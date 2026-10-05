@@ -170,13 +170,21 @@ if (e.key !== 'Escape') return;
 items.forEach((it) => { if (it.hover && !it.li.classList.contains('is-dismissed')) { it.li.classList.add('is-dismissed'); it.hover = false; setItem(it, it.li.classList.contains('is-open')); } });
 });
 const drawer = $('#drawer'), menuBtn = $('.menu-toggle');
+const mqPhone = mq('(max-width: 1023px)');
 if (drawer && menuBtn && typeof drawer.showModal === 'function') {
 const panel = $('.drawer__panel', drawer) || drawer;
+const closeBtn = $('.drawer__close', panel);
 let closeT = 0, downOnSelf = false;
 const open = () => {
 clearTimeout(closeT);
 if (!drawer.open) doc.style.setProperty('--sbw', (getComputedStyle(doc).scrollbarGutter.indexOf('stable') === 0 ? 0 : Math.max(0, innerWidth - doc.clientWidth)) + 'px');
+const menuTop = mqPhone.matches && closeBtn ? menuBtn.getBoundingClientRect().top : null;
 if (!drawer.open) drawer.showModal();
+if (menuTop !== null) {
+panel.style.removeProperty('--menu-top');
+const off = closeBtn.getBoundingClientRect().top - panel.getBoundingClientRect().top - parseFloat(getComputedStyle(panel).paddingTop);
+panel.style.setProperty('--menu-top', (menuTop - off).toFixed(2) + 'px');
+} else if (panel.style.getPropertyValue('--menu-top')) panel.style.removeProperty('--menu-top');
 void panel.offsetWidth; // style the closed pose first
 requestAnimationFrame(() => { if (drawer.open) drawer.classList.add('is-open'); });
 menuBtn.setAttribute('aria-expanded', 'true');
@@ -211,6 +219,17 @@ b.setAttribute('aria-expanded', String(on));
 if (sub) sub.hidden = !on;
 }));
 onMQ(mq(drawer.getAttribute('data-close-at') || '(min-width: 75em)'), (e) => { if (e.matches) close(); });
+W.addEventListener('pagehide', () => {
+if (!drawer.open || !mqPhone.matches) return;
+clearTimeout(closeT);
+drawer.classList.remove('is-open');
+menuBtn.setAttribute('aria-expanded', 'false');
+drawer.close();
+});
+} else if (drawer && menuBtn) {
+const noModal = () => doc.classList.toggle('no-modal', mqPhone.matches);
+noModal();
+onMQ(mqPhone, noModal);
 }
 const carousels = [];
 $$('[data-carousel]').forEach((car) => {

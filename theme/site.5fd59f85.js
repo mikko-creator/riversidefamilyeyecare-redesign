@@ -291,7 +291,7 @@ el.addEventListener('pointerleave', () => { cancelAnimationFrame(raf); raf = 0; 
 const svgU = page && $('.river--under', page), svgO = page && $('.river--over', page);
 const NS = 'http://www.w3.org/2000/svg';
 const mk = (tag, attrs, parent) => { const n = D.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
-const mqD = mq('(min-width: 1200px)'), mqT = mq('(min-width: 769px)');
+const mqD = mq('(min-width: 1200px)'), mqT = mq('(min-width: 769px)'), mqM = mq('(max-width: 1023px)');
 const STRANDS = [ // name, paint, width, opacity, offset(s, nx, ny)
 ['glow', 'glow', 150, 0.16, () => 0],
 ['glow2', 'glow', 96, 0.2, (s) => 3 * Math.sin(s / 300)],
@@ -375,11 +375,11 @@ let bw = 0, bh = 0;
 const buildRiver = () => {
 if (!svgU || !svgO) return;
 const t0 = performance.now(), Wp = page.clientWidth, H = page.offsetHeight;
-const lay = mqD.matches ? 'd' : mqT.matches ? 't' : 'p';
+const lay = mqD.matches ? 'd' : mqT.matches ? (mqM.matches ? 'm' : 't') : 'p';
 const P = [], key = {};
 $$('.ra', page).forEach((a) => {
 const host = a.parentElement, m = parseAt(a.dataset.at);
-const v = lay === 'd' ? m.d : lay === 't' ? m.t || m.d : m.p || m.t || m.d;
+const v = lay === 'd' ? m.d : lay === 't' ? m.t || m.d : lay === 'm' ? m.m || m.t || m.d : m.p || m.t || m.d;
 if (!host || !v || v === 'off' || !host.getClientRects().length) return;
 const [vx, vy] = v.split(','), hb = boxIn(host);
 const x = vy == null ? null : resolveX(vx, hb, host), y = vy == null ? null : resolveY(vy, hb);
@@ -391,7 +391,7 @@ const { S, at } = spline(P), lines = STRANDS.map((st) => offsetPath(S, st[4]));
 const pr = page.getBoundingClientRect(), zones = [];
 $$('.rz', page).forEach((z) => {
 const a = key[z.dataset.from], b = key[z.dataset.to];
-if (!(z.dataset.on || 'd t p').split(/\s+/).includes(lay) || a == null || b == null || a === b) return;
+if (!(z.dataset.on || 'd t m p').split(/\s+/).includes(lay) || a == null || b == null || a === b) return;
 let occ = null;
 try { occ = z.parentElement.querySelector(z.dataset.occluder); } catch (e) { /* not a selector */ }
 const r = occ && occ.getBoundingClientRect();
@@ -406,7 +406,7 @@ const defs = mk('defs', {}, svg);
 Object.keys(GRADS).forEach((g) => { const lg = mk('linearGradient', { id: pre + g, gradientUnits: 'userSpaceOnUse', x1: 0, y1: 0, x2: 0, y2: H }, defs); GRADS[g].forEach(([o, c]) => mk('stop', { offset: o, 'stop-color': c }, lg)); });
 const draw = (g, i0, i1) => STRANDS.forEach(([name, paint, w, op], j) => {
 if (over && w > 18) return;
-mk('path', { d: toD(lines[j].slice(i0, i1 + 1)), fill: 'none', stroke: paint[0] === '#' ? paint : 'url(#' + pre + paint + ')', 'stroke-width': w, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: op, 'data-strand': name }, g);
+mk('path', { d: toD(lines[j].slice(i0, i1 + 1)), fill: 'none', stroke: paint[0] === '#' ? paint : 'url(#' + pre + paint + ')', 'stroke-width': lay === 'p' ? +(w * 0.6).toFixed(2) : w, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: op, 'data-strand': name }, g);
 });
 if (S.length < 2) return;
 if (!over) return draw(mk('g', {}, svg), 0, S.length - 1);

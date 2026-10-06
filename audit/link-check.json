@@ -1,0 +1,54 @@
+{
+ "schema": "rfec/link-check@1",
+ "generated": "2026-10-06T17:34:30.780Z",
+ "dist": "C:\\Users\\Dell\\riversidefamilyeyecare-reforge\\dist",
+ "base404": "/",
+ "filesChecked": 150,
+ "localRefs": 12382,
+ "externalRefsSkipped": 2324,
+ "broken": 0,
+ "byKind": {},
+ "control": {
+  "planted": "<a href=\"nope/index.html\">x</a><a href=\"/abs/\">y</a><a href=\"#missing-id\">z</a><img src=\"img/nothing.webp\" alt=\"\">",
+  "reported": [
+   {
+    "kind": "missing",
+    "attr": "href",
+    "value": "nope/index.html",
+    "resolved": "ctl/nope/index.html"
+   },
+   {
+    "kind": "root-absolute",
+    "attr": "href",
+    "value": "/abs/"
+   },
+   {
+    "kind": "dead-fragment",
+    "attr": "href",
+    "value": "#missing-id"
+   },
+   {
+    "kind": "missing",
+    "attr": "src",
+    "value": "img/nothing.webp",
+    "resolved": "ctl/img/nothing.webp"
+   }
+  ],
+  "planted404": "<a href=\"/\">home</a><a href=\"/theme/riverlight.da04c250.css\">css</a><link href=\"/styles/nope.css\"><a href=\"index.html\">rel</a>",
+  "reported404": [
+   {
+    "kind": "missing",
+    "attr": "href",
+    "value": "/styles/nope.css",
+    "resolved": "styles/nope.css"
+   },
+   {
+    "kind": "page-relative-in-404",
+    "attr": "href",
+    "value": "index.html"
+   }
+  ],
+  "fired": true
+ },
+ "findings": []
+}

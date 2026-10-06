@@ -1,0 +1,428 @@
+{
+  "schema": "rfec/generated-media@1",
+  "provider": "Higgsfield",
+  "note": "AI-generated illustrative motion ADDED by the redesign. Not footage of this practice, its people, its patients or its results. One record per Higgsfield clip; the first-frame still is recorded in audit/generated-images.json.",
+  "clips": [
+    {
+      "id": "hero-river",
+      "status": "ACCEPTED by wf4 review lane M (round 1, wf_fd7de7e7-aa1): calm (YDIF max 1.23 mp4 / 1.30 webm / 1.05 phone, 0 frames over 20, seamless), teal-navy share 1.0, neon 0; NOTE: mean saturation 0.094 is under IMAGE-PLAN floor 0.2 (V1 itself is 0.101) - accepted, to be judged on screen against the logo in the build integration (wf5b 2b)",
+      "motionPlan": "src/content/motion-plan.json motions[id=hero-river]",
+      "page": "/",
+      "purpose": "DESIGN-SPEC 2.8 A3: the slow river of brand-coloured light behind the home hero (plane 0), masked soft on all sides, no blend mode (the grade is baked into the clip). Home only (U3); interiors use the poster still (A6).",
+      "still": {
+        "imageId": "V1",
+        "file": "assets/generated/V1.jpg",
+        "sha256": "007768e138a14adef0ede8550c9d08ebbc4c5aaba71f9830792b833c55956888",
+        "provider": "fal.ai",
+        "model": "fal-ai/flux-pro/v1.1-ultra",
+        "requestId": "01a0f6c3-e79a-7343-ad13-cdfb9a8cdfe6",
+        "seed": 761105898,
+        "size": "2752x1536",
+        "record": "audit/generated-images.json (id V1)",
+        "preflightMetrics": "tmp/wf4/generate/metrics-V1.json (upper-left third mean luma 250, min 242.4; satInTealNavy 1; neon 0)"
+      },
+      "provider": "Higgsfield",
+      "endpoint": "kling-video/v3.0-turbo/image-to-video",
+      "prompt": "Locked-off static camera. The soft luminous ribbon of light drifts and undulates very slowly, like a calm river current, a gentle shimmer travelling from right to left along the teal and navy strands. Smooth continuous ambient motion. No camera movement, no zoom, no new objects, no text, no flashes, no cuts, no brightness changes.",
+      "input": {
+        "prompt": "Locked-off static camera. The soft luminous ribbon of light drifts and undulates very slowly, like a calm river current, a gentle shimmer travelling from right to left along the teal and navy strands. Smooth continuous ambient motion. No camera movement, no zoom, no new objects, no text, no flashes, no cuts, no brightness changes.",
+        "duration": 10,
+        "resolution": "1080p",
+        "image_url": "https://d3snorpfx4xhv8.cloudfront.net/ddbaf43b-a6aa-42cc-833b-bef90fef7cbf/a6aac3eb-ab5c-4571-9b41-3af4e2aee2c2.jpeg"
+      },
+      "requestIds": {
+        "generation": "97266174-5381-4e20-ba8a-0a69cc660a97",
+        "upload": "none (POST /files/generate-upload-url returns a URL, not a request id): https://d3snorpfx4xhv8.cloudfront.net/ddbaf43b-a6aa-42cc-833b-bef90fef7cbf/a6aac3eb-ab5c-4571-9b41-3af4e2aee2c2.jpeg",
+        "estimate": "none (POST /estimate returns a price only)"
+      },
+      "requestVerified": "status re-polled with hf-run --resume 97266174-5381-4e20-ba8a-0a69cc660a97 (no new generation): completed, output sha256 identical to the raw clip (tmp/wf4/generate/hf-resume-check.log)",
+      "raw": {
+        "file": "assets/media/raw/hero-river.mp4",
+        "bytes": 9161992,
+        "sha256": "c828426ec00928c0fe2cbba97505a84c97cb61895fa10959e22d0149cc05d9fb",
+        "outputUrl": "https://d3u0tzju9qaucj.cloudfront.net/ddbaf43b-a6aa-42cc-833b-bef90fef7cbf/7a3ac565-8015-46b0-bf43-1404af7db234.mp4",
+        "sidecar": "assets/media/raw/hero-river.mp4.json",
+        "generatedAt": "2026-10-01T09:27:07.462Z",
+        "codec": "h264",
+        "profile": "Main",
+        "width": 1928,
+        "height": 1072,
+        "pixFmt": "yuv420p",
+        "fps": "24/1",
+        "frames": 241,
+        "duration": 10.041667,
+        "audioStreams": 1,
+        "tags": {
+          "comment": null,
+          "description": null
+        }
+      },
+      "cost": {
+        "estimateUsd": 0.77,
+        "credits": 12.32,
+        "discount": {
+          "percentage": "45.00",
+          "credits": "10.080",
+          "usd": "0.630"
+        },
+        "listUsdBeforeDiscount": 1.4,
+        "via": "tools/hf-run.mjs --estimate, HTTP 200 (tmp/wf4/generate/hf-estimate.log)",
+        "checkedAgainstBilling": false
+      },
+      "loop": {
+        "tool": "tools/make-loop.mjs",
+        "command": "node tools/make-loop.mjs --in assets/media/raw/hero-river.mp4 --out assets/media/hero-river --fade 1.5 --width 1920 --phone-width 720 --phone-aspect 9:16 --crf 26 --label \"Higgsfield kling-video/v3.0-turbo/image-to-video\"",
+        "fade": 1.5,
+        "fps": 24,
+        "inputDuration": 10.041667,
+        "loopDuration": 8.542,
+        "report": "assets/media/hero-river.json",
+        "reproducible": "the make-loop run was repeated with this exact command: mp4, phone mp4 and poster byte-identical to the first run (tmp/wf4/generate/make-loop-2.log, motion-before-reloop.sha256)"
+      },
+      "outputs": {
+        "mp4": {
+          "file": "assets/media/hero-river.mp4",
+          "bytes": 719597,
+          "kB": 719.6,
+          "capKB": 850,
+          "withinCap": true,
+          "sha256": "01519166afcbc84f99c3f3ffa9369c13e15a4349bbf09b6d4f2f019c36c41691",
+          "codec": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1068,
+          "pixFmt": "yuv420p",
+          "fps": "24/1",
+          "frames": 205,
+          "duration": 8.541667,
+          "audioStreams": 0,
+          "tags": {
+            "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+            "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+          }
+        },
+        "webm": {
+          "file": "assets/media/hero-river.webm",
+          "bytes": 302094,
+          "kB": 302.1,
+          "capKB": 350,
+          "withinCap": true,
+          "sha256": "732d455870af6f81d92280580962c4b2a382dd76bf50f7fc3595e72d8bb4b4ab",
+          "codec": "vp9",
+          "profile": "Profile 0",
+          "width": 1920,
+          "height": 1068,
+          "pixFmt": "yuv420p",
+          "fps": "24/1",
+          "frames": null,
+          "duration": 8.542,
+          "audioStreams": 0,
+          "tags": {
+            "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+            "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+          },
+          "encode": {
+            "codec": "libvpx-vp9",
+            "crf": 40,
+            "from": "assets/media/hero-river.mp4",
+            "args": "-an -c:v libvpx-vp9 -b:v 0 -crf 40 -row-mt 1 -deadline good -cpu-used 2 -metadata comment=<make-loop AI note>",
+            "why": "make-loop fixes VP9 at CRF 36 (415594 B, over the 350 KB cap); motion-plan sizeCapsKB.rule: raise the CRF by 2 until the cap holds: CRF 38 = 352352 B (over), CRF 40 = 302094 B (holds)"
+          }
+        },
+        "phoneMp4": {
+          "file": "assets/media/hero-river-phone.mp4",
+          "bytes": 270920,
+          "kB": 270.9,
+          "capKB": 400,
+          "withinCap": true,
+          "sha256": "2d20f3d20826f59f1f224e4ae2de32d09a227dd2a0877d02e7d0f0da48fc0777",
+          "codec": "h264",
+          "profile": "High",
+          "width": 720,
+          "height": 1282,
+          "pixFmt": "yuv420p",
+          "fps": "24/1",
+          "frames": 205,
+          "duration": 8.541667,
+          "audioStreams": 0,
+          "tags": {
+            "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+            "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+          }
+        },
+        "poster": {
+          "file": "assets/media/hero-river-poster.webp",
+          "bytes": 26204,
+          "kB": 26.2,
+          "capKB": 30,
+          "withinCap": true,
+          "sha256": "0e8f81d52742a81a97f03b5974aa7a301be7c4608306efdcd222d33613c0d552",
+          "codec": "webp",
+          "profile": null,
+          "width": 1920,
+          "height": 1068,
+          "pixFmt": "yuv420p",
+          "fps": "25/1",
+          "frames": null,
+          "duration": null,
+          "audioStreams": 0,
+          "tags": {
+            "comment": null,
+            "description": null
+          },
+          "xmp": {
+            "features": "XMP metadata",
+            "xmpBytes": 937,
+            "trainedAlgorithmicMediaCount": 1
+          }
+        },
+        "phonePoster": {
+          "file": "assets/media/hero-river-poster-phone.webp",
+          "bytes": 10954,
+          "kB": 11,
+          "capKB": 15,
+          "withinCap": true,
+          "sha256": "0e57ec8c02a6e54a44e71b11934c956e4d6ecabce900e3a264f9e679c0108589",
+          "codec": "webp",
+          "profile": null,
+          "width": 720,
+          "height": 1282,
+          "pixFmt": "yuv420p",
+          "fps": "25/1",
+          "frames": null,
+          "duration": null,
+          "audioStreams": 0,
+          "tags": {
+            "comment": null,
+            "description": null
+          },
+          "xmp": {
+            "features": "XMP metadata",
+            "xmpBytes": 937,
+            "trainedAlgorithmicMediaCount": 1
+          }
+        }
+      },
+      "sizeCaps": {
+        "kbConvention": "1 KB = 1000 bytes (tmp/toolcheck/NOTES.md reports the 227613-byte toolcheck WebM as 228 KB)",
+        "allWithinCap": true
+      },
+      "calmness": {
+        "limits": {
+          "ydifMax": 3,
+          "ydifP95": 1.5,
+          "framesOver20": 0,
+          "seamChangeMax": "1.5 x p95"
+        },
+        "mp4": {
+          "frames": 409,
+          "max": 1.23218,
+          "p95": 0.931159,
+          "mean": 0.709,
+          "framesOver20": 0,
+          "seamChange": 1.23218
+        },
+        "webm": {
+          "frames": 409,
+          "max": 1.2984,
+          "p95": 0.96849,
+          "mean": 0.763,
+          "framesOver20": 0,
+          "seamChange": 1.2984
+        },
+        "phoneMp4": {
+          "frames": 409,
+          "max": 1.05497,
+          "p95": 0.927282,
+          "mean": 0.656,
+          "framesOver20": 0,
+          "seamChange": 0.969469
+        },
+        "pass": true,
+        "workflowCeiling": {
+          "ydifMax": 6,
+          "framesOver20": 0,
+          "note": "the workflow reviewer ceiling; the plan's 3.0 is stricter and governs"
+        }
+      },
+      "lumaMeanRange": {
+        "limit": 6,
+        "method": "max(YAVG) - min(YAVG) over every frame printed by commands.lumaRange (stderr); compare with calmness.lumaMeanRangeMax",
+        "mp4": {
+          "min": 214.59,
+          "max": 217.52,
+          "range": 2.92,
+          "frames": 205
+        },
+        "webm": {
+          "min": 214.61,
+          "max": 217.47,
+          "range": 2.86,
+          "frames": 205
+        },
+        "phoneMp4": {
+          "min": 218.13,
+          "max": 221.16,
+          "range": 3.03,
+          "frames": 205
+        },
+        "pass": true,
+        "note": "this loop meets the 6-level limit as written (the toolcheck loop 13.26 and the fallback 16.93 do not; motion-plan calibrationWarning)"
+      },
+      "brand": {
+        "frames": 12,
+        "measuredWith": "tmp/wf4/generate/metrics.mjs (definitions of tmp/wf4/plan/calibrate.mjs; positive controls reproduced: control-neon fails every check, the toolcheck loop reads meanS 0.206 / satInTealNavy 0.808 / luma range 13.26 as in calibrate.log)",
+        "metrics": "tmp/wf4/generate/metrics-motion.json",
+        "checks": {
+          "hueShareInOklch180to280": {
+            "value": 1,
+            "min": 0.7,
+            "pass": true
+          },
+          "neon": {
+            "value": 0,
+            "max": 0,
+            "pass": true
+          },
+          "meanSaturationCeiling": {
+            "value": 0.094,
+            "max": 0.35,
+            "pass": true
+          },
+          "meanSaturationFloor": {
+            "value": 0.094,
+            "min": 0.2,
+            "pass": false,
+            "note": "fails as written. The loop inherits V1 (meanS 0.101, a high-key white still the V1 prompt asks for), so a second clip from the same still cannot pass it. The plan stage measured the same floor failing accepted high-key masters (droplet 0.107, lens-beam 0.048) and recommended applying only the ceiling and the no-neon rule (image-plan reviewCalibration); the operator has not ruled on it yet (planner decision 2). No clip retry spent on it."
+          },
+          "upperLeftThirdNearWhite": {
+            "meanLuma": 247.6,
+            "minLuma": 236.4,
+            "pass": true,
+            "criterion": "generator reading: min luma of the upper-left third over 12 frames >= 230 of 255 (the plan gives no number)"
+          }
+        },
+        "renditions": {
+          "mp4": {
+            "meanS": 0.094,
+            "satShare": 0.106,
+            "satInTealNavy": 1,
+            "neon": 0,
+            "upperLeftThird": {
+              "meanLuma": 247.6,
+              "minLuma": 236.4
+            },
+            "framesSampled": 12
+          },
+          "webm": {
+            "meanS": 0.094,
+            "satShare": 0.105,
+            "satInTealNavy": 1,
+            "neon": 0,
+            "upperLeftThird": {
+              "meanLuma": 247.6,
+              "minLuma": 237.1
+            },
+            "framesSampled": 12
+          },
+          "phoneMp4": {
+            "meanS": 0.081,
+            "satShare": 0.098,
+            "satInTealNavy": 1,
+            "neon": 0,
+            "upperLeftThird": {
+              "meanLuma": 251.9,
+              "minLuma": 249.6
+            },
+            "framesSampled": 12
+          },
+          "poster": {
+            "meanS": 0.095,
+            "satShare": 0.119,
+            "satInTealNavy": 1,
+            "neon": 0,
+            "upperLeftThird": {
+              "meanLuma": 247.6,
+              "minLuma": 240.1
+            },
+            "framesSampled": 1
+          },
+          "phonePoster": {
+            "meanS": 0.077,
+            "satShare": 0.083,
+            "satInTealNavy": 0.999,
+            "neon": 0,
+            "upperLeftThird": {
+              "meanLuma": 251.8,
+              "minLuma": 250
+            },
+            "framesSampled": 1
+          }
+        },
+        "pass": false
+      },
+      "aiLabel": {
+        "video": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+        "mp4Tags": {
+          "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+          "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+        },
+        "webmTags": {
+          "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+          "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+        },
+        "phoneMp4Tags": {
+          "comment": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+          "description": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results."
+        },
+        "posters": {
+          "poster": {
+            "features": "XMP metadata",
+            "xmpBytes": 937,
+            "trainedAlgorithmicMediaCount": 1
+          },
+          "phonePoster": {
+            "features": "XMP metadata",
+            "xmpBytes": 937,
+            "trainedAlgorithmicMediaCount": 1
+          },
+          "xmpPacket": "tmp/wf4/generate/hero-river-poster.xmp.xml"
+        }
+      },
+      "review": {
+        "strip": "tmp/wf4/generate/hero-river-strip.jpg (motion-plan commands.strip: fps=1, 320 px, tile 9x1)",
+        "grid": "tmp/wf4/generate/hero-river-grid3x3.jpg (t = 0..8 s, 640 px, timestamps)",
+        "generatorObservation": "not a verdict: a calm blue/teal ribbon with a thin navy strand across the lower middle on white, faint pink/lilac haze; upper-left third white; camera steady; no text, watermark or new object seen at 640 px; the ribbon runs mostly horizontal with a rise at the right rather than curving down to the lower left as the V1 prompt describes",
+        "verdict": null
+      },
+      "attempts": [
+        {
+          "n": 1,
+          "requestId": "97266174-5381-4e20-ba8a-0a69cc660a97",
+          "result": "produced and looped; kept for review",
+          "at": "2026-10-01T09:27:07.462Z"
+        }
+      ],
+      "clipsUsed": 1,
+      "clipsMax": 2,
+      "fallback": {
+        "used": false,
+        "files": {
+          "mp4": "tmp/panel/riverlight/img/video/river-loop.mp4",
+          "webm": "tmp/panel/riverlight/img/video/river-loop.webm",
+          "phoneMp4": "tmp/panel/riverlight/img/video/river-loop-phone.mp4",
+          "poster": "tmp/panel/riverlight/img/video/river-poster.webp",
+          "phonePoster": "tmp/panel/riverlight/img/video/river-poster-phone.webp"
+        }
+      },
+      "handoff": "IMAGE-PLAN 7 named src/theme/media/hero-river and tmp/hf/hero-river.mp4; this workflow may write only assets/media/**, so the loop lands at assets/media/hero-river.* and the raw clip at assets/media/raw/. The build (DESIGN-SPEC P2 ships src/theme/**) must copy the outputs to src/theme/media/ or read them from assets/media/.",
+      "statusUpdatedAt": "2026-10-01T17:50:28.946Z"
+    }
+  ],
+  "paidCalls": {
+    "higgsfieldClips": 1,
+    "higgsfieldFreeCalls": "upload URL, 1 estimate, 1 status re-poll (none billed)",
+    "estimateUsd": 0.77
+  },
+  "generated": "2026-10-01T15:54:57.832Z"
+}

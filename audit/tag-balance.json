@@ -1,0 +1,51 @@
+{
+ "schema": "rfec/tag-balance@1",
+ "generated": "2026-10-06T17:34:30.496Z",
+ "dist": "C:\\Users\\Dell\\riversidefamilyeyecare-reforge\\dist",
+ "pages": 149,
+ "unbalancedPages": 0,
+ "findings": [],
+ "control": {
+  "input": "unclosed <div> inside <section>; <div> inside <p>; </br> in a heading",
+  "reported": [
+   {
+    "kind": "stray-close",
+    "tag": "section",
+    "at": 38,
+    "open": "main>section>div"
+   },
+   {
+    "kind": "stray-close",
+    "tag": "main",
+    "at": 48,
+    "open": "main>section>div"
+   },
+   {
+    "kind": "unclosed",
+    "tag": "main",
+    "at": 0
+   },
+   {
+    "kind": "unclosed",
+    "tag": "section",
+    "at": 6
+   },
+   {
+    "kind": "unclosed",
+    "tag": "div",
+    "at": 15
+   },
+   {
+    "kind": "block-in-p",
+    "tag": "div",
+    "at": 4
+   },
+   {
+    "kind": "void-close",
+    "tag": "br",
+    "at": 26
+   }
+  ],
+  "fired": true
+ }
+}

@@ -1,0 +1,77 @@
+{
+  "tool": "tools/make-loop.mjs",
+  "input": "assets/media/raw/hero-river.mp4",
+  "inputDuration": 10.041667,
+  "fps": 24,
+  "fade": 1.5,
+  "loopDuration": 8.542,
+  "outputs": {
+    "assets/media/hero-river.mp4": 719597,
+    "assets/media/hero-river.webm": 302094,
+    "assets/media/hero-river-phone.mp4": 270920,
+    "assets/media/hero-river-poster.webp": 26204,
+    "assets/media/hero-river-poster-phone.webp": 10954
+  },
+  "calmness": {
+    "metric": "ffmpeg signalstats YDIF (mean absolute luma change between consecutive frames, 0-255), measured over two plays of the loop",
+    "frames": 409,
+    "max": 1.23218,
+    "p95": 0.931159,
+    "mean": 0.709,
+    "framesOver20": 0,
+    "seamChange": 1.23218
+  },
+  "aiLabel": "AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.",
+  "generatedAt": "2026-10-01T15:50:12.208Z",
+  "makeLoopOutputs": {
+    "assets/media/hero-river.mp4": 719597,
+    "assets/media/hero-river.webm": 415594,
+    "assets/media/hero-river-poster.webp": 25240,
+    "assets/media/hero-river-phone.mp4": 270920
+  },
+  "calmnessRenditions": {
+    "webm": {
+      "frames": 409,
+      "max": 1.2984,
+      "p95": 0.96849,
+      "mean": 0.763,
+      "framesOver20": 0,
+      "seamChange": 1.2984
+    },
+    "phoneMp4": {
+      "frames": 409,
+      "max": 1.05497,
+      "p95": 0.927282,
+      "mean": 0.656,
+      "framesOver20": 0,
+      "seamChange": 0.969469
+    },
+    "method": "make-loop YDIF method re-run on the shipped WebM (CRF 40) and the phone MP4"
+  },
+  "postProcess": [
+    {
+      "step": "WebM re-encode",
+      "at": "2026-10-01 (wf4 generate)",
+      "command": "ffmpeg -y -loglevel error -i assets/media/hero-river.mp4 -an -c:v libvpx-vp9 -b:v 0 -crf 40 -row-mt 1 -deadline good -cpu-used 2 -metadata \"comment=AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.\" assets/media/hero-river.webm",
+      "reason": "make-loop fixes VP9 at CRF 36 (415594 B, over the 350 KB cap); motion-plan sizeCapsKB.rule: raise the CRF by 2 until the cap holds: CRF 38 = 352352 B (over), CRF 40 = 302094 B (holds)",
+      "bytes": {
+        "crf36": 415594,
+        "crf38": 352352,
+        "crf40": 302094
+      }
+    },
+    {
+      "step": "phone poster",
+      "command": "ffmpeg -y -loglevel error -i assets/media/hero-river-phone.mp4 -frames:v 1 -c:v libwebp -quality 82 assets/media/hero-river-poster-phone.webp",
+      "reason": "make-loop does not make it (motion-plan phone.poster)"
+    },
+    {
+      "step": "poster AI labels",
+      "command": "webpmux -set xmp tmp/wf4/generate/hero-river-poster.xmp.xml <poster> -o <poster> (packet format of src/lib/images.mjs xmpPacket; tmp/wf4/generate/label-posters.mjs)",
+      "files": [
+        "assets/media/hero-river-poster.webp",
+        "assets/media/hero-river-poster-phone.webp"
+      ]
+    }
+  ]
+}

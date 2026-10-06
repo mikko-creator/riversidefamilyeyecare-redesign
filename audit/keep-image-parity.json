@@ -1,0 +1,61 @@
+{
+ "schema": "rfec/keep-image-parity@1",
+ "dist": "dist",
+ "totals": {
+  "checked": 239,
+  "present": 236,
+  "declared": 3,
+  "missing": 0
+ },
+ "control": {
+  "page": "/eyeglasses/lens-treatments/anti-reflective/",
+  "file": "antireflective-large.jpg",
+  "fired": true
+ },
+ "missing": [],
+ "declared": [
+  {
+   "page": "/404-page-not-found/",
+   "file": "404.png",
+   "why": "platform image (declared drop)"
+  },
+  {
+   "page": "/eyeglasses/eyeglass-guide/",
+   "file": "eyeglass_guide_logo.png",
+   "why": "platform image (declared drop)"
+  },
+  {
+   "page": "/",
+   "file": "Riverside-Family-Eyecare-practice-interior-wide-shot-new.jpg",
+   "why": "superseded by the design (DESIGN-SPEC Q-6 and 3.4; COMPONENTS B.4, gap I.6): the home hero frame shows the 4:3 crop of the 1920x800 photo of the same scene at every width (sections[0].background[0].image.crop), so the design theme does not render this 1190x496 phone layer; it stays in the model, and the scaffold still renders it"
+  }
+ ],
+ "alt": {
+  "totals": {
+   "pages": 148,
+   "imgs": 543,
+   "kept": 231,
+   "declared": 12,
+   "background": 2,
+   "added": 144,
+   "themeStill": 148,
+   "backgroundImg": 8,
+   "unmatched": 0,
+   "findings": 0
+  },
+  "control": {
+   "page": "/",
+   "alt": "Envision by InMode ad promoting dry eye treatment device",
+   "fired": true
+  },
+  "addedControl": {
+   "undeclared": "/",
+   "misplaced": "/ gen-tb-utility.a08f1d29ce.webp",
+   "firedUndeclared": true,
+   "firedMisplaced": true,
+   "fired": true
+  },
+  "findings": [],
+  "unmatched": []
+ }
+}

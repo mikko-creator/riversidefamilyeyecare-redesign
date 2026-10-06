@@ -1,0 +1,198 @@
+{
+  "schema": "rfec/motion-plan@1",
+  "source": "docs/IMAGE-PLAN.md section 7 (binding) and DESIGN-SPEC 2.8 A3/A6, U3, 7; written by the wf4 plan stage with tmp/wf4/plan/write-plans.mjs",
+  "budget": {
+    "clipsPlanned": 1,
+    "clipsMax": 2,
+    "workflowDefaultCap": 3,
+    "estimate": {
+      "endpoint": "kling-video/v3.0-turbo/image-to-video",
+      "duration": 10,
+      "resolution": "1080p",
+      "usd": 0.77,
+      "credits": 12.32,
+      "listUsdBeforeDiscount": 1.4,
+      "discountPct": 45,
+      "via": "node tools/hf-run.mjs --estimate (HTTP 200, 2026-10-01); log tmp/wf4/plan/estimate-kling.log"
+    },
+    "plannedUsd": 0.77,
+    "maxUsd": 1.54
+  },
+  "motions": [
+    {
+      "id": "hero-river",
+      "purpose": "DESIGN-SPEC 2.8 A3: the slow river of brand-coloured light behind the home hero (plane 0), masked soft on all sides, no blend mode (the grade is baked into the clip). Home only (U3); interiors use the poster still (A6).",
+      "page": "/",
+      "still": {
+        "imageId": "V1",
+        "file": "assets/generated/V1.jpg",
+        "madeBy": "tools/fal-gen.mjs (src/content/image-plan.json entry V1)",
+        "fallbackFile": "tmp/toolcheck/hf-aurora.png",
+        "preflight": [
+          "V1 exists and is 16:9",
+          "look at V1 once before spending the clip: upper-left third near white, no object or text in the ribbon, no neon (a rejected V1 wastes a clip)"
+        ]
+      },
+      "provider": "Higgsfield",
+      "endpoint": "kling-video/v3.0-turbo/image-to-video",
+      "upload": {
+        "file": "assets/generated/V1.jpg",
+        "field": "image_url"
+      },
+      "input": {
+        "prompt": "Locked-off static camera. The soft luminous ribbon of light drifts and undulates very slowly, like a calm river current, a gentle shimmer travelling from right to left along the teal and navy strands. Smooth continuous ambient motion. No camera movement, no zoom, no new objects, no text, no flashes, no cuts, no brightness changes.",
+        "duration": 10,
+        "resolution": "1080p"
+      },
+      "clipOut": "assets/media/raw/hero-river.mp4",
+      "commands": {
+        "generate": "node tools/hf-run.mjs --key-file <scratchpad hf.key> --endpoint kling-video/v3.0-turbo/image-to-video --upload assets/generated/V1.jpg --upload-field image_url --input-file tmp/wf4/plan/hero-river.input.json --out assets/media/raw/hero-river.mp4",
+        "resumeIfInterrupted": "node tools/hf-run.mjs --key-file <scratchpad hf.key> --endpoint kling-video/v3.0-turbo/image-to-video --resume <request_id from assets/media/raw/hero-river.mp4.pending.json> --out assets/media/raw/hero-river.mp4",
+        "loop": "node tools/make-loop.mjs --in assets/media/raw/hero-river.mp4 --out assets/media/hero-river --fade 1.5 --width 1920 --phone-width 720 --phone-aspect 9:16 --crf 26 --label \"Higgsfield kling-video/v3.0-turbo/image-to-video\"",
+        "phonePoster": "ffmpeg -y -loglevel error -i assets/media/hero-river-phone.mp4 -frames:v 1 -c:v libwebp -quality 82 assets/media/hero-river-poster-phone.webp",
+        "inputFile": "tmp/wf4/plan/hero-river.input.json holds exactly motions[0].input (written by the plan stage); if it is missing, write that object to a JSON file and pass it with --input-file",
+        "lumaRange": "ffmpeg -hide_banner -i assets/media/hero-river.mp4 -vf signalstats,metadata=print:key=lavfi.signalstats.YAVG -f null -",
+        "lumaRangeCompute": "max(YAVG) - min(YAVG) over every frame printed by commands.lumaRange (stderr); compare with calmness.lumaMeanRangeMax",
+        "strip": "ffmpeg -y -i assets/media/hero-river.mp4 -vf \"fps=1,scale=320:-1,tile=9x1\" -frames:v 1 tmp/wf4/<stage-id>/hero-river-strip.jpg"
+      },
+      "loop": {
+        "tool": "tools/make-loop.mjs",
+        "fade": 1.5,
+        "width": 1920,
+        "phoneWidth": 720,
+        "phoneAspect": "9:16",
+        "crf": 26,
+        "label": "Higgsfield kling-video/v3.0-turbo/image-to-video",
+        "outBase": "assets/media/hero-river",
+        "expectedDurationS": 8.5,
+        "method": "the clip from 1.5 s crossfaded back into its own start; the seam is measured like any other frame"
+      },
+      "outputs": {
+        "mp4": "assets/media/hero-river.mp4",
+        "webm": "assets/media/hero-river.webm",
+        "phoneMp4": "assets/media/hero-river-phone.mp4",
+        "poster": "assets/media/hero-river-poster.webp",
+        "phonePoster": "assets/media/hero-river-poster-phone.webp",
+        "report": "assets/media/hero-river.json"
+      },
+      "poster": {
+        "file": "assets/media/hero-river-poster.webp",
+        "from": "frame 0 of the loop (make-loop, WebP q82)",
+        "capKB": 30,
+        "alsoUsedAs": "the A6 title-band still on every long-form page (DESIGN-SPEC 2.8 A6; the build re-encodes it to 1600 px)"
+      },
+      "phone": {
+        "file": "assets/media/hero-river-phone.mp4",
+        "crop": "centre 9:16 crop of the full 1080 px height (607 px wide) scaled to 720 (1.19x)",
+        "capKB": 400,
+        "poster": {
+          "file": "assets/media/hero-river-poster-phone.webp",
+          "capKB": 15,
+          "madeBy": "commands.phonePoster (make-loop does not make it)"
+        }
+      },
+      "sizeCapsKB": {
+        "webm": 350,
+        "mp4": 850,
+        "phoneMp4": 400,
+        "poster": 30,
+        "phonePoster": 15,
+        "rule": "raise --crf by 2 and re-run make-loop until a cap holds; make-loop fixes the WebM at VP9 CRF 36, so --crf does not shrink the WebM (the toolcheck WebM was 228 KB)",
+        "references": {
+          "toolcheckLoopKB": {
+            "mp4": 815,
+            "webm": 228,
+            "phoneMp4": 251,
+            "poster": 21
+          }
+        }
+      },
+      "calmness": {
+        "source": "IMAGE-PLAN 7 (binding; WCAG 2.3.1)",
+        "metric": "make-loop report .calmness: signalstats YDIF over two plays of the loop",
+        "ydifMax": 3,
+        "ydifP95": 1.5,
+        "framesOver20": 0,
+        "seamChangeMax": "1.5 x p95",
+        "lumaMeanRangeMax": 6,
+        "workflowCeiling": {
+          "ydifMax": 6,
+          "framesOver20": 0,
+          "note": "the workflow reviewer ceiling; the plan's 3.0 is stricter and governs"
+        },
+        "references": {
+          "toolcheckLoop": {
+            "max": 1.117,
+            "p95": 0.838,
+            "framesOver20": 0,
+            "seamChange": 1.117
+          },
+          "controlFlash2Hz": {
+            "max": 219,
+            "framesOver20": 51
+          }
+        },
+        "calibrationWarning": "lumaMeanRangeMax 6 is not met by either validated reference: toolcheck loop 13.26, panel fallback 16.93 YAVG levels (measured this stage, tmp/wf4/plan/calibrate.log). As written it would reject the clip and the fallback alike; the operator should confirm or relax it."
+      },
+      "brand": {
+        "source": "IMAGE-PLAN 7",
+        "frames": 12,
+        "oklchHueRange": [
+          180,
+          280
+        ],
+        "saturatedShareInRangeMin": 0.7,
+        "neonMax": 0,
+        "meanSaturation": [
+          0.2,
+          0.35
+        ],
+        "upperLeftThird": "near white (the statement sits there; text contrast is judged on rendered pixels with the video seeked, DESIGN-SPEC A-5)",
+        "measuredWith": "tmp/wf4/plan/calibrate.mjs (saturated = S > 0.2 and V > 0.15; neon = S and V > 0.85)",
+        "references": {
+          "toolcheckLoop": {
+            "meanS": 0.206,
+            "satInTealNavy": 0.808,
+            "neon": 0
+          },
+          "panelFallbackLoop": {
+            "meanS": 0.242,
+            "satInTealNavy": 1,
+            "neon": 0
+          }
+        }
+      },
+      "review": [
+        "a frame strip (commands.strip) viewed: no watermark, no artefact, no new object, steady camera",
+        "make-loop report within calmness; size caps; brand check on 12 frames"
+      ],
+      "aiLabel": {
+        "video": "make-loop writes \"AI-generated illustrative motion (Higgsfield kling-video/v3.0-turbo/image-to-video). Not footage of this practice, its people, its patients or its results.\" into the comment and description tags",
+        "posters": "XMP trainedAlgorithmicMedia label on both posters (webpmux; DESIGN-SPEC P7, R7)",
+        "records": "audit/generated-media.json (clip: request id, endpoint, prompt, sizes, calmness, cost); V1 is in audit/generated-images.json"
+      },
+      "loading": "no <video> in the markup and never autoplay: the poster img loads; after window load the script creates a muted, playsinline, looping, aria-hidden video with WebM then MP4 at 769 px and up, the phone MP4 below; skipped for reduced motion, Save-Data, slow-2g/2g/3g and prefers-reduced-data; paused off screen; source swaps on a matchMedia change (IMAGE-PLAN 7, DESIGN-SPEC 7)",
+      "retries": {
+        "maxClips": 2,
+        "retryWhen": "the first clip fails calmness, brand or review",
+        "alternative": {
+          "endpoint": "alibaba/wan-3.0/image-to-video",
+          "when": "only if Kling errors twice without producing a clip; any produced clip counts toward maxClips",
+          "pricing": "estimate endpoint: 1080p $0.20 per generated second, so $2.00 per 10 s before discounts (tmp/wf4/plan/estimate-wan.log)"
+        }
+      },
+      "fallback": {
+        "when": "two clips fail the calmness or brand check",
+        "files": {
+          "mp4": "tmp/panel/riverlight/img/video/river-loop.mp4",
+          "webm": "tmp/panel/riverlight/img/video/river-loop.webm",
+          "phoneMp4": "tmp/panel/riverlight/img/video/river-loop-phone.mp4",
+          "poster": "tmp/panel/riverlight/img/video/river-poster.webp",
+          "phonePoster": "tmp/panel/riverlight/img/video/river-poster-phone.webp"
+        },
+        "note": "the panel regrade of tmp/toolcheck/hfvid/loop.mp4 (1600x900, 460/191 KB)"
+      },
+      "handoff": "IMAGE-PLAN 7 named src/theme/media/hero-river and tmp/hf/hero-river.mp4; this workflow may write only assets/media/**, so the loop lands at assets/media/hero-river.* and the raw clip at assets/media/raw/. The build (DESIGN-SPEC P2 ships src/theme/**) must copy the outputs to src/theme/media/ or read them from assets/media/."
+    }
+  ]
+}

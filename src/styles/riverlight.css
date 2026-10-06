@@ -1,0 +1,1794 @@
+/* riverlight.css: the Riverlight Aurora theme. Values: docs/DESIGN-SPEC.md; markup and hooks: docs/COMPONENTS.md (it wins).
+   Colours only through var(--token) (tokens.css). Layouts: d >=1200, t 769-1199, p <=768, n <=420, a >=1024,
+   s = (min-width:1024px) and (max-height:820px) (720 until QA round 1, LAYOUT-4). Reveals, tilt, glare, sheen and reduced motion: the motion.css layer. */
+
+/* base */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--navbar-h) + 16px);
+
+  background-color: var(--ground);
+  background-image: var(--page-bg);
+  background-repeat: no-repeat;
+}
+/* the scroll lock under the drawer (DESIGN-SPEC 3.2). QA round 1 (LAYOUT-12, MOTION-4): with a classic scrollbar the
+   lock removed the bar and the page behind the scrim widened 15 px. fix-1 kept the gutter (scrollbar-gutter: stable on
+   the open state), which still moved it 0.2-1.8 px: with a gutter reserved, 100vw resolves to 1009 instead of 1024 at
+   1024 px (measured), so every vw-sized length changed (a 4vw padding by 0.6 px). fix-2: site.js writes the bar's width as
+   --sbw before it opens the drawer, and the lock pads the root by it: the content box and the vw lengths stay as they
+   were (0 when the bar is an overlay, or when a gutter is already reserved) */
+html:has(dialog[open]) { overflow: hidden; padding-right: var(--sbw, 0px); }
+/* Mobile optimisation (M-LAYOUT-7): Tab scrolls the next control just onto the fold, and with no bottom scroll padding the
+   lower 3.5-6.3 px of its 6 px focus ring (3 px outline, 3 px offset) sat below the screen on 13 of 20 family Tab walks at
+   390 px. A 12 px bottom padding keeps the whole ring on screen; it moves no box (scroll padding only shapes where a focus
+   or a jump scrolls to), and the top padding (the stuck navbar) is unchanged */
+@media (max-width: 1023px) { html { scroll-padding-bottom: 12px; } }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: var(--step-0);
+  font-weight: var(--fw-body);
+  line-height: var(--lh-body);
+  color: var(--ink-700);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+img, video, svg, picture { max-width: 100%; }
+img, video, svg { display: block; }
+img { height: auto; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--navy-700);
+  font-weight: var(--fw-head);
+  line-height: var(--lh-head);
+  letter-spacing: var(--ls-head);
+  text-wrap: balance;
+}
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+ul, ol { margin: 0; }
+ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+figure, blockquote { margin: 0; }
+address { font-style: normal; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+strong, b { font-weight: var(--fw-strong); }
+table { border-collapse: collapse; }
+[hidden]:not([hidden="until-found"]) { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+#main:focus { outline: none; }
+
+.vh, .sr {
+  position: absolute !important;
+  width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ico { width: 1.15em; height: 1.15em; flex: none; }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--maxw) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip {
+  position: absolute; left: 12px; top: -120px; z-index: 200;
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px;
+  border-radius: var(--r-pill); background: var(--navy-700); color: var(--on-dark);
+  font-weight: var(--fw-strong); text-decoration: none;
+}
+/* QA round 1 (A11Y-15): a navy halo under the teal-200 ring, so the ring keeps its contrast where it crosses the white navbar.
+   fix-2: 12 px (was 9): the ring ends 6 px out, so 9 px left the halo's anti-aliased edge 2.5 px past the ring, where the
+   verifier reads the ring's outer neighbour (1.19:1 there); 12 px keeps 6 px of solid navy beyond the ring */
+.skip:focus { top: 12px; color: var(--on-dark); outline-color: var(--teal-200); box-shadow: 0 0 0 12px var(--navy-700); }
+
+.surface--image, .band__panel { --link: var(--teal-800); --link-hover: var(--navy-900); --link-underline: var(--link-line-image); }
+.lavender, .insurance, .band--lav {
+  --focus: var(--navy-700); --link: var(--navy-700); --link-hover: var(--navy-900);
+  --link-underline: var(--link-line-navy); --bullet: var(--img-bullet-navy);
+}
+.topbar, .site-footer, .ctaband, .surface--navy {
+  --focus: var(--teal-200); --link: var(--teal-200); --link-hover: var(--on-dark);
+  --link-underline: var(--link-line-light); --bullet: var(--img-bullet-light);
+}
+
+/* planes (DESIGN-SPEC 2.9; COMPONENTS 0.5) */
+.page { position: relative; isolation: isolate; overflow-x: clip; }
+.aurora-field { position: fixed; inset: -12vh 0; z-index: -1; pointer-events: none; }
+.aurora-field__layer { position: absolute; inset: 0; }
+.aurora-field__layer--dawn { background-image: var(--aurora-dawn); }
+.aurora-field__layer--day { background-image: var(--aurora-day); opacity: 0; }
+.aurora-field__layer--dusk { background-image: var(--aurora-dusk); opacity: 0; }
+/* sized by site.js's width/height attributes at each build, never by CSS: a 100% box rescaled the drawing (I.81) */
+.river { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; }
+.river--under { z-index: 1; }
+.river--over { z-index: 4; }
+.river path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ra, .rz { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; visibility: hidden; }
+.pl-band { z-index: 0; }
+.pl-surface { position: relative; z-index: 2; }
+.pl-raise { z-index: 3; }
+.pl-break { z-index: 4; }
+.pl-cut { z-index: 5; }
+.protrude { position: absolute; pointer-events: none; max-width: none; }
+
+/* banks (G6): down = fill is the next surface; up = mirrored, the band layers draw the fill */
+.bank { position: absolute; left: 0; width: 100%; height: var(--bank-h); pointer-events: none; overflow: visible; }
+.bank--down { bottom: -1px; }
+.bank--up { bottom: calc(100% - 1px); scale: -1 1; }
+.bank__fill { fill: var(--paper); stroke: none; }
+.bank--up .bank__fill { fill: none; }
+.bank__teal { fill: none; stroke: var(--teal-500); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.bank__navy { fill: none; stroke: var(--navy-700); stroke-width: 1.2; opacity: .75; vector-effect: non-scaling-stroke; }
+
+/* header: top bar (B.1) */
+.site-header { position: sticky; top: calc(-1 * var(--topbar-h)); z-index: 50; }
+.topbar { background: var(--navy-700); color: var(--on-dark); font-size: 0.875rem; line-height: 1.45; }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 6px 20px; min-height: 44px; }
+.topbar__where { margin: 0; min-width: 0; }
+.topbar__where a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--on-dark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  transition: color var(--dur-fast);
+}
+.topbar__where a:is(:hover, :focus-visible) { color: var(--teal-200); }
+.topbar__actions { display: flex; gap: 12px; flex: none; }
+.pill {
+  position: relative; isolation: isolate;
+  display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px;
+  border-radius: var(--r-pill); font-size: 0.875rem; font-weight: var(--fw-ui); line-height: 1.2;
+  text-decoration: none; white-space: nowrap; color: var(--on-dark);
+}
+.pill .ico { width: 16px; height: 16px; }
+
+.pill--ghost::before {
+  content: ""; position: absolute; inset: 5px 0; z-index: -1; border-radius: inherit;
+  border: 2px solid var(--pill-edge);
+  transition: background-color var(--dur-fast), border-color var(--dur-fast);
+}
+.pill--ghost:is(:hover, :focus-visible) { color: var(--on-dark); }
+.pill--ghost:is(:hover, :focus-visible)::before { background: var(--teal-700); border-color: var(--teal-700); }
+.pill:focus-visible { outline-offset: 0; }
+@media (max-width: 768px) {
+  .topbar { font-size: 0.8125rem; }
+  .topbar__inner { justify-content: center; text-align: center; padding-block: 8px; }
+  .topbar__where a { justify-content: center; }
+  .topbar__actions { display: none; }
+}
+@media (max-width: 420px) { .topbar__where { font-size: 0.78125rem; } }
+
+/* header: navbar, main nav, dropdowns (B.2) */
+.navbar {
+  background-image: var(--glass-nav-fill);
+  -webkit-backdrop-filter: var(--glass-blur-nav);
+  backdrop-filter: var(--glass-blur-nav);
+
+  box-shadow: inset 0 -1px 0 var(--line-glass-nav), var(--navbar-shadow);
+}
+.navbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 10px; }
+/* the stuck navbar sits in html's scroll-padding: a focus there must not scroll the page (I.79) */
+.navbar :is(a, button) { scroll-margin-top: calc(-1 * var(--chrome-h)); }
+.brand { display: block; flex: none; border-radius: 8px; }
+.brand img { width: 180px; height: auto; }
+@media (max-width: 768px) {
+  .brand img { width: 145px; }
+  .navbar__inner { gap: 12px; }
+}
+
+.mainnav__list { display: flex; align-items: center; gap: 0; margin: 0; padding: 0; list-style: none; }
+.mainnav__item { position: relative; display: flex; align-items: center; }
+.mainnav__link {
+  position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px;
+  border-radius: 10px; color: var(--navy-700); font-size: 0.96875rem; font-weight: 550; line-height: 1.2;
+  text-decoration: none; white-space: nowrap;
+  transition: background-color var(--dur-fast), color var(--dur-fast);
+}
+.mainnav__link::after {
+  content: ""; position: absolute; left: 8px; right: 8px; bottom: 7px; height: 2px; border-radius: 2px;
+  background: var(--nav-underline); transform: scaleX(0); transform-origin: left;
+  transition: transform 380ms var(--ease-out);
+}
+.mainnav__link:is(:hover, :focus-visible),
+.mainnav__link[aria-current="page"],
+.mainnav__item.is-section > .mainnav__link,
+.mainnav__item.is-open > .mainnav__link { background: var(--tint-lav); color: var(--navy-900); }
+.mainnav__link:is(:hover, :focus-visible)::after,
+.mainnav__link[aria-current="page"]::after,
+.mainnav__item.is-section > .mainnav__link::after,
+.mainnav__item.is-open > .mainnav__link::after { transform: scaleX(1); }
+.mainnav__toggle {
+  display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0;
+  border: 0; border-radius: 10px; background: none; color: var(--navy-700);
+  transition: background-color var(--dur-fast), color var(--dur-fast);
+}
+.mainnav__toggle:is(:hover, :focus-visible), .mainnav__item.is-open > .mainnav__toggle { background: var(--tint-lav); color: var(--navy-900); }
+.mainnav__toggle .ico { width: 16px; height: 16px; transition: rotate 300ms var(--ease-out); }
+.mainnav__item.is-open > .mainnav__toggle .ico, .mainnav__toggle[aria-expanded="true"] .ico { rotate: 180deg; }
+.sub { margin: 0; padding: 0; list-style: none; }
+.sub a {
+  display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border-radius: 10px;
+  color: var(--navy-700); font-size: 0.9375rem; font-weight: 500; line-height: 1.3; text-decoration: none;
+  transition: background-color var(--dur-fast), color var(--dur-fast);
+}
+.sub a:is(:hover, :focus-visible) { background: var(--tint-teal); color: var(--teal-800); }
+.sub a[aria-current="page"], .sub .is-section > a { background: var(--tint-lav); color: var(--navy-900); }
+
+html.js .mainnav { display: none; }
+/* QA round 1 (LAYOUT-11): the nav breakpoint is in em (75em = 1200 px at the default 16 px font), so a larger browser
+   font switches to the drawer instead of crowding the scaled nav labels; the layout breakpoints stay in px */
+@media (min-width: 75em) {
+  html.js .mainnav { display: block; }
+  /* QA round 1 (LAYOUT-6): a fallback, never used at the default text settings (one row, 48 px spare): with wider text
+     (WCAG 1.4.12 spacing, a larger font) the items wrap to a second row instead of running off-screen */
+  html.js .mainnav { flex: 1 1 auto; min-width: 0; }
+  html.js .mainnav__list { flex-wrap: wrap; justify-content: flex-end; }
+  html.js .sub {
+    position: absolute; left: 0; top: calc(100% + 6px); z-index: 60; min-width: 250px; padding: 8px;
+    background-image: var(--glass-sub-fill);
+    -webkit-backdrop-filter: var(--glass-blur-nav);
+    backdrop-filter: var(--glass-blur-nav);
+    border: 1px solid var(--line-glass-nav); border-radius: 16px; box-shadow: var(--sh-3);
+    opacity: 0; visibility: hidden; translate: 0 -6px;
+    transition: opacity var(--dur-dropdown) var(--ease-out), translate var(--dur-dropdown) var(--ease-out), visibility 0s linear var(--dur-dropdown);
+  }
+  html.js .sub::before { content: ""; position: absolute; left: 0; right: 0; top: -11px; height: 11px; }
+  html.js .sub--end { left: auto; right: 0; }
+  html.js .mainnav__item.has-sub:hover:not(.is-dismissed) > .sub,
+  html.js .mainnav__item.is-open > .sub { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+}
+.mobilebar { display: none; align-items: center; gap: 8px; flex: none; }
+@media (max-width: 74.9375em) { .mobilebar { display: flex; } }
+@media (min-width: 769px) and (max-width: 74.9375em) { .mobilebar > :not(.menu-toggle) { display: none; } }
+html:not(.js) .menu-toggle { display: none; }
+/* QA round 1 (LAYOUT-3, A11Y-7): below 360 px the 145 px logo, the 12 px gap and three 44 px circles 8 px apart (305 px)
+   overflowed the 288 px navbar at 320 (scrollWidth 321, the menu circle and its ring cut). Tighter gaps need 287 px; with
+   less room still (a classic scrollbar, 400% zoom) the logo shrinks instead of the page scrolling sideways */
+@media (max-width: 359px) {
+  .navbar__inner { gap: 4px; }
+  .mobilebar { gap: 3px; }
+  .brand { flex: 0 1 auto; min-width: 0; }
+}
+
+.roundbtn {
+  display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0;
+  border: 0; border-radius: 50%; color: var(--on-dark); text-decoration: none;
+  transition: transform var(--dur-fast) var(--ease-out), background-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+.roundbtn .ico { width: 20px; height: 20px; }
+/* Mobile optimisation (M-TOUCH-4): a phone applies :hover to the element it taps and keeps it until the next tap
+   elsewhere, so a control that does not navigate (the menu, close and hero-video buttons, the carousel dots, the drawer's
+   submenu toggles, the form's Submit, the FAQ questions) kept its hover look as if selected. Each such rule is split
+   into its :focus-visible half (unchanged everywhere) and its :hover half under (hover: hover), (min-width: 1024px):
+   true on every screen 1024 px and wider and on any mouse-driven one, so desktop renders exactly as before; a touch
+   phone keeps the rest look after a tap. The variants are exclusive classes (one per button), so their :hover halves
+   share one block after their rest and focus rules without changing which rule wins for any button */
+.roundbtn--navy { background: var(--navy-700); }
+.roundbtn--navy:focus-visible { background: var(--navy-900); color: var(--on-dark); }
+.roundbtn--teal { background: var(--teal-700); }
+.roundbtn--teal:focus-visible { background: var(--teal-800); color: var(--on-dark); }
+.roundbtn--teal:focus-visible { outline-color: var(--navy-700); }
+.roundbtn--ghost { background: var(--paper); color: var(--navy-700); box-shadow: inset 0 0 0 2px var(--navy-700); }
+.roundbtn--ghost:focus-visible { background: var(--tint-teal); color: var(--navy-900); }
+@media (hover: hover), (min-width: 1024px) {
+  .roundbtn--navy:hover { background: var(--navy-900); color: var(--on-dark); }
+  .roundbtn--teal:hover { background: var(--teal-800); color: var(--on-dark); }
+  .roundbtn--ghost:hover { background: var(--tint-teal); color: var(--navy-900); }
+}
+@media (hover: hover) { .roundbtn:hover { transform: translateY(var(--lift-btn)); } }
+.roundbtn:focus-visible { transform: translateY(var(--lift-btn)); }
+
+/* drawer (B.2, G2: a native modal dialog) */
+dialog.drawer {
+  position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0; background: transparent; color: var(--ink-700); overflow: hidden;
+}
+dialog.drawer::backdrop { background: var(--scrim); opacity: 0; transition: opacity var(--dur-drawer) ease; }
+dialog.drawer.is-open::backdrop { opacity: 1; }
+.drawer__panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(380px, 88vw);
+  display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain;
+  padding: 16px 20px 28px;
+  background: linear-gradient(180deg, var(--paper), var(--aqua-50));
+  box-shadow: var(--drawer-shadow);
+  translate: 104% 0;
+  transition: translate var(--dur-drawer) var(--ease-out);
+}
+dialog.drawer.is-open .drawer__panel { translate: 0 0; }
+/* Mobile optimisation (MT-R1): at the top of a page the menu button sits below the top bar (77 px down at 390 px), while
+   the open drawer's close button sat at 20 px, so the drawer put its first row ('Hours & Location') where the menu button
+   was, and a second tap there to close the menu (or a quick double tap) navigated away. site.js writes the menu button's
+   top, less the close button's offset in the drawer head, as --menu-top when it opens the drawer below 1024 px, so the
+   close button opens over the menu button (when the navbar is stuck the value is 16 px or less: unchanged). The panel
+   scrolls, so a taller offset never hides its actions */
+@media (max-width: 1023px) { .drawer__panel { padding-top: max(16px, var(--menu-top, 16px)); } }
+.drawer__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.drawer__logo { width: 130px; height: auto; }
+.dnav { margin: 0 0 20px; padding: 0; list-style: none; }
+.dnav > li { border-bottom: 1px solid var(--line-drawer); }
+.dnav a {
+  display: flex; align-items: center; min-height: 50px; color: var(--navy-700);
+  font-size: 1.0625rem; font-weight: var(--fw-ui); text-decoration: none; transition: color var(--dur-fast);
+}
+.dnav a:is(:hover, :focus-visible) { color: var(--teal-800); }
+.dnav a[aria-current="page"], .dnav .is-section > a, .dnav .is-section > .dnav__row > a { color: var(--teal-800); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .3em; }
+.dnav__row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.dnav__toggle {
+  display: grid; place-items: center; flex: none; width: 48px; height: 48px; padding: 0;
+  border: 0; border-radius: 12px; background: none; color: var(--navy-700);
+}
+.dnav__toggle:focus-visible { background: var(--tint-teal); }
+@media (hover: hover), (min-width: 1024px) { .dnav__toggle:hover { background: var(--tint-teal); } }   /* M-TOUCH-4: the split described above .roundbtn--navy */
+.dnav__toggle .ico { width: 20px; height: 20px; transition: rotate 300ms var(--ease-out); }
+.dnav__toggle[aria-expanded="true"] .ico { rotate: 180deg; }
+.dnav__sub { margin: 0 0 10px; padding: 0 0 0 14px; list-style: none; border-left: 2px solid var(--teal-200); }
+.dnav__sub a { min-height: 44px; font-size: 1rem; font-weight: 500; }
+.drawer__actions { display: grid; gap: 12px; margin-top: auto; }
+
+/* shared controls (B.0) */
+/* QA round 1, regressions (REG-B1): the label's text box (the font's ascent + descent, about 1.3em) is taller than its
+   1.15 line box, so a label that wraps (a larger browser font since LAYOUT-11's rem sizes, or a long label on a narrow
+   screen) ran 1.2-3 px past the top and bottom of the pill, whose overflow clip (it holds the sheen) cut it. The block
+   padding is in em and the min-height absorbs it at the default font: a one- or two-line label sits exactly where it sat
+   (50 - 2 x 5.5 px, and 50 - 2 - 11 with the forced-colours border, still hold 2 x 18.4 px; 5.5 px, and 5.84 px at
+   btn--lg's 17 px, are whole numbers of layout units, so the centring rounds the same), and a label that needs more
+   room grows the pill instead of touching its edge (11/32 em clears the text box by about .25em).
+   The corner radius is capped at 26px + .75em (38 px at the default font; the cap is paint only): a pill that holds one
+   or two lines keeps its round ends at every browser font size swept, 16 to 32 px (its half height stays under the cap),
+   and a taller one, three lines or more, rounds its corners instead of turning into an oval whose ends cut the first and
+   last lines (the 6-line address button of /template/header/ at Chrome font 32 on a 390 px phone lost the top of its
+   first letter). At the default font the cap reaches one button: that 4-line label at 320 px (radius 38, was 42.3) */
+.btn {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: .34375em 24px; border: 0; border-radius: min(var(--r-pill), calc(26px + .75em));
+  font-size: 1rem; font-weight: var(--fw-head); line-height: 1.15; letter-spacing: .005em;
+  text-align: center; text-decoration: none;
+  transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out), background-color var(--dur-fast), color var(--dur-fast);
+}
+.btn .ico { width: 1.15em; height: 1.15em; }
+.btn--lg { min-height: 56px; padding: .34375em 30px; font-size: 1.0625rem; }
+/* M-TOUCH-4 (the split described above .roundbtn--navy; the variants are exclusive classes, so their :hover halves share
+   one block): the Submit of the two inert forms kept its darker fill and 4 px ring after a tap */
+.btn--primary { background: var(--teal-700); color: var(--on-dark); box-shadow: var(--btn-shadow-primary); }
+.btn--primary:focus-visible { background: var(--teal-800); color: var(--on-dark); box-shadow: 0 0 0 4px var(--ring-teal), var(--btn-shadow-primary-hover); }
+.btn--secondary { background: var(--navy-700); color: var(--on-dark); box-shadow: var(--btn-shadow-secondary); }
+.btn--secondary:focus-visible { background: var(--navy-900); color: var(--on-dark); box-shadow: 0 0 0 4px var(--ring-sky), var(--btn-shadow-secondary-hover); }
+.btn--ghost { background: transparent; color: var(--navy-700); box-shadow: inset 0 0 0 2px var(--navy-700); }
+.btn--ghost:focus-visible { background: var(--tint-teal); color: var(--navy-900); box-shadow: inset 0 0 0 2px var(--navy-900), 0 0 0 4px var(--ring-teal); }
+.btn--light { background: var(--paper); color: var(--navy-700); }
+.btn--light:focus-visible { color: var(--navy-900); box-shadow: 0 0 0 4px var(--ring-light), var(--btn-shadow-light-hover); }
+@media (hover: hover), (min-width: 1024px) {
+  .btn--primary:hover { background: var(--teal-800); color: var(--on-dark); box-shadow: 0 0 0 4px var(--ring-teal), var(--btn-shadow-primary-hover); }
+  .btn--secondary:hover { background: var(--navy-900); color: var(--on-dark); box-shadow: 0 0 0 4px var(--ring-sky), var(--btn-shadow-secondary-hover); }
+  .btn--ghost:hover { background: var(--tint-teal); color: var(--navy-900); box-shadow: inset 0 0 0 2px var(--navy-900), 0 0 0 4px var(--ring-teal); }
+  .btn--light:hover { color: var(--navy-900); box-shadow: 0 0 0 4px var(--ring-light), var(--btn-shadow-light-hover); }
+}
+
+.btn:focus-visible { outline: 3px solid var(--navy-700); outline-offset: 3px; }
+.btn--secondary:focus-visible, .btn--ghost:focus-visible { outline-color: var(--teal-700); }
+:is(.topbar, .site-footer, .ctaband, .surface--navy) .btn:focus-visible { outline-color: var(--teal-200); }
+:is(.lavender, .insurance, .band--lav) .btn:focus-visible { outline-color: var(--navy-900); }
+@media (hover: hover) { .btn:hover { transform: translateY(var(--lift-btn)); } }
+.btn:focus-visible { transform: translateY(var(--lift-btn)); }
+@media (max-width: 420px) { .btn--lg, .form__foot > .btn { width: 100%; } }
+/* Mobile optimisation (M-LOOK-4, M-LAYOUT-2): on phones a wrapped label ended on one word ('Read About Insurance Plans We
+   / Accept', the glaucoma 'Learn More About ...' pills) and the main calls to action broke onto two lines at 320-375
+   ('SCHEDULE AN APPOINTMENT' in the hub intros, 'Schedule Appointment' in the CTA bands). A label that still wraps is
+   balanced, and up to 420 px the pills' inline padding and icon gap are tighter so the labels fit one line where the width
+   allows: 16 px and 8 px at the default font (btn--lg 18 px), growing with the font back to the old 24 px and 10 px (btn--lg
+   30 px) by a Chrome font of 24 px, so the large-font pills REG-B1 verified (fonts 24 and 32) keep their padding; the
+   block padding .34375em is untouched and every pill keeps its 50 / 56 px minimum height */
+@media (max-width: 768px) { .btn > span, .qa > span { text-wrap: balance; } }
+@media (max-width: 420px) {
+  .btn { padding-inline: clamp(16px, calc(1.5em - 8px), 24px); gap: clamp(8px, .5em, 10px); }
+  .btn--lg { padding-inline: clamp(18px, calc(1.5em - 7.5px), 30px); }
+}
+.btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.chip {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 4px 14px; border-radius: var(--r-pill);
+  background: var(--tint-teal); color: var(--teal-800); font-size: 0.9375rem; font-weight: var(--fw-strong); line-height: 1.3;
+}
+.more {
+  position: relative; z-index: 2; display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--link); font-weight: var(--fw-strong); text-decoration: underline;
+  text-decoration-color: var(--link-underline); text-underline-offset: .2em;
+  transition: color var(--dur-fast), text-decoration-color var(--dur-fast);
+}
+.more:is(:hover, :focus-visible) { color: var(--link-hover); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+/* standalone links: 44 x 44 at least (B.0 target rule 3), however short their text ("Home", "FAQ") */
+:is(.topbar__where, .section-title, .trio__title, p.callout-title, .footer__financing, .doctor__tag, .loc__title, .visit__title, .testimonial__title, .footer__menu, .legal, .crumbs) a,
+.rich .link-line > a, .more, .sitemap__link { min-width: 44px; }
+
+/* surfaces (2.7; COMPONENTS 0.2) */
+.surface { position: relative; border-radius: var(--r-l); }
+.surface--glass, .surface--image {
+  background-image: var(--glass-card-fill);
+  -webkit-backdrop-filter: var(--glass-blur-card);
+  backdrop-filter: var(--glass-blur-card);
+  border: 1px solid var(--glass-edge);
+  box-shadow: inset 0 1px 0 var(--glass-highlight), var(--sh-2);
+}
+.surface--navy {
+  background-image: var(--glass-navy-fill);
+  -webkit-backdrop-filter: var(--glass-blur-navy);
+  backdrop-filter: var(--glass-blur-navy);
+  border: 1px solid var(--navy-glass-edge);
+  box-shadow: inset 0 1px 0 var(--navy-glass-highlight), var(--sh-3);
+  color: var(--on-dark);
+}
+.surface--paper { background-color: var(--paper); border: 1px solid var(--hairline-paper); box-shadow: var(--sh-1); }
+.surface--frost { background-color: var(--frost-fill); border: 1px solid var(--hairline-paper); box-shadow: var(--sh-1); }
+.surface--tint { background-image: var(--tint-panel-fill); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .surface--glass, .surface--image, .navbar, html.js .sub { background-image: none; background-color: var(--glass-fallback); }
+  .surface--navy { background-image: none; background-color: var(--navy-700); }
+}
+.aurora-deep { background-color: var(--navy-950); background-image: var(--aurora-deep); color: var(--on-dark); }
+
+.frame { position: relative; overflow: hidden; border-radius: var(--r-m); background: var(--tint-teal); }
+.frame::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--frame-edge), inset 0 1px 0 var(--frame-highlight);
+}
+.frame > img, .frame > a > img, .frame > a { display: block; width: 100%; height: 100%; }
+.frame img { object-fit: cover; transition: scale 700ms var(--ease-out); }
+
+/* section header and the wave rule (B.3) */
+.wave-rule::after {
+  content: ""; display: block; width: 74px; height: 12px; margin-top: 14px;
+  background: var(--img-wave-rule) no-repeat 0 0 / 74px 12px;
+}
+.wave-rule--center::after { margin-inline: auto; }
+.wave-rule--navy::after { background-image: var(--img-wave-rule-navy); }
+.wave-rule--light::after { background-image: var(--img-wave-rule-light); }
+.section-title {
+  margin: 0 0 clamp(26px, 3.4vw, 40px); color: var(--navy-700);
+  font-size: var(--step-3); font-weight: var(--fw-head); line-height: var(--lh-head); letter-spacing: var(--ls-head);
+  text-align: center;
+}
+.section-title--left { text-align: left; }
+.section-title a {
+  display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 calc(100% - 2px) / 0 2px no-repeat;
+  transition: background-size var(--dur-underline) var(--ease-out), color var(--dur-fast);
+}
+.section-title a:is(:hover, :focus-visible) { background-size: 100% 2px; color: var(--navy-900); }
+
+/* home hero (B.4) */
+.hero {
+  position: relative;
+  padding: clamp(26px, 5vh, 64px) 0 calc(var(--hero-tuck) + var(--hero-gap));
+  background-image: var(--hero-wash);
+}
+.hero__light {
+  position: absolute; left: 0; right: 0; bottom: -2%; height: 62%; pointer-events: none; overflow: hidden;
+  mask-image: var(--mask-light-y), var(--mask-light-x);
+  mask-composite: intersect;
+}
+.hero__light :is(img, video) {
+  position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover;
+  filter: var(--light-grade);
+}
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); align-items: center; gap: clamp(24px, 4.5vw, 72px); }
+.hero__copy { container-type: inline-size; padding-block: 8px; }
+.hero__statement {
+  margin: 0 0 clamp(22px, 3.4vh, 36px); color: var(--navy-700);
+  font-size: min(var(--display), 100cqi / 6.6); line-height: var(--lh-display); font-weight: var(--fw-statement-light);
+  letter-spacing: var(--ls-display); text-wrap: initial;
+  /* QA round 1 (LAYOUT-7, A11Y-6): the size fits "Comprehensive" at the design's letter-spacing; with user text spacing
+     (WCAG 1.4.12) the one word may break inside the column instead of running under the photo */
+  overflow-wrap: break-word; hyphens: auto;
+}
+.hero__statement span { display: block; font-weight: var(--fw-statement); letter-spacing: -.035em; }
+.hero__frame { position: relative; }
+.frame__clip {
+  position: relative; overflow: hidden; width: 100%; aspect-ratio: 4 / 3;
+  max-height: max(300px, calc(100svh - var(--chrome-h) - 96px));
+  border-radius: var(--r-xl); background: var(--tint-teal); box-shadow: var(--sh-3);
+}
+.frame__clip::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--frame-edge), inset 0 1px 0 var(--frame-highlight);
+}
+.frame__img { position: absolute; left: 0; top: -6%; width: 100%; height: 112%; max-width: none; object-fit: cover; object-position: 55% 50%; }
+.protrude--glasses { width: clamp(190px, 24vw, 370px); left: calc(28px - clamp(24px, 4.5vw, 72px)); bottom: min(-11%, -52px); rotate: -7deg; filter: var(--sh-fore); }
+.hero__toggle { position: absolute; top: 12px; right: 12px; z-index: 1; }
+/* QA round 1 (A11Y-16): a white halo under the teal ring, so the ring reads against white on both sides over any photo.
+   fix-2: 12 px (was 9, whose anti-aliased edge sat 2.5 px past the ring, where the right side still read 2.90:1) */
+.hero__toggle:focus-visible { box-shadow: inset 0 0 0 2px var(--navy-700), 0 0 0 12px var(--paper); }
+@media (min-width: 1024px) and (max-height: 820px) {
+  .frame__clip { max-height: calc(100svh - var(--chrome-h) - 150px); }
+
+  .protrude--glasses { width: clamp(170px, 17vw, 260px); left: -22%; bottom: 18%; }
+}
+/* QA round 1 (LAYOUT-14): in the short-desktop mode at 1024-1199 the glasses sit further right, clear of the statement
+   (their box came within 0-1.5 px of "Comprehensive", and overlapped it at 1024x600) */
+@media (min-width: 1024px) and (max-width: 1199px) and (max-height: 820px) { .protrude--glasses { left: -13%; } }
+/* fix-2 (LAYOUT-14 at a larger browser font): the statement grows with the font setting up to its column, the glasses
+   do not; they move right by 5 px for each px the root font is above 16 (nothing at the default 16 px). The verifier's
+   clearance (glasses box to the "Comprehensive", "Eye Care" and CTA boxes) at 13 sizes from 800 to 1920 px, worst per
+   Chrome font 16 / 20 / 24 / 32: -4.3 / -4.3 / -9.7 / -52.5 px before, 19 / 39 / 59 / 27.5 px with this rule and the
+   1024-1199 offset above (the spec's 12) */
+@media (min-width: 769px) { .protrude--glasses { translate: max(0px, (1rem - 16px) * 5) 0; } }
+@media (max-width: 768px) {
+  .hero { padding-top: 22px; }
+  .hero__grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .hero__statement { margin-bottom: 20px; }
+  .frame__clip { max-height: none; }
+  .hero__light { height: 58%; bottom: 0; mask-image: var(--mask-light-phone); }
+  .protrude--glasses { width: min(48%, 250px); left: 1%; bottom: max(-11%, -40px); }
+}
+
+/* intro card (B.5): the h1, straddling the hero bank */
+.intro { position: relative; margin-top: calc(-1 * var(--hero-tuck)); padding-bottom: clamp(64px, 8vw, 104px); }
+.intro__card { max-width: 980px; margin-inline: auto; padding: clamp(28px, 4.2vw, 58px) clamp(22px, 5vw, 72px); }
+.intro__title { font-size: var(--step-3); }
+.intro__title + .intro__text { margin-top: 18px; }
+.intro__text { font-size: var(--step-1); line-height: 1.6; color: var(--ink-700); }
+@media (min-width: 1024px) and (max-height: 820px) { .intro__card { padding-top: 30px; padding-inline: 48px; } }
+@media (max-width: 768px) { .intro__text { font-size: var(--step-0); } }
+/* Mobile optimisation (M-LAYOUT-5, operator option 4b, fixer D1): on short screens the home h1 ended below the first
+   screen (bottom 784 px at 375x667, 731 at 320x568, 614 at 844x390, 991 at 667x375). Short portrait phones (768 px wide
+   and 740 px tall or less) take a height-aware hero, as the short desktop does (2.4, U1): a tighter hero (padding 14 px,
+   no copy padding, statement 14 px, gap 16 px, --hero-gap 28 px, the intro card's top padding 20 px), and the photo's
+   frame capped at the height the screen leaves: 100svh less the chrome (--chrome-h), the two-line statement
+   (1.96 x --display), the h1 card's two lines (3.1vw) and the rest of the stack with a 10 px margin (234 px), never under
+   110 px. The frame keeps its width, so the photo is cropped wider (cover; 4:3 down to about 2.6:1, the shop's middle
+   band: windows, frame walls, desks). The glasses scale with that frame (95 % of its height at most) and drop at most
+   22 px below it, so they keep 6 px from the CTA (with their 44 px parallax) and from the h1. Taller phones (360x800,
+   390x844, 412x915, 430x932) never match: unchanged */
+@media (max-width: 768px) and (max-height: 740px) {
+  .hero { padding-top: 14px; --hero-gap: 28px; --frame-h: max(110px, calc(100svh - var(--chrome-h) - 1.96 * var(--display) - 3.1vw - 234px)); }
+  .hero__copy { padding-block: 0; }
+  .hero__statement { margin-bottom: 14px; }
+  .hero__grid { gap: 16px; }
+  .frame__clip { max-height: var(--frame-h); }
+  .protrude--glasses { width: min(48%, 250px, calc(var(--frame-h) * .95)); bottom: max(-11%, -22px); }
+  .intro__card { padding-top: 20px; }
+}
+/* M-LAYOUT-5, landscape phones (1023 px wide and 480 px tall or less): the copy and the photo side by side (the 769-1023
+   px hero, also at 667x375), the photo stretched to the copy's height (about 146-158 px) and at most 380 px wide (so
+   never wider than about 2.6:1), a tight stack (padding 8 px, --hero-gap 8 px, statement 12 px, the intro card's top
+   padding 20 px), and the glasses across the frame's left edge at 22 % from its bottom, as in the short desktop
+   (B.4: the corner placement cannot hold when the intro card starts under the frame), 104 px wide */
+@media (max-width: 1023px) and (max-height: 480px) and (orientation: landscape) {
+  .hero { padding-top: 8px; --hero-gap: 8px; }
+  .hero__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 48px; }
+  .hero__copy { padding-block: 0; }
+  .hero__statement { margin-bottom: 12px; }
+  .hero__frame { align-self: stretch; width: 100%; max-width: 380px; justify-self: end; }
+  .frame__clip { aspect-ratio: auto; height: 100%; max-height: none; }
+  .protrude--glasses { width: 104px; left: -34px; bottom: 22%; }
+  .intro__card { padding-top: 20px; }
+}
+
+/* Envision promo and services (B.6) */
+.services {
+  position: relative;
+  container-type: inline-size;
+  padding-bottom: clamp(196px, 17.5vw, 250px);
+  --promo-w: min(100cqw - 2 * var(--gutter), 1040px);
+  --promo-h: calc(var(--promo-w) / 2.668);
+}
+.services__band {
+  position: absolute; left: 0; right: 0; bottom: 0; top: calc(var(--promo-h) * .5);
+  background-image: var(--band-services);
+  border-radius: 50% 50% 0 0 / var(--band-radius) var(--band-radius) 0 0;
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
+
+  mask-image: var(--mask-fade-bottom);
+}
+.services__band::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background-image: var(--band-services-dusk); opacity: calc(var(--p, 0) * .55);
+}
+.promo { position: relative; width: var(--promo-w); margin: 0 auto clamp(56px, 7vw, 90px); }
+.promo figure { margin: 0; }
+.promo .fig__media {
+  position: relative; display: block; overflow: hidden; border-radius: var(--r-l); background: var(--lav-300);
+  box-shadow: var(--sh-3); transition: transform 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+}
+.promo .fig__media a { display: block; border-radius: inherit; }
+.promo img { display: block; width: 100%; height: auto; aspect-ratio: 1366 / 512; object-fit: contain; transition: scale 700ms var(--ease-out); }
+.promo:is(:hover, :focus-within) .fig__media { transform: translateY(var(--lift-promo)); box-shadow: 0 0 0 4px var(--ring-promo), var(--sh-4); }
+.promo:is(:hover, :focus-within) img { scale: var(--zoom-promo); }
+/* QA round 1 (LAYOUT-9, A11Y-1): the ring is drawn by the media box, outside its own overflow clip; on the link (inside
+   the clip, under the 1.04 zoom) it was never painted */
+.promo a:focus-visible { outline: none; }
+.promo .fig__media:has(a:focus-visible) { outline: 3px solid var(--navy-700); outline-offset: 5px; }
+.cards { display: grid; gap: clamp(20px, 2.2vw, 30px); margin: calc(var(--svc-break) + 16px) 0 0; padding: 0; list-style: none; }
+.cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1199px) { .cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: calc(var(--svc-break) + 16px); } }
+@media (max-width: 768px) { .cards--4 { grid-template-columns: minmax(0, 1fr); } }
+.card { display: flex; flex-direction: column; padding: 0 var(--card-pad) var(--card-pad); }
+.card__media { margin: calc(-1 * var(--svc-break)) 0 20px; aspect-ratio: 5 / 4; border-radius: var(--r-m); box-shadow: var(--sh-2); }
+.card__title { margin: 0 0 10px; font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.25; }
+.card__text { font-size: 1rem; line-height: 1.6; }
+.card__text a { position: relative; z-index: 2; }
+
+.card__link {
+  color: var(--navy-700); text-decoration: none;
+  background: linear-gradient(var(--teal-700), var(--teal-700)) 0 100% / 0 2px no-repeat;
+  transition: background-size var(--dur-underline) var(--ease-out), color var(--dur-fast);
+}
+.card__link::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.card__link:focus-visible { outline: none; }
+[data-tilt] :is(.frame, .card__media, .member__photo, .childcard__media) { pointer-events: none; }
+[data-tilt]:not(.rv):is(:hover, :focus-within) .card__link { background-size: 100% 2px; color: var(--navy-900); }
+[data-tilt]:has(:focus-visible) { outline: 3px solid var(--teal-700); outline-offset: 4px; }
+/* QA round 1 (A11Y-17, fix-2): a card's own outline is painted before its positioned children, so the breakout photo
+   (pl-break, z-index 4) covered the ring's top edge (2.7-4.6 % of it painted). The same ring (offset 4, width 3, the
+   outline's corner radius) is drawn again above the photo; the outline stays for its geometry and forced colours.
+   inset -8px: the pseudo-element is placed from the card's padding box, 1 px inside its border (every [data-tilt] host
+   is a .surface with a 1 px border), so the ring lands exactly on the outline (4-7 px out) */
+[data-tilt]:has(:focus-visible)::after {
+  content: ""; position: absolute; inset: -8px; z-index: 6; pointer-events: none;
+  border: 3px solid var(--teal-700); border-radius: calc(var(--r-l) + 7px);
+  /* white on both sides of the ring (outside 4 px; inside the whole 4 px gap to the card's edge), so where it crosses the
+     photo it still reads against white (5.57:1); over the page's light ground the white is not seen */
+  box-shadow: 0 0 0 4px var(--paper), inset 0 0 0 4px var(--paper);
+}
+[data-tilt]:not(.rv):is(:hover, :focus-within) .frame img { scale: var(--zoom); }
+.surface--glass[data-tilt]:not(.rv):is(:hover, :focus-within) { box-shadow: inset 0 1px 0 var(--glass-highlight), var(--sh-3); }
+:is(.surface--paper, .surface--frost)[data-tilt]:not(.rv):is(:hover, :focus-within) { box-shadow: var(--sh-3); }
+/* Mobile optimisation (M-TOUCH-4, the card after Back): on a touch phone (no hover, below 1024 px) a tapped card keeps
+   :hover and its link keeps focus, so after tap, navigate and Back (the back-forward cache) the card came back in its
+   hover / focus look: underlined title, zoomed photo, deeper shadow (and, motion.css, lifted 7 px with its glare). There
+   a card rests as it did before the tap unless focus inside it is keyboard focus (:focus-visible), which keeps the
+   designed focus state (DESIGN-SPEC 6.4). The values are the cards' rest values (.card__link, .frame img, the surfaces) */
+@media (hover: none) and (max-width: 1023px) {
+  [data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible)) .card__link { background-size: 0 2px; color: var(--navy-700); }
+  [data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible)) .frame img { scale: none; }
+  .surface--glass[data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible)) { box-shadow: inset 0 1px 0 var(--glass-highlight), var(--sh-2); }
+  :is(.surface--paper, .surface--frost)[data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible)) { box-shadow: var(--sh-1); }
+}
+
+/* Alumier band (B.7) */
+.alumier { position: relative; margin-top: calc(-1 * var(--al-overlap)); padding-bottom: clamp(70px, 8vw, 110px); }
+.alumier__card {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 430px);
+  min-height: clamp(320px, 31vw, 420px); overflow: hidden; border-radius: var(--r-xl);
+  background: var(--ground); box-shadow: var(--sh-3);
+}
+.alumier__bg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; }
+.alumier__panel {
+  grid-column: 2; align-self: end;
+  margin: clamp(86px, 8vw, 104px) clamp(18px, 2.6vw, 36px) clamp(18px, 2.6vw, 36px) 0;
+  padding: clamp(24px, 2.6vw, 34px);
+}
+.alumier__logo { width: min(250px, 80%); height: auto; margin-bottom: 14px; }
+.alumier__line { margin-bottom: 18px; color: var(--ink-900); font-size: var(--step-1); font-weight: var(--fw-ui); }
+@media (min-width: 769px) and (max-width: 1199px) { .alumier__card { grid-template-columns: minmax(0, 1fr) minmax(0, 380px); } }
+@media (max-width: 768px) {
+  .alumier__card { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .alumier__bg { position: relative; inset: auto; height: auto; aspect-ratio: 1440 / 675; }
+  .alumier__panel {
+    grid-column: 1; margin: 0; border: 0; border-radius: 0; box-shadow: none;
+    background-image: none; background-color: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+}
+
+/* two callouts (B.9) */
+.callouts { position: relative; padding-bottom: clamp(30px, 4vw, 50px); }
+.callouts:has(.protrude--kids) { padding-bottom: 40px; }
+.callouts__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
+.callouts__cell { position: relative; display: flex; min-width: 0; }
+.callout { flex: 1; display: flex; flex-direction: column; min-width: 0; padding: clamp(24px, 3vw, 40px); }
+.callout__title { font-size: var(--step-2); font-weight: var(--fw-strong); }
+.callout__title + .callout__text { margin-top: 16px; }
+.callout__text { flex: 1; }
+.callout__media { aspect-ratio: 640 / 240; margin-top: 22px; border-radius: var(--r-m); }
+.protrude--kids { right: 5%; bottom: -48px; width: clamp(150px, 15vw, 210px); rotate: 6deg; filter: var(--sh-fore); }
+@media (max-width: 768px) {
+  .callouts__grid { grid-template-columns: minmax(0, 1fr); }
+  .callouts__grid:has(.protrude--kids) { row-gap: calc(32px + 44px + 20px); }
+  .protrude--kids { bottom: -32px; }
+}
+
+/* doctor blocks and the portrait placeholder (B.10) */
+.doctor { position: relative; padding-block: clamp(64px, 8vw, 116px); }
+.doctor__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: center; gap: clamp(32px, 6vw, 96px); }
+.doctor__grid--flip > .doctor__portrait { order: 2; }
+.doctor__portrait { position: relative; width: 100%; max-width: 470px; justify-self: center; aspect-ratio: 1 / 1.04; }
+.doctor__plate {
+  position: absolute; left: 0; bottom: 0; width: 76%; height: 76%;
+  border-radius: var(--r-xl); background-image: var(--plate-fill); box-shadow: var(--sh-1);
+}
+.doctor__photo { position: absolute; right: 0; top: 0; width: 84%; aspect-ratio: 1; border-radius: var(--r-xl); box-shadow: var(--sh-4); }
+.doctor__grid--flip .doctor__plate { left: auto; right: 0; }
+.doctor__grid--flip .doctor__photo { right: auto; left: 0; }
+.doctor__text { padding: clamp(26px, 3.4vw, 48px); }
+/* Mobile optimisation (M-LAYOUT-2): below 360 px 'Meet Our Optometrist' broke onto two lines; a 20 px inset keeps it on one */
+@media (max-width: 359px) { .doctor__text { padding-inline: 20px; } }
+.doctor__tag { margin: 0 0 6px; color: var(--teal-700); font-size: 0.9375rem; font-weight: var(--fw-strong); line-height: 1.3; letter-spacing: .02em; }
+.doctor__tag a { display: inline-flex; align-items: center; min-height: 44px; color: var(--teal-700); text-underline-offset: .2em; }
+.doctor__tag a:is(:hover, :focus-visible) { color: var(--teal-800); text-decoration-thickness: 2px; }
+.doctor__prose h2:not([class]) { font-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.2rem); }
+.doctor__text > .btn, .doctor__text > .member__more { margin-top: 22px; }
+@media (min-width: 1024px) {
+  .doctor__grid { align-items: start; }
+  .doctor__portrait { position: sticky; top: calc(var(--navbar-h) + 24px); }
+}
+@media (max-width: 768px) {
+  .doctor__grid, .doctor__grid--flip { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .doctor__grid--flip > .doctor__portrait { order: 0; }
+  .doctor__portrait { width: 86%; max-width: 360px; }
+}
+/* Mobile optimisation (M-LAYOUT-11): on /our-eye-doctors/ the three doctor blocks share one band, and each kept its
+   section padding (64 px top and bottom on phones), so stacked they left 152 px between one doctor's text and the next
+   portrait (34 px inside a block): three section breaks on one page. Up to 768 px a doctor block inside a band pads 24 px;
+   the home's doctor sections are not band children and keep theirs. Fixer D1: widened to 1023 px, where the blocks sit
+   side by side and kept 202-219 px between them (fixer C's measured 1023 px candidate, 79-124 px); 1024 px and up keep
+   the section padding */
+@media (max-width: 1023px) { .band__inner > .doctor { padding-block: 24px; } }
+
+.ph-portrait { container-type: inline-size; background-image: var(--portrait-fill); }
+.titleband__frame > .ph-portrait { position: absolute; inset: 0; }
+.ph-portrait__ring {
+  position: absolute; left: 50%; top: 40%; width: 56%; aspect-ratio: 1; translate: -50% -50%;
+  border-radius: 50%; background-image: var(--iris-ring); opacity: .85;
+  mask-image: var(--iris-segments), radial-gradient(closest-side, transparent calc(100% - 7cqi), var(--mask) calc(100% - 7cqi + 1px), var(--mask) calc(100% - 4.4cqi), transparent calc(100% - 4.4cqi + 1px), transparent calc(100% - 3.6cqi), var(--mask) calc(100% - 3.6cqi + 1px), var(--mask) calc(100% - 1px), transparent);
+  mask-composite: intersect;
+}
+.ph-portrait__mono { position: absolute; left: 50%; top: 40%; translate: -50% -50%; line-height: 1; white-space: nowrap; }
+.ph-portrait__mono::before {
+  content: attr(data-initials);
+  color: var(--navy-700); font-size: clamp(30px, 22cqi, 110px); font-weight: 300; letter-spacing: -.04em;
+}
+.ph-portrait__name {
+  position: absolute; left: 8%; right: 8%; bottom: 7%; margin-inline: auto; max-width: 16ch; text-align: center; color: var(--navy-700);
+  font-size: clamp(11px, 3.6cqi, 14px); font-weight: var(--fw-strong); line-height: 1.35;
+  letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* lavender trio (B.11) */
+.lavender { position: relative; margin-top: clamp(120px, 13vw, 168px); padding-bottom: clamp(56px, 7vw, 96px); color: var(--ink-900); }
+.lavender::before, .lavender::after, .band--lav::before, .band--lav::after {
+  content: ""; position: absolute; inset: calc(-1 * var(--bank-h) + 1px) 0 0; z-index: -1; pointer-events: none;
+  mask: var(--img-bank-up) 0 0 / 100% var(--bank-h) no-repeat, linear-gradient(var(--mask), var(--mask)) 0 calc(var(--bank-h) - 1px) / 100% 100% no-repeat;
+}
+.lavender::before, .band--lav::before { background: var(--lav-300); }
+.lavender::after, .band--lav::after { background: var(--band-lav-dusk); opacity: calc(var(--p, 0) * .55); }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(22px, 3vw, 44px); margin: 0; padding: 0; list-style: none; }
+.trio__item { text-align: center; }
+.trio__photo {
+  width: min(236px, 74%); aspect-ratio: 1; margin: calc(-1 * min(118px, 37%)) auto 24px;
+  border-radius: 50%; box-shadow: 0 0 0 7px var(--photo-ring), var(--sh-3);
+}
+.trio__photo::after { border-radius: 50%; }
+.trio__title { margin: 0 0 6px; font-size: var(--step-2); font-weight: var(--fw-strong); }
+.trio__title a {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+  color: var(--navy-700); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em;
+  transition: color var(--dur-fast);
+}
+.trio__item:is(:hover, :focus-within) .trio__title a { color: var(--navy-900); text-decoration-thickness: 2px; }
+.trio__item:is(:hover, :focus-within) .trio__photo img { scale: var(--zoom); }
+
+.trio__copy { max-width: 34ch; margin-inline: auto; text-align: left; color: var(--ink-900); }
+@media (max-width: 768px) {
+  .trio { grid-template-columns: minmax(0, 1fr); row-gap: 44px; }
+  .trio__photo { width: min(220px, 62%); }
+  .trio__item + .trio__item .trio__photo { margin-top: 0; }
+}
+
+/* designer frames (B.12) */
+.frames { position: relative; padding-block: clamp(80px, 9vw, 130px) clamp(70px, 8vw, 110px); }
+.frames__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 5vw, 80px); }
+.frames__copy > * + * { margin-top: 1em; }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); margin: 0; padding: 0 0 42px; list-style: none; }
+.tile { --base: 0px; transform: translateY(var(--base)); }
+.tile:nth-child(even) { --base: 42px; }
+.tile__media { aspect-ratio: 1; border-radius: var(--r-l); box-shadow: var(--sh-2); }
+.tile figcaption { margin-top: 12px; color: var(--navy-700); font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.3; }
+.ph-brand { display: grid; place-items: center; background-image: var(--brand-cell-fill); }
+.ph-brand__name { color: var(--navy-700); font-size: clamp(2.2rem, 1.6rem + 2.2vw, 3.4rem); font-weight: 300; line-height: 1; letter-spacing: -.02em; }
+@media (max-width: 768px) {
+  .frames__grid { grid-template-columns: minmax(0, 1fr); }
+  .tile:nth-child(even) { --base: 24px; }
+  .tiles { padding-bottom: 24px; }
+}
+
+/* cataract (B.13) */
+.cataract { position: relative; padding-top: clamp(40px, 5vw, 70px); }
+.cataract__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; gap: clamp(28px, 5vw, 80px); }
+.cataract__text { padding: clamp(26px, 3.4vw, 48px); }
+.cataract__lens {
+  position: relative; align-self: end; aspect-ratio: 4 / 5; margin-bottom: calc(-1 * var(--lens-cross));
+  border-radius: var(--r-arch); background: var(--tint-teal); box-shadow: var(--sh-4); pointer-events: none;
+}
+@media (max-width: 768px) {
+  .cataract__grid { grid-template-columns: minmax(0, 1fr); }
+  .cataract__lens { width: min(300px, 72%); justify-self: end; }
+}
+/* Mobile optimisation (M-LOOK-3): the card's first paragraph opens with a <br> (model HTML, kept in the DOM, DESIGN-SPEC
+   3.22), an empty line that doubled the heading-to-text gap (54 px against the sibling cards' 18); below 1024 px it is
+   not drawn */
+@media (max-width: 1023px) { .cataract__copy > p:first-child > br:first-child { display: none; } }
+
+/* Eye Emergencies (B.14) */
+.emergency { position: relative; padding-block: calc(var(--lens-cross) + 48px + 26px) clamp(64px, 7vw, 100px); }
+.emergency::before, .emergency::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border-radius: var(--band-radius) var(--band-radius) 0 0;
+}
+.emergency::before { background-image: var(--band-sky); }
+.emergency::after { background-image: var(--band-sky-dusk); opacity: calc(var(--p, 0) * .55); }
+.emergency__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); align-items: center; gap: clamp(28px, 5vw, 80px); }
+.emergency__photo { position: relative; order: -1; }
+.emergency__photo figure { margin: 0; }
+.emergency__photo .fig__media {
+  display: block; overflow: hidden; aspect-ratio: 1; border-radius: var(--r-xl); background: var(--tint-teal); box-shadow: var(--sh-4);
+}
+.emergency__photo img { width: 100%; height: 100%; object-fit: cover; }
+.emergency__copy a[href^="tel:"] { font-weight: var(--fw-strong); white-space: nowrap; }
+@media (max-width: 768px) {
+  .emergency { padding-top: 140px; }
+  .emergency__grid { grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+  .emergency__photo { order: 0; width: min(420px, 100%); }
+}
+
+/* reviews carousel (B.15) */
+.reviews { position: relative; padding-block: clamp(50px, 6vw, 90px) clamp(70px, 8vw, 120px); }
+/* fix-2 (MOTION-5): photo and panel top-aligned (they were centred on each other, so a taller slide moved the panel's top,
+   and its dots and CTA with it, up by half its growth: 27.7 px at 1280x585) */
+.reviews__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+.reviews__photo { grid-column: 1; grid-row: 1; position: relative; }
+.reviews__photo figure { margin: 0; }
+.reviews__photo .fig__media { display: block; overflow: hidden; aspect-ratio: 1; border-radius: var(--r-xl); background: var(--tint-teal); box-shadow: var(--sh-2); }
+.reviews__photo img { width: 100%; height: 100%; object-fit: cover; }
+.reviews__panel { grid-column: 2; grid-row: 1; min-width: 0; margin-left: calc(-1 * clamp(56px, 8vw, 132px)); padding: clamp(26px, 3.6vw, 50px); }
+.reviews__title { margin-bottom: 0; }
+.carousel { margin: 20px 0 0; }   /* fix-2 (MOTION-5): 22 px at the bottom spaced the CTA that followed; the CTA is in the bar now */
+.carousel__track {
+  display: flex; align-items: flex-start; overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; border-radius: 14px;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track:focus-visible { outline-offset: 4px; }
+.review { flex: 0 0 100%; min-width: 0; margin: 0; padding: 2px 2px 4px; scroll-snap-align: start; }
+/* Mobile optimisation (MT-R3): one quick swipe or flick on a phone skipped a review (2 slides in 2 of 3 flicks at 390 and
+   360 px); every review is a stop for a swipe below 1024 px. In Chrome's touch emulation this removed most skips at
+   swipe speeds a hand reaches, not every skip of a much faster synthetic fling (BUILD-NOTES 15.2) */
+@media (max-width: 1023px) { .review { scroll-snap-stop: always; } }
+.review__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-bottom: 10px; color: var(--ink-700); font-size: var(--step--1); }
+.stars { display: inline-flex; gap: 2px; color: var(--teal-700); }
+.stars svg { width: 18px; height: 18px; }
+.review__quote { color: var(--ink-900); font-size: var(--step-1); line-height: 1.55; }
+.review__name { margin-top: 10px; color: var(--navy-700); font-weight: var(--fw-strong); }
+.carousel__dots { display: flex; flex-wrap: wrap; gap: 4px; margin: -8px 0 6px; }   /* QA round 1 (MOTION-5): above the track */
+/* fix-2 (MOTION-5): the dots and the CTA share one bar above the track; it wraps (dots, then the CTA) where the panel is narrow */
+.carousel__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin: -8px 0 10px; }
+.carousel__bar .carousel__dots { margin: 0; }
+.carousel__dot { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: none; }
+.carousel__dot::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--dot-idle); transition: transform 300ms var(--ease-out), background-color 300ms; }
+.carousel__dot[aria-current="true"]::before { background: var(--teal-700); transform: scale(1.35); }
+/* M-TOUCH-4 (the split described above .roundbtn--navy): the tapped current dot painted the hover navy, not the current teal */
+.carousel__dot:focus-visible::before { background: var(--navy-700); }
+@media (hover: hover), (min-width: 1024px) { .carousel__dot:hover::before { background: var(--navy-700); } }
+@media (max-width: 768px) {
+  .reviews__grid { grid-template-columns: minmax(0, 1fr); }
+  .reviews__photo { width: 78%; }
+  .reviews__panel { grid-column: 1; grid-row: 2; margin: -90px 0 0; }
+}
+/* Mobile optimisation (M-LAYOUT-4 = M-LOOK-7, M-LAYOUT-2): below 360 px the panel's 26 px inset left the bar 234 px for
+   five 44 px dots 4 px apart (236 px: the fifth dot alone on a second row) and for the 238 px "Read Google Reviews" pill
+   (its label on two lines). A 20 px inset gives 246 px: one row of whole 44x44 targets and a one-line label */
+@media (max-width: 359px) { .reviews__panel { padding-inline: 20px; } }
+
+/* insurance band (B.17) */
+.insurance { position: relative; padding-block: clamp(64px, 8vw, 110px); color: var(--ink-900); }
+.insurance::before, .insurance::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.insurance::before { background: var(--lav-300); }
+.insurance::after { background: var(--band-lav-dusk); opacity: calc(var(--p, 0) * .55); }
+.insurance__inner { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+.insurance__title { margin: 0; }
+.insurance__copy { margin-top: 22px; color: var(--ink-900); }
+.insurance__copy > * + * { margin-top: 1em; }
+.insurance__cta { margin-top: 26px; }
+@media (min-width: 1024px) {
+  .insurance__inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas: "title copy" "cta copy";
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(32px, 5vw, 80px);
+  }
+  .insurance__title { grid-area: title; }
+  .insurance__copy { grid-area: copy; margin-top: 0; }
+  .insurance__cta { grid-area: cta; }
+}
+
+/* news and post cards (B.18, B.28) */
+.news { position: relative; padding-block: clamp(70px, 8vw, 120px) clamp(90px, 10vw, 150px); }
+.posts { display: grid; gap: clamp(18px, 2vw, 28px); margin: clamp(30px, 4vw, 52px) 0 0; padding: 0; list-style: none; }
+.posts--grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.posts--summary, .posts--list { grid-template-columns: minmax(0, 1fr); margin-top: 0; }
+@media (max-width: 1199px) { .posts--grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .posts--grid { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 1024px) { .posts--summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.post {
+  display: flex; flex-direction: column; padding: var(--card-pad);
+  background-image: var(--post-rule); background-repeat: no-repeat; background-size: 100% 3px; background-position: top left;
+}
+.post__date { margin: 0 0 10px; color: var(--teal-700); font-size: var(--step--1); font-weight: var(--fw-strong); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; }
+.post__title { margin: 0 0 12px; font-size: 1.15rem; font-weight: var(--fw-strong); line-height: 1.3; }
+.post__excerpt { color: var(--ink-700); font-size: 0.96875rem; line-height: 1.55; }
+.post__more { margin-top: auto; padding-top: 12px; }
+
+/* footer (B.19): the river settles into the deep aurora */
+.site-footer { position: relative; padding-top: clamp(110px, 11vw, 150px); color: var(--on-dark); }
+.site-footer.aurora-deep { background: none; }
+.site-footer::before, .site-footer::after {
+  content: ""; position: absolute; inset: calc(-1 * var(--bank-h) + 1px) 0 0; z-index: -1; pointer-events: none;
+  mask: var(--img-bank-up) 0 0 / 100% var(--bank-h) no-repeat, linear-gradient(var(--mask), var(--mask)) 0 calc(var(--bank-h) - 1px) / 100% 100% no-repeat;
+}
+.site-footer::before { background-color: var(--navy-950); background-image: var(--aurora-deep); }
+.site-footer::after { background-image: var(--aurora-deep-rise); opacity: calc(var(--p, 0) * .55); }
+.footer__grid {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 5fr); align-items: start;
+  gap: clamp(28px, 4vw, 64px); padding-bottom: clamp(40px, 5vw, 64px);
+}
+.footer__menu ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.footer__menu a {
+  display: inline-flex; align-items: center; min-height: 44px; color: var(--on-dark); font-weight: var(--fw-strong); text-decoration: none;
+  background: linear-gradient(var(--teal-200), var(--teal-200)) 0 calc(100% - 8px) / 0 2px no-repeat;
+  transition: background-size var(--dur-underline) var(--ease-out), color var(--dur-fast);
+}
+.footer__menu a:is(:hover, :focus-visible) { background-size: 100% 2px; color: var(--teal-200); }
+.footer__social { display: grid; justify-items: start; gap: 22px; }
+.social { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.social__link {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--teal-700); color: var(--on-dark);
+  transition: transform 300ms var(--ease-out), background-color 300ms, box-shadow 300ms;
+}
+.social__link svg { width: 18px; height: 18px; }
+.social__link:is(:hover, :focus-visible) { background: var(--navy-700); color: var(--on-dark); box-shadow: 0 0 0 2px var(--teal-200); }
+@media (hover: hover) { .social__link:hover { transform: translateY(var(--lift-social)); } }
+.social__link:focus-visible { transform: translateY(var(--lift-social)); }
+.side-card .social__link:is(:hover, :focus-visible), .social--prose .social__link:is(:hover, :focus-visible) { box-shadow: 0 0 0 2px var(--navy-700); }
+.footer__financing a {
+  display: inline-flex; align-items: center; min-height: 44px; color: var(--teal-200); font-weight: var(--fw-strong);
+  text-decoration: underline; text-decoration-color: var(--link-line-light); text-underline-offset: .2em;
+}
+.footer__financing a:is(:hover, :focus-visible) { color: var(--on-dark); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.footer__nap { color: var(--navy-100); line-height: 1.7; overflow-wrap: anywhere; }
+.footer__nap strong { color: var(--on-dark); }
+.footer__nap a { color: var(--teal-200); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.footer__nap a:is(:hover, :focus-visible) { color: var(--on-dark); }
+.legal { position: relative; z-index: 2; border-top: 1px solid var(--line-on-dark); background: var(--legal-ground); }
+.legal__inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px;
+  min-height: 64px; padding-block: 8px; color: var(--navy-100); font-size: var(--step--1);
+}
+.legal ul { display: flex; flex-wrap: wrap; gap: 0 4px; margin: 0; padding: 0; list-style: none; }
+.legal a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--navy-100); text-decoration: none; }
+.legal a:is(:hover, :focus-visible) { color: var(--teal-200); text-decoration: underline; }
+@media (max-width: 1199px) {
+  .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer__nap { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .footer__grid { grid-template-columns: minmax(0, 1fr); }
+  .legal__inner { justify-content: center; text-align: center; }
+  /* Mobile optimisation (M-LOOK-10): below about 340 px the four legal links wrap, and the list's own rows started at its
+     left edge (offsets -28 and -103 px from the centred '© 2026' at 320); they are centred like the line above. From 360 px
+     the list holds one row, shrink-wrapped and centred by .legal__inner, so nothing moves there */
+  .legal ul { justify-content: center; }
+}
+
+/* breadcrumbs (B.20) */
+.crumbs { margin: 0 0 6px; color: var(--ink-900); font-size: 0.9375rem; line-height: 1.35; }
+.crumbs ol { display: flex; flex-wrap: wrap; align-items: center; margin: 0; padding: 0; list-style: none; }
+.crumbs li { display: inline-flex; align-items: center; min-width: 0; }
+.crumbs a {
+  display: inline-flex; align-items: center; min-height: 44px; color: var(--teal-700);
+  text-decoration: underline; text-decoration-color: var(--link-line); text-underline-offset: .2em;
+  transition: color var(--dur-fast), text-decoration-color var(--dur-fast);
+}
+.crumbs a:is(:hover, :focus-visible) { color: var(--teal-800); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.crumbs__sep { white-space: pre; color: var(--ink-600); }
+.crumbs [aria-current="page"] { color: var(--ink-900); }
+
+/* interior title band (B.21) */
+.titleband { position: relative; padding: clamp(36px, 6vh, 70px) 0 var(--tb-pad-bottom); background-image: var(--titleband-wash); }
+.titleband .hero__light { bottom: 0; height: 100%; opacity: .42; }
+.titleband__grid { display: grid; grid-template-columns: minmax(0, 1fr) var(--arch-w); align-items: end; gap: clamp(26px, 3.6vw, 56px); }
+.page-team-member { --arch-w: var(--arch-w-portrait); }
+.titleband__pane { padding: clamp(24px, 3.4vw, 46px); }
+#page-title { font-size: var(--h1-band); line-height: var(--lh-band); letter-spacing: var(--ls-band); overflow-wrap: break-word; }
+#page-title.h1--long { font-size: min(var(--h1-band), var(--h1-cap-long)); }
+#page-title.h1--xlong { font-size: min(var(--h1-band), var(--h1-cap-xlong)); }
+.titleband__date { margin-top: 14px; color: var(--teal-700); font-size: var(--step--1); font-weight: var(--fw-strong); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; }
+.titleband__pane > .chip { margin-top: 14px; }
+
+.titleband__frame {
+  position: relative; aspect-ratio: 4 / 5; margin-bottom: calc(-1 * (var(--tb-pad-bottom) + var(--arch-cross)));
+  border-radius: var(--r-arch); background: var(--tint-teal); box-shadow: var(--sh-4);
+}
+.titleband__frame > img { position: absolute; left: 0; top: -6%; width: 100%; height: 112%; max-width: none; object-fit: cover; object-position: var(--obj-pos, 50% 50%); }
+@media (min-width: 1024px) and (max-height: 820px) {
+  .titleband { padding-top: 16px; }
+  .titleband__pane { padding: 20px 28px; }
+}
+@media (max-width: 1023px) {
+
+  .titleband__grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .titleband__frame { width: min(30%, 200px); justify-self: end; margin-bottom: calc(-1 * (var(--tb-pad-bottom) + min(30%, 200px) * .625)); }
+}
+@media (max-width: 768px) {
+  .titleband { padding-top: 14px; --tb-pad-bottom: 48px; }
+  .titleband__grid { gap: 14px; }
+  .titleband__pane { padding: 18px; }
+  #page-title.h1--xlong { font-size: 1.75rem; }   /* 2.3 target: 5 lines at most at 390 (the 2rem floor of --h1-band would give 6) */
+  .titleband__frame { width: min(38%, 150px); margin-bottom: calc(-1 * (var(--tb-pad-bottom) + min(38%, 150px) * .625)); }
+}
+/* Mobile optimisation (M-LAYOUT-10): at 320 px the two longest post titles (90 and 91 characters) ran 6 lines at 1.75rem
+   against DESIGN-SPEC 2.3's 5; below 360 px an xlong title is 1.5rem (5 lines; 360 px and up unchanged) */
+@media (max-width: 359px) { #page-title.h1--xlong { font-size: 1.5rem; } }
+/* Mobile optimisation (M-LOOK-14, operator option 6b, fixer D1): at the band's phone breakpoint (768 px and below) the arch
+   sat 14 px below the full-width pane, so the first screen held an empty band of river beside it. It now rises into the
+   pane's lower-right corner, only into the room the pane leaves free below its text in the arch's columns: the h1's wave
+   rule row and the pane's bottom padding (35-36 px with A-14's 6 px; G5: the h1 keeps its full width and line breaks),
+   34 px; 70 px where a post's date row lies under the h1 (72 px free); 19 px on a team page, whose position chip can
+   reach the arch's columns (20 px free at 320-390 px). It never rises so far that the band's bank passes under the pane
+   (its crest, 8 px below the bank's top, stays below the pane: at 320 px that caps it at 30 px). The band now ends at the
+   arch's middle (no bottom padding), so the arch still overhangs the bank by half its height and the article's reserve
+   is unchanged: the first content starts 14 px plus the rise earlier. 769-1023 px keeps the specified placement (3.21) */
+@media (max-width: 768px) {
+  .titleband:has(.titleband__frame) { --tb-pad-bottom: 0px; }
+  .titleband__frame { margin-top: calc(-14px - min(34px, min(38%, 150px) * .625 - var(--bank-h) + 8px)); }
+  .titleband__grid:has(> .titleband__pane > .titleband__date) > .titleband__frame { margin-top: calc(-14px - min(70px, min(38%, 150px) * .625 - var(--bank-h) + 8px)); }
+  .titleband__grid:has(> .titleband__pane > .chip) > .titleband__frame { margin-top: calc(-14px - min(19px, min(38%, 150px) * .625 - var(--bank-h) + 8px)); }
+}
+
+/* the article frame (C.1, B.22) */
+.layout { position: relative; padding-bottom: clamp(60px, 7vw, 100px); }
+.layout__grid { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: clamp(26px, 3.6vw, 56px); }
+.prose-card { min-width: 0; padding: clamp(40px, 5vw, 70px) clamp(24px, 4vw, 60px) clamp(24px, 4vw, 60px); }
+@media (min-width: 1024px) {
+  .has-aside .layout__grid { grid-template-columns: minmax(0, 1fr) var(--side-w); }
+  /* QA round 1 (LAYOUT-15, fix-2): the card fills its row, so a short article beside the long aside (an empty archive,
+     a short post) ends level with the aside instead of leaving a tall empty column (up to 1,111 px at 1280x585) */
+  .has-aside .prose-card { grid-column: 1; grid-row: 1; align-self: stretch; }
+  .has-aside .sidebar { grid-column: 2; grid-row: 1; }
+  .has-aside .ctaband { grid-column: 1 / -1; grid-row: 2; }
+
+  .titleband:has(.titleband__frame) + .layout .sidebar { margin-top: calc(var(--arch-cross) + 32px); }
+
+  .titleband:has(.titleband__frame) + .band > .band__inner::before {
+    content: ""; float: right; width: var(--arch-w); height: calc(var(--arch-cross) + 32px - var(--space-section));
+    margin-left: clamp(26px, 3.6vw, 56px);
+  }
+}
+@media (max-width: 1023px) {
+  .titleband:has(.titleband__frame) + .layout .prose-card { padding-top: calc(min(30%, 200px) * .625 + 24px); }
+  .titleband:has(.titleband__frame) + .band { padding-top: calc(min(30vw, 200px) * .625 + 24px); }
+}
+@media (max-width: 768px) {
+  .titleband:has(.titleband__frame) + .layout .prose-card { padding-top: calc(min(38%, 150px) * .625 + 24px); }
+  .titleband:has(.titleband__frame) + .band { padding-top: calc(min(38vw, 150px) * .625 + 24px); }
+}
+@media (max-width: 767px) {
+
+  .prose-card { margin-inline: calc(-1 * var(--gutter)); border-inline: 0; border-radius: 0; padding-inline: var(--gutter); }
+}
+
+/* aside and sidebar widgets (B.23) */
+/* QA round 1 (LAYOUT-1): one explicit minmax(0, 1fr) column. The implicit auto column grew to the cards' min-content at
+   large browser font sizes (cards wider than the 300/340 px track, cut by #page's overflow-x: clip) */
+.sidebar { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: start; gap: 20px; min-width: 0; }
+.side-card { padding: 22px; }
+.side-card--loc { align-self: start; }
+.qa-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.qa {
+  display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 18px; border-radius: 14px;
+  background: var(--teal-700); color: var(--on-dark); font-weight: var(--fw-strong); line-height: 1.25; text-decoration: none;
+  transition: transform 300ms var(--ease-out), background-color var(--dur-fast);
+}
+.qa--navy { background: var(--navy-700); }
+.qa:is(:hover, :focus-visible) { background: var(--teal-800); color: var(--on-dark); }
+.qa--navy:is(:hover, :focus-visible) { background: var(--navy-900); }
+.qa:focus-visible { outline-color: var(--navy-700); }
+.qa--navy:focus-visible { outline-color: var(--teal-700); }
+@media (hover: hover) { .qa:hover { transform: translateX(4px); } }
+.qa:focus-visible { transform: translateX(4px); }
+/* Mobile optimisation (M-LAYOUT-2): below 360 px 'Request An Appointment' broke onto two lines in the sidebar's quick
+   actions (12 px short); tighter insets keep it on one line, the 52 px row height unchanged */
+@media (max-width: 359px) { .side-card { padding-inline: 18px; } .qa { padding-inline: 12px; } }
+.side-card .social { margin-top: 16px; }
+.loc__title { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
+.loc__title a, .visit__title a {
+  display: inline-flex; align-items: center; min-height: 44px; color: var(--navy-700);
+  text-decoration: underline; text-decoration-color: var(--link-line-navy); text-underline-offset: .2em;
+}
+.loc__title a:is(:hover, :focus-visible), .visit__title a:is(:hover, :focus-visible) { color: var(--navy-900); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.loc__address { margin-bottom: 12px; }
+.contact { display: grid; gap: 4px; margin: 0 0 12px; padding: 0; list-style: none; font-size: 0.96875rem; }
+.contact strong { color: var(--navy-700); }
+/* Mobile optimisation (M-TOUCH-3, operator option 7b, fixer D2): below 1024 px the phone number of the location card
+   (B.23, 131 pages), of the visit block (F.8, 3 pages) and of the footer NAP (B.19, 149 pages) was a 20-22 px tall inline
+   link. Each now has a 44 px tall hit box: an empty, transparent, absolutely positioned ::after as wide as the number, so
+   no line, box or page height moves and the focus ring still outlines the number (an outline does not take in an
+   out-of-flow child). In the contact rows the box runs 9 px above the number and 15 px below (the visit block's title
+   link can sit 15 px above it, the email link 39 px below). In the footer it ends .15em below the number and takes the
+   rest above, over the paragraph's previous line, because the NAP's next line, the site URL (a link), sits 6.2-6.4 px
+   below the number at 320-412 px; from about 430 px the URL follows on the same line, 8 px to the right, so the box is
+   never wider than the number. nowrap keeps each number on one line: the footer's broke at a hyphen at 433-462 and
+   880-1023 px (and the card's at a 24 px browser font); the whole number now starts the next line, with no change of
+   line count or height. A departure from B.0 rule 1 at these widths (COMPONENTS I.154) */
+@media (max-width: 1023px) {
+  .contact a[href^="tel:"], .footer__nap a[href^="tel:"] { position: relative; white-space: nowrap; }
+  .contact a[href^="tel:"]::after, .footer__nap a[href^="tel:"]::after { content: ""; position: absolute; left: 0; right: 0; height: 44px; }
+  .contact a[href^="tel:"]::after { top: calc(50% - 19px); }
+  .footer__nap a[href^="tel:"]::after { bottom: -.15em; }
+}
+.note { margin: 0 0 14px; color: var(--ink-700); font-size: 0.875rem; line-height: 1.5; }
+.hours { width: 100%; margin: 0 0 16px; font-size: 0.9375rem; }
+.hours th { padding: 6px 8px 6px 0; color: var(--navy-700); font-weight: var(--fw-strong); text-align: left; vertical-align: top; white-space: nowrap; }
+.hours td { padding: 6px 0; text-align: right; vertical-align: top; }
+.hours tr + tr { border-top: 1px solid var(--hairline); }
+/* QA round 1 (wf6, LAYOUT-1): at a large browser font the day and its hours no longer fit side by side in the card (the
+   table needs about 8.3em: 266 px at Chrome font 32, in a 213 px card at 600 px wide, so "PM" ran past the card and was
+   cut). Below 8.5em of the card's own font size the hours stack under their day; at the default font the card is
+   13-17em wide, so nothing changes there */
+.side-card--loc { container-type: inline-size; }
+@container (max-width: 8.5em) {
+  .hours th, .hours td { display: block; padding: 0; text-align: left; }
+  .hours th { padding-top: 6px; }
+  .hours td { padding-bottom: 6px; }
+}
+/* QA round 1 (LAYOUT-1): minmax(0, 1fr) caps the pill at the card, so its label wraps instead of being clipped */
+.mapcard {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr); align-content: end; min-height: 150px; padding: 16px; overflow: hidden;
+  border-radius: var(--r-m); background: var(--map-pattern); box-shadow: inset 0 0 0 1px var(--line-glass-nav);
+  color: var(--navy-700); font-weight: var(--fw-strong); text-decoration: none;
+}
+.mapcard .ico { position: absolute; left: 60%; top: 24%; width: 34px; height: 34px; color: var(--teal-700); }
+.mapcard span {
+  display: inline-flex; align-items: center; gap: 8px; width: max-content; min-height: 44px; padding: 0 14px;
+  /* QA round 1 (wf6, LAYOUT-1 revised): the pill may use the card's 16 px end padding, as it did before the column cap,
+     so at the default font its one-line label still fits at 600-640 px wide (194 px in a 181 px column); a longer label
+     (a larger font) wraps instead of being cut */
+  max-width: calc(100% + 16px);
+  border-radius: var(--r-pill); background: var(--paper); box-shadow: var(--sh-1); transition: color var(--dur-fast);
+  position: relative;   /* QA round 1 (LAYOUT-1): a wrapped label paints over the decorative pin, never under it */
+}
+.mapcard:is(:hover, :focus-visible) span { color: var(--teal-800); text-decoration: underline; text-underline-offset: .2em; }
+.sidebar a:not([class]) {
+  color: var(--link); text-decoration: underline; text-decoration-color: var(--link-underline); text-underline-offset: .18em;
+  overflow-wrap: anywhere; transition: color var(--dur-fast), text-decoration-color var(--dur-fast);
+}
+.sidebar a:not([class]):is(:hover, :focus-visible) { color: var(--link-hover); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.loc__title a:not([class]) { color: var(--navy-700); text-decoration-color: var(--link-line-navy); }
+/* QA round 1 (LAYOUT-8): site.js marks the card .is-tall when it is taller than the space under the stuck navbar; it
+   then scrolls with the page, so its foot (the map pill) is never held below the fold */
+@media (min-width: 1024px) and (min-height: 860px) {
+  .has-aside .sidebar { align-self: stretch; }
+  .side-card--loc:not(.is-tall) { position: sticky; top: calc(var(--navbar-h) + 24px); }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .sidebar { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; align-items: start; }
+}
+
+/* CTA band (B.24) */
+.ctaband { position: relative; padding: clamp(10px, 1.2vw, 16px); border-radius: var(--r-xl); }
+.ctaband__panel {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) auto; align-items: center; gap: 24px 48px;
+  padding: clamp(28px, 4vw, 56px); border-radius: calc(var(--r-xl) - 8px);
+}
+.ctaband__panel:not(:has(.ctaband__text)) { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+.ctaband h2, .ctaband h3 { color: var(--on-dark); font-size: var(--step-3); }
+.ctaband__copy { margin-top: 18px; color: var(--navy-100); font-size: var(--step-1); }
+.ctaband__copy > * + * { margin-top: .8em; }
+.ctaband__actions { display: grid; justify-items: stretch; gap: 12px; }
+.ctaband__panel:not(:has(.ctaband__text)) .ctaband__actions { grid-auto-flow: column; justify-content: center; }
+@media (max-width: 1023px) {
+  .ctaband__panel { grid-template-columns: minmax(0, 1fr); }
+  .ctaband__actions { justify-items: start; grid-auto-flow: row; }
+  .ctaband__panel:not(:has(.ctaband__text)) .ctaband__actions { grid-auto-flow: row; justify-content: stretch; }
+}
+@media (max-width: 420px) { .ctaband__actions { justify-items: stretch; } }
+/* Mobile optimisation (M-LAYOUT-2, M-LOOK-4): a 20 px panel inset (the navy frame around the panel is kept) lets the full-width
+   'Schedule Appointment' pill hold one line from 360 px */
+@media (max-width: 420px) { .ctaband__panel { padding-inline: 20px; } }
+
+/* the prose element set (D) */
+
+.rich > * + * { margin-top: 1em; }
+.rich--compact > * + * { margin-top: .75em; }
+.rich p:is(:not([class]), .link-line, .lead, .attribution) { text-wrap: pretty; }
+.rich :is(h2, h3, h4, h5, h6):not([class]) { color: var(--navy-700); line-height: 1.2; letter-spacing: var(--ls-head); text-wrap: balance; }
+.rich h2:not([class]) { font-size: var(--step-3); font-weight: var(--fw-head); line-height: var(--lh-head); }
+.rich h2:not([class])::after { content: ""; display: block; width: 74px; height: 12px; margin-top: 10px; background: var(--img-wave-rule) no-repeat 0 0 / 74px 12px; }
+.rich h3:not([class]) { font-size: var(--step-2); font-weight: var(--fw-head); }
+.rich h4:not([class]) { font-size: var(--step-1); font-weight: var(--fw-strong); }
+.rich :is(h5, h6):not([class]) { color: var(--ink-900); font-size: var(--step-0); font-weight: var(--fw-strong); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; }
+.rich--compact h2:not([class]) { font-size: var(--step-1); }
+.rich--compact h2:not([class])::after { content: none; }
+.rich--compact :is(h3, h4, h5, h6):not([class]) { font-size: var(--step-0); font-weight: var(--fw-strong); text-transform: none; letter-spacing: 0; color: var(--navy-700); }
+.rich a:not([class]) {
+  color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--link-underline);
+  text-underline-offset: .18em; overflow-wrap: anywhere;
+  background: linear-gradient(var(--link), var(--link)) 0 100% / 0 2px no-repeat;
+  transition: background-size var(--dur-underline) var(--ease-out), color var(--dur-fast), text-decoration-color var(--dur-fast);
+}
+.rich a:not([class]):is(:hover, :focus-visible) { color: var(--link-hover); background-size: 100% 2px; text-decoration-color: transparent; }
+.rich :is(h2, h3, h4, h5, h6):not([class]) a:not([class]) { color: inherit; text-decoration-color: currentColor; background-image: linear-gradient(currentColor, currentColor); }
+.rich a:not([class]):has(> img) { text-decoration: none; background: none; }
+.rich :is(strong, b) { font-weight: var(--fw-strong); }
+.rich :is(em, i, cite) { font-style: italic; }
+.rich u { text-decoration: underline; }
+.rich :is(sup, sub) { font-size: .75em; line-height: 0; }
+.rich sup { vertical-align: super; }
+.rich sub { vertical-align: sub; }
+.rich small { font-size: var(--step--1); }
+.rich p.lead { color: var(--navy-700); font-size: var(--step-2); line-height: 1.3; }
+.rich p.attribution { color: var(--ink-600); font-size: var(--step--1); font-style: italic; }
+p.callout-title { color: var(--navy-700); font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.3; }
+p.callout-title a { display: inline-flex; align-items: center; min-height: 44px; color: inherit; }
+.rich .link-line > a { display: inline-flex; align-items: center; min-height: 44px; }
+
+.rich ul:is(:not([class]), .cols) { padding-left: 0; list-style: none; }
+.rich ul:is(:not([class]), .cols) > li:is(:not([class]), .link-line, .li--wrap) { position: relative; padding-left: 30px; }
+.rich ul:is(:not([class]), .cols) > li:is(:not([class]), .link-line, .li--wrap)::before {
+  content: ""; position: absolute; left: 4px; top: calc(.85em - 4px); width: 14px; height: 8px;
+  background: var(--bullet) no-repeat center / contain;
+}
+.rich ul:is(:not([class]), .cols) ul:not([class]) > li:is(:not([class]), .link-line)::before {
+  left: 9px; top: calc(.85em - 3px); width: 6px; height: 6px; border-radius: 50%; background: var(--teal-700);
+}
+/* Mobile optimisation (RL-MISS-2; D.7.10): a list item that only wraps a nested list (li.li--wrap, no text of its own)
+   drew a stray wave bullet beside the first nested item and indented the list twice (its text 60 px in). Below 1024 px it
+   draws neither, and its nested items take the list's own wave bullet; at 1024 px and up li--wrap renders exactly as the
+   classless item it was (the :is() lists above) */
+@media (max-width: 1023px) {
+  .rich ul:is(:not([class]), .cols) > li.li--wrap { padding-left: 0; }
+  .rich ul:is(:not([class]), .cols) > li.li--wrap::before { content: none; }
+  .rich ul:is(:not([class]), .cols) > li.li--wrap > ul:not([class]) > li:not([class])::before {
+    left: 4px; top: calc(.85em - 4px); width: 14px; height: 8px; border-radius: 0;
+    background: var(--bullet) no-repeat center / contain;
+  }
+}
+.rich ol:not([class]) { padding-left: 30px; }
+.rich ol:not([class]) > li::marker { color: var(--teal-700); font-weight: var(--fw-strong); }
+.rich :is(ul:is(:not([class]), .cols), ol:not([class])) > li + li { margin-top: 8px; }
+.rich :is(ul, ol):not([class]) :is(ul, ol):not([class]) { margin-top: 8px; }
+.rich dl:not([class]) { margin: 0; }
+.rich dl:not([class]) > dt { color: var(--navy-700); font-weight: var(--fw-strong); }
+.rich dl:not([class]) > dd { margin: 0 0 .8em; }
+.rich hr:not([class]) {
+  width: 74px; max-width: none; height: 12px; margin: 48px auto; border: 0;
+  background: var(--img-wave-rule) no-repeat center / 74px 12px;
+}
+.rich :is(code, pre):not([class]) { font-family: var(--font-mono); font-size: .9em; background: var(--tint-lav); border-radius: var(--r-s); }
+.rich code:not([class]) { padding: 0 4px; }
+.rich pre:not([class]) { padding: 16px; overflow-x: auto; line-height: 1.5; }
+.rich pre:not([class]) code { padding: 0; background: none; }
+.rich blockquote:not([class]) {
+  margin-inline: 0; padding: 20px 24px; border-left: 3px solid var(--teal-700); border-radius: var(--r-m);
+  background-image: var(--tint-panel-fill); color: var(--ink-900); font-size: var(--step-1);
+}
+.rich blockquote:not([class]) > * + * { margin-top: .75em; }
+.rich blockquote:not([class]) cite, .rich cite { color: var(--ink-600); font-size: var(--step--1); }
+
+.rich .table-scroll { overflow-x: auto; }
+.rich .table-scroll:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.rich :is(.table-scroll > table, table:not([class])) { min-width: 100%; border-collapse: collapse; font-size: .95em; }
+.rich :not(.table-scroll) > table:not([class]) { display: block; max-width: 100%; overflow-x: auto; }
+.rich :is(.table-scroll > table, table:not([class])) :is(th, td) { padding: 12px 16px; text-align: left; vertical-align: top; }
+.rich :is(.table-scroll > table, table:not([class])) :is(th[scope="col"], thead th) { background: var(--tint-lav); color: var(--navy-700); font-weight: var(--fw-strong); }
+.rich :is(.table-scroll > table, table:not([class])) th[scope="row"] { color: var(--navy-700); font-weight: var(--fw-strong); background: none; }
+.rich :is(.table-scroll > table, table:not([class])) tr { border-bottom: 1px solid var(--hairline); }
+.rich :is(.table-scroll > table, table:not([class])) tbody tr:nth-child(even) { background: var(--ground); }
+.rich :is(.table-scroll > table, table:not([class])) caption { caption-side: bottom; margin-top: 8px; color: var(--ink-600); font-size: var(--step--1); text-align: left; }
+
+.rich figure.fig, .rich figure:not([class]) { margin-inline: 0; }
+.rich .fig__media { position: relative; display: block; width: fit-content; max-width: 100%; margin-inline: auto; overflow: hidden; border-radius: var(--r-l); }
+.rich .fig__media::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 1px var(--frame-edge); }
+.rich .fig__media a { display: block; }
+.rich .fig__media img, .rich figure:not([class]) img { display: block; max-width: 100%; height: auto; transition: scale 700ms var(--ease-out); }
+.rich .fig__media a:is(:hover, :focus-visible) img { scale: var(--zoom-promo); }
+.rich .fig__media a:focus-visible { outline-offset: -3px; }
+/* QA round 1, regressions (R1): a name caption (D.7.9: the caption only repeats the image's alt) prints as
+   div.fig__caption in a div.fig, not as a figcaption, with the figcaption's look (a div, so p's text-wrap: pretty does not
+   reach it and it wraps as the figcaption did; a selector list, so the figcaption's specificity is unchanged) */
+.rich figcaption, .rich .fig__caption { margin-top: 8px; color: var(--ink-600); font-size: var(--step--1); line-height: 1.45; text-align: left; }
+.rich :is(.fig--plate, .fig--diagram) .fig__media { border-radius: var(--r-s); }
+.rich .fig--plate .fig__media { box-shadow: 0 0 0 1px var(--hairline); }
+.rich .fig--diagram .fig__media { background: var(--paper); }
+.rich .fig--wide .fig__media { box-shadow: var(--sh-2); }
+.rich :is(.fig--column, .fig--chip, .fig--center) { max-width: min(var(--measure), 100%); }
+.rich :is(.fig--chip) .fig__media, .rich .fig--brand:not(.fig-grid .fig) .fig__media {
+  padding: 14px; background: var(--paper); border-radius: var(--r-s); box-shadow: 0 0 0 1px var(--hairline);
+}
+.rich :is(.fig--chip, .fig--brand) img { object-fit: contain; }
+.rich :is(.fig--inset-start, .fig--left) { max-width: min(260px, 100%); }
+.rich :is(.fig--inset, .fig--right) { max-width: min(calc(.42 * var(--measure)), 100%); }
+@media (min-width: 1024px) {
+  .rich :is(.fig--inset, .fig--right) { float: right; margin: .3em 0 16px 28px; }
+  .rich :is(.fig--inset-start, .fig--left) { float: left; margin: .3em 28px 16px 0; }
+  .prose > :is(.fig--inset, .fig--right, .fig--inset-start, .fig--left) { margin-top: .3em; }
+}
+@media (max-width: 1023px) { .rich :is(.fig--inset, .fig--right, .fig--inset-start, .fig--left) { margin-inline: auto; } }
+.rich .fig-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: clamp(12px, 2vw, 24px); }
+.rich .fig-grid .fig { margin: 0; min-width: 0; }
+.rich .fig-grid .fig--brand .fig__media { padding: 12px; background: var(--paper); border-radius: var(--r-s); box-shadow: 0 0 0 1px var(--hairline); }
+.rich .fig-grid :is(.fig--photo, .fig--portrait) .fig__media { border-radius: var(--r-m); }
+@media (min-width: 769px) {
+  .rich .fig-grid[data-count="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .rich .fig-grid:not([data-count="2"], [data-count="3"]) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+/* Mobile optimisation (M-LOOK-1, M-LAYOUT-6, MISS-L2): up to 768 px a fig-grid has two columns (the rule above starts at
+   769), so an odd count left its last figure alone in the left half (the 7 lens plates of /contact-lenses/, the 3 brand
+   chips of /eyeglasses/designer-frames/): it is centred under the row above, one column wide (the LAYOUT-16 pattern).
+   The brand chips were 173 / 94 / 80 px tall at 390 (D.5 asks equal frames): each chip is square, its image contained
+   at its own painted size, never cropped */
+@media (max-width: 768px) {
+  .rich .fig-grid > .fig:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - clamp(12px, 2vw, 24px)) / 2); }
+  .rich .fig-grid .fig--brand .fig__media { display: grid; place-items: center; aspect-ratio: 1; }
+  .rich .fig-grid .fig--brand .fig__media img { width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+}
+.rich ul.logo-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(max(133px, calc((100% - 60px) / 6)), 1fr));
+  gap: 12px; padding: 0; list-style: none;
+}
+.rich .logo-chip { display: grid; place-items: center; min-height: 110px; padding: 10px; background: var(--paper); border-radius: var(--r-s); box-shadow: 0 0 0 1px var(--hairline); }
+.rich .logo-chip--link { padding: 0; }
+.rich .logo-chip--link:has(:focus-visible) { outline: 3px solid var(--focus); outline-offset: 3px; }
+.rich .logo-chip__link { display: grid; place-items: center; width: 100%; min-height: 110px; padding: 10px; border-radius: inherit; }
+.rich .logo-chip__link:focus-visible { outline: none; }
+.rich .logo-chip img { max-width: 100%; max-height: 90px; width: auto; height: auto; object-fit: contain; }
+
+/* .visit: the hub visit block sits outside .rich (I.75) */
+:is(.rich, .visit) .embed { margin-inline: 0; }
+:is(.rich, .visit) .embed iframe { display: block; width: 100%; height: 100%; border: 0; }
+.rich .embed--video { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: var(--r-l); background: var(--navy-950); box-shadow: var(--sh-2); }
+:is(.rich, .visit) .embed--map { overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--r-l); background: var(--tint-sky); }
+.rich .embed--other { max-width: 100%; }
+.rich .embed--other iframe { height: auto; min-height: 320px; }
+
+.video { margin-inline: 0; }
+.video__frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: var(--r-l); background: var(--video-poster); box-shadow: var(--sh-2); }
+.video__frame video { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* Mobile optimisation (M-LOOK-12, the refuter's finding): the three practice videos have no poster, and Chromium's native
+   controls paint their own default poster, a #333 grey over the whole frame (the controls container in its
+   use-default-poster state), so the frame showed a grey slab instead of DESIGN-SPEC 3.22's CSS poster (the frame's navy
+   glass, var(--video-poster)). Below 1024 px only that container is made transparent: the navy shows, and the control bar
+   keeps its own scrim, so the play button, the timeline and the bar over a playing picture look as before (the refuter's
+   wider variant, the enclosure and panel transparent too, dropped the scrim). Chromium-only; elsewhere unverified */
+@media (max-width: 1023px) { .video__frame > video::-webkit-media-controls { background-color: transparent; } }
+/* QA round 1 (A11Y-5): the frame draws the focused video's ring, outside its own overflow clip. fix-2: the video keeps
+   the ring's colour, width and offset and drops only its style, so its computed outline describes the ring the frame
+   draws in the same place (a probe or tool that reads the focused element's outline finds it) */
+.video__frame video:focus-visible { outline-style: none; }
+.video__frame:has(> video:focus-visible) { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.prose { display: flow-root; color: var(--ink-700); font-size: var(--step-prose); line-height: var(--lh-prose); overflow-wrap: break-word; }
+.prose a { overflow-wrap: anywhere; }
+.prose > * + * { margin-top: 1em; }
+.prose > :first-child { margin-top: 0; }
+.prose > :is(p, ul, ol, dl, blockquote, h2, h3, h4, h5, h6, address, pre):not([class]),
+.prose > :is(p.lead, p.attribution, p.callout-title, p.link-line, ul.cols, .table-scroll) { max-width: var(--measure); }
+.prose > h2:not([class]) { margin-top: 2em; }
+.prose > h3:not([class]) { margin-top: 1.6em; }
+.prose > :is(h4, h5, h6):not([class]) { margin-top: 1.3em; }
+.prose > :is(h2, h3, h4, h5, h6):not([class]):first-child { margin-top: 0; }
+.prose > :is(h2, h3, h4, h5, h6):not([class]) + * { margin-top: .5em; }
+.prose > :is(h2, h3):not([class]) + :is(h2, h3):not([class]) { margin-top: 1em; }
+/* Mobile optimisation (M-LAYOUT-9; the refuter: a refinement of the 0.5em heading rhythm, not a phone-only defect): an h4
+   right under an h3 took the 0.5em of any heading's next sibling (9 px), so the two headings read as one block
+   (/eye-care-services/eye-exams/, the site's only such pair). Below 1024 px the stacked-heading rule's 1em extends to an
+   h3 followed by h4-h6; 1024 px and up keep 0.5em (signed off) */
+@media (max-width: 1023px) { .prose > h3:not([class]) + :is(h4, h5, h6):not([class]) { margin-top: 1em; } }
+.prose > p.attribution { margin-top: 1.6em; }
+.prose :is(h2, h3):not([class]) { clear: both; }
+.prose-card :is(.fig--wide, figure.video, .embed--video) { margin-inline: 0; }
+@media (min-width: 768px) {
+  .prose-card .prose > :is(.fig--wide, figure.video, .embed--video) { margin-inline: -24px; }
+}
+.page-legal .prose { --measure: 66ch; }
+
+.checklist, .panel { padding: clamp(20px, 3vw, 34px); border-radius: var(--r-l); }
+:is(.panel, .checklist, .treatment, .faq__a, .hub-intro, .hub-callout, .band__panel) > * + * { margin-top: 1em; }
+:is(.panel, .checklist) > :first-child, .treatment > :first-child { margin-top: 0; }
+.checklist > h3:not([class]) { margin-top: 0; }
+@media (min-width: 768px) {
+  .checklist > ul:not([class]), .rich ul.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 8px; }
+  :is(.checklist > ul:not([class]), .rich ul.cols) > li + li { margin-top: 0; }
+}
+.treatments { display: grid; gap: 14px; padding: clamp(12px, 2vw, 20px); border-radius: var(--r-l); background: var(--ground); }
+.treatment { padding: 22px 24px; border-left: 3px solid var(--teal-700); border-radius: var(--r-m); }
+.treatment > h3:not([class]) { font-size: var(--step-1); }
+/* Mobile optimisation (M-LOOK-5): three insets stacked inside the article (the ground panel 12 px, the 3 px teal border,
+   the card's 22 / 24 px), so a treatment paragraph ran 212 / 252 px wide at 320 / 360 px, a median of 24-30 characters a
+   line. Below 768 px the panel pads 6 px and the card 18 / 16 px; the ground panel and the teal border stay */
+@media (max-width: 767px) {
+  .treatments { padding: 6px; }
+  .treatment { padding: 18px 16px; }
+}
+
+/* the injected CMS block (D.8, A-23): classless controls */
+.rich label:not([class]) { display: block; margin: 0 0 8px; color: var(--navy-700); font-size: 1rem; font-weight: var(--fw-ui); }
+.rich label:not([class]):has(> input:is([type="radio"], [type="checkbox"])) {
+  display: flex; align-items: center; gap: 12px; min-height: 44px; margin: 0; color: var(--ink-700); font-weight: var(--fw-body); cursor: pointer;
+}
+.rich fieldset:not([class]) { min-width: 0; margin: 0; padding: 0; border: 0; }
+.rich legend:not([class]) { margin: 0 0 8px; padding: 0; color: var(--navy-700); font-size: 1rem; font-weight: var(--fw-ui); }
+.rich form:not([class]) { display: grid; gap: 20px; }
+.rich form[role="search"]:not([class]) { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.rich :is(button, input[type="submit"], input[type="button"]):not([class]) {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px;
+  border: 0; border-radius: var(--r-pill); background: var(--teal-700); color: var(--on-dark);
+  font-size: 1rem; font-weight: var(--fw-head); box-shadow: var(--btn-shadow-primary);
+  transition: background-color var(--dur-fast), box-shadow 300ms var(--ease-out);
+}
+.rich :is(button, input[type="submit"], input[type="button"]):not([class]):is(:hover, :focus-visible) { background: var(--teal-800); box-shadow: 0 0 0 4px var(--ring-teal), var(--btn-shadow-primary-hover); }
+.rich :is(button, input[type="submit"], input[type="button"]):not([class]):focus-visible { outline-color: var(--navy-700); }
+
+/* forms (B.25, E) */
+.form-card { padding: clamp(24px, 4vw, 48px); }
+.form__intro { margin-bottom: 24px; color: var(--ink-700); font-size: var(--step-0); }
+.form__intro > * + * { margin-top: 1em; }
+.form__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.field { min-width: 0; margin: 0; }
+fieldset.field { padding: 0; border: 0; }
+.field--wide { grid-column: 1 / -1; }
+.field__label { display: block; margin: 0 0 8px; padding: 0; color: var(--navy-700); font-size: 1rem; font-weight: var(--fw-ui); line-height: 1.35; }
+.field__req { margin-left: 4px; color: var(--alert-700); }
+.field__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+@media (min-width: 600px) { .field__row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.field__sub { display: flex; flex-direction: column; min-width: 0; }
+.field__sublabel { margin-top: 6px; color: var(--ink-600); font-size: var(--step--1); }
+.field__control,
+.rich :is(input:not([type="radio"], [type="checkbox"], [type="submit"], [type="button"], [type="reset"], [type="hidden"]), select, textarea):not([class]) {
+  display: block; width: 100%; max-width: 100%; min-height: 48px; margin: 0; padding: 12px 14px;
+  border: 1.5px solid var(--line-input); border-radius: var(--r-s); background-color: var(--paper);
+  color: var(--ink-900); font-size: max(16px, 1rem); line-height: 1.4;
+  transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+:is(.field__control, .rich :is(input, select, textarea):not([class]))::placeholder { color: var(--ink-600); opacity: 1; }
+select.field__control, .rich select:not([class]) {
+  appearance: none; padding-right: 44px;
+  background-image: var(--img-chevron); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px 18px;
+}
+textarea.field__control, .rich textarea:not([class]) { min-height: 140px; resize: vertical; }
+:is(.field__control, .rich :is(input, select, textarea):not([class])):focus-visible { outline: 3px solid var(--teal-700); outline-offset: 2px; border-color: var(--teal-700); }
+:is(.field__control, .rich :is(input, select, textarea):not([class]))[aria-invalid="true"] { border-color: var(--alert-700); }
+.field--choice .choice + .choice { margin-top: 2px; }
+.choice { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+.choice__input, .rich input:is([type="radio"], [type="checkbox"]):not([class]) {
+  appearance: none; flex: none; display: grid; place-items: center; width: 24px; height: 24px; margin: 0;
+  border: 2px solid var(--navy-700); border-radius: 50%; background: var(--paper); cursor: pointer;
+}
+.choice__input::before, .rich input[type="radio"]:not([class])::before {
+  content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--teal-700); scale: 0; transition: scale 150ms var(--ease-out);
+}
+:is(.choice__input, .rich input[type="radio"]:not([class])):checked::before { scale: 1; }
+.rich input[type="checkbox"]:not([class]) { border-radius: 6px; }
+.rich input[type="checkbox"]:not([class]):checked { background: var(--teal-700) var(--img-check) no-repeat center / 18px 18px; border-color: var(--teal-700); }
+:is(.choice__input, .rich input:is([type="radio"], [type="checkbox"]):not([class])):focus-visible { outline: 3px solid var(--teal-700); outline-offset: 2px; }
+.choice__label { flex: 1; display: flex; align-items: center; min-height: 44px; color: var(--ink-700); font-size: var(--step-0); cursor: pointer; }
+.field__help { margin-top: 6px; color: var(--ink-600); font-size: var(--step--1); }
+.field__error { margin-top: 6px; color: var(--alert-700); font-size: var(--step--1); }
+.form__foot { margin-top: 28px; }
+.form__notice { margin-bottom: 20px; padding: 16px 20px; border-radius: var(--r-m); background-image: var(--tint-panel-fill); color: var(--ink-900); }
+
+/* accordion (B.26; the open/close animation is in the motion layer) */
+.faq { display: grid; gap: 12px; }
+.faq__item { border: 1px solid var(--line-lav); border-radius: var(--r-m); background: var(--tint-lav); transition: background-color var(--dur-fast), box-shadow var(--dur-fast); }
+.faq__item[open] { background: var(--paper); box-shadow: var(--sh-1); }
+.faq__item > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 12px 20px;
+  border-radius: var(--r-m); color: var(--navy-700); font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.35;
+  list-style: none; cursor: pointer;
+}
+.faq__item > summary::-webkit-details-marker { display: none; }
+/* Mobile optimisation (M-LOOK-6): in the narrow phone column many questions ended on one word alone ('exam?', 'take?':
+   12 of 29 at 320 px on /eye-care-services/faq/); below 1024 px their lines are balanced (the anonymous text box of the
+   flex summary inherits it; the chevron is untouched). A browser without text-wrap: balance wraps as before */
+@media (max-width: 1023px) { .faq__item > summary { text-wrap: balance; } }
+@media (hover: hover), (min-width: 1024px) { .faq__item > summary:hover { color: var(--navy-900); } }   /* M-TOUCH-4: the split described above .roundbtn--navy */
+.faq__item > summary .ico { width: 22px; height: 22px; color: var(--teal-700); transition: rotate 300ms var(--ease-out); }
+.faq__item[open] > summary .ico { rotate: 180deg; }
+.faq__a { padding: 0 20px 18px; }
+
+/* team cards (B.27) */
+.team-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: calc(48px + 16px) clamp(18px, 2vw, 28px);
+  margin: calc(48px + 16px) 0 0; padding: 0; list-style: none;
+}
+.member { display: flex; flex-direction: column; padding: 0 var(--card-pad) var(--card-pad); }
+.member__photo { aspect-ratio: 1; margin: -49px 0 18px; border-radius: var(--r-l); box-shadow: var(--sh-4); }
+.member__name { margin: 0 0 8px; font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.25; }
+.member__body > .chip { margin-bottom: 10px; }
+.member__bio { font-size: 0.96875rem; line-height: 1.55; }
+.member__more { margin-top: auto; padding-top: 10px; }
+.doctor__text .member__more { padding-top: 0; }
+@media (max-width: 1199px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1023px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(32px + 16px) 20px; }
+  .member__photo { margin-top: -33px; }
+}
+@media (max-width: 599px) { .team-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* archive rows (B.28) */
+.archive-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.archive-row { border-radius: var(--r-m); }
+.archive-row__link {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 12px 20px;
+  border-radius: inherit; color: var(--navy-700); font-weight: var(--fw-strong); line-height: 1.35; text-decoration: none;
+}
+.archive-row__link span {
+  background: linear-gradient(var(--teal-700), var(--teal-700)) 0 100% / 0 2px no-repeat;
+  transition: background-size var(--dur-underline) var(--ease-out), translate 300ms var(--ease-out);
+}
+.archive-row__link .ico { flex: none; width: 20px; height: 20px; color: var(--teal-700); rotate: -90deg; }
+.archive-row__link:is(:hover, :focus-visible) span { background-size: 100% 2px; translate: 4px 0; }
+.archive-row__link:is(:hover, :focus-visible) { color: var(--navy-900); }
+
+/* child-page listings (F.2) */
+.childlist { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.childcard { display: flex; flex-direction: column; padding: clamp(20px, 2vw, 26px); }
+.childcard--thumb { padding-top: 0; }
+.childcard__media { aspect-ratio: 3 / 2; margin: -49px 0 16px; /* 48 px past the 1 px frost border (I.78) */ border-radius: var(--r-m); box-shadow: var(--sh-4); }
+.childcard__title { margin: 0; color: var(--navy-700); font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.3; }
+.childcard__summary { margin-top: 8px; color: var(--ink-700); font-size: 0.96875rem; line-height: 1.55; }
+@media (min-width: 769px) { .childlist--plain { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.childlist--thumbs { gap: calc(48px + 16px) clamp(18px, 2vw, 28px); }
+:is(.prose, .rich, .band__inner) > :is(.childlist--thumbs, .team-grid), .childlist--thumbs, .team-grid { margin-top: calc(48px + 16px); }
+@media (min-width: 600px) { .childlist--thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .childlist--thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* QA round 1 (LAYOUT-16): a lone card on the last row is centred under the row above (same width as one column) */
+@media (min-width: 1024px) { .childlist--thumbs > li:last-child:nth-child(3n + 1) { grid-column: 2; } }
+@media (min-width: 600px) and (max-width: 1023px) {
+  .childlist--thumbs > li:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - clamp(18px, 2vw, 28px)) / 2); }
+}
+@media (min-width: 769px) { .childlist--plain > li:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - 16px) / 2); } }
+@media (max-width: 1023px) {
+  .childlist--thumbs { row-gap: calc(32px + 16px); }
+  :is(.prose, .rich, .band__inner) > :is(.childlist--thumbs, .team-grid), .childlist--thumbs, .team-grid { margin-top: calc(32px + 16px); }
+  .childcard__media { margin-top: -33px; }
+}
+
+/* sitemap (F.5) */
+.sitemap > .sitemap__list { columns: 3 220px; column-gap: 28px; }
+.sitemap__list { margin: 0; padding: 0; list-style: none; }
+.sitemap > .sitemap__list > .sitemap__item { break-inside: avoid; padding-bottom: 6px; }
+.sitemap__list .sitemap__list { margin: 0 0 6px 6px; padding-left: 16px; border-left: 2px solid var(--teal-200); }
+.sitemap__link {
+  display: inline-flex; align-items: center; min-height: 44px; color: var(--link); text-decoration: underline;
+  text-decoration-color: var(--link-underline); text-underline-offset: .2em; line-height: 1.35;
+}
+.sitemap__link:is(:hover, :focus-visible) { color: var(--link-hover); text-decoration-color: currentColor; text-decoration-thickness: 2px; }
+.sitemap > .sitemap__list > .sitemap__item > .sitemap__link { color: var(--navy-700); font-weight: var(--fw-strong); }
+@media (max-width: 1023px) { .sitemap > .sitemap__list { columns: 2 200px; } }
+@media (max-width: 599px) { .sitemap > .sitemap__list { columns: 1; } }
+/* Mobile optimisation (M-LOOK-9): a one-line link floats in its 44 px row (about 22 px between texts), but a link that
+   wraps fills it and nearly touched its neighbour (3.9 px at 360 px), so the list's rhythm went uneven. Below 1024 px a
+   link pads 8 px top and bottom: a wrapped link grows, a one-line link stays 44 px (its min-height holds). Widened from
+   the finding's 767 px: the two-column list of 600-1023 px crowds the same way at 768x1024 and on the 844x390 landscape
+   phone (3.2 / 3.4 px) */
+@media (max-width: 1023px) { .sitemap__link { padding-block: 8px; } }
+
+/* testimonials and the static review (F.6) */
+.testimonial, .review--static { padding: clamp(22px, 2.6vw, 34px); }
+.testimonial > * + *, .review--static > * + * { margin-top: 12px; }
+.testimonial__title { font-size: var(--step-1); font-weight: var(--fw-strong); }
+.testimonial__title a { display: inline-flex; align-items: center; min-height: 44px; color: var(--navy-700); }
+.testimonial__quote { color: var(--ink-900); font-size: var(--step-1); line-height: 1.55; }
+.testimonial__name { color: var(--navy-700); font-weight: var(--fw-strong); }
+
+/* products and devices (F.7) */
+/* columns from the space, cards 300 px or wider: both blocks sit in the article column (I.80) */
+.products, .devices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: clamp(18px, 2vw, 26px); margin: 0; padding: 0; list-style: none; }
+.product, .device { display: flex; flex-direction: column; gap: 12px; padding: clamp(18px, 2vw, 24px); }
+.product__media, .device__media {
+  display: grid; place-items: center; aspect-ratio: 1; max-height: 320px; padding: 16px;
+  border-radius: var(--r-s); background: var(--paper); box-shadow: 0 0 0 1px var(--hairline);
+}
+.product__media img, .device__media img { width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.product__title, .device__title { font-size: var(--step-1); font-weight: var(--fw-strong); line-height: 1.3; }
+.product__text, .device__text { font-size: var(--step-0); }
+.product__more { margin-top: auto; color: var(--ink-600); font-size: 0.9375rem; }
+
+/* visit block (F.8) */
+.visit { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); }
+@media (min-width: 1024px) { .visit:has(.visit__map) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: start; } }
+.visit__details > * + * { margin-top: 12px; }
+.visit__title { color: var(--navy-700); font-size: var(--step-2); font-weight: var(--fw-head); line-height: 1.25; }
+.visit__sub { color: var(--navy-700); font-size: var(--step-1); font-weight: var(--fw-strong); }
+.visit__sub::after { content: none; }
+
+/* other blocks (B.31) */
+.qa-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.qa-row .qa { display: inline-flex; }
+.logo-wall { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+/* Mobile optimisation (M-LOOK-1, M-LAYOUT-6): below 600 px the wall has two columns, so an odd count left its last chip
+   alone in the left half (27 frame brands, /eyeglasses/designer-frames/); it is centred under the row above, one column
+   wide. Scoped to the two-column range: from 600 px the wall has 4 columns (6 from 1024) and is untouched */
+@media (max-width: 599px) { .logo-wall > .logo-wall__chip:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - 12px) / 2); } }
+@media (min-width: 600px) { .logo-wall { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .logo-wall { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.logo-wall__chip { display: grid; place-items: center; min-height: 110px; padding: 10px; border-radius: var(--r-s); background: var(--paper); box-shadow: 0 0 0 1px var(--hairline); }
+.logo-wall__chip a { display: grid; place-items: center; width: 100%; min-height: 90px; border-radius: inherit; }
+.logo-wall__chip img { width: auto; max-width: 100%; max-height: 90px; object-fit: contain; }
+.docs { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+/* Mobile optimisation (M-LAYOUT-8): .docs { margin: 0 } beats the prose rhythm (.prose > * + *) by source order (the I.65
+   pattern), so on /contact-us/patient-forms/ the forms list touched the sentence above it (0 px). Below 1024 px it takes
+   the flow's 1em; 1024 px and up keep the signed-off 0 */
+@media (max-width: 1023px) { .prose > .docs:not(:first-child) { margin-top: 1em; } }
+.doc { color: var(--ink-600); font-weight: var(--fw-strong); }
+.cherry-link { margin: 0; }
+.cherry-link__pending {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: var(--r-pill);
+  background: var(--tint-lav); color: var(--ink-700); font-weight: var(--fw-strong);
+}
+.cherry { max-width: 100%; overflow-x: auto; }
+
+/* builder hubs (C.7) */
+.band { position: relative; padding-block: var(--space-section); }
+.band--sky::before, .band--sky::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border-radius: 50% 50% 0 0 / var(--band-radius) var(--band-radius) 0 0;
+}
+.band--sky::before { background-image: var(--band-services); }
+.band--sky::after { background-image: var(--band-services-dusk); opacity: calc(var(--p, 0) * .55); }
+.band--lav { margin-top: var(--bank-h); color: var(--ink-900); }
+.band__inner > .section-title + * { margin-top: 0; }
+.band__inner > * + * { margin-top: clamp(24px, 3vw, 36px); }
+.band__inner > .section-title { margin-bottom: clamp(26px, 3.4vw, 40px); }
+.section__bg { position: absolute; inset: 0; z-index: 0; margin: 0; overflow: hidden; }
+.section__bg img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.band--photo .band__panel { padding: clamp(24px, 3vw, 44px); }
+.hub-intro { max-width: 980px; padding: clamp(24px, 3vw, 40px) clamp(22px, 4vw, 52px); }
+/* QA round 1 (LAYOUT-13): short desktop: a tighter top inset brings the intro's first line into the first screen */
+@media (min-width: 1024px) and (max-height: 820px) { .hub-intro { padding-top: 18px; } }
+/* Mobile optimisation (M-LAYOUT-2, M-LOOK-4): with the phone pill padding (B.0) the intro's 16 px inset lets 'SCHEDULE AN
+   APPOINTMENT' hold one line from 360 px (it broke 2+1 at 360 and 375) */
+@media (max-width: 420px) { .hub-intro { padding-inline: 16px; } }
+.hub-callout { padding: clamp(24px, 3vw, 40px); }
+.hub-flow { max-width: 100%; }
+/* Mobile optimisation (MISS-L1, M-LOOK-8): a band that holds only a heading (a section title and a hub-flow whose one child
+   is a heading or an hr) introduces the next band's content, but its bottom padding and the next band's top padding left
+   that heading 128-199 px above it on phones, portrait and landscape ('Our Contact Lens Services:' on /contact-lenses/,
+   'SEE BETTER' / 'LIVE BETTER' on /eyeglasses/designer-frames/; the only two such bands). Below 1024 px the heading band
+   drops its bottom padding and the next band starts 24 px down (192 -> 66 px and 128 -> 24 px to the content at 390), and
+   a hub-flow holding only an hr (a second lone wave rule 74 px under the title's own) is not drawn. Nothing that carries
+   words is hidden */
+@media (max-width: 1023px) {
+  .band:has(> .band__inner > .hub-flow:last-child > :is(hr, h2, h3, h4):only-child):not(:has(> .band__inner > :not(.section-title, .hub-flow))) { padding-bottom: 0; }
+  .band:has(> .band__inner > .hub-flow:last-child > :is(hr, h2, h3, h4):only-child):not(:has(> .band__inner > :not(.section-title, .hub-flow))) + .band { padding-top: 24px; }
+  .band__inner > .hub-flow:has(> hr:only-child) { display: none; }
+}
+/* Mobile optimisation (M-LOOK-2): a hub-flow h2 that directly follows a centred band title ('LIVE BETTER' under 'SEE
+   BETTER', /eyeglasses/designer-frames/, the only such pair) is centred with it below 1024 px, so the two read as one
+   heading instead of a centred title over a left one; every band intro title keeps DESIGN-SPEC 3.3's centred variant */
+@media (max-width: 1023px) {
+  .band__inner > .section-title.wave-rule--center + .hub-flow > h2:first-child { text-align: center; }
+  .band__inner > .section-title.wave-rule--center + .hub-flow > h2:first-child::after { margin-inline: auto; }
+}
+.cards--brand { margin-top: 0; }
+/* Mobile optimisation (M-LAYOUT-3): one column left each 4:3 chip as wide as the band from 560 px up (614-777 px around
+   a 325 px logo, 17-28% of the chip; the four cards 2,070-2,559 px tall). Two to a row up to 1023 px; 1024 px and up and
+   the phone portrait column (the logo at 76% of its chip at 390) unchanged */
+@media (min-width: 560px) and (max-width: 1023px) { .cards--brand { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card--brand { padding: 18px; text-align: center; }
+.card--brand .card__media {
+  display: grid; place-items: center; margin: 0 0 12px; aspect-ratio: 4 / 3; padding: 12px;
+  border-radius: var(--r-s); background: var(--paper); box-shadow: 0 0 0 1px var(--hairline);
+}
+.card--brand .card__media img { width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.card--brand .card__title { margin: 0; color: var(--navy-700); font-size: var(--step-0); font-weight: var(--fw-strong); }
+
+/* QA round 1 (A11Y-2): with the page scrolled, a top-bar control that takes keyboard focus is shown (the bar sticks with
+   the navbar while focus is in it) and sits outside the scroll padding, so Shift+Tab from the logo neither lands off-screen
+   nor scrolls the page */
+.site-header:has(.topbar :focus-visible) { top: 0; }
+html:has(.topbar :focus-visible) { scroll-padding-top: 0; }
+/* QA round 1 (A11Y-8): on very short viewports (high zoom, landscape phones) the header scrolls away instead of sticking;
+   stuck, the navbar took 27-53% of a 146-331 px tall screen (landscape phones 340 px tall or more: the next block) */
+@media (max-height: 480px) {
+  .site-header { position: relative; top: auto; }
+  html { scroll-padding-top: 16px; }
+  .navbar :is(a, button) { scroll-margin-top: 0; }
+  .doctor__portrait { top: 24px; }
+}
+/* Mobile optimisation (M-TOUCH-5, operator option 8b, fixer D2): the rule above also caught phones held in landscape,
+   where every header control left the screen once the page scrolled (pages up to 20,780 px long at 844x390). A touch
+   phone in landscape (a coarse pointer, 340-480 px tall, below 1024 px) keeps a compact sticky navbar instead: 4 px
+   padding and a 110 px logo, the navbar about 52 px tall (13.5-14 % of a 375-390 px screen); the top bar still scrolls
+   away; the scroll padding and the I.79 focus guard come back with it. Zoomed desktops and mouse-driven short windows
+   (a fine pointer) and screens under 340 px tall keep the rule above. html.js keeps the no-JavaScript header as it is,
+   the top bar's focus rule (A11Y-2, above) still wins on specificity, and this block sits before the no-dialog block
+   below so that html.no-modal wins its ties; the compact padding and logo are not applied under html.no-modal */
+@media (max-height: 480px) and (min-height: 340px) and (orientation: landscape) and (pointer: coarse) and (max-width: 1023px) {
+  html.js { scroll-padding-top: calc(var(--navbar-h) + 16px); }
+  html.js .site-header { position: sticky; top: calc(-1 * var(--topbar-h)); }
+  html.js .navbar :is(a, button) { scroll-margin-top: calc(-1 * var(--chrome-h)); }
+  html.js:not(.no-modal) .navbar__inner { padding-block: 4px; }
+  html.js:not(.no-modal) .brand img { width: 110px; }
+}
+
+/* no JavaScript (DESIGN-SPEC 8): the nav as a wrapped list */
+html:not(.js) .site-header { position: relative; top: auto; }
+html:not(.js) .navbar__inner { flex-wrap: wrap; }
+html:not(.js) .mainnav { flex: 1 1 100%; }
+html:not(.js) .mainnav__list { flex-wrap: wrap; align-items: flex-start; gap: 4px 8px; }
+html:not(.js) .mainnav__item { flex-direction: column; align-items: flex-start; }
+html:not(.js) .mainnav__toggle { display: none; }
+html:not(.js) .sub { margin: 0 0 6px 10px; padding-left: 10px; border-left: 2px solid var(--teal-200); }
+/* Mobile optimisation (M-TOUCH-1; simulated in Chrome, unverified on WebKit): a browser without <dialog> (Safari and iOS
+   Safari before 15.4) has neither showModal(), so the menu button opened nothing while html.js hid the main nav, nor the
+   UA rule that hides a closed dialog, so where it supports inset (Safari 14.1-15.3) the closed, transparent drawer covered
+   the whole page and took every tap. Below 1024 px: the closed drawer is not displayed (the UA rule, repeated: identical
+   wherever <dialog> exists), and site.js marks html.no-modal when showModal() is missing, which shows the nav as the
+   wrapped list it is without JavaScript (the rules above), the menu button hidden. The wrapped navbar is tall, so the
+   header does not stick and the scroll padding is the 16 px of the short-screen rule, not the navbar's height plus 16 */
+@media (max-width: 1023px) {
+  dialog.drawer:not([open]) { display: none; }
+  html.no-modal { scroll-padding-top: 16px; }
+  html.no-modal .menu-toggle { display: none; }
+  html.no-modal .site-header { position: relative; top: auto; }
+  html.no-modal .navbar__inner { flex-wrap: wrap; }
+  html.no-modal .navbar :is(a, button) { scroll-margin-top: 0; }
+  html.no-modal .mainnav { display: block; flex: 1 1 100%; }
+  html.no-modal .mainnav__list { flex-wrap: wrap; align-items: flex-start; gap: 4px 8px; }
+  html.no-modal .mainnav__item { flex-direction: column; align-items: flex-start; }
+  html.no-modal .mainnav__toggle { display: none; }
+  html.no-modal .sub { margin: 0 0 6px 10px; padding-left: 10px; border-left: 2px solid var(--teal-200); }
+}
+
+/* forced colours (DESIGN-SPEC 8) */
+@media (forced-colors: active) {
+  .aurora-field, .river, .hero__light, .bank, .ph-portrait__ring { display: none; }
+  .lavender::before, .lavender::after, .band--lav::before, .band--lav::after, .site-footer::before, .site-footer::after,
+  .emergency::before, .emergency::after, .insurance::before, .insurance::after, .band--sky::before, .band--sky::after { display: none; }
+  .surface, .navbar, .sub, .drawer__panel, .btn, .qa, .roundbtn, .social__link, .pill--ghost::before { forced-color-adjust: auto; border: 1px solid CanvasText; }
+  :focus-visible, .btn:focus-visible, [data-tilt]:has(:focus-visible), .promo .fig__media:has(a:focus-visible), .video__frame:has(> video:focus-visible) { outline-color: Highlight; }
+  [data-tilt]:has(:focus-visible)::after { border-color: Highlight; }
+  /* QA round 1 (A11Y-3): the glass fills are gradients, which forced colours drop, so these surfaces were transparent
+     and the menus drew over the page; "surfaces Canvas" (DESIGN-SPEC 8) needs an opaque Canvas fill and no blur */
+  .navbar, html.js .sub, .drawer__panel, .surface--glass, .surface--image, .surface--navy, .surface--tint {
+    background-color: Canvas; -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+  /* QA round 1 (A11Y-14): the navy logo on a light plate, so it stays visible on a dark Canvas (the logo bytes are unchanged) */
+  .brand img, .drawer__logo { forced-color-adjust: none; background-color: var(--paper); border-radius: 8px; }
+}
+/* QA round 1 (A11Y-19): reduced transparency or more contrast: the glass surfaces become opaque and unblurred */
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .surface--glass, .surface--image, .navbar, html.js .sub { background-image: none; background-color: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .surface--navy { background-image: none; background-color: var(--navy-700); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  /* fix-2 (A11Y-19, the residual fix-1 left): the drawer panel flat paper (it kept its paper-to-aqua gradient), the
+     frost cards (94 % white) opaque, and the scrim behind the drawer denser (45 % to 80 %) */
+  .drawer__panel { background: var(--paper); }
+  .surface--frost { background-color: var(--paper); }
+  dialog.drawer::backdrop { background: rgb(var(--shade) / .8); }
+}
+
+/* QA round 1 (MOTION-6): print. The shipped CSS had no print rules: the home's hero (one grid row holding the tall,
+   unbreakable photo frame) moved whole to page 2, the video toggle printed, closed FAQ answers never printed, and the
+   white-on-dark text (buttons, CTA band, footer) printed white once the browser drops backgrounds. In print: no
+   decoration, no motion state, the hero copy above a shorter photo, every answer and every review, and dark ink on
+   white in place of the dark surfaces (the same with or without "background graphics") */
+@media print {
+  .skip, .aurora-field, .river, .hero__light, .hero__toggle, .bank, .protrude, .mobilebar, .mainnav__toggle, dialog.drawer, .carousel__dots { display: none !important; }
+  .site-header { position: static; }
+  html.rv-ready .rv { opacity: 1 !important; translate: none !important; }
+  .hero__grid { display: block; }
+  .frame__clip { max-height: 320px; margin-top: 18px; }
+  .faq__item::details-content { content-visibility: visible !important; height: auto !important; transition: none !important; }
+  .carousel__track { display: block; height: auto !important; overflow: visible; }
+  .review + .review { margin-top: 18px; }
+  :root { --on-dark: var(--ink-900); --navy-100: var(--ink-700); --teal-200: var(--teal-700); }
+  .topbar, .ctaband, .aurora-deep, .surface--navy, .site-footer::before, .site-footer::after, .legal,
+  .btn, .qa, .roundbtn, .social__link, .pill--ghost::before { background: none !important; }
+  .btn, .qa { border: 1px solid currentColor; }
+  *, *::before, *::after { box-shadow: none !important; text-shadow: none !important; }
+}

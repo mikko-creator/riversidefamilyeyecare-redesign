@@ -1,0 +1,335 @@
+{
+  "schema": "rfec/build-report@1",
+  "dist": "dist",
+  "pages": {
+    "built": 148,
+    "of": 148,
+    "plus404": true
+  },
+  "images": {
+    "keptSource": 244,
+    "shipped": 276,
+    "pruned": 2,
+    "encoded": 0,
+    "cached": 235,
+    "vendorDropped": 2,
+    "platformUiDropped": 24,
+    "refusedPlaceholders": 13,
+    "refusedSiblings": 7,
+    "refusedDropped": 17,
+    "altsBlanked": 7,
+    "copiedLossless": 2,
+    "variants": {
+      "encoded": 0,
+      "cached": 245,
+      "files": 484
+    },
+    "crop": {
+      "encoded": 0,
+      "cached": 4
+    },
+    "art": {
+      "encoded": 0,
+      "cached": 119,
+      "labelledThisRun": 0,
+      "labelledFiles": 119,
+      "masters": [
+        "H1",
+        "H2",
+        "H3",
+        "N1",
+        "N10",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "N7",
+        "N8",
+        "N9",
+        "TB-blog",
+        "TB-ecs",
+        "TB-eyeglasses",
+        "TB-insurance",
+        "TB-utility"
+      ]
+    },
+    "fromCacheAfterRender": 347
+  },
+  "theme": {
+    "mode": "riverlight",
+    "root": "src",
+    "stylesheet": {
+      "path": "theme/riverlight.da04c250.css",
+      "bytes": 104433,
+      "sha256": "da04c2503842b69d83dfc7b64e8958de2b7b58f1e654275b1a81b7f58f1c71bb"
+    },
+    "script": {
+      "path": "theme/site.5fd59f85.js",
+      "bytes": 28196,
+      "sha256": "5fd59f858a84b39371ba0b9fddab5b9c2b89639093e9a58c23625deadc4759ea"
+    },
+    "layers": [
+      {
+        "file": "tokens.css",
+        "bytes": 14688,
+        "sha256": "c690d2638c3569d90dd4515a18e026de30be89f6d9c62d4c0b89143ec29db6b2"
+      },
+      {
+        "file": "fonts.css",
+        "bytes": 4103,
+        "sha256": "f89e739c9a4025ee9bc2517e4ecd923b13df99f642afdcc938dc9236aa14c04f"
+      },
+      {
+        "file": "riverlight.css",
+        "bytes": 127902,
+        "sha256": "61018c7b7c870180f9e76f1e4c81c2cbef4da3bfc9ec02e39ae5ef9506b5225e"
+      },
+      {
+        "file": "motion.css",
+        "bytes": 7780,
+        "sha256": "347a5b27e4d78b099aac5ff116497dc577e20ab98aa1552f308f38ec4afeffa0"
+      }
+    ],
+    "files": [
+      "theme/fonts/atkinson-next-italic-latin.woff2",
+      "theme/fonts/atkinson-next-latin.woff2",
+      "theme/fonts/rfec-figures.woff2"
+    ],
+    "media": [
+      "theme/media/hero-river.webm",
+      "theme/media/hero-river.mp4",
+      "theme/media/hero-river-phone.mp4",
+      "theme/media/hero-river-poster.webp",
+      "theme/media/hero-river-poster-phone.webp"
+    ]
+  },
+  "art": {
+    "titleBy": {
+      "TB-utility": 30,
+      "TB-blog": 22,
+      "TB-insurance": 4,
+      "TB-contacts": 11,
+      "TB-contact": 7,
+      "TB-ecs": 21,
+      "TB-eyeglasses": 36,
+      "TB-team": 2
+    },
+    "titles": 133,
+    "inline": 11,
+    "home": [
+      "hero-cutout:H1",
+      "home-feature:H2",
+      "graft-cutout:H3"
+    ],
+    "altBlanksDeclared": 1,
+    "models": 149
+  },
+  "media": [
+    "For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+    "How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+    "copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4"
+  ],
+  "content": {
+    "cached": 235,
+    "variantsCached": 245,
+    "copiedLossless": 2,
+    "cropCached": 4,
+    "shortcodesResolved": 4,
+    "reviewCards": 6,
+    "teamCards": 22,
+    "postSummaries": 46,
+    "galleryItems": 4,
+    "callouts": 54,
+    "ctaButtons": 21,
+    "divHeadingsPromoted": 7,
+    "emptyRowsSkipped": 6,
+    "looseRunsWrapped": 1571,
+    "linkedImagesKept": 6,
+    "figuresWrapped": 74,
+    "linkedFigures": 6,
+    "voidEndTagsRepaired": 1,
+    "sourceCrumbsTaken": 141,
+    "imagesDroppedByDecision": 13,
+    "crumbSegmentsEmptyDropped": 17,
+    "archiveLists": 13,
+    "archiveItems": 34,
+    "balanceStray": 4,
+    "searchFormsRemoved": 14,
+    "cherryWidgets": 1,
+    "childpageLists": 17,
+    "childpageItems": 74,
+    "badgeRowsInMain": 7,
+    "titleH1Removed": 12,
+    "captionsBound": 7,
+    "figureGrids": 3,
+    "figureGridItems": 14,
+    "logoGrids": 1,
+    "logoGridItems": 4,
+    "contactLensProducts": 53,
+    "visitBlocks": 3,
+    "liftsSkipped": 1,
+    "formsParsed": 2,
+    "formShowIfRules": 2,
+    "docCards": 1,
+    "headingOnlySections": 2,
+    "hiddenRatingValuesRemoved": 2,
+    "testimonialCards": 2,
+    "vendorClauses": 6,
+    "vendorParas": 1,
+    "accordionItems": 35,
+    "videos": 3,
+    "equipmentItems": 9,
+    "imageHeadingsUnwrapped": 4,
+    "paraImagesLifted": 4,
+    "logoWallItems": 49,
+    "headingRunsMerged": 1,
+    "attributions": 7,
+    "emptyShellsDropped": 1,
+    "mapPlaceIdsResolved": 2,
+    "mapKeysStripped": 2,
+    "sitemapLinks": 92,
+    "iconLinksLabelled": 12,
+    "anchorsFlattened": 6,
+    "pageMenusKept": 1,
+    "pageMenuItems": 3,
+    "deadButtonsAsText": 1,
+    "emptyTelUnwrapped": 2,
+    "paragraphsClosedByP": 2,
+    "artCached": 119,
+    "unreferencedImagesPruned": 2,
+    "imagesFromCacheAfterRender": 347,
+    "redirects": 16
+  },
+  "lists": {
+    "dupSections": [],
+    "withinCardDupeTexts": [],
+    "liftsSkipped": [
+      "callout: holds a component"
+    ]
+  },
+  "figureRoles": {
+    "brand": 9,
+    "photo": 41,
+    "plate": 20,
+    "portrait": 1,
+    "diagram": 3
+  },
+  "links": {
+    "moved": [
+      {
+        "from": "/appointment-request-form/",
+        "to": "/contact-us/appointment-request-form/",
+        "references": 1
+      },
+      {
+        "from": "/contact-us/patient-forms/new-patient-information/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      },
+      {
+        "from": "/eye-care-services/eye-conditions/dry-eye-disease-and-treatment/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 3
+      },
+      {
+        "from": "/eye-care-services/management-of-ocular-diseases/cataract-surgery-co-management/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 3
+      },
+      {
+        "from": "/eye-care-services/management-of-ocular-diseases/glaucoma-testing-treatment/",
+        "to": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+        "references": 3
+      },
+      {
+        "from": "/eye-emergencies-pink-red-eyes/",
+        "to": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+        "references": 1
+      },
+      {
+        "from": "/eyeglasses-contacts/contact-lenses/",
+        "to": "/contact-lenses/",
+        "references": 2
+      },
+      {
+        "from": "/eyeglasses-contacts/eyeglasses/",
+        "to": "/eyeglasses/",
+        "references": 2
+      },
+      {
+        "from": "/eyeglasses-contacts/eyeglasses/designer-frames/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      },
+      {
+        "from": "/eyeglasses-contacts/eyeglasses/lens-treatments/uv-protection/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      },
+      {
+        "from": "/eyeglasses-contacts/eyeglasses/prescription-eyeglasses/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      },
+      {
+        "from": "/eyeglasses-contacts/eyeglasses/specialty-eyewear/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      },
+      {
+        "from": "/new-patient-information/",
+        "to": "/contact-us/appointment-request-form/",
+        "references": 1
+      },
+      {
+        "from": "/pediatric-eye-exams/",
+        "to": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+        "references": 1
+      },
+      {
+        "from": "/your-eye-health/protecting-your-eyes/",
+        "to": "/eye-care-services/",
+        "references": 2
+      },
+      {
+        "from": "/your-eye-health/protecting-your-eyes/protecting-your-eyes-from-glare/",
+        "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "references": 1
+      }
+    ],
+    "dead": []
+  },
+  "seo": {
+    "titlesRepaired": 17,
+    "canonicalsChanged": 17,
+    "descriptionsDerived": 5,
+    "descriptionsNotDerived": 6,
+    "structuredData": {
+      "BlogPosting REPAIR": 19,
+      "FAQPage REMOVE": 2,
+      "VideoObject REMOVE": 3
+    },
+    "noindex": 23,
+    "sitemapUrls": 117,
+    "redirects": 16
+  },
+  "base": "/",
+  "families": {
+    "home": 1,
+    "not-found": 1,
+    "archive": 17,
+    "blog-post": 21,
+    "builder-hub": 9,
+    "interior": 73,
+    "form": 2,
+    "legal": 3,
+    "location": 1,
+    "sitemap": 1,
+    "team-member": 11,
+    "template": 6,
+    "testimonial": 1,
+    "blog-index": 1
+  },
+  "cherry": "link",
+  "failures": []
+}

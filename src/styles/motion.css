@@ -1,0 +1,1066 @@
+/* motion.css — replication of the source site motion.
+ * Keyframes below are VERBATIM from the live capture.
+ * Do not re-type them: a retyped keyframe is a different animation.
+ * Source: audit/motion-inventory.json
+ */
+
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes pulse_animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes snow {
+  0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  50% { background-position: 500px 500px, 100px 200px, -100px 150px; }
+  100% { background-position: 500px 1000px, 200px 400px, -100px 300px; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounce {
+  20%, 53%, 80%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); transform: translate3d(0px, 0px, 0px); }
+  40%, 43% { animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -30px, 0px); }
+  70% { animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -15px, 0px); }
+  90% { transform: translate3d(0px, -4px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flash {
+  50%, 0%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes pulse {
+  0% { transform: scale3d(1, 1, 1); }
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rubberBand {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes shake {
+  0%, 100% { transform: translate3d(0px, 0px, 0px); }
+  10%, 30%, 50%, 70%, 90% { transform: translate3d(-10px, 0px, 0px); }
+  20%, 40%, 60%, 80% { transform: translate3d(10px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes headShake {
+  6.5% { transform: translateX(-6px) rotateY(-9deg); }
+  18.5% { transform: translateX(5px) rotateY(7deg); }
+  31.5% { transform: translateX(-3px) rotateY(-5deg); }
+  43.5% { transform: translateX(2px) rotateY(3deg); }
+  50% { transform: translateX(0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes swing {
+  20% { transform: rotate3d(0, 0, 1, 15deg); }
+  40% { transform: rotate3d(0, 0, 1, -10deg); }
+  60% { transform: rotate3d(0, 0, 1, 5deg); }
+  80% { transform: rotate3d(0, 0, 1, -5deg); }
+  100% { transform: rotate3d(0, 0, 1, 0deg); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes tada {
+  0% { transform: scale3d(1, 1, 1); }
+  10%, 20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes wobble {
+  0% { transform: none; }
+  15% { transform: translate3d(-25%, 0px, 0px) rotate3d(0, 0, 1, -5deg); }
+  30% { transform: translate3d(20%, 0px, 0px) rotate3d(0, 0, 1, 3deg); }
+  45% { transform: translate3d(-15%, 0px, 0px) rotate3d(0, 0, 1, -3deg); }
+  60% { transform: translate3d(10%, 0px, 0px) rotate3d(0, 0, 1, 2deg); }
+  75% { transform: translate3d(-5%, 0px, 0px) rotate3d(0, 0, 1, -1deg); }
+  100% { transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes jello {
+  11.1%, 0%, 100% { transform: none; }
+  22.2% { transform: skewX(-12.5deg) skewY(-12.5deg); }
+  33.3% { transform: skewX(6.25deg) skewY(6.25deg); }
+  44.4% { transform: skewX(-3.125deg) skewY(-3.125deg); }
+  55.5% { transform: skewX(1.5625deg) skewY(1.5625deg); }
+  66.6% { transform: skewX(-0.78125deg) skewY(-0.78125deg); }
+  77.7% { transform: skewX(0.390625deg) skewY(0.390625deg); }
+  88.8% { transform: skewX(-0.195312deg) skewY(-0.195312deg); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceIn {
+  20%, 40%, 60%, 80%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  20% { transform: scale3d(1.1, 1.1, 1.1); }
+  40% { transform: scale3d(0.9, 0.9, 0.9); }
+  60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
+  80% { transform: scale3d(0.97, 0.97, 0.97); }
+  100% { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceInDown {
+  60%, 75%, 90%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(0px, -3000px, 0px); }
+  60% { opacity: 1; transform: translate3d(0px, 25px, 0px); }
+  75% { transform: translate3d(0px, -10px, 0px); }
+  90% { transform: translate3d(0px, 5px, 0px); }
+  100% { transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceInLeft {
+  60%, 75%, 90%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(-3000px, 0px, 0px); }
+  60% { opacity: 1; transform: translate3d(25px, 0px, 0px); }
+  75% { transform: translate3d(-10px, 0px, 0px); }
+  90% { transform: translate3d(5px, 0px, 0px); }
+  100% { transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceInRight {
+  60%, 75%, 90%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(3000px, 0px, 0px); }
+  60% { opacity: 1; transform: translate3d(-25px, 0px, 0px); }
+  75% { transform: translate3d(10px, 0px, 0px); }
+  90% { transform: translate3d(-5px, 0px, 0px); }
+  100% { transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceInUp {
+  60%, 75%, 90%, 0%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; transform: translate3d(0px, 3000px, 0px); }
+  60% { opacity: 1; transform: translate3d(0px, -20px, 0px); }
+  75% { transform: translate3d(0px, 10px, 0px); }
+  90% { transform: translate3d(0px, -5px, 0px); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceOut {
+  20% { transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% { opacity: 1; transform: scale3d(1.1, 1.1, 1.1); }
+  100% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceOutDown {
+  20% { transform: translate3d(0px, 10px, 0px); }
+  40%, 45% { opacity: 1; transform: translate3d(0px, -20px, 0px); }
+  100% { opacity: 0; transform: translate3d(0px, 2000px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceOutLeft {
+  20% { opacity: 1; transform: translate3d(20px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-2000px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceOutRight {
+  20% { opacity: 1; transform: translate3d(-20px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(2000px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes bounceOutUp {
+  20% { transform: translate3d(0px, -10px, 0px); }
+  40%, 45% { opacity: 1; transform: translate3d(0px, 20px, 0px); }
+  100% { opacity: 0; transform: translate3d(0px, -2000px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translate3d(0px, -100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInDownBig {
+  0% { opacity: 0; transform: translate3d(0px, -2000px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translate3d(-100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInLeftBig {
+  0% { opacity: 0; transform: translate3d(-2000px, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translate3d(100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInRightBig {
+  0% { opacity: 0; transform: translate3d(2000px, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translate3d(0px, 100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeInUpBig {
+  0% { opacity: 0; transform: translate3d(0px, 2000px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutDown {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(0px, 100%, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutDownBig {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(0px, 2000px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutLeft {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(-100%, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutLeftBig {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(-2000px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutRight {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(100%, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutRightBig {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(2000px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutUp {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(0px, -100%, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes fadeOutUpBig {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(0px, -2000px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flip {
+  0% { transform: perspective(400px) rotate3d(0, 1, 0, -360deg); animation-timing-function: ease-out; }
+  40% { transform: perspective(400px) translate3d(0px, 0px, 150px) rotate3d(0, 1, 0, -190deg); animation-timing-function: ease-out; }
+  50% { transform: perspective(400px) translate3d(0px, 0px, 150px) rotate3d(0, 1, 0, -170deg); animation-timing-function: ease-in; }
+  80% { transform: perspective(400px) scale3d(0.95, 0.95, 0.95); animation-timing-function: ease-in; }
+  100% { transform: perspective(400px); animation-timing-function: ease-in; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flipInX {
+  0% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  100% { transform: perspective(400px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flipInY {
+  0% { transform: perspective(400px) rotate3d(0, 1, 0, 90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotate3d(0, 1, 0, -20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotate3d(0, 1, 0, 10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+  100% { transform: perspective(400px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flipOutX {
+  0% { transform: perspective(400px); }
+  30% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); opacity: 1; }
+  100% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes flipOutY {
+  0% { transform: perspective(400px); }
+  30% { transform: perspective(400px) rotate3d(0, 1, 0, -15deg); opacity: 1; }
+  100% { transform: perspective(400px) rotate3d(0, 1, 0, 90deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes lightSpeedIn {
+  0% { transform: translate3d(100%, 0px, 0px) skewX(-30deg); opacity: 0; }
+  60% { transform: skewX(20deg); opacity: 1; }
+  80% { transform: skewX(-5deg); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes lightSpeedOut {
+  0% { opacity: 1; }
+  100% { transform: translate3d(100%, 0px, 0px) skewX(30deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateIn {
+  0% { transform-origin: center center; transform: rotate3d(0, 0, 1, -200deg); opacity: 0; }
+  100% { transform-origin: center center; transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateInDownLeft {
+  0% { transform-origin: left bottom; transform: rotate3d(0, 0, 1, -45deg); opacity: 0; }
+  100% { transform-origin: left bottom; transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateInDownRight {
+  0% { transform-origin: right bottom; transform: rotate3d(0, 0, 1, 45deg); opacity: 0; }
+  100% { transform-origin: right bottom; transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateInUpLeft {
+  0% { transform-origin: left bottom; transform: rotate3d(0, 0, 1, 45deg); opacity: 0; }
+  100% { transform-origin: left bottom; transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateInUpRight {
+  0% { transform-origin: right bottom; transform: rotate3d(0, 0, 1, -90deg); opacity: 0; }
+  100% { transform-origin: right bottom; transform: none; opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateOut {
+  0% { transform-origin: center center; opacity: 1; }
+  100% { transform-origin: center center; transform: rotate3d(0, 0, 1, 200deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateOutDownLeft {
+  0% { transform-origin: left bottom; opacity: 1; }
+  100% { transform-origin: left bottom; transform: rotate3d(0, 0, 1, 45deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateOutDownRight {
+  0% { transform-origin: right bottom; opacity: 1; }
+  100% { transform-origin: right bottom; transform: rotate3d(0, 0, 1, -45deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateOutUpLeft {
+  0% { transform-origin: left bottom; opacity: 1; }
+  100% { transform-origin: left bottom; transform: rotate3d(0, 0, 1, -45deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rotateOutUpRight {
+  0% { transform-origin: right bottom; opacity: 1; }
+  100% { transform-origin: right bottom; transform: rotate3d(0, 0, 1, 90deg); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes hinge {
+  0% { transform-origin: left top; animation-timing-function: ease-in-out; }
+  20%, 60% { transform: rotate3d(0, 0, 1, 80deg); transform-origin: left top; animation-timing-function: ease-in-out; }
+  40%, 80% { transform: rotate3d(0, 0, 1, 60deg); transform-origin: left top; animation-timing-function: ease-in-out; opacity: 1; }
+  100% { transform: translate3d(0px, 700px, 0px); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rollIn {
+  0% { opacity: 0; transform: translate3d(-100%, 0px, 0px) rotate3d(0, 0, 1, -120deg); }
+  100% { opacity: 1; transform: none; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes rollOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(100%, 0px, 0px) rotate3d(0, 0, 1, 120deg); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  50% { opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomInDown {
+  0% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(0px, -1000px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(0px, 60px, 0px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomInLeft {
+  0% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0px, 0px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomInRight {
+  0% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0px, 0px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomInUp {
+  0% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(0px, 1000px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(0px, -60px, 0px); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomOut {
+  0% { opacity: 1; }
+  50% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  100% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomOutDown {
+  40% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(0px, -60px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  100% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(0px, 2000px, 0px); transform-origin: center bottom; animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomOutLeft {
+  40% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0px, 0px); }
+  100% { opacity: 0; transform: scale(0.1) translate3d(-2000px, 0px, 0px); transform-origin: left center; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomOutRight {
+  40% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0px, 0px); }
+  100% { opacity: 0; transform: scale(0.1) translate3d(2000px, 0px, 0px); transform-origin: right center; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes zoomOutUp {
+  40% { opacity: 1; transform: scale3d(0.475, 0.475, 0.475) translate3d(0px, 60px, 0px); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  100% { opacity: 0; transform: scale3d(0.1, 0.1, 0.1) translate3d(0px, -2000px, 0px); transform-origin: center bottom; animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideInDown {
+  0% { transform: translate3d(0px, -100%, 0px); visibility: visible; }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideInLeft {
+  0% { transform: translate3d(-100%, 0px, 0px); visibility: visible; }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideInRight {
+  0% { transform: translate3d(100%, 0px, 0px); visibility: visible; }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideInUp {
+  0% { transform: translate3d(0px, 100%, 0px); visibility: visible; }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideOutDown {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  100% { visibility: hidden; transform: translate3d(0px, 100%, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideOutLeft {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  100% { visibility: hidden; transform: translate3d(-100%, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideOutRight {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  100% { visibility: hidden; transform: translate3d(100%, 0px, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes slideOutUp {
+  0% { transform: translate3d(0px, 0px, 0px); }
+  100% { visibility: hidden; transform: translate3d(0px, -100%, 0px); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes lightboxLoader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gfadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gfadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gslideInLeft {
+  0% { opacity: 0; transform: translate3d(-60%, 0px, 0px); }
+  100% { visibility: visible; transform: translate3d(0px, 0px, 0px); opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gslideOutLeft {
+  0% { opacity: 1; visibility: visible; transform: translate3d(0px, 0px, 0px); }
+  100% { transform: translate3d(-60%, 0px, 0px); opacity: 0; visibility: hidden; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gslideInRight {
+  0% { opacity: 0; visibility: visible; transform: translate3d(60%, 0px, 0px); }
+  100% { transform: translate3d(0px, 0px, 0px); opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gslideOutRight {
+  0% { opacity: 1; visibility: visible; transform: translate3d(0px, 0px, 0px); }
+  100% { transform: translate3d(60%, 0px, 0px); opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gzoomIn {
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  100% { opacity: 1; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes gzoomOut {
+  0% { opacity: 1; }
+  50% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  100% { opacity: 0; }
+}
+/* from capture https://www.riversidefamilyeyecare.com/wp-content/themes/_default/css/public.css?v=2025-02-11 */
+@keyframes splide-loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(1turn); }
+}
+/* from capture (inline) */
+@keyframes calculator-load-2sDtP {
+  0%, 100% { background-position: right center; }
+  50% { background-position: left center; }
+}
+/* from capture (inline) */
+@keyframes calculator-jiggle-1waAE {
+  0% { animation-timing-function: ease-in; transform: rotate(-2deg); }
+  50% { animation-timing-function: ease-out; transform: rotate(2.5deg); }
+}
+/* from capture (inline) */
+@keyframes calculator-borderIn-1PJto {
+  0% { border: 1px solid var(--custom-primary-color); }
+  50% { border: 1px solid rgb(0, 0, 0); }
+  100% { border: 1px solid var(--custom-primary-color); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-expandFromBottomLeft-5dD_9 {
+  0% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(-50px); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-collapseToBottomLeft-37kHM {
+  0% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(-50px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-expandFromBottomMiddle-fK3l8 {
+  0% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(0px); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-collapseToBottomMiddle-28Tx_ {
+  0% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(0px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-expandFromBottomRight-5OQB0 {
+  0% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(50px); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-collapseToBottomRight-2e8c7 {
+  0% { opacity: 1; transform: scale(1) translateY(0px) translateX(0px); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: scale(0.1) translateY(50px) translateX(50px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-fadeInBackground-12iYi {
+  0% { background: rgba(0, 0, 0, 0); }
+  100% { background: rgba(0, 0, 0, 0.4); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-slideUpFromBottom-3EMW0 {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+/* from capture (inline) */
+@keyframes floatingEstimator-slideDownToBottom-__CUG {
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(100%); }
+}
+
+/* --- easing tokens observed on the source ------------------------------ */
+:root {
+  --ease-1: cubic-bezier(0.215,.61,.355,1);
+  --ease-2: cubic-bezier(0.55,.055,.675,.19);
+  --ease-3: cubic-bezier(0.175,.885,.32,1);
+  --ease-4: cubic-bezier(0.755,.050,.855,.060);
+  --ease-5: cubic-bezier(0.3,0,0,1.5);
+  --ease-6: cubic-bezier(.67, .17, .4, .83);
+  --ease-7: cubic-bezier(.42,.65,.27,.99);
+  --dur-1: 0.2s;
+  --dur-2: 0.3s;
+  --dur-3: 0.15s;
+}
+
+/* --- per-element motion measured on the source -------------------------- */
+/* Each block below is what the ORIGINAL element resolved to. Re-apply these
+   to the equivalent rebuilt component; the selector names will differ, the
+   VALUES must not. */
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435b:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-Gq0kbWLfSQ > a.ecp-button.ecp-instance-Gq0kbWLfSQ > span.ecp-icon:nth-of-type(1)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435b:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-Gq0kbWLfSQ > a.ecp-button.ecp-instance-Gq0kbWLfSQ > span.ecp-icon:nth-of-type(1) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435d:nth-of-type(3) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-ugTfwdt8Ij > a.ecp-button.ecp-instance-ugTfwdt8Ij > span.ecp-icon:nth-of-type(1)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435d:nth-of-type(3) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-ugTfwdt8Ij > a.ecp-button.ecp-instance-ugTfwdt8Ij > span.ecp-icon:nth-of-type(1) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* #menu-item-5837 > span.ecp-icon.ecp-menu-icon-parent  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #menu-item-4205 > span.ecp-icon.ecp-menu-icon-parent  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #menu-item-414 > span.ecp-icon.ecp-menu-icon-parent  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #input_9_16 > div.grecaptcha-badge  @1024px */
+.REPLACE-ME {
+  transition: right 0.3s ease;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4)  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4) > span.ecp-icon-svg  @1024px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* #widget-floatingEstimator-mount > div.floatingEstimator-floatingEstimatorContainer-h9CQW > div.floatingEstimator-floatingContainer-1uxGW > button.floatingEstimator-floatingButton-I5Zis  @1024px */
+.REPLACE-ME {
+  transition: all 0.3s ease;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435b:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-Gq0kbWLfSQ > a.ecp-button.ecp-instance-Gq0kbWLfSQ > span.ecp-icon:nth-of-type(1)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435b:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-Gq0kbWLfSQ > a.ecp-button.ecp-instance-Gq0kbWLfSQ > span.ecp-icon:nth-of-type(1) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435d:nth-of-type(3) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-ugTfwdt8Ij > a.ecp-button.ecp-instance-ugTfwdt8Ij > span.ecp-icon:nth-of-type(1)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-col-group.fl-node-6284052911e6d > div.fl-col.fl-node-6284052911e6e > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-628a11e1942c7 > div.fl-col.fl-node-628a11e19435d:nth-of-type(3) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-button > div.fl-module-content.fl-node-content > div.ecp-button-wrapper.ecp-instance-ugTfwdt8Ij > a.ecp-button.ecp-instance-ugTfwdt8Ij > span.ecp-icon:nth-of-type(1) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* #menu-item-5837 > span.ecp-icon.ecp-menu-icon-parent  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #menu-item-4205 > span.ecp-icon.ecp-menu-icon-parent  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #menu-item-414 > span.ecp-icon.ecp-menu-icon-parent  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+  transform: matrix(1, 0, 0, 1, 0, -4.89844);
+}
+/* #input_9_16 > div.grecaptcha-badge  @1440px */
+.REPLACE-ME {
+  transition: right 0.3s ease;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4)  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4) > span.ecp-icon-svg  @1440px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* #widget-floatingEstimator-mount > div.floatingEstimator-floatingEstimatorContainer-h9CQW > div.floatingEstimator-floatingContainer-1uxGW > button.floatingEstimator-floatingButton-I5Zis  @1440px */
+.REPLACE-ME {
+  transition: all 0.3s ease;
+}
+/* div.fl-col-group.fl-node-bg0wjfie7znr > div.fl-col.fl-node-rywmpfqt4oag > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-mobile-header > div.fl-module-content.fl-node-content > div.ecp-mobile-header > div.ecp-content-container > div.ecp-mobile-header__menu:nth-of-type(3) > div.ecp-menu-wrapper.ecp-instance-Dyen6dFkLY > div.ecp-menu-mobile.ecp-menu-mobile-type-hamburger > a.ecp-menu-hamburger-trigger-button > div.ecp-menu-hamburger-trigger-open  @390px */
+.REPLACE-ME {
+  transition: all 0.15s ease-in;
+}
+/* #input_9_16 > div.grecaptcha-badge  @390px */
+.REPLACE-ME {
+  transition: right 0.3s ease;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(1) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-badges.ecp-instance-E8UzHKWCJh:nth-of-type(1) > a.ecp-badge.ecp-badge-withicon:nth-of-type(2) > div.ecp-badge-icon:nth-of-type(1) > span.ecp-icon > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-facebook:nth-of-type(1) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-yelp:nth-of-type(2) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-google:nth-of-type(3) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* html > body.page-template-default.page > div.ecp-wrapper-site:nth-of-type(3) > div.ecp-contentarea-wrapper:nth-of-type(2) > div.ecp-content-container > div.ecp-contentarea.clear > div.ecp-secondary.ecp-widget-area > div.ecp-widget.text-2:nth-of-type(2) > div.textwidget > div.ecp-iconset.ecp-instance-75b31wYCd8:nth-of-type(2) > a.ecp-icon.ecp-network-youtube:nth-of-type(4) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(1) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(2) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(3) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content-wrap > div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4)  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+/* div.fl-row-content.fl-row-fixed-width > div.fl-col-group.fl-node-62840477f41fe:nth-of-type(1) > div.fl-col.fl-node-62840477f4201 > div.fl-col-content.fl-node-content > div.fl-col-group.fl-node-62840477f4203 > div.fl-col.fl-node-62840477f4208:nth-of-type(2) > div.fl-col-content.fl-node-content > div.fl-module.fl-module-ecp-socialicons:nth-of-type(1) > div.fl-module-content.fl-node-content > div.ecp-iconset.ecp-instance-j3JnIMSwa5 > a.ecp-icon.ecp-icon-background:nth-of-type(4) > span.ecp-icon-svg  @390px */
+.REPLACE-ME {
+  transition: all 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* @redesign-motion */
+/* Riverlight motion layer (DESIGN-SPEC 2.10, 6; COMPONENTS 1.3, 1.7). Above the marker: the source motion, verbatim
+   evidence for gate C11, not shipped. Transform and opacity only; no infinite animation, no animated filter. */
+
+/* reveals (6.1, 1.3): hidden only under html.rv-ready; the entrance animates translate, hover and tilt animate transform */
+html.rv-ready .rv { opacity: 0; translate: 0 var(--reveal-y); }
+html.rv-ready .rv.is-in {
+  opacity: 1;
+  translate: 0 0;
+  /* QA round 1 (MOTION-7): the fade takes --dur-fade (320 ms), the slide keeps --dur (480 ms): opacity reaches 1 within
+     A-12's 600 ms of entering the viewport even when the transition starts 130 ms late on a busy frame */
+  transition: opacity var(--dur-fade) var(--ease-out) var(--d, 0ms), translate var(--dur) var(--ease-out) var(--d, 0ms);
+}
+
+/* cards (B.8, 6.4, G16): lift, tilt toward a fine pointer, glare; focus: lift, centred glare, no tilt */
+[data-tilt]:not(.rv) { transform: translateY(var(--lift, 0px)); transition: transform 450ms var(--ease-out), box-shadow 450ms var(--ease-out); }
+[data-tilt]:not(.rv):focus-within { --lift: var(--lift-card); }
+[data-tilt]::before {
+  content: ""; position: absolute; inset: 0; z-index: 3; border-radius: inherit; pointer-events: none;
+  background-image: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), var(--glare-light), transparent 58%);
+  opacity: 0; transition: opacity 300ms var(--ease-out);
+}
+[data-tilt]:not(.rv):focus-within::before { opacity: .35; }
+@media (hover: hover) {
+  [data-tilt]:not(.rv):hover { --lift: var(--lift-card); }
+}
+@media (hover: hover) and (pointer: fine) {
+  [data-tilt]:not(.rv):hover {
+    transform: perspective(var(--tilt-perspective)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px));
+  }
+  [data-tilt]:not(.rv):hover::before { opacity: .5; }
+}
+/* Mobile optimisation (M-TOUCH-4, the card after Back; riverlight.css resets the title, photo and shadow the same way):
+   on a touch phone below 1024 px a card that keeps :hover or focus from a tap (after Back, from the back-forward cache)
+   rests unlifted and without glare; keyboard focus inside it (:focus-visible) keeps the designed focus state */
+@media (hover: none) and (max-width: 1023px) {
+  [data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible)) { --lift: 0px; }
+  [data-tilt]:not(.rv):is(:hover, :focus-within):not(:has(:focus-visible))::before { opacity: 0; }
+}
+
+/* button sheen (6.4) */
+.btn::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: var(--sheen); transform: translateX(-110%);
+}
+.btn--ghost::after, .btn--light::after { background-image: var(--sheen-soft); }
+/* Mobile optimisation (M-TOUCH-4, riverlight.css above .roundbtn--navy): the sheen's :hover half is for a hover-capable
+   screen or 1024 px and up; on a touch phone a tapped button no longer keeps its sheen pass as a hover look */
+.btn:focus-visible::after { transform: translateX(110%); transition: transform var(--dur-slow) var(--ease-out); }
+@media (hover: hover), (min-width: 1024px) { .btn:hover::after { transform: translateX(110%); transition: transform var(--dur-slow) var(--ease-out); } }
+
+/* hero loop fade-in (A3) */
+.hero__light video { opacity: 0; transition: opacity 1.2s ease; }
+.hero__light video.is-playing { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-field__layer, .hero__light { will-change: transform, opacity; }
+  /* QA round 1 (MOTION-1, PERF-1): the band overlays whose opacity follows --p, written every scrolled frame, get their
+     own compositor layers, and so does the river: a --p write or a parallax move no longer re-rasters the band area or
+     the page-tall river SVG on every frame (A-22) */
+  .services__band::after, .lavender::after, .band--lav::after, .emergency::after, .insurance::after, .site-footer::after, .band--sky::after { will-change: opacity; }
+  .river { will-change: transform; }
+}
+/* QA round 1 (wf6, MOTION-1, PERF-1): --p, the band progress site.js writes on every scrolled frame, is registered as
+   NOT inherited. A custom property is inherited by default, so each write restyled every element inside the band; now a
+   write restyles the band and its ::after overlay, which takes the value explicitly (--p: inherit). Without JavaScript,
+   or with reduced motion, --p is never written and stays 0, as before. Measured on the home at 1280x585, DPR 1.5,
+   CPU x4 (tmp/wf6/fix1/results/p14c-1280*.json): style recalc per scroll pass 1.43-1.50 s -> 0.74-0.91 s */
+@property --p { syntax: '<number>'; inherits: false; initial-value: 0; }
+.services__band::after, .lavender::after, .band--lav::after, .emergency::after, .insurance::after, .site-footer::after, .band--sky::after { --p: inherit; }
+/* QA round 1 (wf6, fix-1 resumed; MOTION-1, PERF-1): where the browser runs scroll-driven animations, each band overlay
+   follows a view timeline of its own band instead of --p: the same progress site.js computes, (vh - top) / (vh + h), 0
+   when the band's top reaches the bottom of the viewport and 1 when its bottom leaves the top (inset 0, range cover
+   0%-100%), with no style write per scrolled frame. site.js then writes no --p (COMPONENTS 1.4, register I.L); elsewhere
+   --p stays the fallback. As before: nothing without JavaScript (html.js) and nothing with reduced motion (the overlay
+   stays at 0). Measured with CPU x4 (tmp/wf6/fix1r/p/results/p14d-*.json): the overlay's opacity equals the --p formula
+   (0.233 at 1440x900, 0.203 at 1280x585, difference 0), and the style recalc per scroll pass falls from 0.84-0.96 s to
+   0.44-0.49 s at 1440x900 (0.70-0.79 s to 0.41-0.46 s at 1280x585) */
+@keyframes rfec-band-dusk { from { opacity: 0; } to { opacity: .55; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    html.js [data-band] { view-timeline-name: --rfec-band; view-timeline-axis: block; view-timeline-inset: 0px; }
+    html.js .services__band::after, html.js .lavender::after, html.js .band--lav::after, html.js .emergency::after,
+    html.js .insurance::after, html.js .site-footer::after, html.js .band--sky::after {
+      animation: rfec-band-dusk linear both; animation-timeline: --rfec-band; animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+/* accordion (3.26) */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (interpolate-size: allow-keywords) and selector(::details-content) {
+    .faq__item { interpolate-size: allow-keywords; }
+    .faq__item::details-content {
+      height: 0; overflow: clip;
+      transition: height var(--dur) var(--ease-out), content-visibility var(--dur) var(--ease-out) allow-discrete;
+    }
+    .faq__item[open]::details-content { height: auto; }
+  }
+}
+
+/* reduced motion (6.5): instant, nothing gated, no tilt, glare, lift, zoom or sheen */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  html.rv-ready .rv { opacity: 1; translate: none; }
+  [data-tilt], [data-tilt]:not(.rv), [data-tilt]:not(.rv):is(:hover, :focus-within) { transform: none; }
+  [data-tilt]::before, .btn::after { display: none; }
+  .btn:is(:hover, :focus-visible), .roundbtn:is(:hover, :focus-visible), .social__link:is(:hover, :focus-visible),
+  .qa:is(:hover, :focus-visible), .promo:is(:hover, :focus-within) .fig__media { transform: none; }
+  [data-tilt] .frame img, .trio__photo img, .promo img, .rich .fig__media img { scale: none !important; }
+  .archive-row__link span { translate: none !important; }
+  .carousel__track { scroll-behavior: auto; }
+}

@@ -1,0 +1,15 @@
+{
+ "schema": "rfec/words-added@1",
+ "dist": "dist",
+ "pages": 148,
+ "visibleWords": 102222,
+ "added": [],
+ "visibleGlyphs": 1918,
+ "addedGlyphs": [],
+ "control": {
+  "planted": "an invented sentence on /; five \"★\" on /",
+  "firedWords": true,
+  "firedGlyphs": true,
+  "fired": true
+ }
+}

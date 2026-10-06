@@ -1,0 +1,43 @@
+{
+  "schema": "site-reforge/media@1",
+  "generated": "2026-10-01T03:12:24.597Z",
+  "note": "Same-origin <video>/<audio>/<source> only. A third-party video is an outbound dependency of the site, not an asset of it. Oversized files are skipped, never truncated.",
+  "maxBytes": 52428800,
+  "discovered": [
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/03/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4"
+  ],
+  "saved": [
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+      "savedAs": "For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+      "bytes": 30273579,
+      "sha256": "e2ca9582479fb65b7f8fed5a967907f64f92a09cfc5aa68df50d5f79f082e289"
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/03/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4",
+      "savedAs": "copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4",
+      "bytes": 6806599,
+      "sha256": "35ee1b36159a94c1a49b5f0805bee0f827a84a1af7e730b5e4a5b27489c7fe21"
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+      "savedAs": "How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+      "bytes": 26158684,
+      "sha256": "eb0652ac2adaaed8fc60b83544bce1a2fb5a6fbb088ca53b7b8476762f24d837"
+    }
+  ],
+  "skipped": [],
+  "map": {
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4": "/media/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+    "//www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4": "/media/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+    "/wp-content/uploads/sites/3587/2026/07/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4": "/media/For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/03/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4": "/media/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4",
+    "//www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/03/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4": "/media/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4",
+    "/wp-content/uploads/sites/3587/2026/03/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4": "/media/copy_0645C2BD-6458-4B95-9E77-A87EC5573240.mp4",
+    "https://www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4": "/media/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+    "//www.riversidefamilyeyecare.com/wp-content/uploads/sites/3587/2026/07/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4": "/media/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4",
+    "/wp-content/uploads/sites/3587/2026/07/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4": "/media/How-does-Intense-Pulsed-Light-IPL-treat-the-root-cause-of-dry-eye-rather-than-just-the-symptoms_v001.mp4"
+  }
+}

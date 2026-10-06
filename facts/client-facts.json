@@ -1,0 +1,478 @@
+{
+  "schema": "site-reforge/client-facts@1",
+  "note": "Declared facts for Riverside Family Eye Care. ONLY facts recorded here or present in audit/content-inventory.json may appear as claims on the rebuild. Written by tools/write-facts.mjs from the evidence; every entry names its source. Nothing here is supplied by the client or invented - it is what the LIVE SITE says (crawl of 2026-10-01), including places the extractor text capture did not reach (insurance plan names printed only as logo alt text, testimonial cards, icon-only social links). Every key of the reference build (R) schema is kept. Added: the top-level keys insurance, payment, reviewLinks, mapLinks, legalNameNote, peopleNote, addressNote and testimonialsNote; credentials/group/page on people; title/reviewedAt/shownAs on testimonials; rel on socialProfiles; value/holder/source entries in certifications and awards (R's were empty). post is null on review-widget cards, which carry no post id. sr-fabrication reads every value of every key. QA round 1 (wf6, CONTENT-2) added mapLinks and the sourcedClaimContexts entries: text sr-fabrication --strict reads as a claim although every word of it is the source's (tools/write-facts.mjs section 12 checks each against the evidence). It also added 6 figure-text entries to testimonials, which QA round 1 (regressions, R1) removed: testimonials holds only the source's reviews.",
+  "generatedBy": "tools/write-facts.mjs",
+  "generated": "2026-10-02",
+  "legalName": "",
+  "legalNameNote": "No legal-entity name of the practice (LLC, PLLC, Inc., P.A., P.C.) is printed on any of the 148 pages. The only entity suffixes in visible text belong to third-party names: \"Johnson & Johnson Vision Care, Inc.\" (/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/) and \"Transitions® Lenses Optical, Inc.\" (/eyeglasses/).",
+  "brand": "Riverside Family Eye Care",
+  "people": [
+    {
+      "name": "Dr. Brittany Degler, O.D.",
+      "credentials": "O.D.",
+      "role": "optometrist; her bio: \"Founder of Riverside Family Eyecare\"",
+      "group": "Our Doctors",
+      "page": "/team/dr-brittany-degler-od/",
+      "source": "audit/raw/our-eye-doctors.html div.ecp-post.ecp-post-5541[data-categories=\"Our Doctors\"] .ecp-post-title a; audit/raw/team-dr-brittany-degler-od.html h1 and bio"
+    },
+    {
+      "name": "Dr. Kristin Nelson, O.D., IACMM",
+      "credentials": "O.D., IACMM",
+      "role": "optometrist; her bio: \"Doctor of Optometry specializing in pediatrics and myopia management\"",
+      "group": "Our Doctors",
+      "page": "/team/dr-kristin-nelson-od/",
+      "source": "audit/raw/our-eye-doctors.html div.ecp-post.ecp-post-6558[data-categories=\"Our Doctors\"] .ecp-post-title a; audit/raw/team-dr-kristin-nelson-od.html h1 and bio"
+    },
+    {
+      "name": "Dr. Maivys Longa, O.D.",
+      "credentials": "O.D.",
+      "role": "optometrist; her bio: \"Dr. Longa draws from the experience she has running her own practice, Longa Family Eyecare.\"",
+      "group": "Our Doctors",
+      "page": "/team/maivys-longa/",
+      "source": "audit/raw/our-eye-doctors.html div.ecp-post.ecp-post-6581[data-categories=\"Our Doctors\"] .ecp-post-title a; audit/raw/team-maivys-longa.html h1 and bio"
+    },
+    {
+      "name": "Heather",
+      "role": "Office Manager, Optician",
+      "group": "Our Staff",
+      "page": "/team/heather/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-5544[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-heather.html h1"
+    },
+    {
+      "name": "Erica",
+      "role": "Office Administrator",
+      "group": "Our Staff",
+      "page": "/team/erica-eis/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6325[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-erica-eis.html h1"
+    },
+    {
+      "name": "Nancy",
+      "role": "Lead Optometric Technician",
+      "group": "Our Staff",
+      "page": "/team/nancy/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-5543[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-nancy.html h1"
+    },
+    {
+      "name": "Rose",
+      "role": "Optometric Technician",
+      "group": "Our Staff",
+      "page": "/team/rose-johnson/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6323[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-rose-johnson.html h1"
+    },
+    {
+      "name": "Asma",
+      "role": "Lab Technician",
+      "group": "Our Staff",
+      "page": "/team/asma-sahees/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6330[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-asma-sahees.html h1"
+    },
+    {
+      "name": "Xaiene",
+      "role": "Remote Medical Scribe",
+      "group": "Our Staff",
+      "page": "/team/xaiene-dos-santos-da-costa/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6471[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-xaiene-dos-santos-da-costa.html h1"
+    },
+    {
+      "name": "Kristina",
+      "role": "Optician & Front Desk",
+      "group": "Our Staff",
+      "page": "/team/kristina/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6477[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-kristina.html h1"
+    },
+    {
+      "name": "Jhonae",
+      "role": "Optical Technician",
+      "group": "Our Staff",
+      "page": "/team/jhonae-anglin/",
+      "source": "audit/raw/the-staff.html div.ecp-post.ecp-post-6556[data-categories=\"Our Staff\"] .ecp-post-title a + .ecp-post-position; audit/raw/team-jhonae-anglin.html h1"
+    }
+  ],
+  "peopleNote": "The home page features Dr. Brittany Degler, O.D. and Dr. Kristin Nelson, O.D., IACMM (team cards in audit/raw/index.html <main>). Staff names are the cards' and h1s' first names; some bios add surnames (see docs/FACTS-EVIDENCE.md).",
+  "phone": [
+    {
+      "value": "239-500-2020",
+      "source": "audit/raw/*.html top bar (printed as tel: 239-500-2020), mobile header, sidebar location widget, footer NAP, in-content links and the head JSON-LD telephone; all 566 tel: links on non-template pages resolve to it"
+    }
+  ],
+  "fax": [
+    {
+      "value": "239-500-2030",
+      "source": "audit/raw/*.html location widget li.ecp-post-contactdetails-contacttype-Fax (the sidebar of 131 pages; <main> of /contact-us/, /hours-location/, /location/riverside-family-eyecare/; 133 pages in all)"
+    }
+  ],
+  "faxNote": "Printed as text only (no fax: link).",
+  "email": [
+    {
+      "value": "info@riversidefamilyeyecare.com",
+      "source": "audit/raw/*.html location widget li.ecp-post-contactdetails-contacttype-Email (mailto:), printed with \"(Do not send personal health information by email.)\""
+    },
+    {
+      "value": "optician@riversidefamilyeyecare.com",
+      "source": "audit/raw/website-accessibility-policy.html <main> \"Email us at:\" (mailto:) - the only page that prints it"
+    }
+  ],
+  "addresses": [
+    {
+      "value": "Located at the intersection of Palm Beach Blvd and 31, in the Verandah Publix Plaza",
+      "source": "audit/raw/*.html header top bar (div.ecp-richtext a[href=\"/hours-location/\"]), 142 pages"
+    },
+    {
+      "value": "11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905",
+      "source": "audit/raw/*.html location widget div.ecp-post-address (two lines split by <br>)"
+    },
+    {
+      "value": "Riverside Family Eye Care - Located at 11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905. Phone: 239-500-2020. https://www.riversidefamilyeyecare.com",
+      "source": "audit/raw/*.html footer div.ecp-footer-address, 142 pages"
+    },
+    {
+      "value": "11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905, US",
+      "source": "audit/raw/*.html head JSON-LD PostalAddress (LocalBusiness, MedicalBusiness, Optician, \"MedicalSpecialty :: Optometric\"), 148 pages"
+    }
+  ],
+  "addressNote": "One street, unit and ZIP everywhere: no Suite or other unit form, no other ZIP. /website-accessibility-policy/ prints \"Write to us at: 11841 Palm Beach Blvd, Unit 117 Fort Myers FL\" (no ZIP).",
+  "geo": null,
+  "geoNote": "No latitude/longitude anywhere in audit/raw (0 of 148 pages; no geo in the JSON-LD). The map embeds Google place_id ChIJM8_tjQZv24gRxjCaxQqyGLU (133 pages); its feature id 0x88db6f068dedcf33:0xb518b20ac59a30c6 is the one in the \"Read Google Reviews\" link.",
+  "hours": "Monday: 9:00 AM - 5:00 PM; Tuesday: 9:00 AM - 5:00 PM; Wednesday: 9:00 AM - 6:00 PM; Thursday: 11:00 AM - 7:00 PM; Friday: 8:00 AM - 12:00 PM\n1:00 PM - 4:00 PM; Saturday: Closed; Sunday: Closed",
+  "hoursSource": "audit/raw/*.html hours widget li.ecp-post-hours-item: identical in the sidebar of 131 pages and in <main> of hours-location.html, location-riverside-family-eyecare.html. Friday prints two ranges split by <br> (the \"\\n\"). No other hours statement on the site; the head JSON-LD carries no opening hours.",
+  "licences": [],
+  "certifications": [
+    {
+      "value": "Dr. Nelson is an IACMM certified optometrist, holding advanced accreditation in orthokeratology and myopia management.",
+      "holder": "Dr. Kristin Nelson, O.D., IACMM",
+      "source": "audit/raw/team-dr-kristin-nelson-od.html bio"
+    },
+    {
+      "value": "Certifications: Proficient in LipiFlow and MiSight certified for advanced myopia management.",
+      "holder": "Dr. Maivys Longa, O.D.",
+      "source": "audit/raw/team-maivys-longa.html bio (Education & Training list)"
+    }
+  ],
+  "awards": [
+    {
+      "value": "she was inducted into the Gold Key International Optometric Honor Society, a distinction held by the top 10% of her class for leadership and ethical excellence.",
+      "holder": "Dr. Kristin Nelson, O.D., IACMM",
+      "source": "audit/raw/team-dr-kristin-nelson-od.html bio"
+    }
+  ],
+  "statistics": [],
+  "clients": [],
+  "guarantees": [],
+  "pricing": [],
+  "services": [],
+  "insurance": {
+    "vision": [
+      {
+        "name": "Aetna",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/4ON2tzqw5GNU7H4U.png",
+        "logoFile": "assets/source/744564c5-4ON2tzqw5GNU7H4U.png"
+      },
+      {
+        "name": "AlwaysCare",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/alwayscare.png",
+        "logoFile": "assets/source/c9f52c34-alwayscare.png"
+      },
+      {
+        "name": "Avesis",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/avesis.png",
+        "logoFile": "assets/source/5a7d921f-avesis.png"
+      },
+      {
+        "name": "Care Credit",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/care-credit.png",
+        "logoFile": "assets/source/ba7d60b1-care-credit.png"
+      },
+      {
+        "name": "Eye Med",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/eye-med.png",
+        "logoFile": "assets/source/b4cd3896-eye-med.png"
+      },
+      {
+        "name": "FEP Blue Vision",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/20be0e0a-00f4-4014-aa1c-747638159dfa.png",
+        "logoFile": "assets/source/0fe1cb44-20be0e0a-00f4-4014-aa1c-747638159dfa.png"
+      },
+      {
+        "name": "Guardian",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/guardian.png",
+        "logoFile": "assets/source/fe2d071f-guardian.png"
+      },
+      {
+        "name": "Humana",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/humana.png",
+        "logoFile": "assets/source/670f3d77-humana.png"
+      },
+      {
+        "name": "Humana Medicare",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/scSoWXeOR75fOBub.png",
+        "logoFile": "assets/source/09340878-scSoWXeOR75fOBub.png"
+      },
+      {
+        "name": "National Vision Administration (NVA)",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/nva.png",
+        "logoFile": "assets/source/cc9183a7-nva.png"
+      },
+      {
+        "name": "Premier Eye Care",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/premier-eye-care.png",
+        "logoFile": "assets/source/719cca42-premier-eye-care.png"
+      },
+      {
+        "name": "Spectera",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/spectera.png",
+        "logoFile": "assets/source/4abbec08-spectera.png"
+      },
+      {
+        "name": "Unum Vision",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/n8ILPiY10knBxv10.png",
+        "logoFile": "assets/source/baebdd9e-n8ILPiY10knBxv10.png"
+      },
+      {
+        "name": "VBA",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/D9jkdhNCXSAV7QNV.png",
+        "logoFile": "assets/source/8581b3a6-D9jkdhNCXSAV7QNV.png"
+      },
+      {
+        "name": "VSP",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/29UMjPGjw56kH0x4.png",
+        "logoFile": "assets/source/98a853a5-29UMjPGjw56kH0x4.png"
+      },
+      {
+        "name": "Well Care Health Plans",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/well-care-health-plans.png",
+        "logoFile": "assets/source/d878eb26-well-care-health-plans.png"
+      }
+    ],
+    "medical": [
+      {
+        "name": "Aetna",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/4ON2tzqw5GNU7H4U.png",
+        "logoFile": "assets/source/744564c5-4ON2tzqw5GNU7H4U.png"
+      },
+      {
+        "name": "Care Credit",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/care-credit.png",
+        "logoFile": "assets/source/ba7d60b1-care-credit.png"
+      },
+      {
+        "name": "Cigna",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/cigna.png",
+        "logoFile": "assets/source/0bf8f56d-cigna.png"
+      },
+      {
+        "name": "Medicare",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/medicare.png",
+        "logoFile": "assets/source/d9a9ab48-medicare.png"
+      },
+      {
+        "name": "Railroad Medicare Beneficiaries",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/railroad-medicare-beneficiaries.png",
+        "logoFile": "assets/source/2a04a192-railroad-medicare-beneficiaries.png"
+      },
+      {
+        "name": "Tricare",
+        "logo": "https://storage.googleapis.com/ecp-samurai/insurances/tricare.png",
+        "logoFile": "assets/source/0cef80c4-tricare.png"
+      }
+    ],
+    "source": "audit/raw/insurance.html <main> div.insurance_logo_items ul li img[alt], under h2 \"Vision Plans We Accept\" and h2 \"Medical Plans We Accept\"",
+    "note": "On /insurance/ the plan names are printed ONLY as logo alt text: 18 of the 20 distinct names are absent from the extractor text capture (audit/content-inventory.json); \"VSP\" and \"Medicare\" occur there only in other pages' text. \"Aetna\" and \"Care Credit\" are in both lists. The page also says: \"If you do not see your plan listed here, please give us a call\"."
+  },
+  "payment": [
+    {
+      "name": "Cherry Payment Plan",
+      "page": "/cherry-payment-plan/",
+      "provider": "Cherry (files.withcherry.com/widgets/widget.js)",
+      "slug": "riverside-family-eyecare",
+      "widgetSections": [
+        "hero",
+        "calculator",
+        "howitworks",
+        "faq"
+      ],
+      "floatingEstimatorPages": 148,
+      "source": "chrome.json nav Insurance > Cherry Payment Plan; audit/raw/cherry-payment-plan.html <main> div.ecp-html _hw(\"init\") script",
+      "note": "The page body and the site-wide floating estimator are drawn in the browser by Cherry's script; none of their wording is in audit/raw. Cherry terms are not declared here."
+    },
+    {
+      "name": "CareCredit",
+      "page": "/insurance/carecredit/",
+      "applyUrl": "http://www.carecredit.com/apply/?dtc=DS5V",
+      "source": "audit/raw/insurance-carecredit.html h1.ecp-entry-title + the \"Apply now\" link; \"Care Credit\" logo in both /insurance/ lists",
+      "note": "The page's plan terms (APRs, minimum purchases) are in its own text; they are the source's words and may be stale."
+    }
+  ],
+  "reviewLinks": [
+    {
+      "label": "Read Google Reviews",
+      "href": "https://www.google.com/search?q=riverside+family+eyecare+fort+meyers+fl&oq=riverside+family+eyecare+fort+meyers+fl&aqs=chrome..69i57j46i13i175i199.9764j0j4&sourceid=chrome&ie=UTF-8#lrd=0x88db6f068dedcf33:0xb518b20ac59a30c6,1,,,",
+      "sourceHref": " https://www.google.com/search?q=riverside+family+eyecare+fort+meyers+fl&oq=riverside+family+eyecare+fort+meyers+fl&aqs=chrome..69i57j46i13i175i199.9764j0j4&sourceid=chrome&ie=UTF-8#lrd=0x88db6f068dedcf33:0xb518b20ac59a30c6,1,,,",
+      "page": "/",
+      "googleListing": "0x88db6f068dedcf33:0xb518b20ac59a30c6",
+      "source": "audit/raw/index.html <main> a.ecp-button; its #lrd= feature id equals the one encoded in the map embed place_id ChIJM8_tjQZv24gRxjCaxQqyGLU"
+    },
+    {
+      "label": "More Google Reviews",
+      "href": "https://www.google.com/search?q=riverside+family+eyecare+fort+meyers+fl&oq=riverside+family+eyecare+fort+meyers+fl&aqs=chrome..69i57j46i13i175i199.9764j0j4&sourceid=chrome&ie=UTF-8#lrd=0x88db6f068dedcf33:0xb518b20ac59a30c6,1,,,",
+      "sourceHref": "https://www.google.com/search?q=riverside+family+eyecare+fort+meyers+fl&oq=riverside+family+eyecare+fort+meyers+fl&aqs=chrome..69i57j46i13i175i199.9764j0j4&sourceid=chrome&ie=UTF-8#lrd=0x88db6f068dedcf33:0xb518b20ac59a30c6,1,,,",
+      "page": "/eyeglasses/designer-frames/",
+      "googleListing": "0x88db6f068dedcf33:0xb518b20ac59a30c6",
+      "source": "audit/raw/eyeglasses-designer-frames.html <main> a.ecp-button; its #lrd= feature id equals the one encoded in the map embed place_id ChIJM8_tjQZv24gRxjCaxQqyGLU"
+    }
+  ],
+  "mapLinks": [
+    {
+      "url": "https://www.google.com/maps?q=Riverside%20Family%20Eye%20Care%2C%2011841%20Palm%20Beach%20Blvd%2C%20Unit%20117%2C%20Fort%20Myers%2C%20FL%2033905",
+      "query": "Riverside Family Eye Care, 11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905",
+      "placeId": "ChIJM8_tjQZv24gRxjCaxQqyGLU",
+      "source": "composed from chrome.json mapQuery (brandName + address, verified on 132 sidebar pages); audit/raw/*.html div.ecp-post-map iframe shows the same listing (place_id ChIJM8_tjQZv24gRxjCaxQqyGLU, 133 pages)",
+      "note": "A location link, not a review or credential profile. sr-fabrication reads every google.com/maps link as a proof link. Its link text is chrome.json mapsLinkLabel, an authored UI label (chrome.json authored[])."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "This is an amazing office. Each person in the office was knowledgeable and compassionate. They wanted what was best for my family and were not just focused on making a sale. The doctor was also a great teacher and taught us what she was doing every step of the way. This was a great experience!",
+      "name": "Lukas R, Google 2021",
+      "rating": 5,
+      "post": "testimonial post 5569",
+      "title": "This was a great experience!",
+      "source": "audit/raw/contact-us-testimonials.html <main> div.ecp-post.ecp-posttype-testimonial: .ecp-post-content / .ecp-post-attribute / count of .ecp-rating-star-full, live site 2026-10-01"
+    },
+    {
+      "quote": "I’m a new patient of Riverside Optical….I had a wonderful experience with Dr. Kristin Nelson who performed an in depth optical examination. Heather and the staff are extremely competent and friendly. I’m very pleased. Oh yeah, the office is super modern-‘EYE’ appealing!",
+      "name": "Marshall B.",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-09-15 23:18:33",
+      "shownAs": "2 weeks ago",
+      "source": "audit/raw/eyeglasses-designer-frames.html <main> div.ecp-reviews-wrapper > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "Today was my first time there and everyone was absolutely amazing! Thank you all so much for your help! 1000% recommend and I'll definitely be coming back for my next eye exam and glasses!",
+      "name": "Becki P.",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-09-16 20:07:48",
+      "shownAs": "a week ago",
+      "source": "audit/raw/index.html <main> div.ecp-reviews-wrapper (carousel) > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "I’m a new patient of Riverside Optical….I had a wonderful experience with Dr. Kristin Nelson who performed an in depth optical examination. Heather and the staff are extremely competent and friendly. I’m very pleased. Oh yeah, the office is super modern-‘EYE’ appealing!",
+      "name": "Marshall B.",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-09-15 23:18:33",
+      "shownAs": "2 weeks ago",
+      "source": "audit/raw/index.html <main> div.ecp-reviews-wrapper (carousel) > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "I called with a potentially serious eye concern at 9:40 AM on Monday. I was told to come in that day and they would see me right away. I had a previous appointment that didn’t allow me to get to their office until 2:45. I waited 10 minutes before they had me in an examination room. After an extensive battery of x-rays and whatever else they thought was important, the doctor came in to review my concerns. She was amazing! She was thorough and explained everything so clearly that I understood it. A year ago, maybe a little longer, I came to that office simply because Living in Alva, Florida everything is 30 to 60 minutes away from our home. This office is only about 15 minutes away. I’m thrilled to say that the office staff and the doctors have been the finest I’ve had in years. Thank you for allowing me to comment on the exceptional care that I received on Monday!",
+      "name": "Randy",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-09-15 21:52:23",
+      "shownAs": "2 weeks ago",
+      "source": "audit/raw/index.html <main> div.ecp-reviews-wrapper (carousel) > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "First time client and both my husband and I were very happy with the care and the staff. Brittany is great at explaining everything as she went through the exam and answering any questions or concerns. Her staff works as one team to make it a great experience as well! Highly recommend!!!",
+      "name": "Kristi B.",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-09-03 21:52:19",
+      "shownAs": "3 weeks ago",
+      "source": "audit/raw/index.html <main> div.ecp-reviews-wrapper (carousel) > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "This place is where to go! From the moment you step in the front door you feel like family. All of the staff is friendly and wonderful. The equipment used is state of the art! Dr Degler is amazing and super friendly. She explains everything she’s doing with an upbeat and happy personality. I won’t go anywhere else. The prices are reasonable too as I don’t have eye insurance. Thank you Riverside Family Eye Care!",
+      "name": "Melissa C.",
+      "rating": 5,
+      "post": null,
+      "reviewedAt": "2026-08-27 13:09:00",
+      "shownAs": "a month ago",
+      "source": "audit/raw/index.html <main> div.ecp-reviews-wrapper (carousel) > div.ecp-review: .ecp-review-comment / .ecp-review-name strong / count of .ecp-rating-star-full / .ecp-rating-time[data-reviewed-at], live site 2026-10-01"
+    },
+    {
+      "quote": "This is an amazing office. Each person in the office was knowledgeable and compassionate. They wanted what was best for my family and were not just focused on making a sale. The doctor was also a great teacher and taught us what she was doing every step of the way. This was a great experience!",
+      "name": "Lukas R, Google 2021",
+      "rating": 5,
+      "post": "testimonial post 5569",
+      "source": "audit/raw/testimonial-this-was-a-great-experience.html <main> div.ecp-post.ecp-posttype-testimonial: .ecp-post-content / .ecp-post-attribute / count of .ecp-rating-star-full, live site 2026-10-01"
+    }
+  ],
+  "testimonialsNote": "8 cards on 4 pages, 6 distinct reviews: the home carousel (5), /eyeglasses/designer-frames/ (1, the Marshall B. card again), /contact-us/testimonials/ and /testimonial/this-was-a-great-experience/ (testimonial post 5569 twice). shownAs is the relative time the widget printed at crawl time; it goes stale and must not be shipped as static text. No other entry is declared (QA round 1, R1): the placeholder plates and the contact-lens product names are printed without <figure>, so sr-fabrication does not read them as testimonials.",
+  "socialProfiles": [
+    {
+      "network": "facebook",
+      "label": "Visit us on facebook",
+      "url": "https://www.facebook.com/RiversideFamilyEyeCareFortMyers/",
+      "rel": "nofollow noopener",
+      "source": "aria-label + href of the icon-only footer link on every chrome page and the sidebar icon set (audit/raw/*.html a.ecp-icon.ecp-network-facebook); the glyph is an inline <svg>"
+    },
+    {
+      "network": "yelp",
+      "label": "Visit us on yelp",
+      "url": "https://www.yelp.com/biz/riverside-family-eye-care-fort-myers?osq=riverside+family+eyecare",
+      "rel": "nofollow noopener",
+      "source": "aria-label + href of the icon-only footer link on every chrome page and the sidebar icon set (audit/raw/*.html a.ecp-icon.ecp-network-yelp); the glyph is an inline <svg>"
+    },
+    {
+      "network": "google",
+      "label": "Visit us on google",
+      "url": "https://maps.app.goo.gl/FxcqgwsKhM8qZqoFA",
+      "rel": "nofollow noopener",
+      "source": "aria-label + href of the icon-only footer link on every chrome page and the sidebar icon set (audit/raw/*.html a.ecp-icon.ecp-network-google); the glyph is an inline <svg>"
+    },
+    {
+      "network": "youtube",
+      "label": "Visit us on youtube",
+      "url": "https://www.youtube.com/@RiversideFamilyEyecare",
+      "rel": "noopener",
+      "source": "aria-label + href of the icon-only footer link on every chrome page and the sidebar icon set (audit/raw/*.html a.ecp-icon.ecp-network-youtube); the glyph is an inline <svg>"
+    }
+  ],
+  "sourcedClaimContexts": [
+    {
+      "page": "/eye-care-services/cataract-surgery-co-management/",
+      "sourceText": "determine if surgery is the best option for your clouded lens.",
+      "rebuildContext": "the best option for your clouded lens.",
+      "why": "The source sets \"your\" as two spans (\"you\" + \"r\"); the extractor capture stored \"you r\", so the matched window differs by one space. No word of the claim is new.",
+      "source": "audit/raw/eye-care-services-cataract-surgery-co-management.html (<main> .ecp-richtext (Word-pasted spans))"
+    },
+    {
+      "page": "/eyeglasses/eyeglass-basics/",
+      "sourceText": "How can you narrow down your options and choose the style of frames that are best for you?",
+      "rebuildContext": "best for you? Request An Appointment Email Us Riverside Family Eye Care 11841 Palm Beach Blvd, Unit 117 Fort Myers, FL 33905",
+      "why": "The last sentence of the page is followed on the source by the sidebar search widget (\"Search: Search\", removed: OPEN-DECISIONS Q13) and then the sidebar quick actions and location; on the rebuild the quick actions follow it directly. No word of the claim is new.",
+      "source": "audit/raw/eyeglasses-eyeglass-basics.html (<main> last paragraph; the sidebar (div.ecp-secondary))"
+    },
+    {
+      "page": "/sitemap/",
+      "sourceText": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+      "rebuildContext": "the Best of You The struggle against dry eye every winter is real.",
+      "why": "The post card prints its date before its title (DESIGN-SPEC 3.28); the source printed it between the title and the excerpt, so on the rebuild the title runs into the excerpt. No word of the claim is new.",
+      "source": "audit/raw/sitemap.html (<main> post list: title, date, excerpt)"
+    },
+    {
+      "page": "/whats-new/",
+      "sourceText": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+      "rebuildContext": "the Best of You The struggle against dry eye every winter is real.",
+      "why": "The post card prints its date before its title (DESIGN-SPEC 3.28); the source printed it between the title and the excerpt, so on the rebuild the title runs into the excerpt. No word of the claim is new.",
+      "source": "audit/raw/whats-new.html (<main> post list: title, date, excerpt)"
+    },
+    {
+      "page": "/tag/dry-eye/",
+      "sourceText": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+      "rebuildContext": "the Best of You Request An Appointment Email Us Riverside Family Eye Care 11841 Palm Beach Blvd, Unit 117 Fort Myers, FL 33905",
+      "why": "The archive's last post title is followed on the source by the sidebar search widget (\"Search: Search\", removed: OPEN-DECISIONS Q13) and then the sidebar quick actions and location; on the rebuild the quick actions follow it directly. No word of the claim is new.",
+      "source": "audit/raw/tag-dry-eye.html (<main> archive list; the sidebar (div.ecp-secondary))"
+    },
+    {
+      "page": "/tag/dry-eyes/",
+      "sourceText": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+      "rebuildContext": "the Best of You Request An Appointment Email Us Riverside Family Eye Care 11841 Palm Beach Blvd, Unit 117 Fort Myers, FL 33905",
+      "why": "The archive's only post title is followed on the source by the sidebar search widget (\"Search: Search\", removed: OPEN-DECISIONS Q13) and then the sidebar quick actions and location; on the rebuild the quick actions follow it directly. No word of the claim is new.",
+      "source": "audit/raw/tag-dry-eyes.html (<main> archive list; the sidebar (div.ecp-secondary))"
+    }
+  ]
+}

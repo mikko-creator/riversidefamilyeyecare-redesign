@@ -1,0 +1,108 @@
+/* fonts.css (DESIGN-SPEC 2.2): woff2 only, no display face. Files in src/theme/fonts (SIL OFL 1.1, from their name tables):
+   Atkinson Hyperlegible Next 2.001 roman + italic (wght 200-800); rfec-figures = Lexend 1.007 digits only (wght 100-900).
+   Fallbacks: size-adjust = Atkinson width / local width over 9,000 characters of the site's copy, measured in Chrome;
+   ascent/descent = Atkinson's 984/316 per 1000 divided by it; bold faces match Atkinson 650-700, and a 550-599 face
+   (the main nav's weight) matches Atkinson 550 (QA round 1, PERF-11). */
+@font-face {
+  font-family: "RFEC Figures";
+  src: url("../theme/fonts/rfec-figures.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+  ascent-override: 98.4%;
+  descent-override: 31.6%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../theme/fonts/atkinson-next-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../theme/fonts/atkinson-next-italic-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RFEC Verdana Fallback";
+  src: local("Verdana");
+  font-weight: 200 549;
+  size-adjust: 86.43%;
+  ascent-override: 113.85%;
+  descent-override: 36.56%;
+  line-gap-override: 0%;
+}
+/* QA round 1 (PERF-11, fix-2): the main nav is set at weight 550, where Atkinson is 1.53 % narrower than this bold face
+   sized for 650-700 (the six nav labels at 15.5 px: 613.5 px against 623.0 px, measured in Chrome), so the font swap
+   moved the nav 9.5 px. 550-599 now has its own face: 82.94 % x 0.98468 = 81.67 % */
+@font-face {
+  font-family: "RFEC Verdana Fallback";
+  src: local("Verdana Bold"), local("Verdana-Bold");
+  font-weight: 550 599;
+  size-adjust: 81.67%;
+  ascent-override: 120.48%;
+  descent-override: 38.69%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "RFEC Verdana Fallback";
+  src: local("Verdana Bold"), local("Verdana-Bold");
+  font-weight: 600 800;
+  size-adjust: 82.94%;
+  ascent-override: 118.64%;
+  descent-override: 38.10%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "RFEC Arial Fallback";
+  src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"), local("LiberationSans"), local("Arimo");
+  font-weight: 200 549;
+  size-adjust: 99.12%;
+  ascent-override: 99.28%;
+  descent-override: 31.88%;
+  line-gap-override: 0%;
+}
+/* fix-2 (PERF-11): the same split for the Arial-metric bold face (the nav labels at 550: Atkinson 613.5 px against
+   637.1 px, measured in Chrome with Arial Bold): 98.43 % x 0.96287 = 94.78 %. The Roboto faces are unchanged (Roboto is
+   not installed where this was measured) */
+@font-face {
+  font-family: "RFEC Arial Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Helvetica-Bold"), local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"), local("Arimo-Bold");
+  font-weight: 550 599;
+  size-adjust: 94.78%;
+  ascent-override: 103.82%;
+  descent-override: 33.34%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "RFEC Arial Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Helvetica-Bold"), local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"), local("Arimo-Bold");
+  font-weight: 600 800;
+  size-adjust: 98.43%;
+  ascent-override: 99.97%;
+  descent-override: 32.10%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "RFEC Roboto Fallback";
+  src: local("Roboto"), local("Roboto-Regular"), local("Roboto Regular");
+  font-weight: 200 549;
+  size-adjust: 99.40%;
+  ascent-override: 98.99%;
+  descent-override: 31.79%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "RFEC Roboto Fallback";
+  src: local("Roboto Bold"), local("Roboto-Bold");
+  font-weight: 550 800;
+  size-adjust: 104.76%;
+  ascent-override: 93.93%;
+  descent-override: 30.16%;
+  line-gap-override: 0%;
+}

@@ -1,0 +1,1907 @@
+{
+  "schema": "site-reforge/generated-images@2",
+  "provider": "fal.ai",
+  "note": "Illustrative industry imagery ADDED by the redesign. None stands in for a real person, place, product, brand or result of this practice; every alt describes what is depicted.",
+  "images": [
+    {
+      "id": "H1",
+      "file": "assets/generated/H1.png",
+      "raw": null,
+      "rawBytes": null,
+      "role": "hero-cutout",
+      "alt": "",
+      "usedFor": [
+        {
+          "planId": "H1",
+          "page": "/",
+          "slot": "s1 hero: cut-out crossing the photo frame lower-left corner into the column gap, rotated -7deg, pointer-events none (DESIGN-SPEC 3.4, protrusion 1)",
+          "display": "190-370 px wide; phone min(48%, 250px)"
+        }
+      ],
+      "prompt": "Remove the small gold plus-shaped metal rivets on both front corners of the eyeglass frame and replace them with smooth plain navy acetate that matches the rest of the frame. Keep the eyeglasses, lenses, temples, lighting, shadow and pale grey background exactly the same.",
+      "model": "fal-ai/flux-pro/kontext",
+      "provider": "fal.ai",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2"
+      },
+      "editOf": "tmp/toolcheck/eyeglasses.jpg (fal-ai/flux-pro/v1.1-ultra 4:3, request 01a0f584-25a6-7841-bd2e-4d9a4c1f368f)",
+      "seed": 1763181933,
+      "requestId": "01a0f5b9-dd90-76c3-ab92-f98cde06c308",
+      "width": 1184,
+      "height": 880,
+      "cutout": {
+        "model": "fal-ai/birefnet/v2",
+        "requestId": "01a0f5ba-071f-7331-9a51-88866c959895",
+        "localFix": "detached shadow sliver erased locally (tmp/panel/riverlight/CONCEPT.md)"
+      },
+      "sha256": "5c6447293843175b543f39d2ad59bbafbd946cf063901e2bf36c829c6330b8a5",
+      "generatedAt": "2026-10-01T04:30:03.640Z",
+      "reuse": true,
+      "newCalls": 0,
+      "paidIn": "design-panel stage (before this workflow)",
+      "sidecar": "tmp/panel/riverlight/img/gen/glasses-norivet.jpg.json",
+      "recordedBy": "wf4 plan stage (tmp/wf4/plan/seed-audit.mjs): reused master, recorded so the review lanes check it before shipping (IMAGE-PLAN 2)",
+      "reviewFocus": [
+        "400% crops of both temples, the bridge and both front corners: no rivets, no print (a Kontext pass of the same source left faint temple print in the nightglow panel)",
+        "alpha edge on a magenta composite: no halo, no detached slivers (scan alpha runs)",
+        "two temples and one bridge; lenses clean"
+      ],
+      "masterFrom": "tmp/panel/riverlight/img/gen/glasses-norivet.cut.fixed.png",
+      "localEdit": {
+        "what": "alpha-only erase of an attached 15x4 px grey shadow stub on the lower-left rim (review-A-r1 recipe: alpha 0 for rows 564-570 where x < 338+3*(y-564), 1 px feather)",
+        "changedPixels": 80,
+        "rgbChanged": 0,
+        "bbox": "x 336-356, y 564-570",
+        "sha256Before": "bac73e4e23719bd8aca87b67c288555d21d0679c0c08adf2a706633f9e238572",
+        "evidence": "tmp/wf4/h1-stub/compare.png (magenta, 4x: before top, after bottom)",
+        "at": "2026-10-01T17:44:44.351Z",
+        "calls": 0
+      }
+    },
+    {
+      "id": "H2",
+      "file": "assets/generated/H2.jpg",
+      "raw": null,
+      "rawBytes": null,
+      "role": "home-feature",
+      "alt": "",
+      "usedFor": [
+        {
+          "planId": "H2",
+          "page": "/",
+          "slot": "s12 Cataract: arch-top frame (999px 999px --r-xl --r-xl), 4:5 crop of the 16:9 master, crossing into Eye Emergencies by >= 64 px (DESIGN-SPEC 3.13, protrusion 9)",
+          "display": "4fr column; phone min(300px, 72%)"
+        }
+      ],
+      "prompt": "A clear biconvex optical glass lens standing upright on its thin edge on a pure white seamless studio surface, a soft beam of teal light enters the lens from the left and converges to a small bright focal point on the right, gentle aqua caustics on the white surface, soft daylight from the upper left, crisp minimal scientific product photography, calm and clean, no text, no markings, no numbers, no logos",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "provider": "fal.ai",
+      "input": {
+        "aspect_ratio": "16:9",
+        "output_format": "jpeg",
+        "safety_tolerance": "2"
+      },
+      "editOf": null,
+      "seed": 3734011044,
+      "requestId": "01a0f5bc-118e-7460-b6d5-245b83dd62a6",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "7d23f4fd5519eb533b1dbccc14b1ca1b165f5159f6ac234ba5c23af2b92e4fd7",
+      "generatedAt": "2026-10-01T04:32:28.060Z",
+      "reuse": true,
+      "newCalls": 0,
+      "paidIn": "design-panel stage (before this workflow)",
+      "sidecar": "tmp/panel/riverlight/img/gen/lens-beam.jpg.json",
+      "recordedBy": "wf4 plan stage (tmp/wf4/plan/seed-audit.mjs): reused master, recorded so the review lanes check it before shipping (IMAGE-PLAN 2)",
+      "reviewFocus": [
+        "400% crops of the whole lens rim: each glint must read as refraction, not as a mark or pseudo-text (DESIGN-SPEC R6 asks for a second reviewer)",
+        "the 4:5 crop keeps the lens and its focal point"
+      ],
+      "masterFrom": "tmp/panel/riverlight/img/gen/lens-beam.jpg"
+    },
+    {
+      "id": "TB-ecs",
+      "file": "assets/generated/TB-ecs.jpg",
+      "raw": null,
+      "rawBytes": null,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "planId": "TB-ecs",
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 21,
+          "pages": [
+            "/eye-care-services/cataract-surgery-co-management/",
+            "/eye-care-services/contact-lens-exams/",
+            "/eye-care-services/contact-lens-exams/hard-to-fit/",
+            "/eye-care-services/dry-eye-disease-and-treatment/",
+            "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+            "/eye-care-services/eye-conditions/",
+            "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+            "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+            "/eye-care-services/eye-emergencies-pink-red-eyes/",
+            "/eye-care-services/eye-exams/",
+            "/eye-care-services/eye-exams/advanced-technology/",
+            "/eye-care-services/eye-exams/pediatric-eye-exams/",
+            "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+            "/eye-care-services/eye-exams/what-to-expect/",
+            "/eye-care-services/faq/",
+            "/eye-care-services/lasik-refractive-surgery-co-management/",
+            "/eye-care-services/management-of-ocular-diseases/",
+            "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+            "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+            "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+            "/eye-care-services/nearsighted-myopia/"
+          ],
+          "objectPosition": "68% 62%",
+          "note": "eye-care-services pages; the hub uses its own header photo"
+        }
+      ],
+      "prompt": "Macro photograph of a single clear water droplet resting on a smooth pale aqua glass surface, soft diffused morning daylight from the upper left, gentle teal and white reflections inside the droplet, shallow depth of field with a creamy pale background, calm, airy, high key, minimal composition with empty space on the left, no text, no logos",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "provider": "fal.ai",
+      "input": {
+        "aspect_ratio": "4:3",
+        "output_format": "jpeg",
+        "safety_tolerance": "2"
+      },
+      "editOf": null,
+      "seed": 442646050,
+      "requestId": "01a0f5bb-42d6-72f2-9b14-d26d0b5d2b6d",
+      "width": 2368,
+      "height": 1792,
+      "cutout": null,
+      "sha256": "5ae3b68599ab5e5b865c72b154df4250ecec0166180e1a1886dbb0670896cbda",
+      "generatedAt": "2026-10-01T04:31:37.111Z",
+      "reuse": true,
+      "newCalls": 0,
+      "paidIn": "design-panel stage (before this workflow)",
+      "sidecar": "tmp/panel/riverlight/img/gen/droplet.jpg.json",
+      "recordedBy": "wf4 plan stage (tmp/wf4/plan/seed-audit.mjs): reused master, recorded so the review lanes check it before shipping (IMAGE-PLAN 2)",
+      "reviewFocus": [
+        "4:5 arch crop at object-position 68% 62% keeps the droplet",
+        "no text or marks (100%)"
+      ],
+      "masterFrom": "tmp/panel/riverlight/img/gen/droplet.jpg"
+    },
+    {
+      "id": "TB-blog",
+      "file": "assets/generated/TB-blog.jpg",
+      "raw": null,
+      "rawBytes": null,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "planId": "TB-blog",
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 22,
+          "pages": [
+            "/autoimmune-disease-and-dry-eye-2023/",
+            "/cataract-surgery-co-management-your-path-to-clear-vision/",
+            "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+            "/everything-you-need-to-know-about-uv-rays/",
+            "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+            "/eyes-a-window-into-your-health-2023/",
+            "/glaucoma-awareness-starts-with-an-eye-exam/",
+            "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+            "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+            "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+            "/myopia-management-strategies-for-growing-children/",
+            "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+            "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+            "/top-causes-of-dry-eye-in-fort-myers/",
+            "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+            "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+            "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+            "/whats-new/",
+            "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+            "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+            "/winter-dry-eyes-2023/",
+            "/workplace-eye-wellness-tips-for-clearer-easier-workdays/"
+          ],
+          "note": "the 21 posts and /whats-new/"
+        },
+        {
+          "planId": "A1",
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+          "slot": "inline wide figure (added illustration, model.art.inline)",
+          "anchor": {
+            "type": "after-paragraph",
+            "section": "Why Is Dry Eye So Common in Southwest Florida?",
+            "paragraphIndex": 0,
+            "textEndsWith": "can worsen dry eye symptoms.",
+            "modelPath": "sections[0].blocks[2].html"
+          },
+          "position": "after the paragraph (the prototype placement)"
+        }
+      ],
+      "prompt": "Soft warm morning sunlight streaming through a large window onto a clean white desk, long shadows of palm fronds falling across the desk surface, a clear glass of water and a small green plant on the desk, gentle breeze moving a sheer white curtain, Gulf coast Florida light, airy, calm, high key photography, generous empty space, no people, no screens, no text, no logos",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "provider": "fal.ai",
+      "input": {
+        "aspect_ratio": "16:9",
+        "output_format": "jpeg",
+        "safety_tolerance": "2"
+      },
+      "editOf": null,
+      "seed": 2165224891,
+      "requestId": "01a0f5c5-3cba-7262-8ca8-86400705d680",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "cbd55fa0aeb3148c7fc7412bd61c4b26bf1f61d63dc155c424f3c2f814dbefae",
+      "generatedAt": "2026-10-01T04:42:30.999Z",
+      "reuse": true,
+      "newCalls": 0,
+      "paidIn": "design-panel stage (before this workflow)",
+      "sidecar": "tmp/panel/riverlight/img/gen/florida-light.jpg.json",
+      "recordedBy": "wf4 plan stage (tmp/wf4/plan/seed-audit.mjs): reused master, recorded so the review lanes check it before shipping (IMAGE-PLAN 2)",
+      "reviewFocus": [
+        "crops of the window, the glass of water and the plant pot: no text, no logo",
+        "4:5 arch crop of the 16:9 master: choose an object-position that keeps the window light (none given in IMAGE-PLAN)",
+        "warm master: measured 0% of its saturated pixels in OKLCH 180-280 (tmp/wf4/plan/calibrate.log); IMAGE-PLAN rule 6 hue check would flag it although section 2 reuses it"
+      ],
+      "masterFrom": "tmp/panel/riverlight/img/gen/florida-light.jpg"
+    },
+    {
+      "id": "TB-utility",
+      "file": "assets/generated/TB-utility.png",
+      "raw": null,
+      "rawBytes": null,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "planId": "TB-utility",
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 30,
+          "pages": [
+            "/404-page-not-found/",
+            "/404.html",
+            "/author/riversidefamilyeyecare/",
+            "/category/news/",
+            "/category/our-doctors/",
+            "/category/our-staff/",
+            "/category/testimonials/",
+            "/category/uncategorized/",
+            "/disclaimer/",
+            "/privacy-policy/",
+            "/sitemap/",
+            "/tag/all-about-vision/",
+            "/tag/diabetic-retinopathy/",
+            "/tag/dry-eye/",
+            "/tag/dry-eyes/",
+            "/tag/eye-emergencies/",
+            "/tag/eye-exam/",
+            "/tag/family-eye-exams/",
+            "/tag/gsp-contact-lens-exams/",
+            "/tag/gsp-eye-emergencies/",
+            "/tag/licansed-by-adobe-stock/",
+            "/tag/myopia-management-solutions/",
+            "/template/footer-2/",
+            "/template/footer/",
+            "/template/header-2/",
+            "/template/header-3/",
+            "/template/header/",
+            "/template/inner-header/",
+            "/testimonial/this-was-a-great-experience/",
+            "/website-accessibility-policy/"
+          ],
+          "note": "17 archives, 3 legal, sitemap, /404-page-not-found/, 404.html, the testimonial, 6 templates; also the fallback arch when an item is dropped (IMAGE-PLAN 9)"
+        }
+      ],
+      "prompt": "Abstract aurora light ribbons flowing like a calm river across a soft white sky, teal, aqua and navy luminous bands, silky gradients, minimal, clean, no text, no logos",
+      "model": "z-image/turbo",
+      "provider": "Higgsfield",
+      "input": {
+        "aspect_ratio": "16:9",
+        "resolution": "2k"
+      },
+      "editOf": null,
+      "seed": null,
+      "requestId": "404b92f9-bb6e-4501-8be3-fe1aad9a80aa",
+      "width": 2048,
+      "height": 1152,
+      "cutout": null,
+      "sha256": "0f441cc4968b947694d41237ea936f43bed50f0adb179dedb241ceba191c2c4d",
+      "generatedAt": "2026-10-01T03:31:28.017Z",
+      "reuse": true,
+      "newCalls": 0,
+      "paidIn": "toolcheck stage (before this workflow)",
+      "sidecar": "tmp/toolcheck/hf-aurora.png.json",
+      "recordedBy": "wf4 plan stage (tmp/wf4/plan/seed-audit.mjs): reused master, recorded so the review lanes check it before shipping (IMAGE-PLAN 2)",
+      "reviewFocus": [
+        "confirm at 100%: calm teal/navy wave on white, no text",
+        "4:5 arch crop keeps part of the wave"
+      ],
+      "masterFrom": "tmp/toolcheck/hf-aurora.png"
+    },
+    {
+      "id": "V1",
+      "file": "assets/generated/V1.jpg",
+      "raw": "assets/generated/raw/V1.jpg",
+      "rawBytes": 408825,
+      "role": "hero-video-still",
+      "alt": "",
+      "usedFor": [
+        {
+          "motion": "hero-river",
+          "slot": "first frame (image_url) of the Higgsfield image-to-video clip (src/content/motion-plan.json); not placed on a page itself"
+        }
+      ],
+      "prompt": "A wide, calm, luminous ribbon of soft light flowing like a slow river across a pure white background, entering from the right edge and curving gently down toward the lower left, made of two fine parallel strands, a luminous teal strand above a thinner deep navy strand, wrapped in a soft translucent aqua and pale sky-blue glow with a faint lilac haze at the far left, the upper left third left empty and white, smooth seamless gradients, minimal abstract, no objects, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 761105898,
+      "requestId": "01a0f6c3-e79a-7343-ad13-cdfb9a8cdfe6",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "007768e138a14adef0ede8550c9d08ebbc4c5aaba71f9830792b833c55956888",
+      "generatedAt": "2026-10-01T09:20:40.563Z"
+    },
+    {
+      "id": "TB-insurance",
+      "file": "assets/generated/TB-insurance.jpg",
+      "raw": "assets/generated/raw/TB-insurance.jpg",
+      "rawBytes": 730610,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 4,
+          "pages": [
+            "/cherry-payment-plan/",
+            "/insurance/carecredit/",
+            "/insurance/faqs-of-vision-insurance-plans/",
+            "/insurance/whats-in-your-vision-insurance-plan/"
+          ],
+          "note": "/insurance/ children and /cherry-payment-plan/"
+        }
+      ],
+      "prompt": "A small green leafy plant in a plain white ceramic pot on a clean white desk beside a closed plain white notebook, soft morning window light casting long gentle shadows, pale aqua wall, calm and reassuring still life, no writing on anything, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:4"
+      },
+      "editOf": null,
+      "seed": 3052141186,
+      "requestId": "01a0f6c5-9104-76b3-981b-ce87f9a83531",
+      "width": 1792,
+      "height": 2368,
+      "cutout": null,
+      "sha256": "9c1d8b609ab9313641608a5e88741199ec00d7513cca88927d1cc3c44d552908",
+      "generatedAt": "2026-10-01T09:22:29.168Z"
+    },
+    {
+      "id": "N3",
+      "file": "assets/generated/N3.jpg",
+      "raw": "assets/generated/raw/N3.jpg",
+      "rawBytes": 547510,
+      "role": "stand-in",
+      "alt": "A soft contact lens balanced on a fingertip",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "How Myopia Management Can Help",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[3].title"
+          },
+          "position": "inset left at the start of the section",
+          "sourceAlign": "alignleft",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg",
+          "sourceAlt": "Little girl practicing to insert ophthalmic lenses in optometry office"
+        }
+      ],
+      "prompt": "Close-up of a single soft contact lens balanced on the tip of an index finger, the lens is a thin clear flexible dome with a faint aqua edge catching the light, clean pale aqua background, macro photography, only one fingertip visible, no face, no eyes, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "1:1"
+      },
+      "editOf": null,
+      "seed": 2401783841,
+      "requestId": "01a0f6c6-3742-7a40-ad1a-6330f73696c2",
+      "width": 2048,
+      "height": 2048,
+      "cutout": null,
+      "sha256": "62af592491c784bd64d128d3a02dc0b11a5f630cc115000908839f3618ce04a6",
+      "generatedAt": "2026-10-01T09:23:12.103Z"
+    },
+    {
+      "id": "N5",
+      "file": "assets/generated/N5.jpg",
+      "raw": "assets/generated/raw/N5.jpg",
+      "rawBytes": 394018,
+      "role": "stand-in",
+      "alt": "Soft teal rays of light converging on a bright point",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+          "slot": "lead figure",
+          "anchor": {
+            "type": "article-start",
+            "before": "Ongoing Care for Glaucoma and Other Eye Diseases"
+          },
+          "position": "first in the article",
+          "declaredSize": "2000x1067",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg",
+          "sourceAlt": "Detailed depiction emphasizing the importance of glaucoma exams"
+        }
+      ],
+      "prompt": "Abstract image: many fine rays of soft teal and aqua light converging gently toward one small bright glowing point on the right, pale white-to-aqua background, calm, luminous, minimal, smooth gradients, no anatomy, no shapes, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 2617193068,
+      "requestId": "01a0f6c6-98bd-76b3-8940-c62c7a37a52e",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "245062ac202c99032adbc05ba04b2fee80a1a2169540b1dc48cebfd26d2324c7",
+      "generatedAt": "2026-10-01T09:23:36.954Z"
+    },
+    {
+      "id": "N8",
+      "file": "assets/generated/N8.jpg",
+      "raw": "assets/generated/raw/N8.jpg",
+      "rawBytes": 1722109,
+      "role": "stand-in",
+      "alt": "Sea oats on a sunlit dune under a clear morning sky",
+      "usedFor": [
+        {
+          "page": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+          "slot": "lead figure",
+          "anchor": {
+            "type": "article-start",
+            "before": "Identifying Your Specific Type of Dry Eye"
+          },
+          "position": "first in the article (after the post date)",
+          "declaredSize": "640x350",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/senior-man-suffering-from-sore-eyes.jpeg",
+          "sourceAlt": "senior man suffering from sore eyes"
+        }
+      ],
+      "prompt": "Sunlit sea oats on a pale sand dune under a clear soft morning sky on the Gulf coast of Florida, a gentle sea breeze, hazy light, wide composition with open sky, no people, no buildings, no signs, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 2323667479,
+      "requestId": "01a0f6c7-32d2-75c0-b969-c964f27177b6",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "c47022f60b4aca9a409a36c9e8adf6c8ae5d5056aee23ee66f9d149a54870cc6",
+      "generatedAt": "2026-10-01T09:24:26.895Z"
+    },
+    {
+      "id": "N9",
+      "file": "assets/generated/N9.jpg",
+      "raw": "assets/generated/raw/N9.jpg",
+      "rawBytes": 497599,
+      "role": "stand-in",
+      "alt": "A small hourglass with pale aqua sand on a sunlit desk",
+      "usedFor": [
+        {
+          "page": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+          "slot": "inset",
+          "anchor": {
+            "type": "article-start",
+            "before": "Cataracts: A Leading Cause of Vision Loss"
+          },
+          "position": "inset right at the start of the article",
+          "sourceAlign": "alignright",
+          "declaredSize": "450x246",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/09/AdobeStock_819072843_Regular-Optometry.jpg",
+          "sourceAlt": "AdobeStock 819072843 Regular Optometry"
+        }
+      ],
+      "prompt": "A small glass hourglass with pale aqua sand on a clean white desk, a green leaf in soft focus at the edge, calm minimal still life, no clocks, no writing, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 1349141173,
+      "requestId": "01a0f6c7-8cdc-7c02-b0aa-a6fc98b80c4d",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "fccadf885930c87c47ba98fb5fa9122f77f8d54d0822f971a8926bd96a92b3b1",
+      "generatedAt": "2026-10-01T09:24:39.526Z"
+    },
+    {
+      "id": "N10",
+      "file": "assets/generated/N10.jpg",
+      "raw": "assets/generated/raw/N10.jpg",
+      "rawBytes": 441398,
+      "role": "stand-in",
+      "alt": "A folded white cloth in a bowl of warm water with wisps of steam",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/",
+          "slot": "childpage thumb",
+          "anchor": {
+            "type": "hub-item",
+            "text": "Dry Eye Treatment in Fort Myers, Florida",
+            "modelPath": "sections[2].blocks[0]"
+          },
+          "declaredSize": "325x217",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/Dry-Eye-Treatment_Thumbnail-1.jpg",
+          "sourceAlt": "Woman covering one eye while experiencing eye discomfort"
+        }
+      ],
+      "prompt": "A folded soft white cotton cloth resting in a shallow white ceramic bowl of warm water with a few wisps of steam, pale aqua background, calm spa-like still life, no text, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:2"
+      },
+      "editOf": null,
+      "seed": 2379199911,
+      "requestId": "01a0f6c7-be3a-7cb0-bac8-f774c6a0dc67",
+      "width": 2496,
+      "height": 1664,
+      "cutout": null,
+      "sha256": "dd95cb4508c4ca665ad33b3ba502d9096299777ae90a8b1475c3d4939f2f91a2",
+      "generatedAt": "2026-10-01T09:24:50.406Z"
+    },
+    {
+      "id": "H3-src",
+      "file": "assets/generated/H3-src.jpg",
+      "raw": "assets/generated/raw/H3-src.jpg",
+      "rawBytes": 581011,
+      "role": "graft-source",
+      "alt": "",
+      "usedFor": [
+        {
+          "feeds": "H3",
+          "slot": "source of the H3 Kontext clean pass and cut-out; never shipped itself"
+        }
+      ],
+      "prompt": "Product photo of a small pair of children's eyeglasses with translucent aqua-teal acetate frames and clear lenses, three-quarter view, centred on a plain light grey seamless background, soft studio light from the upper left, smooth plain temple arms with no printing, no rivets, no logos, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "4:3"
+      },
+      "editOf": null,
+      "seed": 350074931,
+      "requestId": "01a0f6c7-e8bf-7b80-8ca2-0b25e149b300",
+      "width": 2368,
+      "height": 1792,
+      "cutout": null,
+      "sha256": "e1a5a26399620ec844414392a07f2fc989438fa311b6dbd3e1bc01e2fba2b174",
+      "generatedAt": "2026-10-01T09:25:03.082Z"
+    },
+    {
+      "id": "H3",
+      "file": "assets/generated/H3.png",
+      "raw": "assets/generated/raw/H3.edit.jpg",
+      "rawBytes": 189361,
+      "role": "graft-cutout",
+      "alt": "",
+      "usedFor": [
+        {
+          "page": "/",
+          "slot": "s7 Back-to-School callout: cut-out resting on the image lower-right corner, hanging >= 48 px below the card into the section gap; must clear the Glaucoma card at every width (DESIGN-SPEC 3.9, G19, Q-15)"
+        }
+      ],
+      "prompt": "Remove any printed lettering or marks from both temple arms and the bridge; keep everything else exactly the same",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/H3-src.jpg)"
+      },
+      "editOf": "assets/generated/H3-src.jpg",
+      "seed": 2176172667,
+      "requestId": "01a0f827-5580-7551-8421-21d4d03be71d",
+      "width": 1184,
+      "height": 880,
+      "cutout": {
+        "model": "fal-ai/birefnet/v2",
+        "requestId": "01a0f827-8017-7570-a090-a7c1fc107b72"
+      },
+      "sha256": "35939151709d9e38f203c21b731ecd7c50da8973bac784e8f7fdda824dc3bb43",
+      "generatedAt": "2026-10-01T15:48:57.591Z",
+      "localFixes": [
+        {
+          "stage": "wf4 fix-r1",
+          "at": "2026-10-01T16:37:50.128Z",
+          "what": "alpha-only edit: the grey cast-shadow wedge below and right of the right earpiece tip set to alpha 0, with a sub-pixel soft edge (Gaussian-blurred keep mask, sigma 0.75 px) on the new boundary; the light shadow band along the earpiece lower edge tapers out toward the tip. RGB untouched; every pixel outside x 879-958, y 522-557 byte-identical.",
+          "script": "tmp/wf4/fix-r1/h3_erase5.py (body = alpha>=128 and HSV S>=0.30, closed r2 + hole-filled; erase = alpha>0 outside the body in x 878-989, y 522-565, lower-edge band kept within a 3->0 px taper over rows 522-540)",
+          "changedAlphaPx": 1219,
+          "rgbChanged": false,
+          "greyOpaqueS02InReviewZone": {
+            "before": 783,
+            "after": 0,
+            "zone": "x 905-965, y 520-560"
+          },
+          "alphaComponents4conn": {
+            "before": 1,
+            "after": 1
+          },
+          "archivedPrevious": "assets/generated/rejected/H3.1790872644981.png",
+          "paidCalls": 0,
+          "review": "review-A-r1 H3 KONTEXT verdict, issue 5 (zero-cost equivalent); the 2-call Kontext + birefnet reserve stays unused"
+        },
+        {
+          "stage": "wf4 fix-r2",
+          "at": "2026-10-01T17:25:51.656Z",
+          "edit": "Fill the transparent triangle inside the right lens, between the two temple bars and the rim, with the same light lens fill as the rest of that lens; keep everything else exactly the same.",
+          "what": "local hole fill: region = the largest component of (binary_erosion(binary_fill_holes(alpha>=128), 4 px) & alpha<255) = 2,916 px, x 789-881, y 413-475 (the hole plus its soft rim); RGB there copied from assets/generated/raw/H3.edit.jpg (the stored RGB under the hole was dark birefnet fill, luma ~90 over the region), alpha set to 255. Every other pixel byte-identical.",
+          "script": "tmp/wf4/fix-r2/h3_holefill.py (report h3_holefill.json; the region is the same for cross, square, disk and EDT erosions: h3_region_probe.json)",
+          "changedPx": 2916,
+          "changedBbox": [
+            789,
+            413,
+            881,
+            475
+          ],
+          "rgbChangedPx": 2913,
+          "alphaChangedPx": 2916,
+          "enclosedHoles": {
+            "before": 1,
+            "after": 0
+          },
+          "alphaComponents8conn": {
+            "before": {
+              "1": 1,
+              "8": 1,
+              "32": 1,
+              "128": 1
+            },
+            "after": {
+              "1": 1,
+              "8": 1,
+              "32": 1,
+              "128": 1
+            }
+          },
+          "interiorSemiTransparentPx": {
+            "before": 2938,
+            "after": 22,
+            "afterNote": "five pre-existing specks, all alpha 254 (visually opaque)"
+          },
+          "seamVsRaw": "opaque ring around the region within 1 level of raw (644 px); every boundary step within 1 level of raw's own step (314 pairs)",
+          "identicalToReviewerScratchTest": "tmp/wf4/review-R-r2/H3.holefill-test.png (every RGBA pixel equal)",
+          "visualCheck": "tmp/wf4/fix-r2/v01-H3-holefill-sheet.png: magenta, over the callout photo's dark corner, #f9fafb ground and a teal-lilac field at 200%, seam at 400%",
+          "archivedPrevious": "assets/generated/rejected/H3.1790875551645.png",
+          "paidCalls": 0,
+          "review": "review-R-r2 H3 KONTEXT verdict; its fix field prescribes this 0-call route (Kontext returns RGB only; birefnet would likely cut the same hole; fal-gen --force H3 would undo the round-1 erase)",
+          "notDone": "the verdict's optional lens-alpha refinement (lens fills to about 0.5 alpha); lenses stay opaque light grey like the accepted H1"
+        }
+      ]
+    },
+    {
+      "id": "TB-eyeglasses",
+      "file": "assets/generated/TB-eyeglasses.jpg",
+      "raw": "assets/generated/raw/TB-eyeglasses.edit.jpg",
+      "rawBytes": 190850,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 36,
+          "pages": [
+            "/eyeglasses/designer-frames/",
+            "/eyeglasses/eyeglass-basics/",
+            "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+            "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+            "/eyeglasses/eyeglass-guide/",
+            "/eyeglasses/kids-optical/",
+            "/eyeglasses/lens-treatments/",
+            "/eyeglasses/lens-treatments/anti-reflective/",
+            "/eyeglasses/lens-treatments/scratch-resistant/",
+            "/eyeglasses/lens-treatments/uv-protection/",
+            "/eyeglasses/prescription-eyeglasses/",
+            "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+            "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+            "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+            "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+            "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+            "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+            "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+            "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+            "/eyeglasses/specialty-eyewear/",
+            "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+            "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+            "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+            "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+            "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+            "/eyeglasses/sunglasses/",
+            "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+            "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+            "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+            "/eyeglasses/sunglasses/prescription-sunglasses/",
+            "/eyeglasses/sunglasses/sunglasses-for-kids/",
+            "/eyeglasses/transitions-lenses/",
+            "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+            "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+            "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+            "/eyeglasses/transitions-lenses/transitions-xtractive/"
+          ],
+          "note": "includes /eyeglasses/designer-frames/ (no header photo); the /eyeglasses/ hub uses its own photo"
+        }
+      ],
+      "prompt": "Change the rainbow colours inside the glass pyramid and in the light streak on the white surface at its lower right to soft teal, aqua and pale lilac only, with no red, orange, yellow or green; keep everything else exactly the same.",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/raw/TB-eyeglasses.jpg)"
+      },
+      "editOf": "assets/generated/raw/TB-eyeglasses.jpg",
+      "seed": 2444547853,
+      "requestId": "01a0f855-7b5c-7ad3-826c-55f76c591d96",
+      "width": 880,
+      "height": 1184,
+      "cutout": null,
+      "sha256": "222e3d368a3a558efc9a2003927da47ed152321407624d59d87ec0291894bce7",
+      "generatedAt": "2026-10-01T16:39:16.024Z"
+    },
+    {
+      "id": "N2",
+      "file": "assets/generated/N2.jpg",
+      "raw": "assets/generated/raw/N2.edit.jpg",
+      "rawBytes": 234900,
+      "role": "stand-in",
+      "alt": "Teal eyeglasses resting on a folded cloth on a white table",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "What Is Myopia?",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[1].title"
+          },
+          "position": "inset right at the start of the section",
+          "sourceAlign": "alignright",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+          "sourceAlt": "Little girl holds glasses. Poor vision, eyesight concept"
+        }
+      ],
+      "prompt": "Remove the small dark metal plate with marks from the left temple arm, seen through the left lens near the hinge, and remove the round metal studs from both front corners of the frame; replace them with smooth plain translucent teal acetate matching the frame. Keep everything else exactly the same.",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/raw/N2.jpg)"
+      },
+      "editOf": "assets/generated/raw/N2.jpg",
+      "seed": 971681098,
+      "requestId": "01a0f855-d538-7520-8616-25a3491f269d",
+      "width": 1248,
+      "height": 832,
+      "cutout": null,
+      "sha256": "f7c689e794d6bf6194f3b43279a71cf94281d30607e9ad1e411b04b6002dca08",
+      "generatedAt": "2026-10-01T16:39:37.194Z",
+      "localFix": {
+        "stage": "wf4 fix-r1",
+        "at": "2026-10-01T16:49:56.883Z",
+        "what": "harmonic inpaint (Laplace fill from the surrounding teal) of one round grey dot on the defocused left temple, mask 466 px at x 298-321, y 409-430; saved with the source JPEG quantisation tables and 4:4:4 sampling (max abs re-encode difference 4, mean 0.063 away from the mask)",
+        "script": "tmp/wf4/fix-r1/n2_inpaint.py",
+        "archivedPrevious": "assets/generated/rejected/N2.1790873396886.jpg",
+        "paidCalls": 0
+      }
+    },
+    {
+      "id": "N4",
+      "file": "assets/generated/N4.jpg",
+      "raw": "assets/generated/raw/N4.jpg",
+      "rawBytes": 464849,
+      "role": "stand-in",
+      "alt": "An unlabelled aqua glass dropper bottle with a drop beside it",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "Is Myopia Management Right for Your Child?",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[6].title"
+          },
+          "position": "inset right at the start of the section",
+          "sourceAlign": "alignright",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg",
+          "sourceAlt": "Atropine Drops"
+        }
+      ],
+      "prompt": "Close-up still life of a small plain pale aqua glass dropper bottle with a white rubber bulb, standing slightly right of centre on a smooth white surface, the bottle filling about half of the frame height, one clear water drop resting on the white surface just in front of the bottle, minimal clinical still life, the bottle has no label, no printing, no stickers, no cap text, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:2"
+      },
+      "editOf": null,
+      "seed": 3567079802,
+      "requestId": "01a0f855-f70b-7ed1-abc1-43849dee56a1",
+      "width": 2496,
+      "height": 1664,
+      "cutout": null,
+      "sha256": "1349f80259bd70a8f4f9a7dc75c4b81dea1e6d7e942ff3b0f5ef0914cea8f1ec",
+      "generatedAt": "2026-10-01T16:39:47.667Z"
+    },
+    {
+      "id": "N7",
+      "file": "assets/generated/N7.jpg",
+      "raw": "assets/generated/raw/N7.edit.jpg",
+      "rawBytes": 291643,
+      "role": "stand-in",
+      "alt": "Two pairs of reading glasses and two coffee cups on a sunny porch table",
+      "usedFor": [
+        {
+          "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+          "slot": "inline figure",
+          "anchor": {
+            "type": "heading",
+            "text": "What is Glaucoma and Why Should You Be Concerned?",
+            "level": "h2"
+          },
+          "position": "before the heading",
+          "declaredSize": "600x350",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg",
+          "sourceAlt": "happy old couple hugging"
+        }
+      ],
+      "prompt": "Add a second pair of folded reading glasses with plain slim teal frames lying on the table in front of the right-hand cup and saucer, beside the first pair; keep everything else exactly the same.",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/raw/N7.jpg)"
+      },
+      "editOf": "assets/generated/raw/N7.jpg",
+      "seed": 720243151,
+      "requestId": "01a0f856-51e8-7af0-a636-0aafc8ec270e",
+      "width": 1392,
+      "height": 752,
+      "cutout": null,
+      "sha256": "d2e014a4ba60e7b30d2c884b05eb93212ddda66b598207a1d925c5f1e0c33982",
+      "generatedAt": "2026-10-01T16:40:11.407Z"
+    },
+    {
+      "id": "N1",
+      "file": "assets/generated/N1.jpg",
+      "raw": "assets/generated/raw/N1.jpg",
+      "rawBytes": 429712,
+      "role": "stand-in",
+      "alt": "A teal and white kite high in a clear morning sky",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "lead figure",
+          "anchor": {
+            "type": "article-start",
+            "before": "When Your Child’s Prescription Keeps Getting Stronger"
+          },
+          "position": "first in the article",
+          "declaredSize": "2560x1274",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+          "sourceAlt": "Cheerful smiling child black wearing goggles."
+        },
+        {
+          "page": "/eye-care-services/",
+          "slot": "childpage thumb",
+          "anchor": {
+            "type": "hub-item",
+            "text": "Myopia Management in Southwest Florida",
+            "modelPath": "sections[2].blocks[0]"
+          },
+          "declaredSize": "2000x1333",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+          "sourceAlt": "Vision, optometrist and portrait of child with glasses ..."
+        }
+      ],
+      "prompt": "A single teal and white diamond-shaped kite flying high in a clear pale-blue morning sky with a few soft white clouds, the kite small and sharp in the upper right third, its kite string is one fine unbroken line that starts at the bottom left corner of the picture and rises in a long gentle curve to the kite, the kite has no tail, no ribbons and no bows, bright Florida daylight, nothing printed on the kite, no people, no ground, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 3681272742,
+      "requestId": "01a0f85c-e5b7-73e2-bae6-6bcc67bf4a8e",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "bd7e89b679be523b976016b6f72da190a74405250ee73296e0cdaea5817bbab5",
+      "generatedAt": "2026-10-01T16:47:24.327Z"
+    }
+  ],
+  "failures": [],
+  "seededAt": "2026-10-01T09:15:34.023Z",
+  "generated": "2026-10-01T16:47:37.142Z",
+  "ledgers": [
+    {
+      "stage": "wf4 generate",
+      "at": "2026-10-01T15:58:24.059Z",
+      "scope": "paid calls of the wf4 imagery workflow up to the end of the generate stage (two generate attempts: 14 calls by the first, 2 by the second). The reuse records above were paid in earlier stages and are not counted here.",
+      "fal": {
+        "calls": [
+          {
+            "id": "V1",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c3-e79a-7343-ad13-cdfb9a8cdfe6",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/V1.jpg"
+          },
+          {
+            "id": "TB-eyeglasses",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c5-6078-7fd1-a0e6-1f83d4acbd05",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/TB-eyeglasses.jpg"
+          },
+          {
+            "id": "TB-insurance",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c5-9104-76b3-981b-ce87f9a83531",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/TB-insurance.jpg"
+          },
+          {
+            "id": "N1",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c5-c10d-7642-8955-e5d91297d46b",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N1.jpg"
+          },
+          {
+            "id": "N2",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-060f-7632-8860-f906173c82be",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N2.jpg"
+          },
+          {
+            "id": "N3",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-3742-7a40-ad1a-6330f73696c2",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N3.jpg"
+          },
+          {
+            "id": "N4",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-68b3-7250-a484-97676d6aeaf9",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N4.jpg"
+          },
+          {
+            "id": "N5",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-98bd-76b3-8940-c62c7a37a52e",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N5.jpg"
+          },
+          {
+            "id": "N6",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-c9c6-7883-8491-f4dcfdfc1849",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N6.jpg"
+          },
+          {
+            "id": "N7",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c6-fae2-7ad2-85ea-73c9a307eb62",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N7.jpg"
+          },
+          {
+            "id": "N8",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c7-32d2-75c0-b969-c964f27177b6",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N8.jpg"
+          },
+          {
+            "id": "N9",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c7-8cdc-7c02-b0aa-a6fc98b80c4d",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N9.jpg"
+          },
+          {
+            "id": "N10",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c7-be3a-7cb0-bac8-f774c6a0dc67",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N10.jpg"
+          },
+          {
+            "id": "H3-src",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f6c7-e8bf-7b80-8ca2-0b25e149b300",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/H3-src.jpg"
+          },
+          {
+            "id": "H3",
+            "kind": "edit",
+            "model": "fal-ai/flux-pro/kontext",
+            "requestId": "01a0f827-5580-7551-8421-21d4d03be71d",
+            "usdEstimate": 0.04,
+            "file": "assets/generated/H3.png"
+          },
+          {
+            "id": "H3",
+            "kind": "cutout",
+            "model": "fal-ai/birefnet/v2",
+            "requestId": "01a0f827-8017-7570-a090-a7c1fc107b72",
+            "usdEstimate": 0.01,
+            "file": "assets/generated/H3.png"
+          }
+        ],
+        "count": 16,
+        "usdEstimate": 0.89,
+        "stopAt": 34,
+        "cap": 40,
+        "rates": "src/content/image-plan.json budget.ratesUsd (estimates, not fal billing)"
+      },
+      "higgsfield": {
+        "clips": 1,
+        "requestIds": [
+          "97266174-5381-4e20-ba8a-0a69cc660a97"
+        ],
+        "usdEstimate": 0.77,
+        "clipsMax": 2,
+        "record": "audit/generated-media.json"
+      },
+      "usdEstimateTotal": 1.66,
+      "failures": 0,
+      "rejectedArchived": 0
+    },
+    {
+      "stage": "wf4 fix-r1",
+      "at": "2026-10-01T16:50:49.056Z",
+      "scope": "paid calls of the wf4 review-round-1 fix stage: the round-1 verdicts for H3, N1, N2, N4, N6 (x2), N7, TB-eyeglasses, plus one retry each for N1 and N6 after the fixer's own check failed the first regeneration",
+      "fal": {
+        "calls": [
+          {
+            "id": "TB-eyeglasses",
+            "kind": "edit",
+            "model": "fal-ai/flux-pro/kontext",
+            "requestId": "01a0f855-7b5c-7ad3-826c-55f76c591d96",
+            "usdEstimate": 0.04,
+            "file": "assets/generated/TB-eyeglasses.jpg",
+            "status": "live",
+            "at": "2026-10-01T16:39:16.024Z"
+          },
+          {
+            "id": "N1",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f855-a462-7dd2-a7b1-05e400fc75b5",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/rejected/N1.1790873244323.jpg",
+            "status": "archived",
+            "at": "2026-10-01T16:39:28.313Z"
+          },
+          {
+            "id": "N2",
+            "kind": "edit",
+            "model": "fal-ai/flux-pro/kontext",
+            "requestId": "01a0f855-d538-7520-8616-25a3491f269d",
+            "usdEstimate": 0.04,
+            "file": "assets/generated/N2.jpg",
+            "status": "live",
+            "at": "2026-10-01T16:39:37.194Z"
+          },
+          {
+            "id": "N4",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f855-f70b-7ed1-abc1-43849dee56a1",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N4.jpg",
+            "status": "live",
+            "at": "2026-10-01T16:39:47.667Z"
+          },
+          {
+            "id": "N6",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f856-1ff8-77d2-958e-070eeacede73",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/rejected/N6.1790873257140.jpg",
+            "status": "archived",
+            "at": "2026-10-01T16:40:00.400Z"
+          },
+          {
+            "id": "N7",
+            "kind": "edit",
+            "model": "fal-ai/flux-pro/kontext",
+            "requestId": "01a0f856-51e8-7af0-a636-0aafc8ec270e",
+            "usdEstimate": 0.04,
+            "file": "assets/generated/N7.jpg",
+            "status": "live",
+            "at": "2026-10-01T16:40:11.407Z"
+          },
+          {
+            "id": "N1",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f85c-e5b7-73e2-bae6-6bcc67bf4a8e",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/N1.jpg",
+            "status": "live",
+            "at": "2026-10-01T16:47:24.327Z"
+          },
+          {
+            "id": "N6",
+            "kind": "generate",
+            "model": "fal-ai/flux-pro/v1.1-ultra",
+            "requestId": "01a0f85d-17d2-7f20-aed4-952a030cc681",
+            "usdEstimate": 0.06,
+            "file": "assets/generated/rejected/N6.1790873396892.jpg",
+            "status": "archived",
+            "at": "2026-10-01T16:47:37.142Z"
+          }
+        ],
+        "count": 8,
+        "usdEstimate": 0.42,
+        "stopAt": 34,
+        "cap": 40,
+        "rates": "src/content/image-plan.json budget.ratesUsd (estimates, not fal billing)"
+      },
+      "higgsfield": {
+        "clips": 0,
+        "note": "no motion verdict in this round"
+      },
+      "localFixes": [
+        {
+          "id": "H3",
+          "paidCalls": 0,
+          "what": "alpha erase of the grey cast shadow under the right earpiece tip (instead of the 2-call Kontext + birefnet reserve)",
+          "archivedPrevious": "assets/generated/rejected/H3.1790872644981.png"
+        },
+        {
+          "id": "N2",
+          "paidCalls": 0,
+          "what": "harmonic inpaint of one rivet-like dot the Kontext edit left on the left temple",
+          "archivedPrevious": "assets/generated/rejected/N2.1790873396886.jpg"
+        }
+      ],
+      "dropped": [
+        {
+          "id": "N6",
+          "reason": "three failed generations (IMAGE-PLAN 9)",
+          "slot": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/"
+        }
+      ],
+      "runningTotal": {
+        "falCalls": 24,
+        "falUsdEstimate": 1.31,
+        "higgsfieldClips": 1,
+        "higgsfieldUsdEstimate": 0.77,
+        "usdEstimateTotal": 2.08,
+        "stopAt": 34,
+        "cap": 40
+      },
+      "failures": 0,
+      "rejectedArchived": 11
+    },
+    {
+      "stage": "wf4 fix-r2",
+      "at": "2026-10-01T17:25:51.656Z",
+      "scope": "paid calls of the wf4 review-round-2 fix stage: the round-2 verdicts for H3 (KONTEXT, applied as the 0-call local fill its fix prescribes) and N6 (DROP x2, already dropped in fix-r1; confirmed, no action)",
+      "fal": {
+        "calls": [],
+        "count": 0,
+        "usdEstimate": 0,
+        "stopAt": 34,
+        "cap": 40,
+        "rates": "src/content/image-plan.json budget.ratesUsd (estimates, not fal billing)"
+      },
+      "higgsfield": {
+        "clips": 0,
+        "note": "no motion verdict in this round"
+      },
+      "localFixes": [
+        {
+          "id": "H3",
+          "paidCalls": 0,
+          "what": "fill of the enclosed transparent triangle in the right lens from raw/H3.edit.jpg RGB, alpha 255 (2,916 px)",
+          "archivedPrevious": "assets/generated/rejected/H3.1790875551645.png"
+        }
+      ],
+      "dropped": [
+        {
+          "id": "N6",
+          "status": "confirmed by review-R-r2 (x2); slot stays declared empty; no calls"
+        }
+      ],
+      "runningTotal": {
+        "falCalls": 24,
+        "falUsdEstimate": 1.31,
+        "higgsfieldClips": 1,
+        "higgsfieldUsdEstimate": 0.77,
+        "usdEstimateTotal": 2.08,
+        "stopAt": 34,
+        "cap": 40
+      },
+      "failures": 0,
+      "rejectedArchived": 12
+    }
+  ],
+  "rejected": [
+    {
+      "id": "H3",
+      "file": "assets/generated/H3.png",
+      "raw": "assets/generated/raw/H3.edit.jpg",
+      "rawBytes": 189361,
+      "role": "graft-cutout",
+      "alt": "",
+      "usedFor": [
+        {
+          "page": "/",
+          "slot": "s7 Back-to-School callout: cut-out resting on the image lower-right corner, hanging >= 48 px below the card into the section gap; must clear the Glaucoma card at every width (DESIGN-SPEC 3.9, G19, Q-15)"
+        }
+      ],
+      "prompt": "Remove any printed lettering or marks from both temple arms and the bridge; keep everything else exactly the same",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/H3-src.jpg)"
+      },
+      "editOf": "assets/generated/H3-src.jpg",
+      "seed": 2176172667,
+      "requestId": "01a0f827-5580-7551-8421-21d4d03be71d",
+      "width": 1184,
+      "height": 880,
+      "cutout": {
+        "model": "fal-ai/birefnet/v2",
+        "requestId": "01a0f827-8017-7570-a090-a7c1fc107b72"
+      },
+      "sha256": "c8e16ab3f804bfc35bab632d1504d61f7230b328f10eefbaddcdb6aa5d3ec685",
+      "generatedAt": "2026-10-01T15:48:57.591Z",
+      "archivedAs": "assets/generated/rejected/H3.1790872644981.png",
+      "reason": "review-A-r1 H3 verdict KONTEXT: birefnet kept the grey cast shadow under the right earpiece tip as an opaque patch (~786 px S<0.2 at x 912-958, y 525-557). Fixed by the zero-cost local alpha erase the verdict names as preferable (IMAGE-PLAN 8.6), not by a Kontext call.",
+      "at": "2026-10-01T16:37:50.128Z"
+    },
+    {
+      "id": "TB-eyeglasses",
+      "file": "assets/generated/TB-eyeglasses.jpg",
+      "raw": "assets/generated/raw/TB-eyeglasses.jpg",
+      "rawBytes": 557178,
+      "role": "title-arch",
+      "alt": "",
+      "usedFor": [
+        {
+          "slot": "title-arch",
+          "frame": "4:5 arch, --arch-w up to 340 px (DESIGN-SPEC 3.21; IMAGE-PLAN 4)",
+          "count": 36,
+          "pages": [
+            "/eyeglasses/designer-frames/",
+            "/eyeglasses/eyeglass-basics/",
+            "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+            "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+            "/eyeglasses/eyeglass-guide/",
+            "/eyeglasses/kids-optical/",
+            "/eyeglasses/lens-treatments/",
+            "/eyeglasses/lens-treatments/anti-reflective/",
+            "/eyeglasses/lens-treatments/scratch-resistant/",
+            "/eyeglasses/lens-treatments/uv-protection/",
+            "/eyeglasses/prescription-eyeglasses/",
+            "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+            "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+            "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+            "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+            "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+            "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+            "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+            "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+            "/eyeglasses/specialty-eyewear/",
+            "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+            "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+            "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+            "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+            "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+            "/eyeglasses/sunglasses/",
+            "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+            "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+            "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+            "/eyeglasses/sunglasses/prescription-sunglasses/",
+            "/eyeglasses/sunglasses/sunglasses-for-kids/",
+            "/eyeglasses/transitions-lenses/",
+            "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+            "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+            "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+            "/eyeglasses/transitions-lenses/transitions-xtractive/"
+          ],
+          "note": "includes /eyeglasses/designer-frames/ (no header photo); the /eyeglasses/ hub uses its own photo"
+        }
+      ],
+      "prompt": "A clear triangular glass prism standing on a smooth white seamless surface, a soft beam of morning light passes through it and spreads into a gentle band of teal, aqua and pale lilac light across the white surface, crisp minimal scientific still life, only teal and lilac light, no rainbow, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:4"
+      },
+      "editOf": null,
+      "seed": 2349825110,
+      "requestId": "01a0f6c5-6078-7fd1-a0e6-1f83d4acbd05",
+      "width": 1792,
+      "height": 2368,
+      "cutout": null,
+      "sha256": "2ff8b854600f72aa998cb1c2178275a60fbc34ecd87802c2800bf696b1926fa3",
+      "generatedAt": "2026-10-01T09:22:16.876Z",
+      "archivedAs": "assets/generated/rejected/TB-eyeglasses.1790872755987.jpg",
+      "reason": "review-B-r1 KONTEXT: spectral rainbow bands on the right face, in the base and as a floor streak (prompt, IMAGE-PLAN rule 6 and reviewFocus say no rainbow)",
+      "at": "2026-10-01T16:39:16.018Z"
+    },
+    {
+      "id": "N1",
+      "file": "assets/generated/N1.jpg",
+      "raw": "assets/generated/raw/N1.jpg",
+      "rawBytes": 404116,
+      "role": "stand-in",
+      "alt": "A teal and white kite high in a clear morning sky",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "lead figure",
+          "anchor": {
+            "type": "article-start",
+            "before": "When Your Child’s Prescription Keeps Getting Stronger"
+          },
+          "position": "first in the article",
+          "declaredSize": "2560x1274",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+          "sourceAlt": "Cheerful smiling child black wearing goggles."
+        },
+        {
+          "page": "/eye-care-services/",
+          "slot": "childpage thumb",
+          "anchor": {
+            "type": "hub-item",
+            "text": "Myopia Management in Southwest Florida",
+            "modelPath": "sections[2].blocks[0]"
+          },
+          "declaredSize": "2000x1333",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+          "sourceAlt": "Vision, optometrist and portrait of child with glasses ..."
+        }
+      ],
+      "prompt": "A single teal and white diamond-shaped kite flying high in a clear pale-blue morning sky with a few soft white clouds, the kite small and sharp in the upper right third, its string curving down out of frame, bright Florida daylight, nothing printed on the kite, no people, no ground, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 3288159029,
+      "requestId": "01a0f6c5-c10d-7642-8955-e5d91297d46b",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "55c2fb0062ca4e8420cc6970f288dfdafa3db298a600d20cc87337e9d2d3cf35",
+      "generatedAt": "2026-10-01T09:22:46.832Z",
+      "archivedAs": "assets/generated/rejected/N1.1790872768311.jpg",
+      "reason": "review-A-r1 REGENERATE: the kite string ends in mid-air with a small dark hook at about (2055-2080, 1080-1095) instead of curving down out of frame",
+      "at": "2026-10-01T16:39:28.311Z"
+    },
+    {
+      "id": "N2",
+      "file": "assets/generated/N2.jpg",
+      "raw": "assets/generated/raw/N2.jpg",
+      "rawBytes": 634942,
+      "role": "stand-in",
+      "alt": "Small children's eyeglasses with teal frames on a white table",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "What Is Myopia?",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[1].title"
+          },
+          "position": "inset right at the start of the section",
+          "sourceAlign": "alignright",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+          "sourceAlt": "Little girl holds glasses. Poor vision, eyesight concept"
+        }
+      ],
+      "prompt": "A pair of small children's eyeglasses with soft teal translucent frames resting folded on a plain white table, a softly blurred bright window behind, shallow depth of field, smooth plain temple arms with no printing, no stickers, no rivets, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:2"
+      },
+      "editOf": null,
+      "seed": 1190841685,
+      "requestId": "01a0f6c6-060f-7632-8860-f906173c82be",
+      "width": 2496,
+      "height": 1664,
+      "cutout": null,
+      "sha256": "ad7c5249e1b391bfcc9a3e3926d3f5dd96ab5064aa971a32b7c050a6b4c212c1",
+      "generatedAt": "2026-10-01T09:22:59.444Z",
+      "archivedAs": "assets/generated/rejected/N2.1790872777193.jpg",
+      "reason": "review-A-r1 KONTEXT: a dark metal plate with letter-like \"cn\" marks on the left temple (x 625-705, y 835-890) and round metal studs on both end pieces; alt not literal (open glasses on a folded cloth, no child-size cue)",
+      "at": "2026-10-01T16:39:37.194Z"
+    },
+    {
+      "id": "N4",
+      "file": "assets/generated/N4.jpg",
+      "raw": "assets/generated/raw/N4.jpg",
+      "rawBytes": 387386,
+      "role": "stand-in",
+      "alt": "An unlabelled amber dropper bottle with a drop at its tip",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "Is Myopia Management Right for Your Child?",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[6].title"
+          },
+          "position": "inset right at the start of the section",
+          "sourceAlign": "alignright",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg",
+          "sourceAlt": "Atropine Drops"
+        }
+      ],
+      "prompt": "A small plain amber glass dropper bottle with a white rubber bulb standing on a smooth white surface, one clear drop forming at the glass tip of the dropper beside the bottle, minimal clinical still life, the bottle has no label, no printing, no stickers, no cap text, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "3:2"
+      },
+      "editOf": null,
+      "seed": 136501252,
+      "requestId": "01a0f6c6-68b3-7250-a484-97676d6aeaf9",
+      "width": 2496,
+      "height": 1664,
+      "cutout": null,
+      "sha256": "6b743690a0c3ff17ff20894ddf62216f9ca2b20262d1305dd800bc12aa685a5a",
+      "generatedAt": "2026-10-01T09:23:24.401Z",
+      "archivedAs": "assets/generated/rejected/N4.1790872787665.jpg",
+      "reason": "review-A-r1 REGENERATE: clear/frosted (not amber) bottle about 5% of the frame width, the drop floats in mid-air beside the body; alt false twice; darker and greyer than the set (mean luma 179)",
+      "at": "2026-10-01T16:39:47.665Z"
+    },
+    {
+      "id": "N6",
+      "file": "assets/generated/N6.jpg",
+      "raw": "assets/generated/raw/N6.jpg",
+      "rawBytes": 531391,
+      "role": "stand-in",
+      "alt": "A warm beam and a teal beam of light overlapping on a pale surface",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+          "slot": "inline figure",
+          "anchor": {
+            "type": "heading",
+            "text": "How IPL and RF Work Together for Eye and Skin Health",
+            "level": "h2"
+          },
+          "position": "before the heading",
+          "declaredSize": "600x350",
+          "replacesDeclared": "//da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+          "sourceAlt": "skin model"
+        }
+      ],
+      "prompt": "Two soft overlapping beams of light on a smooth pale surface, one warm golden beam from the left and one cool teal beam from the right, blending gently where they meet, calm minimal abstract still life, no devices, no skin, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 4165519396,
+      "requestId": "01a0f6c6-c9c6-7883-8491-f4dcfdfc1849",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "855683c36226b180419701ead7d4c0703c0915ef40b9f0a00505d72c0adad55b",
+      "generatedAt": "2026-10-01T09:23:49.512Z",
+      "archivedAs": "assets/generated/rejected/N6.1790872800398.jpg",
+      "reason": "review-A-r1 + review-B-r1 REGENERATE: an empty room corner with no legible beams (alt not literal), light from the right, two straight full-height seams (x 1027-1028 and ~1790) through wall and floor",
+      "at": "2026-10-01T16:40:00.398Z"
+    },
+    {
+      "id": "N7",
+      "file": "assets/generated/N7.jpg",
+      "raw": "assets/generated/raw/N7.jpg",
+      "rawBytes": 725694,
+      "role": "stand-in",
+      "alt": "Two pairs of reading glasses and two coffee cups on a sunny porch table",
+      "usedFor": [
+        {
+          "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+          "slot": "inline figure",
+          "anchor": {
+            "type": "heading",
+            "text": "What is Glaucoma and Why Should You Be Concerned?",
+            "level": "h2"
+          },
+          "position": "before the heading",
+          "declaredSize": "600x350",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg",
+          "sourceAlt": "happy old couple hugging"
+        }
+      ],
+      "prompt": "Two pairs of reading glasses resting side by side on a sunny wooden porch table beside two white coffee cups, warm morning light, a soft green garden blurred behind, a calm feeling of companionship, plain frames with no printing, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 3833707380,
+      "requestId": "01a0f6c6-fae2-7ad2-85ea-73c9a307eb62",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "77a40c01904302696324e10c2ea9d46485b819d3ed051a9f9dce0661b8827ccd",
+      "generatedAt": "2026-10-01T09:24:03.833Z",
+      "archivedAs": "assets/generated/rejected/N7.1790872811404.jpg",
+      "reason": "review-B-r1 KONTEXT: one pair of glasses in front of two cups; the alt and reviewFocus count two pairs",
+      "at": "2026-10-01T16:40:11.405Z"
+    },
+    {
+      "id": "N1",
+      "file": "assets/generated/N1.jpg",
+      "raw": "assets/generated/raw/N1.jpg",
+      "rawBytes": 449612,
+      "role": "stand-in",
+      "alt": "A teal and white kite high in a clear morning sky",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "lead figure",
+          "anchor": {
+            "type": "article-start",
+            "before": "When Your Child’s Prescription Keeps Getting Stronger"
+          },
+          "position": "first in the article",
+          "declaredSize": "2560x1274",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+          "sourceAlt": "Cheerful smiling child black wearing goggles."
+        },
+        {
+          "page": "/eye-care-services/",
+          "slot": "childpage thumb",
+          "anchor": {
+            "type": "hub-item",
+            "text": "Myopia Management in Southwest Florida",
+            "modelPath": "sections[2].blocks[0]"
+          },
+          "declaredSize": "2000x1333",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+          "sourceAlt": "Vision, optometrist and portrait of child with glasses ..."
+        }
+      ],
+      "prompt": "A single teal and white diamond-shaped kite flying high in a clear pale-blue morning sky with a few soft white clouds, the kite small and sharp in the upper right third, its thin string curving gently down from the kite all the way to the bottom edge and continuing out of the frame, the string never ends in mid-air, bright Florida daylight, nothing printed on the kite, no people, no ground, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 321725797,
+      "requestId": "01a0f855-a462-7dd2-a7b1-05e400fc75b5",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "bff57c18cc46fb1a48b4f850d86fefb6d684c097bb594297ac0cb774b3e56417",
+      "generatedAt": "2026-10-01T16:39:28.313Z",
+      "archivedAs": "assets/generated/rejected/N1.1790873244323.jpg",
+      "reason": "fix-r1 own check of the round-1 regeneration: the white line again ends in mid-air, in a wavy dark-teal ribbon with a loop at ~(305, 1275); it reads as a kite tail with no flying line",
+      "at": "2026-10-01T16:47:24.324Z"
+    },
+    {
+      "id": "N6",
+      "file": "assets/generated/N6.jpg",
+      "raw": "assets/generated/raw/N6.jpg",
+      "rawBytes": 493570,
+      "role": "stand-in",
+      "alt": "A warm beam and a teal beam of light overlapping on a pale surface",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+          "slot": "inline figure",
+          "anchor": {
+            "type": "heading",
+            "text": "How IPL and RF Work Together for Eye and Skin Health",
+            "level": "h2"
+          },
+          "position": "before the heading",
+          "declaredSize": "600x350",
+          "replacesDeclared": "//da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+          "sourceAlt": "skin model"
+        }
+      ],
+      "prompt": "Abstract light study on one smooth seamless sheet of pale paper that fills the whole frame, with no corners, edges, walls or floor line: a soft warm pale-golden beam of light enters from the upper left and a soft cool teal beam enters from the upper right, the two beams cross in the centre and blend into a gentle pale aqua-white glow, smooth continuous gradients across the whole frame, no panels, no window shadows, no room, no window, no devices, no skin, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 1945835760,
+      "requestId": "01a0f856-1ff8-77d2-958e-070eeacede73",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "4af69132194a31cf277db6bde56618477c6166a8fa58c348c2692058a5e54c1c",
+      "generatedAt": "2026-10-01T16:40:00.400Z",
+      "archivedAs": "assets/generated/rejected/N6.1790873257140.jpg",
+      "reason": "fix-r1 own check of the round-1 regeneration: one teal beam in a room corner with a floor line, no warm beam (alt not literal)",
+      "at": "2026-10-01T16:47:37.141Z"
+    },
+    {
+      "id": "N2",
+      "file": "assets/generated/N2.jpg",
+      "raw": "assets/generated/raw/N2.edit.jpg",
+      "rawBytes": 234900,
+      "role": "stand-in",
+      "alt": "Teal eyeglasses resting on a folded cloth on a white table",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inset",
+          "anchor": {
+            "type": "heading",
+            "text": "What Is Myopia?",
+            "level": "h2",
+            "modelPath": "sections[0].blocks[1].title"
+          },
+          "position": "inset right at the start of the section",
+          "sourceAlign": "alignright",
+          "declaredSize": "230x153",
+          "replacesDeclared": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+          "sourceAlt": "Little girl holds glasses. Poor vision, eyesight concept"
+        }
+      ],
+      "prompt": "Remove the small dark metal plate with marks from the left temple arm, seen through the left lens near the hinge, and remove the round metal studs from both front corners of the frame; replace them with smooth plain translucent teal acetate matching the frame. Keep everything else exactly the same.",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/raw/N2.jpg)"
+      },
+      "editOf": "assets/generated/raw/N2.jpg",
+      "seed": 971681098,
+      "requestId": "01a0f855-d538-7520-8616-25a3491f269d",
+      "width": 1248,
+      "height": 832,
+      "cutout": null,
+      "sha256": "9aaf874f70442a9e55cffe2735f4fdebeb44de993d9f4973d140552a4f1dbb45",
+      "generatedAt": "2026-10-01T16:39:37.194Z",
+      "archivedAs": "assets/generated/rejected/N2.1790873396886.jpg",
+      "reason": "wf4 fix-r1 own check: the Kontext edit removed the \"cn\" plate and both studs but left one round grey rivet-like dot (~18 px) on the defocused left temple seen through the left lens at ~(310, 420); superseded by a local retouch of this same file (byte-identical to raw/N2.edit.jpg)",
+      "at": "2026-10-01T16:49:56.883Z"
+    },
+    {
+      "id": "N6",
+      "file": "assets/generated/N6.jpg",
+      "raw": "assets/generated/raw/N6.jpg",
+      "rawBytes": 622675,
+      "role": "stand-in",
+      "alt": "A warm beam and a teal beam of light overlapping on a pale surface",
+      "usedFor": [
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+          "slot": "inline figure",
+          "anchor": {
+            "type": "heading",
+            "text": "How IPL and RF Work Together for Eye and Skin Health",
+            "level": "h2"
+          },
+          "position": "before the heading",
+          "declaredSize": "600x350",
+          "replacesDeclared": "//da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+          "sourceAlt": "skin model"
+        }
+      ],
+      "prompt": "Overhead flat-lay photograph looking straight down at one smooth seamless sheet of plain white paper that fills the entire frame edge to edge, with no horizon, no wall, no floor line, no corner and no paper edge visible: two soft spotlight beams fall on the paper as two large soft round pools of light, a soft warm golden-amber pool on the left half and a cool teal pool on the right half, the two pools overlap in the centre where they blend into a gentle pale mint-white, smooth continuous gradients, minimal abstract light study, no objects, no window shadows, no devices, no skin, no people, soft diffused morning daylight from the upper left, high-key, airy and calm, clean minimal composition with generous empty space, white and pale aqua tones with gentle teal reflections and small deep navy accents, natural photographic realism, no text, no letters, no numbers, no logos, no labels, no watermarks, no brand marks",
+      "model": "fal-ai/flux-pro/v1.1-ultra",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "aspect_ratio": "16:9"
+      },
+      "editOf": null,
+      "seed": 2996935357,
+      "requestId": "01a0f85d-17d2-7f20-aed4-952a030cc681",
+      "width": 2752,
+      "height": 1536,
+      "cutout": null,
+      "sha256": "4638234961b18b3034dde670a1735d467b403393e4307453350c1e895505fd21",
+      "generatedAt": "2026-10-01T16:47:37.142Z",
+      "archivedAs": "assets/generated/rejected/N6.1790873396892.jpg",
+      "reason": "DROPPED (IMAGE-PLAN 9: three failed generations). Round 0 (01a0f6c6-c9c6-7883-8491-f4dcfdfc1849): an empty room corner, no legible beams, two full-height seams (review-A-r1, review-B-r1). Round 1a (01a0f856-1ff8-77d2-958e-070eeacede73): one teal beam in a room corner with a floor line, no warm light. Round 1b (01a0f85d-17d2-7f20-aed4-952a030cc681): two separate hard-edged flat discs (teal, warm cream) that do not overlap and read as paper discs, not beams. The plan alt \"A warm beam and a teal beam of light overlapping on a pale surface\" is false for all three.",
+      "at": "2026-10-01T16:49:56.883Z"
+    },
+    {
+      "id": "H3",
+      "file": "assets/generated/H3.png",
+      "raw": "assets/generated/raw/H3.edit.jpg",
+      "rawBytes": 189361,
+      "role": "graft-cutout",
+      "alt": "",
+      "usedFor": [
+        {
+          "page": "/",
+          "slot": "s7 Back-to-School callout: cut-out resting on the image lower-right corner, hanging >= 48 px below the card into the section gap; must clear the Glaucoma card at every width (DESIGN-SPEC 3.9, G19, Q-15)"
+        }
+      ],
+      "prompt": "Remove any printed lettering or marks from both temple arms and the bridge; keep everything else exactly the same",
+      "model": "fal-ai/flux-pro/kontext",
+      "input": {
+        "output_format": "jpeg",
+        "safety_tolerance": "2",
+        "image_url": "(data uri of assets/generated/H3-src.jpg)"
+      },
+      "editOf": "assets/generated/H3-src.jpg",
+      "seed": 2176172667,
+      "requestId": "01a0f827-5580-7551-8421-21d4d03be71d",
+      "width": 1184,
+      "height": 880,
+      "cutout": {
+        "model": "fal-ai/birefnet/v2",
+        "requestId": "01a0f827-8017-7570-a090-a7c1fc107b72"
+      },
+      "sha256": "0fea82c125a1763b28ff2244b489ac437f3b2a73c8048ee97b1fac94828f4f3b",
+      "generatedAt": "2026-10-01T15:48:57.591Z",
+      "localFix": {
+        "stage": "wf4 fix-r1",
+        "at": "2026-10-01T16:37:50.128Z",
+        "what": "alpha-only edit: the grey cast-shadow wedge below and right of the right earpiece tip set to alpha 0, with a sub-pixel soft edge (Gaussian-blurred keep mask, sigma 0.75 px) on the new boundary; the light shadow band along the earpiece lower edge tapers out toward the tip. RGB untouched; every pixel outside x 879-958, y 522-557 byte-identical.",
+        "script": "tmp/wf4/fix-r1/h3_erase5.py (body = alpha>=128 and HSV S>=0.30, closed r2 + hole-filled; erase = alpha>0 outside the body in x 878-989, y 522-565, lower-edge band kept within a 3->0 px taper over rows 522-540)",
+        "changedAlphaPx": 1219,
+        "rgbChanged": false,
+        "greyOpaqueS02InReviewZone": {
+          "before": 783,
+          "after": 0,
+          "zone": "x 905-965, y 520-560"
+        },
+        "alphaComponents4conn": {
+          "before": 1,
+          "after": 1
+        },
+        "archivedPrevious": "assets/generated/rejected/H3.1790872644981.png",
+        "paidCalls": 0,
+        "review": "review-A-r1 H3 KONTEXT verdict, issue 5 (zero-cost equivalent); the 2-call Kontext + birefnet reserve stays unused"
+      },
+      "archivedAs": "assets/generated/rejected/H3.1790875551645.png",
+      "reason": "review-R-r2 H3 verdict KONTEXT: an enclosed transparent triangle inside the RIGHT lens, between the horizontal temple bar, the diagonal temple bar and the rim (x 794-880, y 418-472, 2,384 px, mean alpha 3.5; 2,916 px with its soft rim, x 789-881, y 413-475), present since round 0 and missed in round 1; it shows black over the Back-to-School photo and tinted over the aurora field. Fixed by the 0-call local fill the verdict prescribes (no fal call can repair an alpha hole), not by a Kontext call.",
+      "at": "2026-10-01T17:25:51.656Z"
+    }
+  ],
+  "dropped": [
+    {
+      "id": "N6",
+      "stage": "wf4 fix-r1",
+      "at": "2026-10-01T16:49:56.883Z",
+      "reason": "DROPPED (IMAGE-PLAN 9: three failed generations). Round 0 (01a0f6c6-c9c6-7883-8491-f4dcfdfc1849): an empty room corner, no legible beams, two full-height seams (review-A-r1, review-B-r1). Round 1a (01a0f856-1ff8-77d2-958e-070eeacede73): one teal beam in a room corner with a floor line, no warm light. Round 1b (01a0f85d-17d2-7f20-aed4-952a030cc681): two separate hard-edged flat discs (teal, warm cream) that do not overlap and read as paper discs, not beams. The plan alt \"A warm beam and a teal beam of light overlapping on a pale surface\" is false for all three.",
+      "paidCalls": [
+        {
+          "round": 0,
+          "requestId": "01a0f6c6-c9c6-7883-8491-f4dcfdfc1849",
+          "archivedAs": "assets/generated/rejected/N6.1790872800398.jpg"
+        },
+        {
+          "round": "1a",
+          "requestId": "01a0f856-1ff8-77d2-958e-070eeacede73",
+          "archivedAs": "assets/generated/rejected/N6.1790873257140.jpg"
+        },
+        {
+          "round": "1b",
+          "requestId": "01a0f85d-17d2-7f20-aed4-952a030cc681",
+          "archivedAs": "assets/generated/rejected/N6.1790873396892.jpg"
+        }
+      ],
+      "slot": {
+        "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+        "slot": "inline figure",
+        "anchor": {
+          "type": "heading",
+          "text": "How IPL and RF Work Together for Eye and Skin Health",
+          "level": "h2"
+        },
+        "position": "before the heading",
+        "declaredSize": "600x350",
+        "replacesDeclared": "//da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+        "sourceAlt": "skin model"
+      },
+      "fills": "nothing: the inline slot before \"How IPL and RF Work Together for Eye and Skin Health\" on /eye-care-services/dry-eye-disease-and-treatment/envision-inmode/ stays omitted and declared, as the build does today (IMAGE-PLAN 9); the page keeps its TB-ecs title arch",
+      "confirmed": [
+        {
+          "stage": "review-R-r2",
+          "verdict": "DROP",
+          "answers": "review-A-r1 REGENERATE",
+          "note": "viewed both rejects: 1a one teal beam into a room corner, no warm beam (warm max chroma 0.0066); 1b two separate hard-edged flat discs that do not overlap (meanS 0.049); neither may be reinstated with a rewritten alt (1b reads as paper coasters; 1a could read as the practice's office, rule 1)"
+        },
+        {
+          "stage": "review-R-r2",
+          "verdict": "DROP",
+          "answers": "review-B-r1 REGENERATE",
+          "note": "three failures under IMAGE-PLAN 9; drop and declared empty slot wired correctly"
+        },
+        {
+          "stage": "wf4 fix-r2",
+          "at": "2026-10-01T17:25:51.656Z",
+          "action": "none needed: wiring re-checked (plan images[] has no N6, plan dropped[] and declaredEmpty hold it, audit images[] has no N6, 3 archives in rejected[], no live assets/generated/N6.*, no dist reference); 0 calls"
+        }
+      ]
+    }
+  ],
+  "relocatedAt": "2026-10-01T17:44:06.398Z",
+  "relocateNote": "Reused masters copied byte-identical from tmp/ (panel prototype + generator tool check) into assets/generated/ so the build and the handoff never depend on scratch space; masterFrom keeps the origin."
+}

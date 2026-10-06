@@ -1,0 +1,20 @@
+# 404 page (dist/404.html; its URLs are root-relative)
+ErrorDocument 404 /404.html
+
+# Carried-forward redirects: the live site's own aliases (see audit/redirects.json)
+RedirectMatch 301 ^/appointment-request-form/?$ /contact-us/appointment-request-form/
+RedirectMatch 301 ^/contact-us/patient-forms/new-patient-information/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eye-care-services/eye-conditions/dry-eye-disease-and-treatment/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eye-care-services/management-of-ocular-diseases/cataract-surgery-co-management/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eye-care-services/management-of-ocular-diseases/glaucoma-testing-treatment/?$ /eye-care-services/management-of-ocular-diseases/glaucoma/
+RedirectMatch 301 ^/eye-emergencies-pink-red-eyes/?$ /eye-care-services/eye-emergencies-pink-red-eyes/
+RedirectMatch 301 ^/eyeglasses-contacts/contact-lenses/?$ /contact-lenses/
+RedirectMatch 301 ^/eyeglasses-contacts/eyeglasses/?$ /eyeglasses/
+RedirectMatch 301 ^/eyeglasses-contacts/eyeglasses/designer-frames/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eyeglasses-contacts/eyeglasses/lens-treatments/uv-protection/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eyeglasses-contacts/eyeglasses/prescription-eyeglasses/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/eyeglasses-contacts/eyeglasses/specialty-eyewear/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/
+RedirectMatch 301 ^/new-patient-information/?$ /contact-us/appointment-request-form/
+RedirectMatch 301 ^/pediatric-eye-exams/?$ /eye-care-services/eye-exams/pediatric-eye-exams/
+RedirectMatch 301 ^/your-eye-health/protecting-your-eyes/?$ /eye-care-services/
+RedirectMatch 301 ^/your-eye-health/protecting-your-eyes/protecting-your-eyes-from-glare/?$ /riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/

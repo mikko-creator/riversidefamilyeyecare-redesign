@@ -1,0 +1,23 @@
+# From sr-init (restored):
+node_modules/
+.DS_Store
+Thumbs.db
+/.tmp/
+
+# Workspace-only paths. Every path is anchored with a leading "/" so it matches only at the workspace root (an
+# unanchored "assets/" once silently dropped dist/assets/ from another project's repo).
+/tmp/
+/preview/
+/.claude/
+*.zip
+*.log
+
+# The capture evidence stays on disk but is NOT published. sr-init's note says to keep audit/raw as the evidence,
+# and it IS kept, locally. But its 148 raw pages embed the live site's Google Maps API key (133 hits, found by
+# `node tools/secret-scan.mjs --dir audit` on 2026-10-02), and this repository is public. The handoff zip strips
+# these folders by default too (sr-package).
+/audit/raw/
+/audit/rendered/
+/audit/capture/
+/audit/css/
+/audit/screens/

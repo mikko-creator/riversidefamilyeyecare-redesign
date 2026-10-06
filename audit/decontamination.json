@@ -1,0 +1,12 @@
+{
+  "schema": "site-reforge/decontamination@1",
+  "generated": "2026-10-06T17:44:02.047Z",
+  "target": "C:\\Users\\Dell\\riversidefamilyeyecare-reforge\\dist",
+  "filesFound": 153,
+  "filesScanned": 153,
+  "filesSkipped": 0,
+  "counts": {},
+  "clean": true,
+  "verdict": "CLEAN",
+  "findings": []
+}

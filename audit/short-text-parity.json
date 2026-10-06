@@ -1,0 +1,91 @@
+{
+ "schema": "rfec/short-text-parity@1",
+ "dist": "dist",
+ "method": "short items (dates, phone/fax numbers, emails, prices and rates, form labels/options/hints, CTA labels, page-menu labels, headings under 5 words) of each raw content region must appear in the rebuilt <main> (exact, case-sensitive, after entity/whitespace/quote/dash normalisation); copies of the site menus (chrome.json) are excluded; declared removals are listed apart",
+ "totals": {
+  "pages": 148,
+  "items": 815,
+  "found": 813,
+  "declared": 2,
+  "missing": 0,
+  "byCat": {
+   "date": {
+    "items": 71,
+    "found": 71,
+    "declared": 0,
+    "missing": 0
+   },
+   "phone": {
+    "items": 22,
+    "found": 22,
+    "declared": 0,
+    "missing": 0
+   },
+   "price": {
+    "items": 76,
+    "found": 76,
+    "declared": 0,
+    "missing": 0
+   },
+   "cta": {
+    "items": 57,
+    "found": 57,
+    "declared": 0,
+    "missing": 0
+   },
+   "heading": {
+    "items": 551,
+    "found": 551,
+    "declared": 0,
+    "missing": 0
+   },
+   "email": {
+    "items": 4,
+    "found": 4,
+    "declared": 0,
+    "missing": 0
+   },
+   "form": {
+    "items": 31,
+    "found": 29,
+    "declared": 2,
+    "missing": 0
+   },
+   "menu": {
+    "items": 3,
+    "found": 3,
+    "declared": 0,
+    "missing": 0
+   }
+  }
+ },
+ "control": {
+  "page": "/",
+  "item": {
+   "cat": "phone",
+   "text": "239-500-2020"
+  },
+  "fired": true
+ },
+ "controlMenu": {
+  "page": "/template/header-2/",
+  "item": {
+   "cat": "menu",
+   "text": "Call Fort Myers 239-500-2020"
+  },
+  "fired": true
+ },
+ "missing": [],
+ "declared": [
+  {
+   "page": "/contact-us/appointment-request-form/",
+   "cat": "form",
+   "text": "Δ"
+  },
+  {
+   "page": "/contact-us/contact-form/",
+   "cat": "form",
+   "text": "Δ"
+  }
+ ]
+}

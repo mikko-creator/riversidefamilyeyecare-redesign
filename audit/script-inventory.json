@@ -1,0 +1,71 @@
+{
+  "schema": "site-reforge/scripts@1",
+  "generated": "2026-10-01T03:12:27.102Z",
+  "note": "Same-origin <script src> only. A third-party script is an outbound dependency of the site, not an asset of it; vendoring one would change what the page does.",
+  "discovered": [
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2",
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+    "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2",
+    "https://www.riversidefamilyeyecare.com/wp-content/themes/_default/js/public.js?v=2025-02-11"
+  ],
+  "saved": [
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2",
+      "savedAs": "a116559e-jquery.json.min.js",
+      "bytes": 1823
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "savedAs": "83d58d18-jquery.min.js",
+      "bytes": 87553
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+      "savedAs": "e195b8d1-core.min.js",
+      "bytes": 21464
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3",
+      "savedAs": "ac31f33d-datepicker.min.js",
+      "bytes": 36748
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2",
+      "savedAs": "51173fe4-jquery.maskedinput.min.js",
+      "bytes": 4159
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/wp-content/themes/_default/js/public.js?v=2025-02-11",
+      "savedAs": "9064f834-public.js",
+      "bytes": 270312
+    }
+  ],
+  "map": {
+    "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2": "/scripts/a116559e-jquery.json.min.js",
+    "//www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2": "/scripts/a116559e-jquery.json.min.js",
+    "/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2": "/scripts/a116559e-jquery.json.min.js",
+    "/wp-content/plugins/gravityforms/js/jquery.json.min.js": "/scripts/a116559e-jquery.json.min.js",
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1": "/scripts/83d58d18-jquery.min.js",
+    "//www.riversidefamilyeyecare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1": "/scripts/83d58d18-jquery.min.js",
+    "/wp-includes/js/jquery/jquery.min.js?ver=3.7.1": "/scripts/83d58d18-jquery.min.js",
+    "/wp-includes/js/jquery/jquery.min.js": "/scripts/83d58d18-jquery.min.js",
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3": "/scripts/e195b8d1-core.min.js",
+    "//www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3": "/scripts/e195b8d1-core.min.js",
+    "/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3": "/scripts/e195b8d1-core.min.js",
+    "/wp-includes/js/jquery/ui/core.min.js": "/scripts/e195b8d1-core.min.js",
+    "https://www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3": "/scripts/ac31f33d-datepicker.min.js",
+    "//www.riversidefamilyeyecare.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3": "/scripts/ac31f33d-datepicker.min.js",
+    "/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3": "/scripts/ac31f33d-datepicker.min.js",
+    "/wp-includes/js/jquery/ui/datepicker.min.js": "/scripts/ac31f33d-datepicker.min.js",
+    "https://www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2": "/scripts/51173fe4-jquery.maskedinput.min.js",
+    "//www.riversidefamilyeyecare.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2": "/scripts/51173fe4-jquery.maskedinput.min.js",
+    "/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2": "/scripts/51173fe4-jquery.maskedinput.min.js",
+    "/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js": "/scripts/51173fe4-jquery.maskedinput.min.js",
+    "https://www.riversidefamilyeyecare.com/wp-content/themes/_default/js/public.js?v=2025-02-11": "/scripts/9064f834-public.js",
+    "//www.riversidefamilyeyecare.com/wp-content/themes/_default/js/public.js?v=2025-02-11": "/scripts/9064f834-public.js",
+    "/wp-content/themes/_default/js/public.js?v=2025-02-11": "/scripts/9064f834-public.js",
+    "/wp-content/themes/_default/js/public.js": "/scripts/9064f834-public.js"
+  }
+}

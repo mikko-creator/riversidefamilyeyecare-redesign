@@ -1,0 +1,1411 @@
+{
+  "schema": "site-reforge/seo-repairs@1",
+  "note": "Head-level fields: source values carried forward; repairs only from the page own content or a declared decision.",
+  "titles": [
+    {
+      "page": "/author/riversidefamilyeyecare/",
+      "from": "Why Eye Checkups Are Important | Riverside Family Eye Care",
+      "to": "Author: riversidefamilyeyecare",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/category/news/",
+      "from": "What to Expect at Your Specialized Dry Eye Assessment in Fort Myers",
+      "to": "News",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/category/our-doctors/",
+      "from": "",
+      "to": "Nothing Found",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/category/our-staff/",
+      "from": "",
+      "to": "Nothing Found",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/category/testimonials/",
+      "from": "",
+      "to": "Nothing Found",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/category/uncategorized/",
+      "from": "7 Causes of Dry Eye in Fort Myers | Florida Weather & Your Eyes",
+      "to": "Uncategorized",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/all-about-vision/",
+      "from": "Eyeglass Basics | Fort Myers Optical | Riverside Family Eye Care",
+      "to": "All About Vision",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/diabetic-retinopathy/",
+      "from": "What Your Eyes Reveal About Health | Riverside Family Eye Care",
+      "to": "Diabetic Retinopathy",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/dry-eye/",
+      "from": "Is Rinsing Eyes with Tap Water Safe? | Eye Care in Fort Myers",
+      "to": "Dry Eye",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/dry-eyes/",
+      "from": "Defeat Dry Eye Syndrome This Winter in Fort Myers, Florida",
+      "to": "Dry Eyes",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/eye-emergencies/",
+      "from": "Emergency Eye Care in Fort Myers | Riverside Family Eye Care",
+      "to": "eye-emergencies",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/eye-exam/",
+      "from": "What Your Eyes Reveal About Health | Riverside Family Eye Care",
+      "to": "Eye Exam",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/family-eye-exams/",
+      "from": "Family Eye Exams in Fort Myers | Riverside Family Eye Care",
+      "to": "family eye exams",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/gsp-contact-lens-exams/",
+      "from": "Contact Lens Exam in Fort Myers | Riverside Family Eye Care",
+      "to": "Gsp Contact Lens Exams",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/gsp-eye-emergencies/",
+      "from": "Emergency Eye Care in Fort Myers | Riverside Family Eye Care",
+      "to": "Gsp Eye Emergencies",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/licansed-by-adobe-stock/",
+      "from": "",
+      "to": "Nothing Found",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    },
+    {
+      "page": "/tag/myopia-management-solutions/",
+      "from": "Myopia Management in Fort Myers – Protect Your Child's Eyes",
+      "to": "myopia management solutions",
+      "why": "WordPress gave this archive the title of the first post it lists (or none); replaced with the page own h1."
+    }
+  ],
+  "openGraph": [
+    {
+      "page": "/author/riversidefamilyeyecare/",
+      "from": {
+        "type": "article",
+        "title": "Why Regular Optometry Visits Are Crucial for Managing Eye Conditions",
+        "description": "Learn about cataracts, glaucoma, dry eyes, and AMD, and why regular visits to Riverside Family Eye Care in Fort Myers are essential for preventing vision loss.",
+        "image": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png"
+      },
+      "to": {
+        "type": "website",
+        "title": "Author: riversidefamilyeyecare",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/category/news/",
+      "from": {
+        "type": "article",
+        "title": "What to Expect at Your Specialized Dry Eye Assessment",
+        "description": "Feeling nervous about a dry eye exam? Riverside Family Eye Care demystifies the process. Learn about our non-invasive testing, personalized treatment tiers, and how we help you find lasting relief.",
+        "image": "https://www.riversidefamilyeyecare.com/img/old-man-undergoing-an-eye-exam.37e85a18af.png"
+      },
+      "to": {
+        "type": "website",
+        "title": "News",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/category/uncategorized/",
+      "from": {
+        "type": "article",
+        "title": "Top 7 Causes of Dry Eye in Fort Myers",
+        "description": "From AC to salt water, find out why Fort Myers residents struggle with dry eye symptoms. Get expert tips and professional relief for dry eyes in Fort Myers.",
+        "image": "https://www.riversidefamilyeyecare.com/img/dry-eye-girl-640x350.ebed336913.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Uncategorized",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/all-about-vision/",
+      "from": {
+        "type": "website",
+        "title": "Eyeglass Basics",
+        "description": "Eyeglasses are more popular today than ever, despite the availability of contact lenses and vision correction surgery. Learn more at Riverside Family Eye Care.",
+        "image": "https://www.riversidefamilyeyecare.com/img/thumbnail-eyeglass-basics.c18c9b8e6b.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "All About Vision",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/diabetic-retinopathy/",
+      "from": {
+        "type": "article",
+        "title": "Your Eyes As A Window Into Your Whole-Body Health",
+        "description": "Did you know that your eyes are often the first line of defense when it comes to detecting and treating many common systemic diseases and conditions? It's true!",
+        "image": "https://www.riversidefamilyeyecare.com/img/eyes-windows-to-health.013c73ad26.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Diabetic Retinopathy",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/dry-eye/",
+      "from": {
+        "type": "article",
+        "title": "How Safe Is It To Rinse Your Eyes With Tap Water?",
+        "description": "Although tap water is a common choice for rinsing the eyes, it may not be safe in all cases. Find out when to use water, and what to use when you can't!",
+        "image": "https://www.riversidefamilyeyecare.com/img/water-rinse.fc5361e9ba.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Dry Eye",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/dry-eyes/",
+      "from": {
+        "type": "article",
+        "title": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+        "description": "Beat dry eyes this winter in Fort Myers, FL with expert care from Riverside Family Eyecare. Learn prevention and treatment tips today.",
+        "image": "https://www.riversidefamilyeyecare.com/img/woman-dabbing-eyes-in-winter-coat.09701d9402.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Dry Eyes",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/eye-emergencies/",
+      "from": {
+        "type": "website",
+        "title": "Eye Emergencies (Pink/Red Eyes) in Fort Myers",
+        "description": "Need urgent eye care? Riverside Family Eyecare treats eye emergencies, including pink and red eyes. Get prompt, professional care when you need it most.",
+        "image": "https://www.riversidefamilyeyecare.com/img/thumbnail-emerg.d3f9f8c7cd.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "eye-emergencies",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/eye-exam/",
+      "from": {
+        "type": "article",
+        "title": "Your Eyes As A Window Into Your Whole-Body Health",
+        "description": "Did you know that your eyes are often the first line of defense when it comes to detecting and treating many common systemic diseases and conditions? It's true!",
+        "image": "https://www.riversidefamilyeyecare.com/img/eyes-windows-to-health.013c73ad26.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Eye Exam",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/family-eye-exams/",
+      "from": {
+        "type": "article",
+        "title": "What Every Mom Needs to Know Before Booking a Family Eye Exam at Riverside Family Eye Care",
+        "description": "Learn what to expect at a family eye exam. Visit Riverside Family Eyecare in Fort Myers, FL, for expert care tailored to children’s eye health.",
+        "image": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png"
+      },
+      "to": {
+        "type": "website",
+        "title": "family eye exams",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/gsp-contact-lens-exams/",
+      "from": {
+        "type": "website",
+        "title": "Contact Lens Exams",
+        "description": "Contact lenses are a great alternative to wearing eyeglasses. A contact lens exam includes both a comprehensive eye exam and then a contact lens consultation.",
+        "image": "https://www.riversidefamilyeyecare.com/img/thumbnail-contacts.bfe6ff0a47.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Gsp Contact Lens Exams",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/gsp-eye-emergencies/",
+      "from": {
+        "type": "website",
+        "title": "Eye Emergencies (Pink/Red Eyes) in Fort Myers",
+        "description": "Need urgent eye care? Riverside Family Eyecare treats eye emergencies, including pink and red eyes. Get prompt, professional care when you need it most.",
+        "image": "https://www.riversidefamilyeyecare.com/img/thumbnail-emerg.d3f9f8c7cd.jpg"
+      },
+      "to": {
+        "type": "website",
+        "title": "Gsp Eye Emergencies",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    },
+    {
+      "page": "/tag/myopia-management-solutions/",
+      "from": {
+        "type": "article",
+        "title": "Myopia Management Strategies for Growing Children",
+        "description": "Learn about our effective myopia management solutions, like atropine eye drops at Riverside Family Eye Care to protect your child's eyes in Fort Myers, Florida.",
+        "image": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png"
+      },
+      "to": {
+        "type": "website",
+        "title": "myopia management solutions",
+        "description": null
+      },
+      "why": "the archive carried its first listed post's Open Graph; it now describes the archive itself (image: the site logo)"
+    }
+  ],
+  "canonicals": [
+    {
+      "page": "/author/riversidefamilyeyecare/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare/"
+    },
+    {
+      "page": "/category/news/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/category/news/"
+    },
+    {
+      "page": "/category/our-doctors/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/category/our-doctors/"
+    },
+    {
+      "page": "/category/our-staff/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/category/our-staff/"
+    },
+    {
+      "page": "/category/testimonials/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/category/testimonials/"
+    },
+    {
+      "page": "/category/uncategorized/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/category/uncategorized/"
+    },
+    {
+      "page": "/tag/all-about-vision/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/all-about-vision/"
+    },
+    {
+      "page": "/tag/diabetic-retinopathy/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy/"
+    },
+    {
+      "page": "/tag/dry-eye/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/dry-eye/"
+    },
+    {
+      "page": "/tag/dry-eyes/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/dry-eyes/"
+    },
+    {
+      "page": "/tag/eye-emergencies/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/eye-emergencies/"
+    },
+    {
+      "page": "/tag/eye-exam/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/eye-exam/"
+    },
+    {
+      "page": "/tag/family-eye-exams/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams/"
+    },
+    {
+      "page": "/tag/gsp-contact-lens-exams/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams/"
+    },
+    {
+      "page": "/tag/gsp-eye-emergencies/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies/"
+    },
+    {
+      "page": "/tag/licansed-by-adobe-stock/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock/"
+    },
+    {
+      "page": "/tag/myopia-management-solutions/",
+      "from": "(none declared)",
+      "to": "https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions/"
+    }
+  ],
+  "descriptionsDerived": 5,
+  "descriptions": [
+    {
+      "page": "/category/our-doctors/",
+      "to": "It seems we can’t find what you’re looking for. Perhaps searching can help.",
+      "why": "no source meta description: derived from ONE block of the page own prose (seo.mjs deriveDescription; link-only blocks never qualify)"
+    },
+    {
+      "page": "/category/our-staff/",
+      "to": "It seems we can’t find what you’re looking for. Perhaps searching can help.",
+      "why": "no source meta description: derived from ONE block of the page own prose (seo.mjs deriveDescription; link-only blocks never qualify)"
+    },
+    {
+      "page": "/category/testimonials/",
+      "to": "It seems we can’t find what you’re looking for. Perhaps searching can help.",
+      "why": "no source meta description: derived from ONE block of the page own prose (seo.mjs deriveDescription; link-only blocks never qualify)"
+    },
+    {
+      "page": "/tag/licansed-by-adobe-stock/",
+      "to": "It seems we can’t find what you’re looking for. Perhaps searching can help.",
+      "why": "no source meta description: derived from ONE block of the page own prose (seo.mjs deriveDescription; link-only blocks never qualify)"
+    },
+    {
+      "page": "/team/jhonae-anglin/",
+      "to": "Jhonae is an Optical Technician who enjoys helping patients find eyewear that makes them look and feel their best.",
+      "why": "no source meta description: derived from ONE block of the page own prose (seo.mjs deriveDescription; link-only blocks never qualify)"
+    }
+  ],
+  "descriptionsNotDerived": [
+    {
+      "page": "/template/footer/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    },
+    {
+      "page": "/template/footer-2/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    },
+    {
+      "page": "/template/header/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    },
+    {
+      "page": "/template/header-2/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    },
+    {
+      "page": "/template/header-3/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    },
+    {
+      "page": "/template/inner-header/",
+      "why": "no source meta description; a /template/* page is the platform's header or footer template rendered as a page (noindex) and its text is template copy (social icon labels, a placeholder location line), so no description is derived from it"
+    }
+  ],
+  "descriptionsRemoved": [
+    {
+      "page": "/author/riversidefamilyeyecare/",
+      "from": "Learn about cataracts, glaucoma, dry eyes, and AMD, and why regular visits to Riverside Family Eye Care in Fort Myers are essential for preventing vision loss.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/category/news/",
+      "from": "Feeling nervous about a dry eye exam? Riverside Family Eye Care demystifies the process. Learn about our non-invasive testing, personalized treatment tiers, and how we help you find lasting relief.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/category/uncategorized/",
+      "from": "From AC to salt water, find out why Fort Myers residents struggle with dry eye symptoms. Get expert tips and professional relief for dry eyes in Fort Myers.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/all-about-vision/",
+      "from": "Eyeglasses are more popular today than ever, despite the availability of contact lenses and vision correction surgery. Learn more at Riverside Family Eye Care.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/diabetic-retinopathy/",
+      "from": "Did you know that your eyes are often the first line of defense when it comes to detecting and treating many common systemic diseases and conditions? It's true!",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/dry-eye/",
+      "from": "Although tap water is a common choice for rinsing the eyes, it may not be safe in all cases. Find out when to use water, and what to use when you can't!",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/dry-eyes/",
+      "from": "Beat dry eyes this winter in Fort Myers, FL with expert care from Riverside Family Eyecare. Learn prevention and treatment tips today.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/eye-emergencies/",
+      "from": "Need urgent eye care? Riverside Family Eyecare treats eye emergencies, including pink and red eyes. Get prompt, professional care when you need it most.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/eye-exam/",
+      "from": "Did you know that your eyes are often the first line of defense when it comes to detecting and treating many common systemic diseases and conditions? It's true!",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/family-eye-exams/",
+      "from": "Learn what to expect at a family eye exam. Visit Riverside Family Eyecare in Fort Myers, FL, for expert care tailored to children’s eye health.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/gsp-contact-lens-exams/",
+      "from": "Contact lenses are a great alternative to wearing eyeglasses. A contact lens exam includes both a comprehensive eye exam and then a contact lens consultation.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/gsp-eye-emergencies/",
+      "from": "Need urgent eye care? Riverside Family Eyecare treats eye emergencies, including pink and red eyes. Get prompt, professional care when you need it most.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    },
+    {
+      "page": "/tag/myopia-management-solutions/",
+      "from": "Learn about our effective myopia management solutions, like atropine eye drops at Riverside Family Eye Care to protect your child's eyes in Fort Myers, Florida.",
+      "why": "the archive's meta description was its first listed post's (the same text as the og:description the platform copied); the archive is a list of links, so no description is derived"
+    }
+  ],
+  "h1": [
+    {
+      "page": "/cherry-payment-plan/",
+      "h1": "Cherry Payment Plan",
+      "source": "label",
+      "why": "no source h1 (the page body is the Cherry widget); the page's own primary-menu label (chrome.json nav)"
+    },
+    {
+      "page": "/template/footer/",
+      "h1": "Footer",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    },
+    {
+      "page": "/template/footer-2/",
+      "h1": "Footer-NEW",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    },
+    {
+      "page": "/template/header/",
+      "h1": "Header",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    },
+    {
+      "page": "/template/header-2/",
+      "h1": "Header – MultiLoc",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    },
+    {
+      "page": "/template/header-3/",
+      "h1": "Header-NEW",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    },
+    {
+      "page": "/template/inner-header/",
+      "h1": "Inner Header",
+      "source": "title",
+      "why": "no source h1: the page <title>"
+    }
+  ],
+  "noindex": [
+    "/author/riversidefamilyeyecare/",
+    "/category/news/",
+    "/category/our-doctors/",
+    "/category/our-staff/",
+    "/category/testimonials/",
+    "/category/uncategorized/",
+    "/tag/all-about-vision/",
+    "/tag/diabetic-retinopathy/",
+    "/tag/dry-eye/",
+    "/tag/dry-eyes/",
+    "/tag/eye-emergencies/",
+    "/tag/eye-exam/",
+    "/tag/family-eye-exams/",
+    "/tag/gsp-contact-lens-exams/",
+    "/tag/gsp-eye-emergencies/",
+    "/tag/licansed-by-adobe-stock/",
+    "/tag/myopia-management-solutions/",
+    "/template/footer/",
+    "/template/footer-2/",
+    "/template/header/",
+    "/template/header-2/",
+    "/template/header-3/",
+    "/template/inner-header/"
+  ],
+  "structuredDataNote": "Every application/ld+json block of every raw page that is not one of the platform's site-wide types (replaced: audit/clone-removals.json elements): CARRY (verbatim), REPAIR (carried with the listed field repairs, each with from / to / why) or REMOVE (with why). src/lib/seo.mjs sourceStructuredData; tools/seo-parity.mjs checks it.",
+  "structuredData": [
+    {
+      "page": "/autoimmune-disease-and-dry-eye-2023/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/autoimmune-disease-and-dry-eye-2023/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "February 26, 2023",
+          "to": "2023-02-26",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "February 26, 2023",
+          "to": "2023-02-26",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/cataract-surgery-co-management-your-path-to-clear-vision/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/cataract-surgery-co-management-your-path-to-clear-vision/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "March 6, 2024",
+          "to": "2024-03-06",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "March 6, 2024",
+          "to": "2024-03-06",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "headline",
+          "from": "Dry Eyes Driving You Crazy? Here&#8217;s How IPL Could Help",
+          "to": "Dry Eyes Driving You Crazy? Here’s How IPL Could Help",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "description",
+          "from": "Dry Eyes Driving You Crazy? Here&#8217;s How IPL Could Help",
+          "to": "Dry Eyes Driving You Crazy? Here’s How IPL Could Help",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "datePublished",
+          "from": "January 15, 2026",
+          "to": "2026-01-15",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "January 15, 2026",
+          "to": "2026-01-15",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/everything-you-need-to-know-about-uv-rays/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/everything-you-need-to-know-about-uv-rays/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "May 7, 2024",
+          "to": "2024-05-07",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "May 7, 2024",
+          "to": "2024-05-07",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+      "type": "FAQPage",
+      "decision": "REMOVE",
+      "why": "its 4 questions and answers are not printed on this page (8 of 8 texts absent). Structured data describes what the page shows, so it is removed (docs/OPEN-DECISIONS.md B)"
+    },
+    {
+      "page": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "type": "VideoObject",
+      "decision": "REMOVE",
+      "why": "the source block does not parse (JSON.parse: Bad control character in string literal in JSON at position 197 (line 6 column 68)), so no search engine could read it; removed, not repaired (docs/OPEN-DECISIONS.md B)"
+    },
+    {
+      "page": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "type": "FAQPage",
+      "decision": "REMOVE",
+      "why": "its 4 questions and answers are not printed on this page (8 of 8 texts absent); its url names another page (https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/). Structured data describes what the page shows, so it is removed (docs/OPEN-DECISIONS.md B)"
+    },
+    {
+      "page": "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "November 13, 2025",
+          "to": "2025-11-13",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "November 13, 2025",
+          "to": "2025-11-13",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/eyes-a-window-into-your-health-2023/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "March 19, 2023",
+          "to": "2023-03-19",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "March 19, 2023",
+          "to": "2023-03-19",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/glaucoma-awareness-starts-with-an-eye-exam/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "January 30, 2025",
+          "to": "2025-01-30",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "January 30, 2025",
+          "to": "2025-01-30",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/how-poor-vision-could-stunt-your-childs-academic-performance/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "July 6, 2024",
+          "to": "2024-07-06",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "July 6, 2024",
+          "to": "2024-07-06",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "April 25, 2023",
+          "to": "2023-04-25",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "April 25, 2023",
+          "to": "2023-04-25",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/myopia-management-strategies-for-growing-children/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "November 20, 2024",
+          "to": "2024-11-20",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "November 20, 2024",
+          "to": "2024-11-20",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "April 26, 2024",
+          "to": "2024-04-26",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "April 26, 2024",
+          "to": "2024-04-26",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "November 3, 2023",
+          "to": "2023-11-03",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "November 3, 2023",
+          "to": "2023-11-03",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/tag/eye-emergencies/",
+      "type": "VideoObject",
+      "decision": "REMOVE",
+      "why": "the source block does not parse (JSON.parse: Bad control character in string literal in JSON at position 197 (line 6 column 68)), so no search engine could read it; removed, not repaired (docs/OPEN-DECISIONS.md B)"
+    },
+    {
+      "page": "/tag/gsp-eye-emergencies/",
+      "type": "VideoObject",
+      "decision": "REMOVE",
+      "why": "the source block does not parse (JSON.parse: Bad control character in string literal in JSON at position 197 (line 6 column 68)), so no search engine could read it; removed, not repaired (docs/OPEN-DECISIONS.md B)"
+    },
+    {
+      "page": "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "April 24, 2025",
+          "to": "2025-04-24",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "April 24, 2025",
+          "to": "2025-04-24",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "April 22, 2026",
+          "to": "2026-04-22",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "April 22, 2026",
+          "to": "2026-04-22",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "May 12, 2026",
+          "to": "2026-05-12",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "May 12, 2026",
+          "to": "2026-05-12",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "September 25, 2024",
+          "to": "2024-09-25",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "September 25, 2024",
+          "to": "2024-09-25",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "headline",
+          "from": "Why Some Dry Eye Treatments Don’t Work &#038; What Actually Does",
+          "to": "Why Some Dry Eye Treatments Don’t Work & What Actually Does",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "description",
+          "from": "Why Some Dry Eye Treatments Don’t Work &#038; What Actually Does",
+          "to": "Why Some Dry Eye Treatments Don’t Work & What Actually Does",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "datePublished",
+          "from": "November 7, 2025",
+          "to": "2025-11-07",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "November 7, 2025",
+          "to": "2025-11-07",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/winter-dry-eyes-2023/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/winter-dry-eyes-2023/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "headline",
+          "from": "This Winter, Don&#8217;t Let Dry Eyes Get the Best of You",
+          "to": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "description",
+          "from": "This Winter, Don&#8217;t Let Dry Eyes Get the Best of You",
+          "to": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+          "why": "HTML entities inside the JSON string (the platform wrote the escaped title) decoded"
+        },
+        {
+          "field": "datePublished",
+          "from": "February 28, 2023",
+          "to": "2023-02-28",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "February 28, 2023",
+          "to": "2023-02-28",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    },
+    {
+      "page": "/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+      "type": "BlogPosting",
+      "decision": "REPAIR",
+      "why": "carried into the page graph; every value is the source's except the listed repairs",
+      "repairs": [
+        {
+          "field": "mainEntityOfPage.@id",
+          "from": "https://www.riversidefamilyeyecare.com",
+          "to": "https://www.riversidefamilyeyecare.com/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+          "why": "the platform points every post at the home page; the post is the main entity of its own page (its canonical)"
+        },
+        {
+          "field": "datePublished",
+          "from": "March 13, 2026",
+          "to": "2026-03-13",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "dateModified",
+          "from": "March 13, 2026",
+          "to": "2026-03-13",
+          "why": "the same date as an ISO 8601 date (schema.org Date)"
+        },
+        {
+          "field": "image",
+          "from": [
+            ""
+          ],
+          "to": null,
+          "why": "empty at source; omitted (no image is invented)"
+        },
+        {
+          "field": "publisher.logo.url",
+          "from": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2022/06/Riverside-Family-Eye-Care-Logo-01.png",
+          "to": "https://www.riversidefamilyeyecare.com/img/riverside-family-eye-care-logo-01.737365bec0.png",
+          "why": "the platform CDN copy of the practice logo; the same file as this build ships it"
+        }
+      ]
+    }
+  ]
+}

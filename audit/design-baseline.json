@@ -1,0 +1,2171 @@
+{
+  "schema": "site-reforge/design-baseline@1",
+  "generated": "2026-10-06T06:49:32.211Z",
+  "evidence": "computed (browser capture)",
+  "capturedViewports": [
+    {
+      "file": "baseline.contact-us-appointment-request-form.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us-appointment-request-form.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us-appointment-request-form.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us-appointment-request-form.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us-appointment-request-form.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us-appointment-request-form.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.contact-us.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services-faq.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eye-care-services.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.eyeglasses-eyeglass-basics.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.hours-location.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.index.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.insurance.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/insurance/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.our-eye-doctors.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.team-dr-brittany-degler-od.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.top-causes-of-dry-eye-in-fort-myers.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.1024.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 1024,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.1280.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 1280,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.1440.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.360.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 360,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.390.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "dpr": 1
+      }
+    },
+    {
+      "file": "baseline.whats-new.768.style.json",
+      "url": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "viewport": {
+        "w": 768,
+        "h": 900,
+        "dpr": 1
+      }
+    }
+  ],
+  "sourceCssBytes": 26900457,
+  "sourceStylesheets": 46,
+  "inlineStyleBlocks": 3354,
+  "authorTokens": {
+    "fromSourceCss": {
+      "--wp--preset--aspect-ratio--square": "1",
+      "--wp--preset--aspect-ratio--4-3": "4/3",
+      "--wp--preset--aspect-ratio--3-4": "3/4",
+      "--wp--preset--aspect-ratio--3-2": "3/2",
+      "--wp--preset--aspect-ratio--2-3": "2/3",
+      "--wp--preset--aspect-ratio--16-9": "16/9",
+      "--wp--preset--aspect-ratio--9-16": "9/16",
+      "--wp--preset--color--black": "#000000",
+      "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+      "--wp--preset--color--white": "#ffffff",
+      "--wp--preset--color--pale-pink": "#f78da7",
+      "--wp--preset--color--vivid-red": "#cf2e2e",
+      "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+      "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+      "--wp--preset--color--light-green-cyan": "#7bdcb5",
+      "--wp--preset--color--vivid-green-cyan": "#00d084",
+      "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+      "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+      "--wp--preset--color--vivid-purple": "#9b51e0",
+      "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+      "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+      "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+      "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+      "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+      "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+      "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+      "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+      "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+      "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+      "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+      "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+      "--wp--preset--font-size--small": "13px",
+      "--wp--preset--font-size--medium": "20px",
+      "--wp--preset--font-size--large": "36px",
+      "--wp--preset--font-size--x-large": "42px",
+      "--wp--preset--spacing--20": "0.44rem",
+      "--wp--preset--spacing--30": "0.67rem",
+      "--wp--preset--spacing--40": "1rem",
+      "--wp--preset--spacing--50": "1.5rem",
+      "--wp--preset--spacing--60": "2.25rem",
+      "--wp--preset--spacing--70": "3.38rem",
+      "--wp--preset--spacing--80": "5.06rem",
+      "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+      "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+      "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+      "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)",
+      "--wp--preset--shadow--crisp": "6px 6px 0px rgba(0, 0, 0, 1)"
+    },
+    "fromComputedRoot": {
+      "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+      "--custom-floating-estimator-offset-y": "0px",
+      "--wp--preset--font-size--large": "36px",
+      "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+      "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+      "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)",
+      "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+      "--wp--preset--spacing--30": "0.67rem",
+      "--wp--preset--aspect-ratio--4-3": "4/3",
+      "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+      "--wp--preset--spacing--50": "1.5rem",
+      "--wp--preset--color--vivid-purple": "#9b51e0",
+      "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+      "--custom-header-font": "'Montserrat'",
+      "--wp--preset--aspect-ratio--16-9": "16/9",
+      "--wp--preset--font-size--small": "13px",
+      "--wp--preset--color--pale-pink": "#f78da7",
+      "--custom-floating-estimator-text-font-family": "'Montserrat'",
+      "--wp--preset--spacing--70": "3.38rem",
+      "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+      "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+      "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+      "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+      "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+      "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+      "--wp--preset--aspect-ratio--9-16": "9/16",
+      "--wp--preset--spacing--60": "2.25rem",
+      "--wp--preset--color--vivid-red": "#cf2e2e",
+      "--wp--preset--shadow--crisp": "6px 6px 0px rgba(0, 0, 0, 1)",
+      "--wp--preset--color--vivid-green-cyan": "#00d084",
+      "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+      "--wp--preset--color--light-green-cyan": "#7bdcb5",
+      "--custom-floating-estimator-offset-x": "0px",
+      "--custom-secondary-color": "#1e2c7010",
+      "--custom-floating-estimator-cta-text-color": "#FFFFFF",
+      "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+      "--custom-floating-estimator-cta-font-family": "'Montserrat'",
+      "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+      "--wp--preset--aspect-ratio--square": "1",
+      "--wp--preset--spacing--80": "5.06rem",
+      "--wp--preset--color--white": "#ffffff",
+      "--wp--preset--spacing--40": "1rem",
+      "--wp--preset--font-size--medium": "20px",
+      "--wp--preset--color--black": "#000000",
+      "--wp--preset--aspect-ratio--3-4": "3/4",
+      "--custom-primary-color": "#1e2c70",
+      "--custom-floating-estimator-z-index": "9999",
+      "--wp--preset--aspect-ratio--3-2": "3/2",
+      "--custom-font": "'Montserrat'",
+      "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+      "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+      "--wp--preset--spacing--20": "0.44rem",
+      "--wp--preset--aspect-ratio--2-3": "2/3",
+      "--wp--preset--font-size--x-large": "42px",
+      "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+      "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+      "--custom-floating-estimator-cta-color": "#1e2c70",
+      "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)"
+    }
+  },
+  "color": {
+    "text": [
+      {
+        "value": "#464451",
+        "count": 17730
+      },
+      {
+        "value": "#ffffff",
+        "count": 8088
+      },
+      {
+        "value": "#ffd700",
+        "count": 2250
+      },
+      {
+        "value": "#757575",
+        "count": 1152
+      },
+      {
+        "value": "#666666",
+        "count": 996
+      },
+      {
+        "value": "#1e2c70",
+        "count": 768
+      },
+      {
+        "value": "#000000",
+        "count": 702
+      },
+      {
+        "value": "#03756d",
+        "count": 504
+      },
+      {
+        "value": "#941221",
+        "count": 324
+      },
+      {
+        "value": "#424242",
+        "count": 186
+      },
+      {
+        "value": "#808080",
+        "count": 180
+      },
+      {
+        "value": "#ff0000",
+        "count": 36
+      },
+      {
+        "value": "#790000",
+        "count": 30
+      },
+      {
+        "value": "#263e4a",
+        "count": 30
+      },
+      {
+        "value": "#800000",
+        "count": 12
+      }
+    ],
+    "background": [
+      {
+        "value": "undefined",
+        "count": 31092
+      },
+      {
+        "value": "#ffffff",
+        "count": 612
+      },
+      {
+        "value": "#03756d",
+        "count": 540
+      },
+      {
+        "value": "#00000008",
+        "count": 174
+      },
+      {
+        "value": "#1e2c70",
+        "count": 144
+      },
+      {
+        "value": "#000000",
+        "count": 144
+      },
+      {
+        "value": "#ffffff00",
+        "count": 114
+      },
+      {
+        "value": "#efefef",
+        "count": 114
+      },
+      {
+        "value": "#0000004d",
+        "count": 24
+      },
+      {
+        "value": "#595959",
+        "count": 12
+      },
+      {
+        "value": "#404d8a57",
+        "count": 12
+      },
+      {
+        "value": "#000000cc",
+        "count": 6
+      }
+    ],
+    "border": [
+      {
+        "value": "#464451",
+        "count": 17454
+      },
+      {
+        "value": "#ffffff",
+        "count": 8088
+      },
+      {
+        "value": "#ffd700",
+        "count": 2250
+      },
+      {
+        "value": "#757575",
+        "count": 1152
+      },
+      {
+        "value": "#666666",
+        "count": 996
+      },
+      {
+        "value": "#1e2c70",
+        "count": 768
+      },
+      {
+        "value": "#03756d",
+        "count": 504
+      },
+      {
+        "value": "#000000",
+        "count": 444
+      },
+      {
+        "value": "#941221",
+        "count": 324
+      },
+      {
+        "value": "#424242",
+        "count": 186
+      },
+      {
+        "value": "#e1e1e1",
+        "count": 174
+      },
+      {
+        "value": "#808080",
+        "count": 150
+      },
+      {
+        "value": "#cccccc",
+        "count": 132
+      },
+      {
+        "value": "#767676",
+        "count": 120
+      },
+      {
+        "value": "rgb(70, 68, 81) rgb(70, 68, 81) rgb(3, 117, 109)",
+        "count": 66
+      },
+      {
+        "value": "#ff0000",
+        "count": 36
+      },
+      {
+        "value": "#790000",
+        "count": 30
+      },
+      {
+        "value": "#263e4a",
+        "count": 24
+      },
+      {
+        "value": "rgb(66, 66, 66) rgb(128, 128, 128) rgb(128, 128, 128)",
+        "count": 18
+      },
+      {
+        "value": "rgb(70, 68, 81) rgb(70, 68, 81) rgba(0, 0, 0, 0.25)",
+        "count": 18
+      },
+      {
+        "value": "#f4f4f4",
+        "count": 18
+      },
+      {
+        "value": "rgb(3, 117, 109) rgb(128, 128, 128) rgb(128, 128, 128)",
+        "count": 12
+      },
+      {
+        "value": "#800000",
+        "count": 12
+      },
+      {
+        "value": "rgb(0, 0, 0) rgb(204, 204, 204) rgb(204, 204, 204) rgb(0, 0, 0)",
+        "count": 6
+      }
+    ],
+    "allDeclaredInCss": [
+      {
+        "value": "#fff",
+        "count": 3635
+      },
+      {
+        "value": "#ffffff",
+        "count": 3387
+      },
+      {
+        "value": "#ff0000",
+        "count": 1764
+      },
+      {
+        "value": "#ffff00",
+        "count": 1764
+      },
+      {
+        "value": "#03756d",
+        "count": 1617
+      },
+      {
+        "value": "#000",
+        "count": 1542
+      },
+      {
+        "value": "#1e2c70",
+        "count": 1010
+      },
+      {
+        "value": "#05c1ff",
+        "count": 882
+      },
+      {
+        "value": "#efefef",
+        "count": 755
+      },
+      {
+        "value": "#757575",
+        "count": 735
+      },
+      {
+        "value": "#f5f5f5",
+        "count": 590
+      },
+      {
+        "value": "#d1d1d1",
+        "count": 588
+      },
+      {
+        "value": "#000000",
+        "count": 534
+      },
+      {
+        "value": "#ccc",
+        "count": 471
+      },
+      {
+        "value": "#000000b3",
+        "count": 443
+      },
+      {
+        "value": "#0000001a",
+        "count": 442
+      },
+      {
+        "value": "#038",
+        "count": 421
+      },
+      {
+        "value": "#333",
+        "count": 305
+      },
+      {
+        "value": "#dd6420",
+        "count": 296
+      },
+      {
+        "value": "#ff6900",
+        "count": 296
+      },
+      {
+        "value": "#00000033",
+        "count": 296
+      },
+      {
+        "value": "#000000",
+        "count": 296
+      },
+      {
+        "value": "#000000",
+        "count": 294
+      },
+      {
+        "value": "#e7e7e7",
+        "count": 294
+      },
+      {
+        "value": "#dd4b39",
+        "count": 294
+      },
+      {
+        "value": "#ff0000",
+        "count": 294
+      },
+      {
+        "value": "#ffffff00",
+        "count": 294
+      },
+      {
+        "value": "#00000033",
+        "count": 291
+      },
+      {
+        "value": "#333f47",
+        "count": 286
+      },
+      {
+        "value": "#cccccc",
+        "count": 278
+      },
+      {
+        "value": "#666",
+        "count": 157
+      },
+      {
+        "value": "#aaa",
+        "count": 155
+      },
+      {
+        "value": "#00000033",
+        "count": 155
+      },
+      {
+        "value": "#00000026",
+        "count": 149
+      },
+      {
+        "value": "#fafafa",
+        "count": 149
+      },
+      {
+        "value": "#464451",
+        "count": 148
+      },
+      {
+        "value": "#e6e6e6",
+        "count": 148
+      },
+      {
+        "value": "#abb8c3",
+        "count": 148
+      },
+      {
+        "value": "#f78da7",
+        "count": 148
+      },
+      {
+        "value": "#cf2e2e",
+        "count": 148
+      },
+      {
+        "value": "#ff6900",
+        "count": 148
+      },
+      {
+        "value": "#fcb900",
+        "count": 148
+      },
+      {
+        "value": "#7bdcb5",
+        "count": 148
+      },
+      {
+        "value": "#00d084",
+        "count": 148
+      },
+      {
+        "value": "#8ed1fc",
+        "count": 148
+      },
+      {
+        "value": "#0693e3",
+        "count": 148
+      },
+      {
+        "value": "#9b51e0",
+        "count": 148
+      },
+      {
+        "value": "#0693e3",
+        "count": 148
+      }
+    ]
+  },
+  "typography": {
+    "families": [
+      {
+        "value": "Verdana",
+        "count": 31986
+      },
+      {
+        "value": "Montserrat",
+        "count": 600
+      },
+      {
+        "value": "Arial",
+        "count": 324
+      },
+      {
+        "value": "\"Times New Roman\"",
+        "count": 72
+      },
+      {
+        "value": "system-ui, \"---apple-system\", BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "count": 6
+      }
+    ],
+    "familiesDeclaredInCss": [
+      {
+        "value": "Verdana",
+        "count": 148
+      },
+      {
+        "value": "Arial,Helvetica,sans-serif",
+        "count": 147
+      },
+      {
+        "value": "'Open Sans'",
+        "count": 12
+      },
+      {
+        "value": "'Montserrat'",
+        "count": 9
+      },
+      {
+        "value": "'Poppins'",
+        "count": 9
+      },
+      {
+        "value": "'Raleway'",
+        "count": 9
+      },
+      {
+        "value": "'Roboto'",
+        "count": 9
+      },
+      {
+        "value": "'Source Sans 3'",
+        "count": 8
+      },
+      {
+        "value": "inherit",
+        "count": 8
+      },
+      {
+        "value": "'Oswald'",
+        "count": 6
+      },
+      {
+        "value": "'Playfair Display'",
+        "count": 6
+      },
+      {
+        "value": "'Lato'",
+        "count": 5
+      }
+    ],
+    "sizes": [
+      {
+        "value": "14px",
+        "count": 20331
+      },
+      {
+        "value": "20px",
+        "count": 2364
+      },
+      {
+        "value": "19.6px",
+        "count": 1260
+      },
+      {
+        "value": "13px",
+        "count": 1152
+      },
+      {
+        "value": "24.5px",
+        "count": 1092
+      },
+      {
+        "value": "17.5px",
+        "count": 696
+      },
+      {
+        "value": "28px",
+        "count": 672
+      },
+      {
+        "value": "112px",
+        "count": 624
+      },
+      {
+        "value": "13.3333px",
+        "count": 546
+      },
+      {
+        "value": "26.25px",
+        "count": 528
+      },
+      {
+        "value": "12px",
+        "count": 342
+      },
+      {
+        "value": "15.4px",
+        "count": 342
+      },
+      {
+        "value": "18px",
+        "count": 294
+      },
+      {
+        "value": "16px",
+        "count": 234
+      },
+      {
+        "value": "15px",
+        "count": 228
+      },
+      {
+        "value": "21px",
+        "count": 192
+      },
+      {
+        "value": "34px",
+        "count": 186
+      },
+      {
+        "value": "10px",
+        "count": 174
+      },
+      {
+        "value": "12.6px",
+        "count": 156
+      },
+      {
+        "value": "40px",
+        "count": 153
+      },
+      {
+        "value": "22.05px",
+        "count": 144
+      },
+      {
+        "value": "11px",
+        "count": 132
+      },
+      {
+        "value": "17px",
+        "count": 120
+      },
+      {
+        "value": "36px",
+        "count": 108
+      }
+    ],
+    "sizeScalePx": [
+      9.756,
+      10,
+      10.5,
+      11,
+      11.382,
+      12,
+      12.6,
+      13,
+      13.3333,
+      14,
+      15,
+      15.4,
+      16,
+      17,
+      17.5,
+      18,
+      19.6,
+      20,
+      21,
+      22,
+      22.05,
+      24,
+      24.5,
+      26.25,
+      28,
+      30,
+      31.5,
+      34,
+      35,
+      36,
+      40,
+      65,
+      112
+    ],
+    "weights": [
+      {
+        "value": "400",
+        "count": 31296
+      },
+      {
+        "value": "700",
+        "count": 1692
+      }
+    ],
+    "lineHeights": [
+      {
+        "value": "21px",
+        "count": 18957
+      },
+      {
+        "value": "30px",
+        "count": 2274
+      },
+      {
+        "value": "16.8px",
+        "count": 720
+      },
+      {
+        "value": "13px",
+        "count": 648
+      },
+      {
+        "value": "30.8px",
+        "count": 612
+      },
+      {
+        "value": "19.5px",
+        "count": 528
+      },
+      {
+        "value": "14px",
+        "count": 438
+      },
+      {
+        "value": "23.1px",
+        "count": 402
+      },
+      {
+        "value": "27px",
+        "count": 294
+      },
+      {
+        "value": "18px",
+        "count": 270
+      },
+      {
+        "value": "24px",
+        "count": 184
+      },
+      {
+        "value": "15px",
+        "count": 174
+      }
+    ],
+    "letterSpacings": [
+      {
+        "value": "0.666667px",
+        "count": 12
+      }
+    ],
+    "loadedFonts": [
+      "Montserrat 100 900 normal"
+    ],
+    "fontFaces": []
+  },
+  "space": {
+    "paddings": [
+      {
+        "value": "10px",
+        "count": 2226
+      },
+      {
+        "value": "15px",
+        "count": 1416
+      },
+      {
+        "value": "20px",
+        "count": 1296
+      },
+      {
+        "value": "9.8px",
+        "count": 1152
+      },
+      {
+        "value": "5px",
+        "count": 768
+      },
+      {
+        "value": "7px",
+        "count": 612
+      },
+      {
+        "value": "8px",
+        "count": 480
+      },
+      {
+        "value": "14px",
+        "count": 420
+      },
+      {
+        "value": "12px",
+        "count": 294
+      },
+      {
+        "value": "30px",
+        "count": 246
+      },
+      {
+        "value": "40px",
+        "count": 225
+      },
+      {
+        "value": "10.5px",
+        "count": 168
+      },
+      {
+        "value": "11.9px",
+        "count": 168
+      },
+      {
+        "value": "6.66667px",
+        "count": 144
+      },
+      {
+        "value": "4px",
+        "count": 132
+      },
+      {
+        "value": "16px",
+        "count": 128
+      },
+      {
+        "value": "25px",
+        "count": 108
+      },
+      {
+        "value": "33px",
+        "count": 72
+      },
+      {
+        "value": "50px",
+        "count": 69
+      },
+      {
+        "value": "60px",
+        "count": 36
+      },
+      {
+        "value": "6px",
+        "count": 24
+      },
+      {
+        "value": "80px",
+        "count": 18
+      },
+      {
+        "value": "70px",
+        "count": 15
+      },
+      {
+        "value": "100px",
+        "count": 15
+      }
+    ],
+    "margins": [
+      {
+        "value": "20px",
+        "count": 3828
+      },
+      {
+        "value": "5px",
+        "count": 972
+      },
+      {
+        "value": "10px",
+        "count": 909
+      },
+      {
+        "value": "14px",
+        "count": 897
+      },
+      {
+        "value": "7px",
+        "count": 801
+      },
+      {
+        "value": "21px",
+        "count": 768
+      },
+      {
+        "value": "-1px",
+        "count": 688
+      },
+      {
+        "value": "3.5px",
+        "count": 336
+      },
+      {
+        "value": "12.6px",
+        "count": 312
+      },
+      {
+        "value": "15px",
+        "count": 276
+      },
+      {
+        "value": "28px",
+        "count": 237
+      },
+      {
+        "value": "3px",
+        "count": 216
+      },
+      {
+        "value": "11.76px",
+        "count": 216
+      },
+      {
+        "value": "184px",
+        "count": 188
+      },
+      {
+        "value": "4px",
+        "count": 152
+      },
+      {
+        "value": "15.4px",
+        "count": 150
+      },
+      {
+        "value": "16px",
+        "count": 147
+      },
+      {
+        "value": "6px",
+        "count": 136
+      },
+      {
+        "value": "150px",
+        "count": 134
+      },
+      {
+        "value": "14.7px",
+        "count": 126
+      },
+      {
+        "value": "70px",
+        "count": 113
+      },
+      {
+        "value": "-5px",
+        "count": 108
+      },
+      {
+        "value": "6.125px",
+        "count": 78
+      },
+      {
+        "value": "10.5px",
+        "count": 66
+      }
+    ],
+    "gaps": [
+      {
+        "value": "15px",
+        "count": 510
+      },
+      {
+        "value": "20px",
+        "count": 186
+      },
+      {
+        "value": "10px",
+        "count": 6
+      },
+      {
+        "value": "20px 3%",
+        "count": 6
+      }
+    ],
+    "scalePx": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      6.66667,
+      7,
+      8,
+      9.8,
+      10,
+      10.5,
+      11.9,
+      12,
+      13.6,
+      14,
+      15,
+      16,
+      20,
+      25,
+      28,
+      30,
+      33,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      250,
+      350
+    ]
+  },
+  "shape": {
+    "radii": [
+      {
+        "value": "50%",
+        "count": 318
+      },
+      {
+        "value": "10px",
+        "count": 210
+      },
+      {
+        "value": "5px",
+        "count": 156
+      },
+      {
+        "value": "32px",
+        "count": 72
+      },
+      {
+        "value": "100px",
+        "count": 72
+      },
+      {
+        "value": "2px",
+        "count": 6
+      },
+      {
+        "value": "1px",
+        "count": 6
+      }
+    ],
+    "radiiDeclaredInCss": [
+      {
+        "value": "10px",
+        "count": 606
+      },
+      {
+        "value": "100%",
+        "count": 591
+      },
+      {
+        "value": "50%",
+        "count": 467
+      },
+      {
+        "value": "4px",
+        "count": 452
+      },
+      {
+        "value": "inherit",
+        "count": 297
+      },
+      {
+        "value": ".25em",
+        "count": 294
+      },
+      {
+        "value": "5px",
+        "count": 159
+      },
+      {
+        "value": "20%",
+        "count": 147
+      },
+      {
+        "value": "100px",
+        "count": 144
+      },
+      {
+        "value": "0",
+        "count": 141
+      },
+      {
+        "value": "0px",
+        "count": 24
+      },
+      {
+        "value": "10px 10px 10px 10px",
+        "count": 21
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgb(174, 174, 174) 0px 0px 10px 0px",
+        "count": 132
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.07) 0px 36px 67px 0px, rgba(0, 0, 0, 0.05) 0px 13.141px 24.456px 0px, rgba(0, 0, 0, 0.04) 0px 6.38px 11.873px 0px, rgba(0, 0, 0, 0.03) 0px 3.127px 5.82px 0px, rgba(0, 0, 0, 0.02) 0px 1.237px 2.301px 0px",
+        "count": 72
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.4) 0px 0px 20px 0px",
+        "count": 18
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.75) 11px 15px 36px -13px",
+        "count": 12
+      },
+      {
+        "value": "rgb(128, 128, 128) 0px 0px 5px 0px",
+        "count": 6
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 10px 0px",
+        "count": 6
+      },
+      {
+        "value": "rgb(226, 226, 226) 0px 0px 10px 0px",
+        "count": 6
+      }
+    ],
+    "shadowsDeclaredInCss": [
+      {
+        "value": "none !important",
+        "count": 1037
+      },
+      {
+        "value": "none",
+        "count": 450
+      },
+      {
+        "value": "0 0 10px rgba(0,0,0,0.1)",
+        "count": 441
+      },
+      {
+        "value": "0 0 20px rgba(0,0,0,.2)",
+        "count": 147
+      },
+      {
+        "value": "0 0 10px rgba(0,0,0,.15)",
+        "count": 147
+      },
+      {
+        "value": "0 0 2px rgba(0,0,0,0.2)",
+        "count": 147
+      },
+      {
+        "value": "0 0 10px rgba(0,0,0,0.2)",
+        "count": 144
+      },
+      {
+        "value": "0px 0px 10px #aeaeae",
+        "count": 27
+      },
+      {
+        "value": "0 0 5px rgba(0,0,0,.3)",
+        "count": 4
+      },
+      {
+        "value": "0 0 17px #e2e2e2",
+        "count": 4
+      },
+      {
+        "value": "0 0 19px #dddddd",
+        "count": 4
+      },
+      {
+        "value": "0 0 10px 0 rgba(0,0,0,.5)",
+        "count": 3
+      }
+    ]
+  },
+  "layout": {
+    "containers": [
+      {
+        "value": "100%",
+        "count": 759
+      },
+      {
+        "value": "1100px",
+        "count": 582
+      },
+      {
+        "value": "400px",
+        "count": 282
+      },
+      {
+        "value": "180px",
+        "count": 36
+      },
+      {
+        "value": "100px",
+        "count": 36
+      },
+      {
+        "value": "85%",
+        "count": 12
+      },
+      {
+        "value": "1226px",
+        "count": 12
+      },
+      {
+        "value": "300px",
+        "count": 9
+      }
+    ],
+    "containersDeclaredInCss": [
+      {
+        "value": "100%",
+        "count": 2251
+      },
+      {
+        "value": "100% !important",
+        "count": 887
+      },
+      {
+        "value": "1100px",
+        "count": 877
+      },
+      {
+        "value": "none",
+        "count": 620
+      },
+      {
+        "value": "none !important",
+        "count": 589
+      },
+      {
+        "value": "30%",
+        "count": 587
+      },
+      {
+        "value": "100px",
+        "count": 294
+      },
+      {
+        "value": "600px",
+        "count": 294
+      },
+      {
+        "value": "!important",
+        "count": 286
+      },
+      {
+        "value": "100%!important",
+        "count": 151
+      },
+      {
+        "value": "250px",
+        "count": 151
+      },
+      {
+        "value": "200px",
+        "count": 148
+      }
+    ],
+    "breakpointsDeclaredInCss": [
+      {
+        "value": "@media (max-width: 768px)",
+        "count": 625
+      },
+      {
+        "value": "@media(max-width: 768px)",
+        "count": 314
+      },
+      {
+        "value": "@media only screen and (max-width : 900px)",
+        "count": 148
+      },
+      {
+        "value": "@media (max-width: 1200px)",
+        "count": 148
+      },
+      {
+        "value": "@media (max-width: 992px)",
+        "count": 148
+      },
+      {
+        "value": "@media (min-width: 1201px)",
+        "count": 148
+      },
+      {
+        "value": "@media (min-width: 993px) and (max-width: 1200px)",
+        "count": 148
+      },
+      {
+        "value": "@media (min-width: 769px) and (max-width: 992px)",
+        "count": 148
+      },
+      {
+        "value": "@media only screen and (max-width : 790px)",
+        "count": 147
+      },
+      {
+        "value": "@media (min-width: 1px) and (max-width : 768px)",
+        "count": 147
+      },
+      {
+        "value": "@media (min-width: 768px) and (max-width : 1099px)",
+        "count": 147
+      },
+      {
+        "value": "@media (min-width: 769px) and (max-width : 992px)",
+        "count": 147
+      },
+      {
+        "value": "@media (min-width: 1100px)",
+        "count": 147
+      },
+      {
+        "value": "@media (min-width: 993px)",
+        "count": 147
+      },
+      {
+        "value": "@media screen and (max-width: 600px)",
+        "count": 147
+      },
+      {
+        "value": "@media(max-width: 992px)",
+        "count": 13
+      },
+      {
+        "value": "@media only screen and (max-width : 480px)",
+        "count": 4
+      },
+      {
+        "value": "@media only screen and (max-width:641px)",
+        "count": 2
+      },
+      {
+        "value": "@media only screen and (min-width:321px)",
+        "count": 2
+      },
+      {
+        "value": "@media only screen and (min-width:641px)",
+        "count": 2
+      },
+      {
+        "value": "@media only screen and (max-width:1024px)",
+        "count": 2
+      },
+      {
+        "value": "@media only screen and (max-width:640px)",
+        "count": 1
+      },
+      {
+        "value": "@media only screen and (max-width:761px)",
+        "count": 1
+      },
+      {
+        "value": "@media(max-width:980px)",
+        "count": 1
+      },
+      {
+        "value": "@media(max-width:768px)",
+        "count": 1
+      },
+      {
+        "value": "@media (max-width: 800px)",
+        "count": 1
+      },
+      {
+        "value": "@media only screen and (max-width: 700px)",
+        "count": 1
+      },
+      {
+        "value": "@media (min-width:769px)",
+        "count": 1
+      },
+      {
+        "value": "@media (min-width:992px)",
+        "count": 1
+      }
+    ],
+    "breakpointsPx": [
+      1,
+      321,
+      480,
+      600,
+      640,
+      641,
+      700,
+      761,
+      768,
+      769,
+      790,
+      800,
+      900,
+      980,
+      992,
+      993,
+      1024,
+      1100,
+      1200,
+      1201
+    ]
+  },
+  "motionHints": {
+    "transitions": [
+      {
+        "value": "all 0s ease",
+        "count": 30648
+      },
+      {
+        "value": "all 0.2s ease-in",
+        "count": 1824
+      },
+      {
+        "value": "all 0.3s ease-in-out",
+        "count": 372
+      },
+      {
+        "value": "all 0.3s ease",
+        "count": 72
+      },
+      {
+        "value": "all 0.15s ease-in",
+        "count": 36
+      },
+      {
+        "value": "transform 0.2s linear",
+        "count": 30
+      },
+      {
+        "value": "right 0.3s ease",
+        "count": 6
+      }
+    ],
+    "transforms": [
+      {
+        "value": "matrix(1, 0, 0, 1, 0, -4.89844)",
+        "count": 108
+      },
+      {
+        "value": "matrix(1.4, 0, 0, 1.4, 0, 0)",
+        "count": 6
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -6750, 0)",
+        "count": 2
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -320.625, 0)",
+        "count": 2
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -6000, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -284.805, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -3200, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -152, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -3500, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -166.25, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -7280, 0)",
+        "count": 1
+      },
+      {
+        "value": "matrix(1, 0, 0, 1, -345.797, 0)",
+        "count": 1
+      }
+    ]
+  }
+}

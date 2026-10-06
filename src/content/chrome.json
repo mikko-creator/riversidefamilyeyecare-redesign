@@ -1,0 +1,331 @@
+{
+  "schema": "rfec/chrome@1",
+  "schemaBase": "the chrome.json schema of the reference build R (see docs/PORT-NOTES.md): every field there keeps its meaning here, as read by its consumers src/lib/templates.mjs, src/lib/seo.mjs, src/lib/home.mjs and src/build.mjs; fields R does not have are listed in `extensions`.",
+  "note": "Site chrome for the Riverside Family Eye Care rebuild, copied by tmp/wf1/facts/extract-chrome.mjs out of the raw header, top bar, menus and footer of audit/raw/index.html and the sidebar of audit/raw/contact-lenses-disposable-contacts.html (2026-10-01 crawl). Every visible string is the source's own except the entries in `authored`; tools/write-facts.mjs re-verifies each value against every chrome-bearing raw page (142 with the header and footer; 132 with the sidebar, 131 of them with the location widget, which the location post's own page prints in <main> instead) and exits non-zero on any difference. Links are own-origin paths (the source prints most as absolute https://www.riversidefamilyeyecare.com/... URLs); the build makes them page-relative. A \"\\n\" inside an hours value is the source's <br>: that day has two ranges. `changes` lists every departure from the source markup; its ids are proposals for the design ledger.",
+  "origin": "https://www.riversidefamilyeyecare.com",
+  "brandName": "Riverside Family Eye Care",
+  "logo": {
+    "srcPattern": "Riverside-Family-Eye-Care-Logo-01",
+    "alt": "Riverside Family Eye Care logo",
+    "srcPatternMobile": "Riverside-Family-Eye-Care-Logo.png",
+    "altMobile": "Riverside Family Eyecare Logo",
+    "homeLabel": "Riverside Family Eye Care home"
+  },
+  "phone": "239-500-2020",
+  "fax": "239-500-2030",
+  "email": "info@riversidefamilyeyecare.com",
+  "address": {
+    "street": "11841 Palm Beach Blvd, Unit 117",
+    "locality": "Fort Myers",
+    "region": "FL",
+    "postalCode": "33905"
+  },
+  "addressLines": [
+    "11841 Palm Beach Blvd, Unit 117",
+    "Fort Myers, FL 33905"
+  ],
+  "mapQuery": "Riverside Family Eye Care, 11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905",
+  "mapPlaceId": "ChIJM8_tjQZv24gRxjCaxQqyGLU",
+  "mapsLinkLabel": "Open in Google Maps",
+  "skip": "Skip to main content",
+  "topbar": {
+    "address": {
+      "label": "Located at the intersection of Palm Beach Blvd and 31, in the Verandah Publix Plaza",
+      "href": "/hours-location/"
+    },
+    "appointment": {
+      "label": "Request Appointment",
+      "href": "/contact-us/appointment-request-form/"
+    },
+    "call": {
+      "label": "239-500-2020",
+      "href": "tel:239-500-2020",
+      "sourceHref": "tel: 239-500-2020",
+      "change": "C01"
+    }
+  },
+  "mobileHeader": {
+    "appointment": {
+      "label": "Make an appointment",
+      "href": "/contact-us/appointment-request-form/",
+      "newTab": true
+    },
+    "call": {
+      "label": "Call",
+      "href": "tel:239-500-2020"
+    },
+    "menuOpen": "Open Menu",
+    "menuClose": "Close Menu",
+    "menuToggle": "Toggle mobile menu",
+    "menu": "nav"
+  },
+  "nav": [
+    {
+      "label": "Hours & Location",
+      "href": "/hours-location/",
+      "children": []
+    },
+    {
+      "label": "Meet Our Team",
+      "href": "/our-eye-doctors/",
+      "children": [
+        {
+          "label": "Our Eye Doctors",
+          "href": "/our-eye-doctors/",
+          "children": []
+        },
+        {
+          "label": "The Staff",
+          "href": "/the-staff/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Eye Care Services",
+      "href": "/eye-care-services/",
+      "children": [
+        {
+          "label": "Comprehensive Eye Exams",
+          "href": "/eye-care-services/eye-exams/",
+          "children": []
+        },
+        {
+          "label": "Pediatric Eye Care",
+          "href": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+          "children": []
+        },
+        {
+          "label": "Dry Eye Treatment",
+          "href": "/eye-care-services/dry-eye-disease-and-treatment/",
+          "children": []
+        },
+        {
+          "label": "Myopia Management",
+          "href": "/eye-care-services/nearsighted-myopia/",
+          "children": []
+        },
+        {
+          "label": "Emergency Eye Care",
+          "href": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+          "children": []
+        },
+        {
+          "label": "Lasik",
+          "href": "/eye-care-services/lasik-refractive-surgery-co-management/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "label": "Eyeglasses",
+      "href": "/eyeglasses/",
+      "children": []
+    },
+    {
+      "label": "Contact Lenses",
+      "href": "/contact-lenses/",
+      "children": []
+    },
+    {
+      "label": "Insurance",
+      "href": "/insurance/",
+      "children": [
+        {
+          "label": "Cherry Payment Plan",
+          "href": "/cherry-payment-plan/",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "quickActions": [
+    {
+      "label": "Request An Appointment",
+      "href": "/contact-us/appointment-request-form/",
+      "newTab": false,
+      "icon": "calendar",
+      "sourceIcon": "fa-calendar-check-o"
+    },
+    {
+      "label": "Email Us",
+      "href": "/contact-us/contact-form/",
+      "newTab": false,
+      "icon": "mail",
+      "sourceIcon": "fa-envelope-o"
+    }
+  ],
+  "hours": [
+    [
+      "Monday",
+      "9:00 AM - 5:00 PM"
+    ],
+    [
+      "Tuesday",
+      "9:00 AM - 5:00 PM"
+    ],
+    [
+      "Wednesday",
+      "9:00 AM - 6:00 PM"
+    ],
+    [
+      "Thursday",
+      "11:00 AM - 7:00 PM"
+    ],
+    [
+      "Friday",
+      "8:00 AM - 12:00 PM\n1:00 PM - 4:00 PM"
+    ],
+    [
+      "Saturday",
+      "Closed"
+    ],
+    [
+      "Sunday",
+      "Closed"
+    ]
+  ],
+  "sidebar": {
+    "location": {
+      "title": "Riverside Family Eye Care",
+      "href": "/location/riverside-family-eyecare/",
+      "phoneLabel": "Phone:",
+      "faxLabel": "Fax:",
+      "emailLabel": "Email:",
+      "emailNote": "(Do not send personal health information by email.)"
+    },
+    "insurance": null,
+    "social": "footer.social"
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": null,
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact-us/"
+          },
+          {
+            "label": "What’s New",
+            "href": "/whats-new/"
+          },
+          {
+            "label": "Disclaimer",
+            "href": "/disclaimer/"
+          }
+        ]
+      }
+    ],
+    "nap": {
+      "name": "Riverside Family Eye Care",
+      "located": " - Located at ",
+      "street": "11841 Palm Beach Blvd, Unit 117",
+      "sep": ", ",
+      "locality": "Fort Myers",
+      "region": "FL",
+      "postalCode": "33905",
+      "postalEnd": ".",
+      "phoneLabel": "Phone:",
+      "phoneEnd": ".",
+      "site": {
+        "label": "https://www.riversidefamilyeyecare.com",
+        "href": "https://www.riversidefamilyeyecare.com",
+        "newTab": true
+      },
+      "text": "Riverside Family Eye Care - Located at 11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905. Phone: 239-500-2020. https://www.riversidefamilyeyecare.com"
+    },
+    "social": [
+      {
+        "network": "facebook",
+        "label": "Visit us on facebook",
+        "href": "https://www.facebook.com/RiversideFamilyEyeCareFortMyers/",
+        "rel": "nofollow noopener"
+      },
+      {
+        "network": "yelp",
+        "label": "Visit us on yelp",
+        "href": "https://www.yelp.com/biz/riverside-family-eye-care-fort-myers?osq=riverside+family+eyecare",
+        "rel": "nofollow noopener"
+      },
+      {
+        "network": "google",
+        "label": "Visit us on google",
+        "href": "https://maps.app.goo.gl/FxcqgwsKhM8qZqoFA",
+        "rel": "nofollow noopener"
+      },
+      {
+        "network": "youtube",
+        "label": "Visit us on youtube",
+        "href": "https://www.youtube.com/@RiversideFamilyEyecare",
+        "rel": "noopener"
+      }
+    ],
+    "button": {
+      "label": "Request Appointment",
+      "href": "/contact-us/appointment-request-form/"
+    },
+    "copyright": "© 2026",
+    "util": [
+      {
+        "label": "Accessibility",
+        "href": "/website-accessibility-policy/"
+      },
+      {
+        "label": "Sitemap",
+        "href": "/sitemap/"
+      },
+      {
+        "label": "Privacy",
+        "href": "/privacy-policy/"
+      },
+      {
+        "label": "Disclaimer",
+        "href": "/disclaimer/"
+      }
+    ]
+  },
+  "notice": null,
+  "authored": [
+    {
+      "field": "logo.homeLabel",
+      "why": "non-visible aria-label for the logo link; the source link has none (its img alt names it). R precedent: COMPONENTS.md H.2. Riverside decision pending."
+    },
+    {
+      "field": "mapsLinkLabel",
+      "why": "fallback link text if the keyless map does not resolve. R precedent: BUILD-DECISIONS #10. Riverside decision pending."
+    },
+    {
+      "field": "mapQuery",
+      "why": "composed from the verified NAP parts (brandName, address.*): the keyless maps?q= endpoint cannot resolve the source's place_id (R's PORT-NOTES F4)."
+    }
+  ],
+  "changes": [
+    {
+      "id": "C01",
+      "what": "top-bar call button: tel: 239-500-2020 (space after \"tel:\") -> tel:239-500-2020, the form the mobile header, sidebar and footer NAP already use (R ledger L17)"
+    },
+    {
+      "id": "C02",
+      "what": "not carried into the chrome (R ledger L11 class; the design ledger must confirm): footer voice search (\"Speak Field\"), sidebar search widget, \"Powered by\" + EyeCarePro logo (the \"© 2026\" stays), the Login link (https://riversidefamilyeyecare.ecpbuilder.com/wp-admin), \"Return to top of menu\" focus traps, the GTM noscript iframe"
+    }
+  ],
+  "extensions": [
+    "nav[].children: the source menu has sub-menus (3 of 6 top items); every item carries children ([] when none). R's templates render only the top level.",
+    "fax, email, sidebar.location.faxLabel / emailLabel / emailNote: the sidebar location widget prints Fax and Email (R's printed neither).",
+    "sidebar.insurance = null: Riverside's sidebar has no insurance text widget; R's aside() reads sidebar.insurance.paras and must skip a null. sidebar.social: the sidebar prints the same four icons as footer.social.",
+    "logo.srcPatternMobile: the mobile header uses a different logo file (and alt) from the desktop header.",
+    "mobileHeader.appointment.newTab (source target=\"_blank\"); mobileHeader.menu = \"nav\": the hamburger prints the same tree as nav.",
+    "mapPlaceId: the source map embeds Google place_id (keyed embed/v1); kept as evidence, not used by the keyless embed.",
+    "quickActions[].sourceIcon: the source data-icon behind the mapped icon name.",
+    "footer.columns[0].title = null: the source footer menu has no heading, and there is one column (R has two; its footer() reads columns[1]).",
+    "footer.nap.postalEnd / phoneEnd / site / text: the source NAP line ends the ZIP and the phone with \".\" and adds the site URL; text is the whole line as printed, the oracle write-facts compares against.",
+    "footer.button: the footer prints a Request Appointment button.",
+    "footer.social: four networks (facebook, yelp, google, youtube); R's footer() draws every icon with the facebook glyph.",
+    "notice = null: the form notice is a build decision Riverside has not made (R: BUILD-DECISIONS #4)."
+  ]
+}

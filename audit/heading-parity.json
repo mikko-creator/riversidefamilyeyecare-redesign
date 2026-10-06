@@ -1,0 +1,19 @@
+{
+ "schema": "rfec/heading-parity@1",
+ "dist": "dist",
+ "totals": {
+  "pages": 148,
+  "headings": 743,
+  "same": 742,
+  "declared": 1,
+  "findings": 0
+ },
+ "control": {
+  "page": "/",
+  "heading": "Our Eye Care Services",
+  "level": true,
+  "notAHeading": true,
+  "fired": true
+ },
+ "findings": []
+}

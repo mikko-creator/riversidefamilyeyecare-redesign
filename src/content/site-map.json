@@ -1,0 +1,451 @@
+{
+  "schema": "rfec/site-map@1",
+  "generated": "2026-10-01T03:10:40.502Z",
+  "source": "audit/architecture-map.json (families: FAMILY_RULES of tools/write-architecture.mjs, partition-checked there and here), src/content/chrome.json (menus, verified by tools/write-facts.mjs), docs/SITE-ARCHITECTURE.md section 11 (artefacts)",
+  "note": "href = own-origin path with trailing slash; the build makes every link page-relative. templates = the 14 template families that partition the 148 crawled pages (rules tried in order, first match wins; see docs/SITE-ARCHITECTURE.md section 3). Written by tools/write-site-map.mjs; do not edit by hand.",
+  "menus": {
+    "topbar": [
+      {
+        "label": "Located at the intersection of Palm Beach Blvd and 31, in the Verandah Publix Plaza",
+        "href": "/hours-location/",
+        "kind": "text link"
+      },
+      {
+        "label": "Request Appointment",
+        "href": "/contact-us/appointment-request-form/",
+        "kind": "button"
+      },
+      {
+        "label": "239-500-2020",
+        "href": "tel:239-500-2020",
+        "kind": "button",
+        "sourceHref": "tel: 239-500-2020"
+      }
+    ],
+    "primary": [
+      {
+        "label": "Hours & Location",
+        "href": "/hours-location/",
+        "children": []
+      },
+      {
+        "label": "Meet Our Team",
+        "href": "/our-eye-doctors/",
+        "children": [
+          {
+            "label": "Our Eye Doctors",
+            "href": "/our-eye-doctors/",
+            "children": []
+          },
+          {
+            "label": "The Staff",
+            "href": "/the-staff/",
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "Eye Care Services",
+        "href": "/eye-care-services/",
+        "children": [
+          {
+            "label": "Comprehensive Eye Exams",
+            "href": "/eye-care-services/eye-exams/",
+            "children": []
+          },
+          {
+            "label": "Pediatric Eye Care",
+            "href": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+            "children": []
+          },
+          {
+            "label": "Dry Eye Treatment",
+            "href": "/eye-care-services/dry-eye-disease-and-treatment/",
+            "children": []
+          },
+          {
+            "label": "Myopia Management",
+            "href": "/eye-care-services/nearsighted-myopia/",
+            "children": []
+          },
+          {
+            "label": "Emergency Eye Care",
+            "href": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+            "children": []
+          },
+          {
+            "label": "Lasik",
+            "href": "/eye-care-services/lasik-refractive-surgery-co-management/",
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "Eyeglasses",
+        "href": "/eyeglasses/",
+        "children": []
+      },
+      {
+        "label": "Contact Lenses",
+        "href": "/contact-lenses/",
+        "children": []
+      },
+      {
+        "label": "Insurance",
+        "href": "/insurance/",
+        "children": [
+          {
+            "label": "Cherry Payment Plan",
+            "href": "/cherry-payment-plan/",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "quickActions": [
+      {
+        "label": "Request An Appointment",
+        "href": "/contact-us/appointment-request-form/"
+      },
+      {
+        "label": "Email Us",
+        "href": "/contact-us/contact-form/"
+      }
+    ],
+    "footer": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/contact-us/"
+      },
+      {
+        "label": "What’s New",
+        "href": "/whats-new/"
+      },
+      {
+        "label": "Disclaimer",
+        "href": "/disclaimer/"
+      }
+    ],
+    "footerButton": {
+      "label": "Request Appointment",
+      "href": "/contact-us/appointment-request-form/"
+    },
+    "util": [
+      {
+        "label": "Accessibility",
+        "href": "/website-accessibility-policy/"
+      },
+      {
+        "label": "Sitemap",
+        "href": "/sitemap/"
+      },
+      {
+        "label": "Privacy",
+        "href": "/privacy-policy/"
+      },
+      {
+        "label": "Disclaimer",
+        "href": "/disclaimer/"
+      }
+    ]
+  },
+  "templates": {
+    "template": [
+      "/template/footer-2/",
+      "/template/footer/",
+      "/template/header-2/",
+      "/template/header-3/",
+      "/template/header/",
+      "/template/inner-header/"
+    ],
+    "home": [
+      "/"
+    ],
+    "not-found": [
+      "/404-page-not-found/"
+    ],
+    "archive": [
+      "/author/riversidefamilyeyecare/",
+      "/category/news/",
+      "/category/our-doctors/",
+      "/category/our-staff/",
+      "/category/testimonials/",
+      "/category/uncategorized/",
+      "/tag/all-about-vision/",
+      "/tag/diabetic-retinopathy/",
+      "/tag/dry-eye/",
+      "/tag/dry-eyes/",
+      "/tag/eye-emergencies/",
+      "/tag/eye-exam/",
+      "/tag/family-eye-exams/",
+      "/tag/gsp-contact-lens-exams/",
+      "/tag/gsp-eye-emergencies/",
+      "/tag/licansed-by-adobe-stock/",
+      "/tag/myopia-management-solutions/"
+    ],
+    "blog-post": [
+      "/autoimmune-disease-and-dry-eye-2023/",
+      "/cataract-surgery-co-management-your-path-to-clear-vision/",
+      "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+      "/everything-you-need-to-know-about-uv-rays/",
+      "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+      "/eyes-a-window-into-your-health-2023/",
+      "/glaucoma-awareness-starts-with-an-eye-exam/",
+      "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+      "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+      "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+      "/myopia-management-strategies-for-growing-children/",
+      "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+      "/top-causes-of-dry-eye-in-fort-myers/",
+      "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+      "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+      "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+      "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+      "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+      "/winter-dry-eyes-2023/",
+      "/workplace-eye-wellness-tips-for-clearer-easier-workdays/"
+    ],
+    "team-member": [
+      "/team/asma-sahees/",
+      "/team/dr-brittany-degler-od/",
+      "/team/dr-kristin-nelson-od/",
+      "/team/erica-eis/",
+      "/team/heather/",
+      "/team/jhonae-anglin/",
+      "/team/kristina/",
+      "/team/maivys-longa/",
+      "/team/nancy/",
+      "/team/rose-johnson/",
+      "/team/xaiene-dos-santos-da-costa/"
+    ],
+    "testimonial": [
+      "/testimonial/this-was-a-great-experience/"
+    ],
+    "location": [
+      "/location/riverside-family-eyecare/"
+    ],
+    "builder-hub": [
+      "/cherry-payment-plan/",
+      "/contact-lenses/",
+      "/eye-care-services/",
+      "/eyeglasses/",
+      "/eyeglasses/designer-frames/",
+      "/hours-location/",
+      "/insurance/",
+      "/our-eye-doctors/",
+      "/the-staff/"
+    ],
+    "sitemap": [
+      "/sitemap/"
+    ],
+    "legal": [
+      "/disclaimer/",
+      "/privacy-policy/",
+      "/website-accessibility-policy/"
+    ],
+    "form": [
+      "/contact-us/appointment-request-form/",
+      "/contact-us/contact-form/"
+    ],
+    "blog-index": [
+      "/whats-new/"
+    ],
+    "interior": [
+      "/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+      "/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+      "/contact-lenses/disposable-contacts/",
+      "/contact-lenses/eye-exams-for-contact-lenses/",
+      "/contact-lenses/gas-permeable-gp-contact-lenses/",
+      "/contact-lenses/our-featured-brands/",
+      "/contact-lenses/our-featured-brands/alcon/",
+      "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "/contact-lenses/our-featured-brands/coopervision/",
+      "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "/contact-lenses/toric-contact-lenses-for-astigmatism/",
+      "/contact-us/",
+      "/contact-us/patient-forms/",
+      "/contact-us/testimonials/",
+      "/eye-care-services/cataract-surgery-co-management/",
+      "/eye-care-services/contact-lens-exams/",
+      "/eye-care-services/contact-lens-exams/hard-to-fit/",
+      "/eye-care-services/dry-eye-disease-and-treatment/",
+      "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+      "/eye-care-services/eye-conditions/",
+      "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+      "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+      "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "/eye-care-services/eye-exams/",
+      "/eye-care-services/eye-exams/advanced-technology/",
+      "/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+      "/eye-care-services/eye-exams/what-to-expect/",
+      "/eye-care-services/faq/",
+      "/eye-care-services/lasik-refractive-surgery-co-management/",
+      "/eye-care-services/management-of-ocular-diseases/",
+      "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+      "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+      "/eye-care-services/nearsighted-myopia/",
+      "/eyeglasses/eyeglass-basics/",
+      "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+      "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+      "/eyeglasses/eyeglass-guide/",
+      "/eyeglasses/kids-optical/",
+      "/eyeglasses/lens-treatments/",
+      "/eyeglasses/lens-treatments/anti-reflective/",
+      "/eyeglasses/lens-treatments/scratch-resistant/",
+      "/eyeglasses/lens-treatments/uv-protection/",
+      "/eyeglasses/prescription-eyeglasses/",
+      "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+      "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+      "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+      "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+      "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+      "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+      "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+      "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+      "/eyeglasses/specialty-eyewear/",
+      "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+      "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+      "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+      "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+      "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+      "/eyeglasses/sunglasses/",
+      "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+      "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+      "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+      "/eyeglasses/sunglasses/prescription-sunglasses/",
+      "/eyeglasses/sunglasses/sunglasses-for-kids/",
+      "/eyeglasses/transitions-lenses/",
+      "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+      "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+      "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+      "/eyeglasses/transitions-lenses/transitions-xtractive/",
+      "/insurance/carecredit/",
+      "/insurance/faqs-of-vision-insurance-plans/",
+      "/insurance/whats-in-your-vision-insurance-plan/"
+    ]
+  },
+  "counts": {
+    "template": 6,
+    "home": 1,
+    "not-found": 1,
+    "archive": 17,
+    "blog-post": 21,
+    "team-member": 11,
+    "testimonial": 1,
+    "location": 1,
+    "builder-hub": 9,
+    "sitemap": 1,
+    "legal": 3,
+    "form": 2,
+    "blog-index": 1,
+    "interior": 73
+  },
+  "partitionCheck": {
+    "crawled": 148,
+    "placed": 148,
+    "missing": [],
+    "duplicated": [],
+    "unknown": [],
+    "positiveControl": {
+      "planted": "one interior page dropped from a copy",
+      "fired": true
+    }
+  },
+  "artefacts": [
+    {
+      "path": "/template/footer-2/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/template/footer/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/template/header-2/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/template/header-3/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/template/header/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/template/inner-header/",
+      "kind": "builder template post",
+      "robots": "as source (noindex)",
+      "build": "kept at its path (one output page per source page)",
+      "recommendation": "drop (410) or 301 to / after launch: SITE-ARCHITECTURE section 11",
+      "why": "Beaver Builder global-template post rendered as a page; orphan; stale placeholder copy on some."
+    },
+    {
+      "path": "/404-page-not-found/",
+      "kind": "platform 404 body as a page",
+      "robots": "as source (index)",
+      "build": "kept at its path; also rendered as dist/404.html (noindex, root-relative URLs)",
+      "recommendation": "noindex (docs/OPEN-DECISIONS.md)",
+      "why": "The platform 404 body is an indexable page at source."
+    },
+    {
+      "path": "/category/our-doctors/",
+      "kind": "\"Nothing Found\" archive",
+      "robots": "as source (noindex)",
+      "build": "kept at its path",
+      "recommendation": "redirect or drop after launch: SITE-ARCHITECTURE section 11",
+      "why": "Empty archive with an empty <title> at source."
+    },
+    {
+      "path": "/category/our-staff/",
+      "kind": "\"Nothing Found\" archive",
+      "robots": "as source (noindex)",
+      "build": "kept at its path",
+      "recommendation": "redirect or drop after launch: SITE-ARCHITECTURE section 11",
+      "why": "Empty archive with an empty <title> at source."
+    },
+    {
+      "path": "/category/testimonials/",
+      "kind": "\"Nothing Found\" archive",
+      "robots": "as source (noindex)",
+      "build": "kept at its path",
+      "recommendation": "redirect or drop after launch: SITE-ARCHITECTURE section 11",
+      "why": "Empty archive with an empty <title> at source."
+    },
+    {
+      "path": "/tag/licansed-by-adobe-stock/",
+      "kind": "\"Nothing Found\" archive",
+      "robots": "as source (noindex)",
+      "build": "kept at its path",
+      "recommendation": "redirect or drop after launch: SITE-ARCHITECTURE section 11",
+      "why": "Empty archive with an empty <title> at source."
+    }
+  ]
+}

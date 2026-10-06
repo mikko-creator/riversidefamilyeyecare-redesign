@@ -1,0 +1,17 @@
+{
+ "schema": "fes/render-verification@1",
+ "generated": "2026-10-01T03:14:23.045Z",
+ "rule": "renderedChars >= 400 AND >= 95% of static distinct words present in the render",
+ "results": [
+  {
+   "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form",
+   "renderedHref": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+   "renderedChars": 1740,
+   "staticChars": 837,
+   "staticDistinctWords": 82,
+   "staticWordsFoundInRender": 1,
+   "excludedHiddenByDesign": "1 x Gravity Forms honeypot label (display:none)",
+   "capturedAt": "2026-10-01T03:14:21.535Z"
+  }
+ ]
+}

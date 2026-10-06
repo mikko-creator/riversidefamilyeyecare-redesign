@@ -1,0 +1,76 @@
+/* ==========================================================================================================
+   SCAFFOLD THEME - scaffold.css
+   NEUTRAL SCAFFOLD, not the design: minimal, readable, system fonts, no brand work. The design build replaces
+   this file (with src/lib/templates.mjs and src/lib/home.mjs). Classes are the scaffold's own.
+   ========================================================================================================== */
+:root { --ink: #1b1f24; --muted: #555d66; --line: #d6dbe0; --bg: #ffffff; --soft: #f4f6f8; --link: #0b4f8a; --focus: #0b4f8a; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); overflow-wrap: break-word; }
+img, video, iframe { max-width: 100%; height: auto; }
+a { color: var(--link); }
+a:focus-visible, summary:focus-visible, .btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.skip { position: absolute; left: -9999px; top: 0; background: #fff; padding: .5rem 1rem; }
+.skip:focus { left: 1rem; z-index: 10; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.site-header, .site-footer, .page-body { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+.topbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; padding: .5rem 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.topbar p { margin: 0; }
+.masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding: 1rem 0; }
+.logo picture { display: block; }
+.logo img { display: block; width: 180px; height: auto; }
+.menu__list, .menu__sub { list-style: none; margin: 0; padding: 0; }
+.menu__list { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.menu__sub { padding-left: 1rem; font-size: .9rem; }
+.menu a[aria-current="page"] { font-weight: 700; }
+.btn { display: inline-block; padding: .4rem .9rem; border: 1px solid var(--link); border-radius: 4px; text-decoration: none; }
+
+.page-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 1rem; padding-bottom: 2rem; }
+@media (min-width: 64em) { .has-aside .page-body { grid-template-columns: minmax(0, 1fr) 18rem; } }
+.title-band { border-bottom: 1px solid var(--line); margin-bottom: 1rem; }
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem; font-size: .9rem; color: var(--muted); }
+.crumbs__sep { margin: 0 .25rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: .5rem 0; }
+h2 { font-size: 1.5rem; line-height: 1.25; }
+h3 { font-size: 1.2rem; }
+.date { color: var(--muted); font-size: .9rem; }
+.section { margin: 0 0 2rem; }
+.section__bg { margin: 0 0 1rem; }
+.section__bg picture { display: block; }
+.section__bg img { display: block; width: 100%; height: auto; }
+.prose figure { margin: 1rem 0; }
+/* min(): the cap must not replace the global max-width: 100% (fix round 2 re-audit: a 300px plate in a 12rem grid
+   cell pushed /contact-lenses/ 9px past a 1280px viewport) */
+.prose .fig--plate img, .prose .fig--diagram img { max-width: min(20rem, 100%); }
+.fig-grid, .gallery, .logo-grid, .cards, .posts, .products, .equipment, .badges, .social, .docs { list-style: none; margin: 1rem 0; padding: 0; }
+.fig-grid, .gallery, .logo-grid, .cards, .posts--grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 1rem; }
+.logo-grid img { max-width: 8rem; }
+.callout { border: 1px solid var(--line); border-radius: 6px; padding: 1rem; margin: 1rem 0; }
+.callout__media { margin: 0 0 .75rem; }
+.card, .post, .product, .device, .member, .review, .testimonial { border-top: 1px solid var(--line); padding: 1rem 0; margin: 0; }
+.product img, .device img, .member__photo img { max-width: 12rem; }
+.member__photo { margin: 0 0 .5rem; }
+.ph-portrait, .ph-brand, .ph-product, .doc[data-needs] { display: inline-flex; align-items: center; justify-content: center; min-width: 10rem; min-height: 6rem; padding: .75rem; border: 2px dashed var(--muted); color: var(--muted); background: var(--soft); text-align: center; }
+.stars { color: #8a6d00; margin: 0; line-height: 1; }
+.stars .star { display: inline-block; vertical-align: middle; }
+.hours { margin: .5rem 0; }
+.hours__row { display: flex; gap: .5rem; }
+.hours dt { min-width: 7rem; font-weight: 600; }
+.hours dd { margin: 0; }
+.contacts { list-style: none; padding: 0; }
+.embed { margin: 1rem 0; }
+.embed--map iframe { width: 100%; height: 300px; border: 0; }
+.embed--video video, .embed--video iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; }
+.accordion details { border-top: 1px solid var(--line); padding: .5rem 0; }
+.accordion summary { cursor: pointer; font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+.page-aside { border-top: 1px solid var(--line); padding-top: 1rem; font-size: .95rem; }
+.page-aside .embed--map iframe { height: 200px; }
+.form .field { margin: 0 0 1rem; }
+.form .field__control { display: block; width: 100%; max-width: 32rem; padding: .4rem; font: inherit; }
+.form fieldset { border: 0; padding: 0; }
+.form .field__row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.site-footer { border-top: 1px solid var(--line); padding-top: 1rem; padding-bottom: 2rem; font-size: .95rem; }
+.site-footer ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 1rem; align-items: baseline; color: var(--muted); }

@@ -1,0 +1,35 @@
+{
+  "schema": "site-reforge/source-cms@1",
+  "generated": "2026-10-01T03:10:57.579Z",
+  "detected": [
+    {
+      "id": "wordpress",
+      "label": "WordPress",
+      "matchedPatterns": 2,
+      "evidence": [
+        "/\\/wp-content\\//i",
+        "/wp-emoji/i"
+      ],
+      "pages": 148
+    },
+    {
+      "id": "woocommerce",
+      "label": "WooCommerce",
+      "matchedPatterns": 1,
+      "evidence": [
+        "/woocommerce/i"
+      ],
+      "pages": 114
+    },
+    {
+      "id": "duda",
+      "label": "Duda",
+      "matchedPatterns": 1,
+      "evidence": [
+        "/dudamobile|dmAlbum|d-page/i"
+      ],
+      "pages": 105
+    }
+  ],
+  "note": "Every id listed here MUST be absent from dist/ before packaging. sr-decontaminate.mjs enforces it."
+}

@@ -1,0 +1,2763 @@
+{
+ "schema": "rfec/licence-overlap@1",
+ "reference": {
+  "files": 349,
+  "distinctSentences": 8833,
+  "placeNamesMasked": 6
+ },
+ "method": "verbatim >= 5-word sentences of each Riverside content region found in the reference crawl (practice names and city/state words masked on both sides); markers read from the raw markup",
+ "groups": {
+  "other pages": {
+   "pages": 27,
+   "withShared": 7,
+   "mostlyShared": 3,
+   "sentences": 625,
+   "shared": 161,
+   "attribution": 0,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 0,
+   "productLibrary": 0
+  },
+  "blog posts": {
+   "pages": 21,
+   "withShared": 3,
+   "mostlyShared": 0,
+   "sentences": 869,
+   "shared": 4,
+   "attribution": 0,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 0,
+   "productLibrary": 0
+  },
+  "contact-lens library": {
+   "pages": 8,
+   "withShared": 8,
+   "mostlyShared": 7,
+   "sentences": 230,
+   "shared": 201,
+   "attribution": 0,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 1,
+   "productLibrary": 1
+  },
+  "contact-lens brand pages": {
+   "pages": 4,
+   "withShared": 0,
+   "mostlyShared": 0,
+   "sentences": 521,
+   "shared": 0,
+   "attribution": 0,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 0,
+   "productLibrary": 4
+  },
+  "eye-care library": {
+   "pages": 22,
+   "withShared": 14,
+   "mostlyShared": 10,
+   "sentences": 871,
+   "shared": 266,
+   "attribution": 0,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 0,
+   "productLibrary": 1
+  },
+  "eyeglasses library": {
+   "pages": 37,
+   "withShared": 34,
+   "mostlyShared": 32,
+   "sentences": 798,
+   "shared": 619,
+   "attribution": 6,
+   "allAboutVisionTag": 10,
+   "clipartLibrary": 6,
+   "productLibrary": 1
+  },
+  "insurance": {
+   "pages": 4,
+   "withShared": 4,
+   "mostlyShared": 4,
+   "sentences": 82,
+   "shared": 69,
+   "attribution": 1,
+   "allAboutVisionTag": 0,
+   "clipartLibrary": 1,
+   "productLibrary": 0
+  }
+ },
+ "pages": [
+  {
+   "path": "/disclaimer/",
+   "family": "legal",
+   "group": "other pages",
+   "sentences": 14,
+   "shared": 14,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "disclaimer.html",
+     "shared": 14
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 12,
+   "shared": 12,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-bifocal-lenses.html",
+     "shared": 12
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 59,
+   "shared": 59,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-contacts-glasses-that-enhance-performance.html",
+     "shared": 59
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 15,
+   "shared": 15,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-are-transitions-right-for-you.html",
+     "shared": 15
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 9,
+   "shared": 9,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-original-transitions-lenses.html",
+     "shared": 9
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-transitions-xtractive.html",
+     "shared": 3
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-cataracts-more-about-cataracts.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 12,
+   "shared": 12,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-transition-solfx-sunwear-products.html",
+     "shared": 12
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-cataracts-more-about-cataracts.html",
+     "shared": 2
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-diabetes-and-eyesight-overview-of-diabetic-retinopathy.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/transitions-lenses/transitions-xtractive/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 10,
+   "shared": 10,
+   "sharedPct": 100,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-transitions-xtractive.html",
+     "shared": 10
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-original-transitions-lenses.html",
+     "shared": 3
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-cataracts-more-about-cataracts.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/privacy-policy/",
+   "family": "legal",
+   "group": "other pages",
+   "sentences": 80,
+   "shared": 79,
+   "sharedPct": 98.8,
+   "topReferencePages": [
+    {
+     "file": "privacy-policy.html",
+     "shared": 79
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/website-accessibility-policy/",
+   "family": "legal",
+   "group": "other pages",
+   "sentences": 58,
+   "shared": 57,
+   "sharedPct": 98.3,
+   "topReferencePages": [
+    {
+     "file": "website-accessibility-policy.html",
+     "shared": 57
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 32,
+   "shared": 31,
+   "sharedPct": 96.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses-nonprescription-sunglasses.html",
+     "shared": 31
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/contact-lens-exams/hard-to-fit/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 54,
+   "shared": 52,
+   "sharedPct": 96.3,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-contact-lens-exams-hard-to-fit.html",
+     "shared": 52
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses-contact-lenses-for-the-hard-to-fit-patient.html",
+     "shared": 51
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses-toric-contact-lenses-for-astigmatism.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 25,
+   "shared": 24,
+   "sharedPct": 96,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-caring-for-lenses.html",
+     "shared": 24
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-cataracts-more-about-cataracts.html",
+     "shared": 2
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-diseases-diabetes-and-eyesight-overview-of-diabetic-retinopathy.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 39,
+   "shared": 37,
+   "sharedPct": 94.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-bifocal-and-multifocal-contact-lenses.html",
+     "shared": 37
+    },
+    {
+     "file": "bifocal-and-multifocal-contact-lenses-2016.html",
+     "shared": 22
+    },
+    {
+     "file": "eye-care-services-eye-conditions-presbyopia-diagnosis-and-treatment.html",
+     "shared": 7
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/toric-contact-lenses-for-astigmatism/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 19,
+   "shared": 18,
+   "sharedPct": 94.7,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-toric-contact-lenses-for-astigmatism.html",
+     "shared": 18
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses.html",
+     "shared": 1
+    },
+    {
+     "file": "eye-care-services-contact-lens-exams-hard-to-fit.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-exams/what-to-expect/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 37,
+   "shared": 35,
+   "sharedPct": 94.6,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-exams-what-to-expect.html",
+     "shared": 35
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-what-to-expect.html",
+     "shared": 28
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 54,
+   "shared": 51,
+   "sharedPct": 94.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-contact-lenses-for-the-hard-to-fit-patient.html",
+     "shared": 51
+    },
+    {
+     "file": "eye-care-services-contact-lens-exams-hard-to-fit.html",
+     "shared": 50
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 35,
+   "shared": 33,
+   "sharedPct": 94.3,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-conditions-presbyopia-diagnosis-and-treatment.html",
+     "shared": 33
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-conditions-info-presbyopia.html",
+     "shared": 31
+    },
+    {
+     "file": "bifocal-and-multifocal-contact-lenses-2016.html",
+     "shared": 6
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 46,
+   "shared": 43,
+   "sharedPct": 93.5,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-safety-and-sports-glasses.html",
+     "shared": 43
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/lens-treatments/scratch-resistant/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 14,
+   "shared": 13,
+   "sharedPct": 92.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments-scratch-resistant.html",
+     "shared": 13
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/insurance/faqs-of-vision-insurance-plans/",
+   "family": "interior",
+   "group": "insurance",
+   "sentences": 24,
+   "shared": 22,
+   "sharedPct": 91.7,
+   "topReferencePages": [
+    {
+     "file": "insurance-faqs-of-vision-insurance-plans.html",
+     "shared": 22
+    },
+    {
+     "file": "insurance.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/eye-exams-for-contact-lenses/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 42,
+   "shared": 38,
+   "sharedPct": 90.5,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-contact-lens-exams.html",
+     "shared": 38
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-eye-exams-for-contact-lenses.html",
+     "shared": 38
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses-eye-exams-for-contact-lenses.html",
+     "shared": 38
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/gas-permeable-gp-contact-lenses/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 29,
+   "shared": 26,
+   "sharedPct": 89.7,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-gas-permeable-gp-contact-lenses.html",
+     "shared": 26
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 36,
+   "shared": 32,
+   "sharedPct": 88.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-eyeglass-basics-eyeglass-frames.html",
+     "shared": 32
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-eyeglass-basics.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/lens-treatments/uv-protection/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 17,
+   "shared": 15,
+   "sharedPct": 88.2,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments-uv-protection.html",
+     "shared": 15
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-what-to-expect.html",
+     "shared": 2
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments-anti-reflective.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 39,
+   "shared": 34,
+   "sharedPct": 87.2,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-shooting-glasses-and-hunting-eyewear.html",
+     "shared": 34
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/insurance/whats-in-your-vision-insurance-plan/",
+   "family": "interior",
+   "group": "insurance",
+   "sentences": 29,
+   "shared": 25,
+   "sharedPct": 86.2,
+   "topReferencePages": [
+    {
+     "file": "insurance-whats-in-your-vision-insurance-plan.html",
+     "shared": 25
+    },
+    {
+     "file": "insurance.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 12,
+   "shared": 10,
+   "sharedPct": 83.3,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-polycarbonate-lenses.html",
+     "shared": 10
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 23,
+   "shared": 19,
+   "sharedPct": 82.6,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear.html",
+     "shared": 19
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-scuba-masks-and-swim-goggles.html",
+     "shared": 1
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-shooting-glasses-and-hunting-eyewear.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 17,
+   "shared": 14,
+   "sharedPct": 82.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses.html",
+     "shared": 14
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-high-index-and-aspheric-lenses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 32,
+   "shared": 26,
+   "sharedPct": 81.3,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-frame-maintenance.html",
+     "shared": 26
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/transitions-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 16,
+   "shared": 13,
+   "sharedPct": 81.3,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses.html",
+     "shared": 13
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-transitions-lenses-are-transitions-right-for-you.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 15,
+   "shared": 12,
+   "sharedPct": 80,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-conditions-astigmatism-diagnosis-treatment.html",
+     "shared": 12
+    },
+    {
+     "file": "eye-care-services-eye-conditions.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-exams/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 35,
+   "shared": 28,
+   "sharedPct": 80,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-exams.html",
+     "shared": 28
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-eye-exams-for-children.html",
+     "shared": 3
+    },
+    {
+     "file": "eye-care-services-eye-exams-pediatric-eye-exams.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 10,
+   "shared": 8,
+   "sharedPct": 80,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-management-of-ocular-diseases-treating-diabetic-retinopathy.html",
+     "shared": 8
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/lens-treatments/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 10,
+   "shared": 8,
+   "sharedPct": 80,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments.html",
+     "shared": 8
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 15,
+   "shared": 12,
+   "sharedPct": 80,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-high-index-and-aspheric-lenses.html",
+     "shared": 12
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 29,
+   "shared": 23,
+   "sharedPct": 79.3,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-eyeglass-basics-lens-options-for-eyeglasses.html",
+     "shared": 23
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/prescription-sunglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 18,
+   "shared": 14,
+   "sharedPct": 77.8,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses-prescription-sunglasses.html",
+     "shared": 14
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/disposable-contacts/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 13,
+   "shared": 10,
+   "sharedPct": 76.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-disposable-contacts.html",
+     "shared": 10
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 26,
+   "shared": 20,
+   "sharedPct": 76.9,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-scuba-masks-and-swim-goggles.html",
+     "shared": 20
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/insurance/",
+   "family": "builder-hub",
+   "group": "insurance",
+   "sentences": 17,
+   "shared": 13,
+   "sharedPct": 76.5,
+   "topReferencePages": [
+    {
+     "file": "insurance.html",
+     "shared": 13
+    },
+    {
+     "file": "insurance-faqs-of-vision-insurance-plans.html",
+     "shared": 1
+    },
+    {
+     "file": "insurance-whats-in-your-vision-insurance-plan.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 20,
+   "shared": 15,
+   "sharedPct": 75,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-management-of-ocular-diseases-treating-macular-degeneration.html",
+     "shared": 15
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/lens-treatments/anti-reflective/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 16,
+   "shared": 12,
+   "sharedPct": 75,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments-anti-reflective.html",
+     "shared": 12
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-what-to-expect.html",
+     "shared": 2
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-lens-treatments-scratch-resistant.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": true,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/insurance/carecredit/",
+   "family": "interior",
+   "group": "insurance",
+   "sentences": 12,
+   "shared": 9,
+   "sharedPct": 75,
+   "topReferencePages": [
+    {
+     "file": "insurance-carecredit.html",
+     "shared": 9
+    },
+    {
+     "file": "insurance.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/lasik-refractive-surgery-co-management/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 70,
+   "shared": 52,
+   "sharedPct": 74.3,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-lasik-refractive-surgery-co-management.html",
+     "shared": 52
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 18,
+   "shared": 13,
+   "sharedPct": 72.2,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses-performance-and-sport-sunglasses.html",
+     "shared": 13
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/",
+   "family": "builder-hub",
+   "group": "contact-lens library",
+   "sentences": 28,
+   "shared": 20,
+   "sharedPct": 71.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses.html",
+     "shared": 20
+    },
+    {
+     "file": "eye-care-services-contact-lens-exams.html",
+     "shared": 2
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 7,
+   "shared": 5,
+   "sharedPct": 71.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses-prescription-sunglass-treatments.html",
+     "shared": 5
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/kids-optical/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 37,
+   "shared": 26,
+   "sharedPct": 70.3,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-kids-optical.html",
+     "shared": 26
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 38,
+   "shared": 26,
+   "sharedPct": 68.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-prescription-eyeglasses-eyeglass-frame-materials.html",
+     "shared": 26
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 25,
+   "shared": 17,
+   "sharedPct": 68,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-specialty-eyewear-specialty-eyewear-overview.html",
+     "shared": 17
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/management-of-ocular-diseases/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 16,
+   "shared": 10,
+   "sharedPct": 62.5,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-management-of-ocular-diseases.html",
+     "shared": 10
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/sunglasses-for-kids/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 23,
+   "shared": 13,
+   "sharedPct": 56.5,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses-sunglasses-for-kids.html",
+     "shared": 13
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/eyeglass-basics/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 36,
+   "shared": 20,
+   "sharedPct": 55.6,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-eyeglass-basics.html",
+     "shared": 20
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-eyeglass-basics-eyeglass-frames.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": true,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/",
+   "family": "builder-hub",
+   "group": "eyeglasses library",
+   "sentences": 22,
+   "shared": 12,
+   "sharedPct": 54.5,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses.html",
+     "shared": 12
+    },
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-conditions/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 12,
+   "shared": 6,
+   "sharedPct": 50,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-conditions.html",
+     "shared": 6
+    },
+    {
+     "file": "eye-care-services-eye-conditions-presbyopia-diagnosis-and-treatment.html",
+     "shared": 2
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-conditions-info-presbyopia.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-us/",
+   "family": "interior",
+   "group": "other pages",
+   "sentences": 6,
+   "shared": 2,
+   "sharedPct": 33.3,
+   "topReferencePages": [
+    {
+     "file": "contact-us.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/sunglasses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 17,
+   "shared": 5,
+   "sharedPct": 29.4,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-sunglasses.html",
+     "shared": 5
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/hours-location/",
+   "family": "builder-hub",
+   "group": "other pages",
+   "sentences": 18,
+   "shared": 5,
+   "sharedPct": 27.8,
+   "topReferencePages": [
+    {
+     "file": "hours-location.html",
+     "shared": 5
+    },
+    {
+     "file": "index.html",
+     "shared": 2
+    },
+    {
+     "file": "our-eye-doctors.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/",
+   "family": "builder-hub",
+   "group": "eye-care library",
+   "sentences": 33,
+   "shared": 9,
+   "sharedPct": 27.3,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services.html",
+     "shared": 9
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/our-featured-brands/",
+   "family": "interior",
+   "group": "contact-lens library",
+   "sentences": 6,
+   "shared": 1,
+   "sharedPct": 16.7,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-contact-lenses-our-featured-brands.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/designer-frames/",
+   "family": "builder-hub",
+   "group": "eyeglasses library",
+   "sentences": 12,
+   "shared": 2,
+   "sharedPct": 16.7,
+   "topReferencePages": [
+    {
+     "file": "eyeglasses-contacts-eyeglasses-designer-frames.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/cataract-surgery-co-management-your-path-to-clear-vision/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 31,
+   "shared": 2,
+   "sharedPct": 6.5,
+   "topReferencePages": [
+    {
+     "file": "smoking-and-vision-2017.html",
+     "shared": 1
+    },
+    {
+     "file": "sneak-thief-of-sight-january-2017.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/contact-lens-exams/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 50,
+   "shared": 3,
+   "sharedPct": 6,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-contact-lens-exams.html",
+     "shared": 3
+    },
+    {
+     "file": "eye-care-services-your-eye-health-eye-exams-eye-exams-for-contact-lenses.html",
+     "shared": 2
+    },
+    {
+     "file": "eyeglasses-contacts-contact-lenses-eye-exams-for-contact-lenses.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-exams/advanced-technology/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 18,
+   "shared": 1,
+   "sharedPct": 5.6,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-exams-advanced-technology.html",
+     "shared": 1
+    },
+    {
+     "file": "eye-care-services-eye-exams.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/",
+   "family": "home",
+   "group": "other pages",
+   "sentences": 93,
+   "shared": 3,
+   "sharedPct": 3.2,
+   "topReferencePages": [
+    {
+     "file": "hours-location.html",
+     "shared": 2
+    },
+    {
+     "file": "index.html",
+     "shared": 2
+    },
+    {
+     "file": "eye-care-services-management-of-ocular-diseases-glaucoma-testing-treatment.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 63,
+   "shared": 2,
+   "sharedPct": 3.2,
+   "topReferencePages": [
+    {
+     "file": "eye-care-services-eye-emergencies-pinkred-eyes.html",
+     "shared": 2
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/everything-you-need-to-know-about-uv-rays/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 36,
+   "shared": 1,
+   "sharedPct": 2.8,
+   "topReferencePages": [
+    {
+     "file": "uv-safety-awareness-month-2019.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/glaucoma-awareness-starts-with-an-eye-exam/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 41,
+   "shared": 1,
+   "sharedPct": 2.4,
+   "topReferencePages": [
+    {
+     "file": "what-you-need-to-know-about-glaucoma-the-sneak-thief-of-sight-2019.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/whats-new/",
+   "family": "blog-index",
+   "group": "other pages",
+   "sentences": 70,
+   "shared": 1,
+   "sharedPct": 1.4,
+   "topReferencePages": [
+    {
+     "file": "whats-new.html",
+     "shared": 1
+    }
+   ],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/autoimmune-disease-and-dry-eye-2023/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 28,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/cherry-payment-plan/",
+   "family": "builder-hub",
+   "group": "other pages",
+   "sentences": 0,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-lenses/our-featured-brands/alcon/",
+   "family": "interior",
+   "group": "contact-lens brand pages",
+   "sentences": 131,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": true
+   }
+  },
+  {
+   "path": "/contact-lenses/our-featured-brands/bausch-lomb/",
+   "family": "interior",
+   "group": "contact-lens brand pages",
+   "sentences": 88,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": true
+   }
+  },
+  {
+   "path": "/contact-lenses/our-featured-brands/coopervision/",
+   "family": "interior",
+   "group": "contact-lens brand pages",
+   "sentences": 192,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": true
+   }
+  },
+  {
+   "path": "/contact-lenses/our-featured-brands/johnson-johnson/",
+   "family": "interior",
+   "group": "contact-lens brand pages",
+   "sentences": 110,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": true,
+    "contactLensPlugin": true
+   }
+  },
+  {
+   "path": "/contact-us/appointment-request-form/",
+   "family": "form",
+   "group": "other pages",
+   "sentences": 2,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-us/contact-form/",
+   "family": "form",
+   "group": "other pages",
+   "sentences": 0,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-us/patient-forms/",
+   "family": "interior",
+   "group": "other pages",
+   "sentences": 3,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/contact-us/testimonials/",
+   "family": "interior",
+   "group": "other pages",
+   "sentences": 6,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 71,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/cataract-surgery-co-management/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 36,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/dry-eye-disease-and-treatment/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 57,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 37,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 40,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 24,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/faq/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 112,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 49,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-care-services/nearsighted-myopia/",
+   "family": "interior",
+   "group": "eye-care library",
+   "sentences": 48,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 75,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/eyeglass-guide/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 12,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 6,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+   "family": "interior",
+   "group": "eyeglasses library",
+   "sentences": 5,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": true,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/eyes-a-window-into-your-health-2023/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 17,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 36,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 33,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 44,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/location/riverside-family-eyecare/",
+   "family": "location",
+   "group": "other pages",
+   "sentences": 7,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/myopia-management-strategies-for-growing-children/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 43,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/our-eye-doctors/",
+   "family": "builder-hub",
+   "group": "other pages",
+   "sentences": 20,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 41,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 41,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/asma-sahees/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 18,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/dr-brittany-degler-od/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 26,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/dr-kristin-nelson-od/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 12,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/erica-eis/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 24,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/heather/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 8,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/jhonae-anglin/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 7,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/kristina/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 26,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/maivys-longa/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 30,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/nancy/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 23,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/rose-johnson/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 17,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/team/xaiene-dos-santos-da-costa/",
+   "family": "team-member",
+   "group": "other pages",
+   "sentences": 24,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/testimonial/this-was-a-great-experience/",
+   "family": "testimonial",
+   "group": "other pages",
+   "sentences": 6,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/the-staff/",
+   "family": "builder-hub",
+   "group": "other pages",
+   "sentences": 27,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/top-causes-of-dry-eye-in-fort-myers/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 35,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 52,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 41,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 36,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 25,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 66,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/winter-dry-eyes-2023/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 22,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  },
+  {
+   "path": "/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+   "family": "blog-post",
+   "group": "blog posts",
+   "sentences": 55,
+   "shared": 0,
+   "sharedPct": 0,
+   "topReferencePages": [],
+   "markers": {
+    "attribution": false,
+    "allAboutVisionTag": false,
+    "gspTag": false,
+    "clipartLibrary": false,
+    "productLibrary": false,
+    "contactLensPlugin": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "site-reforge/project@1",
+  "name": "riversidefamilyeyecare-com",
+  "targetUrl": "https://www.riversidefamilyeyecare.com/",
+  "origin": "https://www.riversidefamilyeyecare.com",
+  "createdAt": "2026-10-01T03:06:52.908Z",
+  "updatedAt": "2026-10-06T17:44:04.686Z",
+  "config": {
+    "maxPages": 300,
+    "concurrency": 2,
+    "includeSubdomains": false,
+    "breakpoints": [
+      360,
+      390,
+      768,
+      1024,
+      1280,
+      1440
+    ],
+    "pixelDiffThreshold": 0.02,
+    "contentRecallFloor": 0.95,
+    "requestDelayMs": 400,
+    "requestHeaders": {}
+  },
+  "tooling": {
+    "browser": "unknown",
+    "imageGen": "unknown",
+    "detectedAt": null
+  },
+  "stages": {
+    "intake": {
+      "status": "done",
+      "at": "2026-10-01T03:06:52.909Z",
+      "note": "workspace created"
+    },
+    "crawl": {
+      "status": "done",
+      "at": "2026-10-01T03:10:40.512Z",
+      "note": "148 pages, 0 failed"
+    },
+    "extract": {
+      "status": "done",
+      "at": "2026-10-01T03:10:57.581Z",
+      "note": "148 pages extracted"
+    },
+    "assets": {
+      "status": "partial",
+      "at": "2026-10-01T03:14:46.288Z",
+      "note": "269/307 assets on disk"
+    },
+    "capture": {
+      "status": "done",
+      "at": "2026-10-06T06:49:14.186Z",
+      "note": "captures merged"
+    },
+    "tokens": {
+      "status": "done",
+      "at": "2026-10-06T06:49:32.218Z",
+      "note": "computed (browser capture)"
+    },
+    "motion": {
+      "status": "done",
+      "at": "2026-10-01T04:15:26.304Z",
+      "note": "102 keyframes, 1568 animated elements"
+    },
+    "presets": {
+      "status": "done",
+      "at": "2026-10-01T03:20:29.144Z",
+      "note": "186 presets from 27 files"
+    },
+    "ux": {
+      "status": "partial",
+      "at": "2026-10-01T03:20:29.523Z",
+      "note": "739 rows, 739 UNSET"
+    },
+    "brand": {
+      "status": "partial",
+      "at": "2026-10-01T03:20:20.656Z",
+      "note": "tokens emitted; brand-system.md still owed"
+    },
+    "implement": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "clone": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "cloneVerify": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "responsive": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "seo": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "performance": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "decontaminate": {
+      "status": "done",
+      "at": "2026-10-06T17:44:02.048Z",
+      "note": "CLEAN (0 traces)"
+    },
+    "parity": {
+      "status": "fail",
+      "at": "2026-10-06T17:41:56.793Z",
+      "note": "DRIFT — 397 findings"
+    },
+    "fabrication": {
+      "status": "done",
+      "at": "2026-10-06T17:34:36.996Z",
+      "note": "SOURCED — 0 findings"
+    },
+    "pixeldiff": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "sweep": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "functional": {
+      "status": "pending",
+      "at": null,
+      "note": ""
+    },
+    "gate": {
+      "status": "fail",
+      "at": "2026-10-06T17:44:02.671Z",
+      "note": "NOT-READY — 22/29 passing"
+    },
+    "package": {
+      "status": "forced",
+      "at": "2026-10-06T17:44:04.686Z",
+      "note": "riversidefamilyeyecare-com-handoff-v20261006.zip — 1301 entries, 212383412 bytes"
+    },
+    "presetMatch": {
+      "status": "partial",
+      "at": "2026-10-01T03:20:44.623Z",
+      "note": "0 matched, 464 undecided, 275 unmeasurable"
+    }
+  },
+  "notes": []
+}

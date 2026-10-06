@@ -1,0 +1,2057 @@
+{
+  "schema": "site-reforge/clone-removals@1",
+  "note": "Deliberate removals and repairs, each a decision with a reason: the source's own chrome (rendered instead from src/content/chrome.json), platform runtime and plumbing, former-vendor credits, controls with no backend, duplicated platform copy, and unrendered platform shortcodes. Editorial copy is never removed. Written by src/build.mjs from what the build actually did; tools/sentence-parity.mjs and tools/short-text-parity.mjs read it.",
+  "elements": [
+    {
+      "selector": "header.ecp-header, footer.ecp-footer, div.ecp-global-footer, div.ecp-secondary",
+      "decision": "REPLACE",
+      "reason": "The source chrome (top bar, header, 4 copies of the primary menu, footer, sidebar widgets) is rendered from src/content/chrome.json, whose every value tools/write-facts.mjs verifies against all chrome-bearing raw pages."
+    },
+    {
+      "selector": "footer form#voice_search.ecp-voice-search (\"Speak Field\")",
+      "decision": "REMOVE",
+      "reason": "Voice search form (144 files): posts to WordPress /?s=, which a static build does not serve; its transcript script cannot even reach the field (SITE-ARCHITECTURE section 7)."
+    },
+    {
+      "selector": "div.ecp-secondary .widget_search, main .fl-module-ecp-search, the \"Nothing Found\" search prompts, the /sitemap/ search form",
+      "decision": "REMOVE",
+      "count": 14,
+      "reason": "WordPress search forms (sidebar on 132 pages; 14 inside the content regions): no search backend in a static build. The sentence \"Perhaps searching can help.\" on the four \"Nothing Found\" archives is source copy and stays."
+    },
+    {
+      "selector": "div.ecp-global-footer a.ecp-powered-by (+ eyecarepro-logo.svg)",
+      "decision": "REMOVE",
+      "reason": "Vendor credit \"Powered by\" + the EyeCarePro logo of the former platform; the \"© 2026\" before it stays."
+    },
+    {
+      "selector": "a#ecp-footer-login-link",
+      "decision": "REMOVE",
+      "reason": "Login link to the platform WordPress admin (riversidefamilyeyecare.ecpbuilder.com/wp-admin); no such backend exists in the rebuild."
+    },
+    {
+      "selector": "a.ecp-menu-mobile-focus-trap (\"Return to top of menu\")",
+      "decision": "REMOVE",
+      "reason": "Focus-trap link of the platform's mobile menu (146 files); the scaffold menu needs none."
+    },
+    {
+      "selector": "nav.ecp-menu copies of the SITE menus in the /template/* pages (header, footer and mobile-menu copies)",
+      "decision": "REPLACE",
+      "reason": "The six /template/* pages are the platform's global header/footer templates rendered as pages. A menu whose every item is a chrome.json menu label (primary menu with its children, footer menu, utility links) is a copy of the site menus, rendered from chrome.json. Any other menu is page content and is kept (the phone menu of /template/header-2/, next row)."
+    },
+    {
+      "selector": "/template/header-2/ phone menu (div.ecp-menu-wrapper.ecp-menu-convert-at-desktop): its second, hamburger copy (nav.ecp-menu-hamburger-content) of the same items",
+      "decision": "REMOVE",
+      "count": 1,
+      "reason": "The platform prints a menu twice, a horizontal nav and its hamburger copy; this one shows at every width only as the hamburger labelled \"Call Us\". Its label and its 3 items print once, as a list: \"Call Fort Myers 239-500-2020\" (tel:239-500-2020) and two \"Call\" items whose href is an empty tel: (unwrapped to the word, as everywhere: a tel: with no number dials nothing). Its focus-trap link is the \"Return to top of menu\" row."
+    },
+    {
+      "selector": "GTM-P6GSK34 (script + noscript iframe), Google Analytics G-6LTG771EHQ, Google Ads conversion_async.js, Microsoft Clarity",
+      "decision": "REMOVE",
+      "reason": "Trackers of the current accounts: the rebuild must not report its visitors to them; re-add only on the owner's instruction."
+    },
+    {
+      "selector": "#floatingEstimator + files.withcherry.com/widgets/widget.js init (every page)",
+      "decision": "REPLACE",
+      "reason": "The site-wide floating Cherry estimator is a third-party script on every page; it is not reproduced. Its function stays as a local link to /cherry-payment-plan/ (that page: Cherry mode \"link\"). Decision CY-1, docs/OPEN-DECISIONS.md."
+    },
+    {
+      "selector": "/cherry-payment-plan/ div.ecp-html (the Cherry widget: fonts link, loader, init, mount points)",
+      "decision": "REPLACE",
+      "reason": "The widget does not work standalone (tested from a non-practice origin: only its static hero draws, its gql.withcherry.com API calls fail, it throws, and it loads Segment analytics). Per decision CY-1 the page shows a link instead; the source markup holds no Cherry application URL, so the page's own label renders with data-needs=\"cherry application url\" until the practice supplies one (RFEC_CHERRY_URL). RFEC_CHERRY=embed restores the exact source embed. The widget's text is drawn by Cherry's script and is not in the source HTML."
+    },
+    {
+      "selector": "li.gfield--type-captcha (forms 9 and 10)",
+      "decision": "REMOVE",
+      "reason": "Invisible Google reCAPTCHA (data-size=\"invisible\") bound to the platform account's site key: platform plumbing; never rendered as a visible \"CAPTCHA\" field. The forms are inert (data-needs-backend) until an endpoint with its own spam protection is wired."
+    },
+    {
+      "selector": "GF honeypot li.gform_validation_container + Akismet block",
+      "decision": "REMOVE",
+      "reason": "Anti-spam plumbing of the WordPress form backend (2 pages); the honeypot labels \"Email\" (form 9) and \"Name\" (form 10) would pose as real fields."
+    },
+    {
+      "selector": "span[itemprop=ratingValue] (display:none)",
+      "decision": "REMOVE",
+      "count": 2,
+      "reason": "Hidden schema.org rating value \"5\"; the visible star count is kept."
+    },
+    {
+      "selector": "div.ecp-contactlens-desc > #ecp-contactlens-summary-N + a[href=\"javascript:void(0)\"] toggles",
+      "decision": "REPLACE",
+      "count": 53,
+      "reason": "Contact-lens brand pages: each product prints its FULL text once; the truncated excerpt is a duplicate (page-scoped list in `sentences`). The script-only \"Read More+\" toggle is unwrapped to its words (no link)."
+    },
+    {
+      "selector": "EyeCarePro-Icons, Foundation Icons, Font Awesome (platform icon fonts)",
+      "decision": "REMOVE",
+      "reason": "Platform icon fonts; the scaffold draws no icons."
+    },
+    {
+      "selector": "wp-emoji, jQuery, Gravity Forms and Beaver Builder scripts and stylesheets, the commented-out Mercator SSO script, <meta name=\"admin_url\">, body[data-subdomain]",
+      "decision": "REMOVE",
+      "reason": "WordPress / platform runtime: no trace of the old platform ships."
+    },
+    {
+      "selector": "source JSON-LD of the platform's 7 site-wide types (WebPage, LocalBusiness, MedicalBusiness, Optician, \"MedicalSpecialty :: Optometric\", Organization, static BreadcrumbList)",
+      "decision": "REPLACE",
+      "reason": "Replaced by one valid graph built from the verified facts (Organization + Optometric + the page's own BreadcrumbList); the source used an invalid @type and one static breadcrumb list on every page. The page's own structured data is carried or removed by the rows below."
+    },
+    {
+      "selector": "source JSON-LD BlogPosting on 19 page(s)",
+      "decision": "REPAIR",
+      "count": 19,
+      "pages": [
+        "/autoimmune-disease-and-dry-eye-2023/",
+        "/cataract-surgery-co-management-your-path-to-clear-vision/",
+        "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+        "/everything-you-need-to-know-about-uv-rays/",
+        "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+        "/eyes-a-window-into-your-health-2023/",
+        "/glaucoma-awareness-starts-with-an-eye-exam/",
+        "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+        "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+        "/myopia-management-strategies-for-growing-children/",
+        "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+        "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+        "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+        "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+        "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+        "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+        "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+        "/winter-dry-eyes-2023/",
+        "/workplace-eye-wellness-tips-for-clearer-easier-workdays/"
+      ],
+      "reason": "The post's own BlogPosting is carried into the page graph (src/lib/seo.mjs carryBlogPosting); every key and value is the source's except these repairs: mainEntityOfPage.@id (the platform pointed every post at the home page) becomes the page's canonical; HTML entities inside the headline / description strings are decoded (3 posts); datePublished and dateModified (\"February 26, 2023\") become ISO 8601 dates, the same date the page prints; the empty image [\"\"] is omitted; publisher.logo.url (the platform CDN copy) becomes the logo file this build ships. The build fails if a headline is not the page h1, a date does not parse, datePublished differs from the printed post date, or the author / publisher is not the practice. Blog posts with no BlogPosting at source get none: /inmode-forma-and-lumecca-a-breakthrough-in-eye-care/, /top-causes-of-dry-eye-in-fort-myers/."
+    },
+    {
+      "selector": "source JSON-LD FAQPage on 2 page(s)",
+      "decision": "REMOVE",
+      "count": 2,
+      "pages": [
+        "/eye-care-services/dry-eye-disease-and-treatment/",
+        "/eye-care-services/management-of-ocular-diseases/glaucoma/"
+      ],
+      "reason": "The FAQPage block lists 4 questions and answers that no page of the site prints (the visible FAQ accordion of /eye-care-services/dry-eye-disease-and-treatment/ asks 3 other questions with other answers; the copy on the glaucoma page also names the dry-eye page as its url). Structured data describes what the page shows, so it is removed rather than published as page content (per-page why: audit/seo-repairs.json). Open: docs/OPEN-DECISIONS.md B."
+    },
+    {
+      "selector": "source JSON-LD VideoObject (unparseable at source) on 3 page(s)",
+      "decision": "REMOVE",
+      "count": 3,
+      "pages": [
+        "/eye-care-services/eye-emergencies-pink-red-eyes/",
+        "/tag/eye-emergencies/",
+        "/tag/gsp-eye-emergencies/"
+      ],
+      "reason": "The VideoObject block (the eye-safety YouTube video) does not parse at source - a raw line break inside its description string (JSON.parse: \"Bad control character in string literal\") - so no search engine read it. It is removed, not repaired: repairing it would publish values the source never published validly (uploadDate \"2004-6-10\" is not an ISO 8601 date; thumbnailUrl is a YouTube animated-preview URL, i.ytimg.com/an_webp/... with du / sqp / rs query parameters). The 2 tag archives that carry it do not show the video. Open: docs/OPEN-DECISIONS.md B."
+    },
+    {
+      "selector": "a[href^=\"https://builder.eyeglassguide.com\"] > img eyeglass_guide_logo.png (/eyeglasses/eyeglass-guide/)",
+      "decision": "REMOVE",
+      "reason": "Platform tool badge (classified platform-ui-drop/platform-tool-logo): the EyeGlass Guide is an online tool of the platform; its icon link goes with the image. The page copy stays. Whether the tool survives the move is an open decision (docs/OPEN-DECISIONS.md)."
+    },
+    {
+      "selector": "404.png (/404-page-not-found/)",
+      "decision": "REMOVE",
+      "reason": "The platform's default 404 illustration (platform-ui-drop/platform-404-illustration)."
+    }
+  ],
+  "strings": [
+    {
+      "value": "This field is for validation purposes and should be left unchanged.",
+      "decision": "REMOVE",
+      "reason": "Gravity Forms honeypot instruction (2 pages)."
+    },
+    {
+      "value": "Δ",
+      "decision": "REMOVE",
+      "reason": "Label (&#916;) of the hidden Akismet honeypot textarea inside both Gravity Forms (p.akismet-fields-container, display:none): anti-spam plumbing."
+    },
+    {
+      "value": "Powered by",
+      "decision": "REMOVE",
+      "reason": "Footer credit to the former platform vendor (EyeCarePro)."
+    },
+    {
+      "value": "Login",
+      "decision": "REMOVE",
+      "reason": "Footer link to the platform WordPress admin."
+    },
+    {
+      "value": "Speak Field",
+      "decision": "REMOVE",
+      "reason": "Visually hidden label of the removed voice search input."
+    },
+    {
+      "value": "Search the site",
+      "decision": "REMOVE",
+      "reason": "Placeholder of the removed voice search input."
+    },
+    {
+      "value": "Return to top of menu",
+      "decision": "REMOVE",
+      "reason": "Mobile-menu focus-trap link (146 files)."
+    },
+    {
+      "value": "Search:",
+      "decision": "REMOVE",
+      "reason": "Label of the removed WordPress search widget / modules."
+    },
+    {
+      "value": "Search",
+      "decision": "REMOVE",
+      "reason": "Button of the removed WordPress search widget / modules."
+    },
+    {
+      "value": "CAPTCHA",
+      "decision": "REMOVE",
+      "reason": "Label of the invisible reCAPTCHA field (never visible at source either)."
+    },
+    {
+      "value": "Toggle accordion",
+      "decision": "REMOVE",
+      "reason": "aria-label of the platform accordion toggle (href=\"#\"); the native <details> needs none."
+    }
+  ],
+  "replacements": [
+    {
+      "from": "[account get='name']",
+      "to": "Riverside Family Eye Care",
+      "decision": "REPAIR",
+      "reason": "unrendered platform shortcode, resolved to the account value it requests",
+      "pages": [
+        "/",
+        "/sitemap/",
+        "/whats-new/"
+      ]
+    },
+    {
+      "from": "[location get='city']",
+      "to": "Fort Myers",
+      "decision": "REPAIR",
+      "reason": "unrendered platform shortcode, resolved to the account value it requests",
+      "pages": [
+        "/whats-new/"
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Water gradient technology provides exceptional comfort that lasts until the end of the day. A Contact Lens that feels like nothing on the eye. A CUSHION OF MOISTURE: Almost 100% water at the very outer surface of the contact lens for exceptional comfort. HIGHEST BREATHABILITY: As compared to all daily disposable contact lenses, for white healthy-looking eyes. A SMOOTH GLIDING SURFACE ALL DAY:&nbs ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "DAILIES TOTAL1® Water Gradient"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Life in PRECISION1® lenses is easy to love. That’s because these babies are easy to wear. PRECISION1® contact lenses help you embrace the freedom of life with lenses. PRECISION1® contact lenses are tiny pairs of genius with some big, beautiful science woven into their DNA. With SMARTSURFACE® Technology, each lens has a thin layer of moisture on the surface that is made up of ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Precision1®"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Having astigmatism does not mean you have to settle for dryness, discomfort and blurred vision. AIR OPTIX® for Astigmatism contact lenses are specially designed with two unique technologies to give you moisture and consistent comfort. Consistent comfort without compromise. Consistently clear vision. Outstanding visual acuity. Because lenses for astigmatism require two prescriptions that mus ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "AIR OPTIX® for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "AIR OPTIX® COLORS contact lenses create a beautiful look that blends naturally with any eye color—whether you have dark eyes or light, whether you need vision correction or not. These breathable contact lenses provide stunning eye color and outstanding comfort. Plus, their monthly replacement schedule is easy to remember. Beauty, comfort, and breathability—together like never befor ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "AIR OPTIX® COLORS"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "AIR OPTIX® NIGHT & DAY® AQUA contact lenses are FDA-approved for daily wear and up to 30 nights of continuous wear. They are the contact lens brand most recommended by eye care professionals for patients who sleep overnight in their contact lenses. Allows the most oxygen through the lens of any available soft contact lenses. Wake up and see comfortably, wherever, whenever. Consistent ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "AIR OPTIX® NIGHT & DAY AQUA"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "LASTING LENS SURFACE MOISTURE AND EXCELLENT DEPOSIT PROTECTION IN ONE CONTACT LENS AIR OPTIX® plus HydraGlyde contact lenses bring together two advanced technologies designed to provide long-lasting lens surface moisture and deposit protection PRODUCT FEATURES: Smartshield® Technology: Helps shield against irritating deposits all month long Hydraglyde Moisture Matrix: Attracts and main ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "AIR OPTIX® plus HydraGlyde"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "AIR OPTIX® plus HydraGlyde ® Multifocal contact lenses are made with a unique combination of technologies to give you the comfortable lens-wearing experience you deserve†. With HydraGlyde® Moisture Matrix technology, you can enjoy longer-lasting lens surface moisture‡. The Unique Precision Profile® design of AIR OPTIX® plus HydraGlyde® Multifocal contact len ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "AIR OPTIX® plus HydraGlyde Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "New lens every day, refreshing all day. Performance DAILIES® brand contact lenses provide a range of lenses to suit a variety of patient vision and lifestyle needs. Featuring unique blink-activated moisture, all DAILIES® brand contact lenses deliver refreshing comfort right up to the end of the day and are ideal for patients seeking outstanding comfort in a contact lens. Technology An idea ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "DAILIES® AquaComfort Plus"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Designed for clarity at all distances, near through far DAILIES ® AquaComfort Plus® Multifocal Contact Lenses feature the same optical design as the #1 selling AIR OPTIX® AQUA Multifocal contact lenses1 and the same material as the #1 selling daily disposable contact lens. Technology DAILIES® AquaComfort Plus® Multifocal Contact Lenses feature the same optical design as #1 sell ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "DAILIES® AquaComfort Plus Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Moisture and Stability with Every Blink. Features Blink-Activated Moisture Technology for exceptional wettability and superior tear film stability in a world full of digital screens. It’s Precision Curve ® Lens Design supports excellent visual acuity so your astigmatic patients can see comfortably and clearly every day. Technology DAILIES® AquaComfort Plus® Toric Contact Lenses f ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "DAILIES® AquaComfort Plus Toric"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "The First and Only Water Gradient Contact Lens for Presbyopes. Technology Featuring the unique Precision Profile Design for clear vision at all distances, near through far, with three ADDs for the different stages of presbyopia Smooth transition from center near to intermediate and distance Consistent ADD power across the entire spherical power range for decreased fit time Design The advanced fe ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "DAILIES TOTAL1® Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "FreshLook® COLORBLENDS® contact lenses for naturally beautiful dark or light eyes offers you a wide range of desired looks–from subtle eye color enhancement to a bold, noticeable change. The FreshLook® collections have a wide variety of color contact lenses to enhance or transform your eye color. 3-in-1 color technology gives your own natural beauty a boost. FreshLook® COLORB ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "FreshLook® COLORBLENDS"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/alcon/",
+      "value": "Wearing PRECISION1® for Astigmatism means you’ll always say, “Yasss!” to the things you love, even if you have astigmatism. Only contact lenses uniquely designed to correct astigmatism can provide the clear vision you need to keep it moving. And did we mention PRECISION1® for Astigmatism lenses also feature a cool bit of genius known as SMARTSURFACE® Te ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "PRECISION1® for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "MoistureSeal technology helps maintain 95% of lens moisture. Innovative Lens Material Designed to meet the demands of digital device users Nearly 60% of adults spend 5 or more hours on digital devices each day. 73% of individuals in their 20s report symptoms of digital eye strain.3 9 OUT OF 10 PATIENTS AGREE that Bausch + Lomb ULTRA® Contact Lenses help relieve their eyes from feeling dry and ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Bausch + Lomb ULTRA"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "Presbyopic Contact Lenses Fit For Success Bausch + Lomb ULTRA® for Presbyopia contact lenses provide an easy, predictable fit with outstanding vision. 80% of patients were successfully fit in one visit.* *First fit success for Bausch + Lomb ULTRA® for Presbyopia achieved when the ECP followed the fitting guide for the 3-Zone Progressive™ Design of the PureVision®2 for Presbyopia ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Bausch + Lomb ULTRA for Presbyopia"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "Bausch + Lomb ULTRA® Multifocal for Astigmatism is the first and only lens of its kind available as a standard offering. This innovative lens combines the seamless transitions presbyopic patients want with the lens stability their astigmatism needs. REACHING NEW LIMITS Bausch + Lomb ULTRA® Multifocal for Astigmatism combines 3-Zone Progressive™ Design and OpticAlign® design for c ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Bausch + Lomb ULTRA Multifocal for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "Deliver all-day comfort and consistently clear vision. Patients wearing Bausch + Lomb ULTRA® for Astigmatism agree: 93% of patients agree this lens helps reduce halos and glare, even in low light. 91 % feels comfortable throughout the day 96 % provides comfortable vision, even when spending hours on digital devices 95 % delivers clear vision when driving at night Available in -2.75D Cylinder ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Bausch + Lomb ULTRA for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "Biotrue ONEday has more moisture than any other contact lens And, maintains nearly 100% of its moisture for a full 16 hours2 Water-loving polymer PVP is the most abundant, hydrophilic component of the lens Allows for a lens that is 78% water content – same as the cornea Patented dehydration barrier Poloxamer 407 drives to the lens surface to lock in moisture throughout the day Mimics the ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biotrue ONEday"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "TAKE A CLOSER LOOK I Biotrue ONEday for Astigmatism 94% of patients experience comfortable vision throughout the day Peri-Ballast Design Spherical aberration control reduces halos and glare Thin, tapered edge design limits lid interaction Designed to work with natural blink patterns WARNING: UV-absorbing contact lenses are NOT substitutes for protective UV-absorbing eyewear, such as UV-ab ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biotrue ONEday for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "If you find yourself holding books, menus and phone screens farther and farther away in order to focus properly, or if close work, like reading or handwriting, gives you headaches or eyestrain, you may be showing early signs of presbyopia. Biotrue ONEday for Presbyopia daily disposable multifocal lens has a 3-Zone Progressive Design to help you see clearly and comfortably with your contacts, up cl ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biotrue ONEday for Presbyopia"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "SofLens Multi-Focal (polymacon) visibility tinted contact lens is a soft hydrophilic contact lens that is a front surface asphere consisting of multiple aspheric zones with a spherical base curve. The most plus power is in the center of the lens, progressing to more minus in the periphery. The lens material, polymacon, is 2-hydroxyethyl methacrylate, and is 38.6% water by weight when immersed in a ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "SofLens Multi-Focal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "value": "The only silicone hydrogel daily disposable with a next-generation material infused with ProBalance Technology™ to help maintain ocular surface homeostasis1 NEXT-GENERATION MATERIAL Balances exceptional moisture, modulus, and breathability to help minimize the impact on the ocular surface and provide excellent comfort: Most Moisture: 55%1† Maintains 96% of its moisture for a full 16 ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "INFUSE™"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "New Biofinity Energys™ the only contact lenses with Digital Zone Optics™ lens design AT A GLANCE Digital Zone Optics™ lens design Aquaform® Technology Monthly Replacement When there's no time for tired eyes... Biofinity Energys™ contact lenses are designed for all-day wear, helping people’s eyes better adapt so they can seamlessly and contin ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity Energys™"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "The healthier way to whiter, brighter eyes for your nearsighted or farsighted vision. AT A GLANCE Convenient daily replacement schedule The healthy advantages of silicone hydrogel lenses Nearsighted and farsighted vision correction Supports excellent all-day comfort UVA and UVB protection* The Convenience of Daily Disposables, the Health of Silicone Hydrogel If the convenience of daily ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Clariti™ 1-day (sphere)"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "The cornerstone of a comprehensive myopia management approach, MiSight® 1 day is a daily wear, single use contact lens that has been clinically proven and FDA-approved to slow the progression of myopia (nearsightedness) when initially prescribed for children 8-12 years old. AT A GLANCE Suitable for children as young as 8** Easy for children to wear and handle Corrects your child’s ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "MiSight® 1 day"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Get the best of both worlds: Superior vision and a more comfortable lens-wearing experience. AT A GLANCE Monthly replacement Designed for stability, clarity and comfort Natural wettability for incredible, long-lasting comfort and clarity Highly breathable for clear, white, and healthier eyes Extended range of lenses available to correct higher degrees of astigmatism along with nearsightedness o ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity® Toric"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Have an extreme prescription? Thought you couldn't wear contacts? AT A GLANCE Monthly replacement Lenses stay moist and comfortable Naturally wettable so you're less likely to need additional wetting drops Extended Range May Be the Answer Are you nearsighted or farsighted to such a degree that vision correction with contact lenses has been difficult to find? If so, CooperVision Biofinity® XR ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity® XR"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Over 40? Meet your premium multifocal contact lenses. AT A GLANCE Monthly replacement Focus close up, far away and in-between Lenses stay moist and comfortable Naturally wettable so you're less likely to need additional wetting drops Focus Up Close, Far Away and In-Between Once we reach age 40 to 45, our eyes lose the ability to focus on objects that are up close—especially in low-light si ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity® Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Premium soft contact lenses. Luxurious extended-wear comfort. AT A GLANCE Monthly replacement Lenses stay moist and comfortable Naturally wettable so you're less likely to need additional wetting drops Up to 6 Nights/7 Days of Continuous Wear You need your nearsighted or farsighted vision corrected. You also demand contacts with comfort that lasts all day—starting with your first morning c ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity®"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Same toric design as the most prescribed toric lens on the market, Biofinity® toric1 Predictable, consistent visual acuity and lens stability Uniform horizontal ISO thickness and wide ballast band quickly orient the lens for better performance, clear vision and a stable fit Balanced Progressive® Technology allows for remarkable vision performance at all distances, the same design as B ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Biofinity® Toric Multifocals"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Correct your astigmatism the healthier way with silicone hydrogel, daily disposable lenses. AT A GLANCE Ease and convenience Whiter, brighter eyes Vision correction for astigmatism Amazing affordability Moisture means comfort UV protection** Oh, happy day. Winner of the Contact Lens Product of the Year at the 2012 Optician Awards, clariti® 1 day toric contact lenses let you enjoy all the con ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Clariti™ 1-day Toric"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Correct your presbyopia the healthier way with silicone hydrogel, daily disposable lenses. AT A GLANCE Ease and convenience Whiter, brighter eyes Vision correction for presbyopia—focus close up, far away and in-between Amazing affordability Moisture means comfort UV protection** Oh, happy day. clariti® 1 day multifocal contact lenses from CooperVision® lets you enjoy all ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Clariti™ 1-day Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Features Biofinity® toric optical design features in a 1-day lens 3rd generation silicone hydrogel material for a high performing, comfortable lens Up to 4x Dk/t of a hydrogel 1-day lens for higher oxygen transmissibility Our highest UVA/UVB* blockers Benefits of Biofinity® toric replicated in a 1-day lens. Proven toric lens design, with the same optical design features found in Biofinit ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "MyDay® toric"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Your eyes are working all day. Shouldn’t your daily disposable lenses, too? AT A GLANCE Convenient daily replacement schedule The healthy advantages of silicone hydrogel lenses Vision correction for nearsightedness and farsightedness Supports excellent all-day comfort UVA and UVB protection* Your eyes are working all day. Shouldn’t your daily disposable lenses, too? We thin ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "MyDay®"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Monthly contacts for nearsighted or farsighted vision. AT A GLANCE Monthly replacement schedule Provide clear vision, exceptional comfort Stay 96% hydrated throughout the day May help address eye dryness when wearing contact lenses Help Keep Eyes Moist and Comfortable When it comes to correcting blurry nearsighted or farsighted vision, all contact lenses are the same, right? Not so! Unlike some ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® sphere"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "The performance of a hydrogel. The benefits of a daily. AT A GLANCE Stay 96% hydrated throughout the day, even after 12 hours of wear Maintain oxygen flow to help keep your eyes clear and white May help address eye dryness when wearing contact lenses Correct Nearsighted or Farsighted Vision Do you find you have gritty, red eyes when wearing contacts? Changing your contact lenses often may help y ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® 1 day"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Over 40? Get the clarity you need with the comfort of daily disposables. AT A GLANCE Stay 96% hydrated throughout the day, even after 12 hours of wear Provide clear vision at all distances May help address eye dryness when wearing contact lenses Focus Up Close, Far Away and In-Between If you’re age of 40 to 45, you may have noticed that your vision is blurry when looking at objects up clos ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® 1 day multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Over 40? Get the clarity you need with the comfort of daily disposables. AT A GLANCE Stay 96% hydrated throughout the day, even after 12 hours of wear Provide clear vision at all distances May help address eye dryness when wearing contact lenses 40-Somethings: Say No to Bifocal Glasses Between the ages of 40 and 45, our eyes lose the ability to focus on objects up close. It’s called ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Soak in the comfort with our multifocal contact lenses for astigmatism. AT A GLANCE Monthly replacement schedule Correct astigmatism and presbyopia Stay 96% hydrated throughout the day, even after 12 hours of wear May help address eye dryness when wearing contact lenses Dual Correction for Clear Vision If you have astigmatism, you may experience blurry or distorted vision. This can happen at any ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® multifocal toric"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Provides excellent stereopisis and visual acuity at all ranges Extensive parameter range, including seven Add Powers May address discomfort from dry eyes Balanced Progressive™ Technology CooperVision Proclear® multifocal contact lenses have a proven track record of providing outstanding vision, health and comfort. And the Proclear multifocal lens-fitting system offers you mo ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® multifocal XR"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/coopervision/",
+      "value": "Features Soft, low modulus Risk-free fitting guarantee Extended range options May address discomfort from dry eyes Over 45,000 Parameters Available CooperVision® Proclear® toric has a proven track record of providing outstanding vision health and comfort. Proclear toric lenses feature a soft, low modulus that helps reduce the risk of adverse effects on ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "Proclear® toric XR"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Product Overview 1-Day ACUVUE® MOIST MULTIFOCAL Contact Lenses are uniquely designed to provide crisp, clear, reliable vision at all distances enabling your presbyopic patients to continue to see distance, intermediate and near tasks. Patients can continue wearing contact lenses to do the things they love. #1 selling Daily Disposable Contact Lens Brand in the World. Blocks approximately ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "1-DAY ACUVUE® MOIST Multifocal"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "ACUVUE OASYS® 1-DAY is designed with HydraLuxe™ Technology to help keep your eyes feeling comfortable throughout the demands of your day. This contact lens has tear-like properties that work with your natural tear film each day, providing all-day performance and excellent comfort, vision and handling. KEY FEATURES If your eyes feel tired from staring at digital devices or work ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE OASYS® 1-Day with HydraLuxe"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "1-Day ACUVUE® MOIST provides enhanced hydration by helping to keep moisture in and irritation out. LACREON® Technology with an embedded wetting agent creates a long-lasting cushion of moisture. KEY FEATURES A daily disposable contact lens that keeps moisture in and irritation out. Available with correction for near and farsighted prescriptions. Daily disposable contacts avai ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "1-DAY ACUVUE® MOIST"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Product Overview Proven performance you can trust - 1-DAY ACUVUE® MOIST integrates premium EYE‑INSPIRED™ Innovations for an exceptional vision experience within reach. 1-DAY ACUVUE® MOIST makes Success Simplified™ Unbeaten in comfort in its category2† An ACUVUE® experience within reach Available in a full family of lenses to fit almost any patient 1-DAY A ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "1-DAY ACUVUE® MOIST for ASTIGMATISM"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "BLINK STABILIZED® Design helps minimize shifting and helps keep vision crisp, clear and stable all day long—even for people with an active lifestyle. KEY FEATURES Exceptional comfort meets visual stability in these contacts for astigmatism - when objects are blurry and shadowed at all distances, often accompanied by near or farsightedness. ACUVUE® OASYS® for Astigmatism 2-Week c ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE OASYS® for ASTIGMATISM"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "ACUVUE OASYS® 1-DAY for ASTIGMATISM Brand Contact Lenses are designed with Hydraluxe™ Technology to help make the feeling of tired eyes a thing of the past. The design of these daily contacts for astigmatism also help to provide clear, consistent, stable vision all day long—whether you’re relaxing on the couch or playing sports. KEY FEATURES These daily d ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE OASYS® 1-Day for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Product Overview ACUVUE® OASYS is the #1 selling contact lens brand in the world. Almost 1 in 3 new spherical contact lens wearers drop out in the first year, and comfort issues are the top reason.1 You can trust the brand family of 2-week reusable contact lenses that has never been beaten in comfort in 20 clinical studies. Start your new reusable contact lens patients in ACUVUE® OASYS Bra ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE OASYS® 2-Week"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Product Overview ACUVUE® OASYS with Transitions™ Light Intelligent Technology™ is the first-of-its-kind contact lens to deliver superior visual performance your patients can see and feel. This lens combines the proven comfort of ACUVUE® with seamless adaptation to light for superior visual performance, day to night. Key Message for Patients Some of the many benefits this contac ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE OASYS® with Transitions"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Don’t blame yourself for your monthly contact lens discomfort, it could be your lenses. As the month goes on, you might be using rewetting drops, taking breaks, or removing your lenses to deal with the discomfort. If this sounds familiar, NEW ACUVUE® VITA® Brand with HydraMax™ Technology might be the right lenses for you. KEY FEATURES Monthly contact lenses designed for reliab ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE VITA®"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "Product Overview ACUVUE® VITA® for ASTIGMATISM with HydraMax™ Technology is a monthly toric lens for patients who want a full month of comfortable wear from their lenses. It is a non-coated silicone hydrogel formulation balanced to help maximize and maintain hydration throughout the lens. It also features BLINK STABILIZED® Design which functions with the natural eyelid movements ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE VITA® for Astigmatism"
+    },
+    {
+      "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "value": "The superb design of ACUVUE® 2 2-Week features a smooth front surface that makes it easy to put on and take off your contact lenses. KEY FEATURES A versatile contact lens for clear, comfortable vision. Available with correction for near and farsighted prescriptions. ACUVUE® 2 2-Week lenses are available in 6 lenses per box. One of the highest levels of UV protection availab ...",
+      "decision": "REMOVE",
+      "reason": "Contact-lens product excerpt: the platform's truncated copy of the product text (#ecp-contactlens-summary-N, shown until a script toggle revealed the full text). The FULL text prints once per product instead (decision: each product once); the excerpt is a duplicate, cut mid-sentence (one inside an entity: \"&nbs ...\").",
+      "product": "ACUVUE® 2"
+    }
+  ],
+  "vendorClauses": {
+    "decision": "REMOVED",
+    "scope": "sentences naming EyeCarePro (the practice's former website platform), removed at sentence level; no replacement text authored",
+    "count": 6,
+    "removed": [
+      "Due to the possibility of human error or advances in scientific knowledge, EyeCarePro, and/or any commercial partners, their staff nor any other party involved in providing web pages, services or database information accessible within this website, warrant that the information contained therein is in every respect accurate or complete and are not responsible nor liable for any errors or omissions that may be found in such information or for the results obtained from the use of such information.",
+      "EyeCarePro and any of its affiliated companies do not endorse any of the products or treatments described, mentioned or discussed in any of the web pages, services or database information accessible within this website.",
+      "EyeCarePro authorizes you to view and download a single copy of the Material on the web site solely for your personal, non-commercial use.",
+      "EyeCarePro does not permanently store nor use, transmit (other than for its intended use), record, or otherwise make any use of this health information.",
+      "The basic graphical template and parts of this website have been created by a Service provided by EyeCarePro and/or any affiliated companies.",
+      "The material contained in this website, including but not limited to text, graphics, video, audio, trademarks and logos, includes that which is owned or controlled by EyeCarePro and that which is owned or controlled by third parties."
+    ],
+    "caveat": "Those sentences disclaimed on the PLATFORM'S behalf (/disclaimer/). The practice is left with no warranty clause of its own there; writing one is for the practice's counsel (docs/OPEN-DECISIONS.md)."
+  },
+  "images": {
+    "vendorAssets": [
+      "eyecarepro-logo.svg",
+      "review-quote.png"
+    ],
+    "platformUi": [
+      "404.png",
+      "fas-fa-check.svg",
+      "fas-fa-chevron-right.svg",
+      "fas-fa-circle.svg",
+      "fas-fa-question-circle.svg",
+      "eyeglass_guide_logo.png",
+      "spinner.svg",
+      "arrow.png",
+      "gf-creditcards.svg",
+      "gf-creditcards-check.svg",
+      "chosen-sprite.png",
+      "chosen-sprite@2x.png",
+      "fas-fa-angle-left.svg",
+      "fas-fa-angle-right.svg",
+      "fas-fa-minus-circle.svg",
+      "fas-fa-plus-circle.svg",
+      "new-black.png",
+      "new-orange.png",
+      "new-blue.png",
+      "ribbon.png",
+      "tag.png",
+      "snowflake1.png",
+      "snowflake2.png",
+      "snowflake3.png"
+    ],
+    "refusedPlaceholders": {
+      "files": [
+        "heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343-427x427.jpeg",
+        "heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343.jpeg",
+        "xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-320x427.jpeg",
+        "xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-640x640.jpeg",
+        "xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f.jpeg",
+        "young-woman-bajio-sunglasses.jpg",
+        "kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-427x427.jpeg",
+        "kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-640x640.jpeg",
+        "kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999.jpeg",
+        "maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1-427x427.jpeg",
+        "maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1.jpeg",
+        "jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-493x427.jpeg",
+        "jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-640x640.jpeg"
+      ],
+      "why": "refused by the platform CDN (HTTP 403, audit/failures.json; never fetched again): a real person prints an honest placeholder with the person's name (class ph-portrait, data-needs=\"practice photo\"); a brand prints its name (ph-brand)"
+    },
+    "refusedSiblings": [
+      "child-learning-640x350.jpg -> 90ff202a-child-learning-640x350.jpg",
+      "Child-Serious-Preschool-1280x480-e1541434177535.jpg -> 696a266e-Child-Serious-Preschool-1280x480-e1541434177535-640x240.jpg",
+      "Dry-Eye-Africam-American-Man-640x350.jpg -> 66920b80-Dry-Eye-Africam-American-Man-640x350.jpg",
+      "happy-family-wearing-eyeglasses-640x350-1.jpg -> 8f8cd594-happy-family-wearing-eyeglasses-640x350-1.jpg",
+      "Dry-Eye-Africam-American-Man-640x350.jpg -> 66920b80-Dry-Eye-Africam-American-Man-640x350.jpg",
+      "young-woman-working-on-her-laptop_640x350.jpg -> 07417529-young-woman-working-on-her-laptop_640x350.jpg",
+      "Dry-Eye-Girl-640x350.jpg -> 123c59b6-Dry-Eye-Girl-640x350.jpg"
+    ],
+    "refusedDropped": {
+      "files": [
+        "AdobeStock_819072843_Regular-Optometry.jpg",
+        "teenage-girl-wearing-contact-lenses-640x350-1.jpg",
+        "skin-model-1.jpg",
+        "Dry-Eye-Treatment_Thumbnail-1.jpg",
+        "happy-old-couple-hugging.jpg",
+        "family-wearing-eyeglasses-640.jpg",
+        "senior-man-suffering-from-sore-eyes.jpeg",
+        "Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+        "Close-up-of-the-red-eye-of-a-man-affected-by-an-infection-scaled-1-1024x384.jpg",
+        "Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+        "Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg",
+        "Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight-640x427.jpeg",
+        "Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+        "atropine.jpg",
+        "A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg",
+        "A-detailed-depiction-emphasizing-the-importance-of-glaucoma-exams-and-awareness-640x427.jpeg",
+        "mqdefault_6s.webp"
+      ],
+      "why": "refused stock photos with no on-disk sibling: omitted (generated stand-ins may come later from the image plan, not from this workflow)"
+    },
+    "droppedOnPages": [
+      {
+        "page": "/404-page-not-found/",
+        "src": "https://d3dhq28juvmj53.cloudfront.net/clipart/other/404.png",
+        "why": "platform image (platform-404-illustration, audit/image-classification.json)"
+      },
+      {
+        "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+        "src": "//da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Close-up-of-the-red-eye-of-a-man-affected-by-an-infection-scaled-1-1024x384.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/Dry-Eye-Treatment_Thumbnail-1.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/nearsighted-myopia/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/nearsighted-myopia/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/nearsighted-myopia/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eye-care-services/nearsighted-myopia/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/eyeglasses/eyeglass-guide/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/images/product_images/eyeglass_guide_logo.png",
+        "why": "platform image (platform-tool-logo, audit/image-classification.json)"
+      },
+      {
+        "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/",
+        "src": "https://riversidefamilyeyecare.ecpbuilder.com/wp-content/uploads/sites/3587/2025/05/Riverside-Family-Eyecare-practice-interior-wide-shot-new.jpg",
+        "why": "superseded by the design (DESIGN-SPEC Q-6 and 3.4; COMPONENTS B.4, gap I.6): the home hero frame shows the 4:3 crop of the 1920x800 photo of the same scene at every width (sections[0].background[0].image.crop), so the design theme does not render this 1190x496 phone layer; it stays in the model, and the scaffold still renders it"
+      },
+      {
+        "page": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/senior-man-suffering-from-sore-eyes.jpeg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      },
+      {
+        "page": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+        "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/09/AdobeStock_819072843_Regular-Optometry.jpg",
+        "why": "refused by the platform CDN (HTTP 403) during the harvest (content-photo); no on-disk sibling; omitted (a generated stand-in may come later from the image plan)"
+      }
+    ],
+    "altsBlanked": {
+      "count": 7,
+      "why": "file-name or upload-hash alt text describes nothing; it becomes alt=\"\". Readable alts are kept verbatim, child-page thumbnails included (fix round 2, R2-1). `count`: inventory images whose first alt is such a name; `onPages`: every alt actually blanked, per page. wf5b: a real photo used as an ambient title arch (alt \"\") on a page whose source shows it with an alt is a declared blank too (where \"title-arch\": TB-contact on /hours-location/).",
+      "onPages": [
+        {
+          "page": "/autoimmune-disease-and-dry-eye-2023/",
+          "file": "blue-eye-on-grey-background.jpg",
+          "alt": "blue eye on grey background.jpg",
+          "where": "prose"
+        },
+        {
+          "page": "/eye-care-services/cataract-surgery-co-management/",
+          "file": "cataracts-optometrist-blog.jpg",
+          "alt": "cataracts optometrist blog.jpg",
+          "where": "prose"
+        },
+        {
+          "page": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+          "file": "Child-Serious-Preschool-1280x480-e1541434177535.jpg",
+          "alt": "Child Serious Preschool 1280×480",
+          "where": "prose"
+        },
+        {
+          "page": "/eye-care-services/",
+          "file": "cataracts-optometrist-blog.jpg",
+          "alt": "cataracts optometrist blog.jpg",
+          "where": "childpage-thumb"
+        },
+        {
+          "page": "/eyes-a-window-into-your-health-2023/",
+          "file": "eyes-windows-to-health.jpg",
+          "alt": "eyes windows to health.jpg",
+          "where": "prose"
+        },
+        {
+          "page": "/hours-location/",
+          "file": "Interior-shot-of-practice-2-1024x682.jpg",
+          "alt": "Modern optometry office with reception desk and eyewear displays",
+          "where": "title-arch"
+        },
+        {
+          "page": "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+          "file": "child-learning-640x350.jpg",
+          "alt": "child learning 640×350",
+          "where": "prose"
+        },
+        {
+          "page": "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+          "file": "water-rinse.jpg",
+          "alt": "water rinse.jpg",
+          "where": "prose"
+        },
+        {
+          "page": "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+          "file": "young-woman-working-on-her-laptop_640x350.jpg",
+          "alt": "young woman working on her laptop 640x350",
+          "where": "prose"
+        },
+        {
+          "page": "/myopia-management-strategies-for-growing-children/",
+          "file": "Child-Serious-Preschool-1280x480-e1541434177535.jpg",
+          "alt": "Child Serious Preschool 1280×480",
+          "where": "prose"
+        },
+        {
+          "page": "/winter-dry-eyes-2023/",
+          "file": "woman-dabbing-eyes-in-winter-coat.jpg",
+          "alt": "woman dabbing eyes in winter coat.jpg",
+          "where": "prose"
+        },
+        {
+          "page": "/",
+          "file": "AlumierMD_Logo_Gry.png",
+          "alt": "AlumierMD_Logo_Gry",
+          "where": "callout"
+        }
+      ]
+    },
+    "added": {
+      "why": "Images the redesign adds through model.art (DESIGN-SPEC 4.3 P4; src/content/image-plan.json; IMAGE-PLAN 2-4): the generated title-arch defaults, the generated stand-ins in the slots of refused stock photos (`replaces`: the declared-dropped source image they stand in for) and added illustrations (ai: true, AI-labelled files, P7), the home cut-outs and lens, and two real arches (TB-contact: the practice-interior photo; TB-team: Dr. Degler's own portrait on her team page). `file` is the model `url` file; its srcset variants share its base name.",
+      "count": 146,
+      "onPages": [
+        {
+          "page": "/404-page-not-found/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/404.html",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/author/riversidefamilyeyecare/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/autoimmune-disease-and-dry-eye-2023/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/cataract-surgery-co-management-your-path-to-clear-vision/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/category/news/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/category/our-doctors/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/category/our-staff/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/category/testimonials/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/category/uncategorized/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/cherry-payment-plan/",
+          "slot": "title-arch",
+          "id": "TB-insurance",
+          "file": "gen-tb-insurance.5d324fedcf.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/disposable-contacts/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/eye-exams-for-contact-lenses/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/gas-permeable-gp-contact-lenses/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/our-featured-brands/alcon/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/our-featured-brands/bausch-lomb/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/our-featured-brands/coopervision/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/our-featured-brands/johnson-johnson/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/our-featured-brands/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-lenses/toric-contact-lenses-for-astigmatism/",
+          "slot": "title-arch",
+          "id": "TB-contacts",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/contact-us/appointment-request-form/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/contact-us/contact-form/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/contact-us/patient-forms/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/contact-us/testimonials/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/contact-us/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/disclaimer/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/everything-you-need-to-know-about-uv-rays/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/cataract-surgery-co-management/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/contact-lens-exams/hard-to-fit/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/contact-lens-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+          "slot": "inline",
+          "id": "A1",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-conditions/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-exams/advanced-technology/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-exams/what-to-expect/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/faq/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/lasik-refractive-surgery-co-management/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+          "slot": "inline",
+          "id": "N5",
+          "file": "gen-n5.e912839c48.webp",
+          "alt": "Soft teal rays of light converging on a bright point",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg"
+        },
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/management-of-ocular-diseases/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inline",
+          "id": "N1",
+          "file": "gen-n1.02ceb4b31c.webp",
+          "alt": "A teal and white kite high in a clear morning sky",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg"
+        },
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inline",
+          "id": "N2",
+          "file": "gen-n2.0b8eda9cba.webp",
+          "alt": "Teal eyeglasses resting on a folded cloth on a white table",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg"
+        },
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inline",
+          "id": "N3",
+          "file": "gen-n3.8c3d97ed2d.webp",
+          "alt": "A soft contact lens balanced on a fingertip",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg"
+        },
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "inline",
+          "id": "N4",
+          "file": "gen-n4.0e7e82989c.webp",
+          "alt": "An unlabelled aqua glass dropper bottle with a drop beside it",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg"
+        },
+        {
+          "page": "/eye-care-services/nearsighted-myopia/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eye-care-services/",
+          "slot": "inline",
+          "id": "N1",
+          "file": "gen-n1.02ceb4b31c.webp",
+          "alt": "A teal and white kite high in a clear morning sky",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg"
+        },
+        {
+          "page": "/eye-care-services/",
+          "slot": "inline",
+          "id": "N10",
+          "file": "gen-n10.da723d2a67.webp",
+          "alt": "A folded white cloth in a bowl of warm water with wisps of steam",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/Dry-Eye-Treatment_Thumbnail-1.jpg"
+        },
+        {
+          "page": "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/designer-frames/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/eyeglass-basics/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/eyeglass-guide/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/kids-optical/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/lens-treatments/anti-reflective/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/lens-treatments/scratch-resistant/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/lens-treatments/uv-protection/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/lens-treatments/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/prescription-eyeglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/specialty-eyewear/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/prescription-sunglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/sunglasses-for-kids/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/sunglasses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/transitions-lenses/transitions-xtractive/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyeglasses/transitions-lenses/",
+          "slot": "title-arch",
+          "id": "TB-eyeglasses",
+          "file": "gen-tb-eyeglasses.c5577b91f8.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/eyes-a-window-into-your-health-2023/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+          "slot": "inline",
+          "id": "N7",
+          "file": "gen-n7.49758ff2e4.webp",
+          "alt": "Two pairs of reading glasses and two coffee cups on a sunny porch table",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg"
+        },
+        {
+          "page": "/glaucoma-awareness-starts-with-an-eye-exam/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/hours-location/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/insurance/carecredit/",
+          "slot": "title-arch",
+          "id": "TB-insurance",
+          "file": "gen-tb-insurance.5d324fedcf.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/insurance/faqs-of-vision-insurance-plans/",
+          "slot": "title-arch",
+          "id": "TB-insurance",
+          "file": "gen-tb-insurance.5d324fedcf.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/insurance/whats-in-your-vision-insurance-plan/",
+          "slot": "title-arch",
+          "id": "TB-insurance",
+          "file": "gen-tb-insurance.5d324fedcf.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/location/riverside-family-eyecare/",
+          "slot": "title-arch",
+          "id": "TB-contact",
+          "file": "interior-shot-of-practice-2-1024x682.8ad91d8ab5.webp",
+          "alt": "",
+          "ai": false
+        },
+        {
+          "page": "/myopia-management-strategies-for-growing-children/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/privacy-policy/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/sitemap/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/all-about-vision/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/diabetic-retinopathy/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/dry-eye/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/dry-eyes/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/eye-emergencies/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/eye-exam/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/family-eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/gsp-contact-lens-exams/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/gsp-eye-emergencies/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/licansed-by-adobe-stock/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/tag/myopia-management-solutions/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/team/dr-brittany-degler-od/",
+          "slot": "title-arch",
+          "id": "TB-team",
+          "file": "brittany_gsp_uid_9cde0fdb-5f4b-45df-b8ff-c44fadddc1d5.05c5e091da.webp",
+          "alt": "Dr. Brittany Degler, O.D.",
+          "ai": false
+        },
+        {
+          "page": "/template/footer-2/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/template/footer/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/template/header-2/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/template/header-3/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/template/header/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/template/inner-header/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/testimonial/this-was-a-great-experience/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/top-causes-of-dry-eye-in-fort-myers/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/website-accessibility-policy/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+          "slot": "inline",
+          "id": "N8",
+          "file": "gen-n8.81742d6d4f.webp",
+          "alt": "Sea oats on a sunlit dune under a clear morning sky",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/senior-man-suffering-from-sore-eyes.jpeg"
+        },
+        {
+          "page": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/whats-new/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+          "slot": "inline",
+          "id": "N9",
+          "file": "gen-n9.71decbb484.webp",
+          "alt": "A small hourglass with pale aqua sand on a sunlit desk",
+          "ai": true,
+          "replaces": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/09/AdobeStock_819072843_Regular-Optometry.jpg"
+        },
+        {
+          "page": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/winter-dry-eyes-2023/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+          "slot": "title-arch",
+          "id": "TB-blog",
+          "file": "gen-tb-blog.02da2fbbee.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/",
+          "slot": "home:graft-cutout",
+          "id": "H3",
+          "file": "gen-h3.fa0b32b98f.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/",
+          "slot": "home:hero-cutout",
+          "id": "H1",
+          "file": "gen-h1.691c646221.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/",
+          "slot": "home:home-feature",
+          "id": "H2",
+          "file": "gen-h2.1ad9a41e18.webp",
+          "alt": "",
+          "ai": true
+        }
+      ]
+    }
+  },
+  "documents": [
+    {
+      "page": "/contact-us/patient-forms/",
+      "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2021/07/HIPAA-Sig-Page-Riverside-Family-Eye-Care.pdf",
+      "why": "the PDF is not in the harvest (assets/docs/ is empty); its only copy is on the platform CDN"
+    }
+  ],
+  "videoPosters": [
+    {
+      "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+      "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Video-Dry-Eye-Consultation.png",
+      "why": "poster image not in the harvest (audit/image-inventory.json); the video renders without a poster"
+    },
+    {
+      "page": "/eye-care-services/dry-eye-disease-and-treatment/",
+      "src": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/IPL-Dry-Eye.png",
+      "why": "poster image not in the harvest (audit/image-inventory.json); the video renders without a poster"
+    }
+  ],
+  "prosePlatformNames": []
+}

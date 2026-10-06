@@ -1,0 +1,3318 @@
+{
+  "schema": "rfec/build-pages@1",
+  "pages": [
+    {
+      "path": "/",
+      "family": "home",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Doctor in Fort Myers | Riverside Family Eye Care",
+      "h1": "Your Eye Doctor in Fort Myers, Florida",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/",
+      "aside": null,
+      "sections": 16,
+      "blocks": {
+        "cta": 5,
+        "prose": 9,
+        "callout": 10,
+        "team": 2,
+        "gallery": 1,
+        "reviews": 1,
+        "posts": 1
+      },
+      "images": 20,
+      "placeholders": [
+        "portrait:Dr. Kristin Nelson, O.D., IACMM",
+        "brand:Bajio"
+      ],
+      "embeds": []
+    },
+    {
+      "path": "/404-page-not-found/",
+      "family": "not-found",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, max-image-preview:large",
+      "title": "404 | Riverside Family Eye Care in Fort Myers",
+      "h1": "404",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/404-page-not-found/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/author/riversidefamilyeyecare/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Author: riversidefamilyeyecare",
+      "h1": "Author: riversidefamilyeyecare",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/autoimmune-disease-and-dry-eye-2023/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Dry Eye & Autoimmune Care | Riverside Family Eye Care, Fort Myers",
+      "h1": "Autoimmune Disease and Dry Eye: Is There a Connection?",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/autoimmune-disease-and-dry-eye-2023/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/cataract-surgery-co-management-your-path-to-clear-vision/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Cataract Treatment & Surgery in Riverside Family Eye Care, Florida",
+      "h1": "Cataract Surgery Co-Management: Your Path to Clear Vision",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/cataract-surgery-co-management-your-path-to-clear-vision/",
+      "aside": "standard",
+      "sections": 7,
+      "blocks": {
+        "prose": 7
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/category/news/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "News",
+      "h1": "News",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/category/news/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/category/our-doctors/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Nothing Found",
+      "h1": "Nothing Found",
+      "h1Source": "source",
+      "description": "derived",
+      "canonical": "https://www.riversidefamilyeyecare.com/category/our-doctors/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/category/our-staff/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Nothing Found",
+      "h1": "Nothing Found",
+      "h1Source": "source",
+      "description": "derived",
+      "canonical": "https://www.riversidefamilyeyecare.com/category/our-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/category/testimonials/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Nothing Found",
+      "h1": "Nothing Found",
+      "h1Source": "source",
+      "description": "derived",
+      "canonical": "https://www.riversidefamilyeyecare.com/category/testimonials/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/category/uncategorized/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Uncategorized",
+      "h1": "Uncategorized",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/category/uncategorized/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/cherry-payment-plan/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Care Services | Riverside Family Eye Care - Fort Myers",
+      "h1": "Cherry Payment Plan",
+      "h1Source": "label",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/cherry-payment-plan/",
+      "aside": null,
+      "sections": 1,
+      "blocks": {
+        "cherry": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "cherry"
+      ]
+    },
+    {
+      "path": "/contact-lenses/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Contact Lenses in Fort Myers | Riverside Family Eye Care",
+      "h1": "A WIDE SELECTION OF CONTACT LENSES IN Fort Myers, Florida",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/",
+      "aside": null,
+      "sections": 7,
+      "blocks": {
+        "callout": 6,
+        "badges": 1,
+        "prose": 3,
+        "childpages": 1
+      },
+      "images": 20,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Bifocal & Multifocal Contact Lenses | Riverside Family Eye Care",
+      "h1": "Bifocal and Multifocal Contact Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Contact Lenses for Hard-to-Fit Patients | Fort Myers",
+      "h1": "Contact Lenses for the “Hard-to-Fit” Patient",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/disposable-contacts/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Disposable Contact Lens in Fort Myers | Riverside Family Eye Care",
+      "h1": "Disposable Contact Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/disposable-contacts/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/eye-exams-for-contact-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Exams for Contact Lenses | Fort Myers Optometrist",
+      "h1": "Eye Exams for Contact Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/eye-exams-for-contact-lenses/",
+      "aside": "standard",
+      "sections": 5,
+      "blocks": {
+        "prose": 5
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/gas-permeable-gp-contact-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Gas Permeable (GP) Contact Lenses | Riverside Family Eye Care",
+      "h1": "Gas Permeable (GP) Contact Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/gas-permeable-gp-contact-lenses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/our-featured-brands/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Featured Contact Lens Brands at Riverside Family Eye Care",
+      "h1": "Our Featured Brands",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 4,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/our-featured-brands/alcon/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Alcon | Riverside Family Eye Care in Fort Myers",
+      "h1": "Alcon",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/alcon/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "products": 2
+      },
+      "images": 13,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Bausch & Lomb Eyeglasses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Bausch & Lomb",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/bausch-lomb/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "products": 1
+      },
+      "images": 9,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/our-featured-brands/coopervision/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Coopervision | Riverside Family Eye Care in Fort Myers",
+      "h1": "Coopervision",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/coopervision/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "products": 2
+      },
+      "images": 20,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Johnson & Johnson Eyeglasses | Riverside Family Eye Care",
+      "h1": "Johnson & Johnson",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/johnson-johnson/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "products": 2
+      },
+      "images": 11,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-lenses/toric-contact-lenses-for-astigmatism/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Toric Contact Lenses for Astigmatism | Riverside Family Eye Care",
+      "h1": "Toric Contact Lenses for Astigmatism",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-lenses/toric-contact-lenses-for-astigmatism/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-us/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Contact Us | Riverside Family Eye Care in Fort Myers",
+      "h1": "Contact Us",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-us/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "visit": 1,
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-us/appointment-request-form/",
+      "family": "form",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Schedule an Eye Exam Appointment at Riverside Family Eye Care",
+      "h1": "Appointment Request Form",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "form": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-us/contact-form/",
+      "family": "form",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Email Us | Riverside Family Eye Care in Fort Myers",
+      "h1": "Email Us",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-us/contact-form/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "form": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-us/patient-forms/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Patient Forms | Riverside Family Eye Care in Fort Myers",
+      "h1": "Patient Forms",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-us/patient-forms/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2,
+        "docs": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/contact-us/testimonials/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Testimonials | Riverside Family Eye Care in Fort Myers",
+      "h1": "Testimonials",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/contact-us/testimonials/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "testimonials": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/disclaimer/",
+      "family": "legal",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Disclaimer | Riverside Family Eye Care in Fort Myers",
+      "h1": "Disclaimer",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/disclaimer/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Treat Dry Eye & MGD with IPL | Eye Doctor in Fort Myers, FL",
+      "h1": "Dry Eyes Driving You Crazy? Here’s How IPL Could Help",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/dry-eyes-driving-you-crazy-heres-how-ipl-could-help/",
+      "aside": "standard",
+      "sections": 6,
+      "blocks": {
+        "prose": 6
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/everything-you-need-to-know-about-uv-rays/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "UV Rays & Eye Health | Riverside Family Eye Care in Fort Myers",
+      "h1": "Everything You Need to Know About UV Rays",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/everything-you-need-to-know-about-uv-rays/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Care Services in Fort Myers | Riverside Family Eye Care",
+      "h1": "EYE CARE SERVICES IN Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "callout": 1,
+        "prose": 1,
+        "badges": 1,
+        "childpages": 1
+      },
+      "images": 9,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/eye-care-services/cataract-surgery-co-management/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Cataract Co-Management | Riverside Family Eye Care, Fort Myers",
+      "h1": "Cataract Co-Management in Fort Myers, FL",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/cataract-surgery-co-management/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 3,
+        "cta": 2,
+        "accordion": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/contact-lens-exams/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Contact Lens Exam in Fort Myers | Riverside Family Eye Care",
+      "h1": "Contact Lens Exams",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/contact-lens-exams/hard-to-fit/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Hard-To-Fit Contact Lenses at Riverside Family Eye Care Fort Myers",
+      "h1": "Hard-to-Fit Contacts",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams/hard-to-fit/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/dry-eye-disease-and-treatment/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Dry Eye Treatments in Fort Myers, FL | Riverside Family Eye Care",
+      "h1": "Dry Eye Treatment in Fort Myers, Florida",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 2,
+        "callout": 5,
+        "video": 2,
+        "accordion": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "video",
+        "video",
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Dry Eye Relief with InMode | Riverside Family Eye Care, Fort Myers",
+      "h1": "Envision Inmode",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-conditions/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Condition Treatment in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eye Condition Treatment",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Astigmatism: Causes & Treatment | Riverside Family Eye Care",
+      "h1": "Astigmatism",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Presbyopia: Eye Exam, Reading Glasses, Bifocal Contacts, PALs",
+      "h1": "Presbyopia Treatment",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Emergency Eye Care in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eye Emergencies (Pink/Red Eyes) in Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 2,
+      "placeholders": [],
+      "embeds": [
+        "youtube",
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-exams/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Exam in Fort Myers, FL | Riverside Family Eye Care",
+      "h1": "Comprehensive Eye Exams",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-exams/advanced-technology/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Advanced Eye Exam Technology | Optometrist in Fort Myers, FL",
+      "h1": "Technology – Advanced Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/advanced-technology/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 2,
+        "equipment": 1
+      },
+      "images": 13,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Pediatric Eye Doctor in Fort Myers | Riverside Family Eye Care",
+      "h1": "Kid’s Eye Exams in Fort Myers, FL",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "InfantSEE | Free Eye Exam for Baby at an Eye Doctor in Fort Myers",
+      "h1": "InfantSEE®",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/eye-exams/what-to-expect/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Exams: What To Expect | Fort Myers Eye Doctor",
+      "h1": "What to Expect From Your Eye Exam",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/what-to-expect/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/faq/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Answers to Your Frequently Asked Eye Care Questions in Fort Myers",
+      "h1": "Frequently Asked Questions (FAQ)",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/faq/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "callout": 8,
+        "accordion": 7
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/lasik-refractive-surgery-co-management/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "LASIK Co-management in Fort Myers | Riverside Family Eye Care",
+      "h1": "LASIK & Refractive Surgery Co-Management in Fort Myers, FL",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/lasik-refractive-surgery-co-management/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/management-of-ocular-diseases/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Eye Disease Management in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eye Disease Management",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Glaucoma & Eye Care in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eye Disease Management in Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "callout": 9
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Diabetic Retinopathy | Diabetic Eye Disease | Diabetes Eye Exam",
+      "h1": "Diabetic Eye Disease",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Macular Degeneration | AMD | Low Vision Treatment | Eye Doctor",
+      "h1": "Macular Degeneration",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-care-services/nearsighted-myopia/",
+      "family": "interior",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Myopia Management in Fort Myers | Riverside Family Eye Care",
+      "h1": "Myopia Management in Southwest Florida",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-care-services/nearsighted-myopia/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "callout": 8
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Eye Exam FAQs: What to Expect | Riverside Family Eye Care",
+      "h1": "Eye Exam FAQs: What to Expect at Riverside Family Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/",
+      "aside": "standard",
+      "sections": 12,
+      "blocks": {
+        "prose": 12
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eyeglasses in Fort Myers | Riverside Family Eye Care",
+      "h1": "CHOICE-EYEGLASSES in Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "callout": 1,
+        "prose": 1,
+        "badges": 1,
+        "childpages": 1
+      },
+      "images": 10,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/eyeglasses/designer-frames/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Designer Frames in Fort Myers | Riverside Family Eye Care",
+      "h1": "DESIGNER EYEWEAR",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/designer-frames/",
+      "aside": null,
+      "sections": 6,
+      "blocks": {
+        "prose": 4,
+        "logos": 1,
+        "reviews": 1,
+        "cta": 1
+      },
+      "images": 33,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/eyeglasses/eyeglass-basics/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eyeglass Basics | Fort Myers Optical | Riverside Family Eye Care",
+      "h1": "Eyeglass Basics",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eyeglass Frames in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eyeglass Frames",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/eyeglass-frames/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Lens Options for Eyeglasses | Your Fort Myers Optician",
+      "h1": "Lens Options for Eyeglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/eyeglass-guide/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "The Riverside Family Eye Care EyeGlass Guide | Fort Myers Eye Care",
+      "h1": "EyeGlass Guide",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-guide/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/kids-optical/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Kid's Optical in Fort Myers | Riverside Family Eye Care",
+      "h1": "Kid’s Optical",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/kids-optical/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/lens-treatments/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Lens Treatments in Fort Myers | Riverside Family Eye Care",
+      "h1": "Lens Treatments",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/lens-treatments/anti-reflective/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Anti-Reflective Coating for Lenses | Fort Myers Optical",
+      "h1": "Anti-Reflective Coating for Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/anti-reflective/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/lens-treatments/scratch-resistant/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Scratch Resistant Lenses | Fort Myers Eye Care",
+      "h1": "Scratch Resistant Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/scratch-resistant/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/lens-treatments/uv-protection/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "UV Protection in Fort Myers, FL | Riverside Family Eye Care",
+      "h1": "UV Protection",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/uv-protection/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Prescription Eyeglasses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Prescription Eyeglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Bifocal Lenses in Fort Myers, FL | Riverside Family Eye Care",
+      "h1": "Bifocal Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Caring for Lenses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Caring for Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eyeglass Frame Materials in Fort Myers | Riverside Family Eye Care",
+      "h1": "Eyeglass Frame Materials",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Frame Maintenance in Fort Myers | Riverside Family Eye Care",
+      "h1": "Frame Maintenance",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "High Index and Aspheric Lenses | Riverside Family Eye Care",
+      "h1": "High Index and Aspheric Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Photochromic Lenses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Photochromic Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Polycarbonate Lenses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Polycarbonate Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Progressive Lenses | Riverside Family Eye Care in Fort Myers",
+      "h1": "Progressive Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Specialty Eyewear | The Local Fort Myers Optician",
+      "h1": "Specialty Eyewear",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Contacts & Glasses For Performance | Riverside Family Eye Care",
+      "h1": "Contacts & Glasses that Enhance Performance",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Safety and Sports Glasses | The Riverside Family Eye Care Optical",
+      "h1": "Safety and Sports Glasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eyewear for Watersports | Riverside Family Eye Care in Fort Myers",
+      "h1": "Eyewear for Swimming, Snorkeling and Scuba Diving",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Shooting Glasses & Hunting Eyewear in Fort Myers | Local Optical",
+      "h1": "Shooting Glasses and Hunting Eyewear",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Specialty Eyewear Overview | The Riverside Family Eye Care Optical",
+      "h1": "Specialty Eyewear Overview",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+      "aside": "standard",
+      "sections": 5,
+      "blocks": {
+        "prose": 5
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Sunglasses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Sunglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Nonprescription Sunglasses | Riverside Family Eye Care, Fort Myers",
+      "h1": "Nonprescription Sunglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/nonprescription-sunglasses/",
+      "aside": "standard",
+      "sections": 5,
+      "blocks": {
+        "prose": 5
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Performance & Sport Sunglasses in Fort Myers | Local Optical",
+      "h1": "Performance and Sport Sunglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Prescription Sunglass Treatments in Fort Myers | Eye Care Clinic",
+      "h1": "Prescription Sunglass Treatments",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/prescription-sunglasses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Prescription Sunglasses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Prescription Sunglasses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglasses/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/sunglasses/sunglasses-for-kids/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Sunglasses for Kids in Fort Myers | Riverside Family Eye Care",
+      "h1": "Sunglasses for Kids",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/sunglasses-for-kids/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/transitions-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Transitions® Lenses in Fort Myers | Riverside Family Eye Care",
+      "h1": "Transitions® Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "childpages": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Transitions® Lenses for Everybody | Riverside Family Eye Care",
+      "h1": "Are Transitions® Lenses Right For You?",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "The Original Transitions Lenses | Riverside Family Eye Care",
+      "h1": "The Original Transitions Lenses",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/original-transitions-lenses/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Transitions® SOLFX Sunwear Products | Riverside Family Eye Care",
+      "h1": "Transitions® SOLFX Sunwear Products",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyeglasses/transitions-lenses/transitions-xtractive/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Transitions® Lenses XTRActive | Riverside Family Eye Care",
+      "h1": "Transitions® Lenses XTRActive",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/transitions-xtractive/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/eyes-a-window-into-your-health-2023/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "What Your Eyes Reveal About Health | Riverside Family Eye Care",
+      "h1": "Your Eyes As A Window Into Your Whole-Body Health",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/glaucoma-awareness-starts-with-an-eye-exam/",
+      "family": "blog-post",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Glaucoma Awareness with Eye Exam | Riverside Family Eye Care",
+      "h1": "Glaucoma Awareness Starts with an Eye Exam",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/glaucoma-awareness-starts-with-an-eye-exam/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/hours-location/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Hours & Location | Fort Myers Clinic | Riverside Family Eye Care",
+      "h1": "Our Eye Care Practice in Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "visit": 1,
+        "prose": 2,
+        "badges": 1,
+        "cta": 1
+      },
+      "images": 2,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/how-poor-vision-could-stunt-your-childs-academic-performance/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Poor Vision & Learning | Riverside Family Eye Care in Fort Myers",
+      "h1": "How Poor Vision Could Stunt Your Child’s Academic Performance",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/how-poor-vision-could-stunt-your-childs-academic-performance/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Is Rinsing Eyes with Tap Water Safe? | Eye Care in Fort Myers",
+      "h1": "How Safe Is It To Rinse Your Eyes With Tap Water?",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "InMode Forma & Lumecca IPL for Dry Eye | Riverside Family Eye Care",
+      "h1": "InMode Forma and Lumecca: A Breakthrough in Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/inmode-forma-and-lumecca-a-breakthrough-in-eye-care/",
+      "aside": "standard",
+      "sections": 6,
+      "blocks": {
+        "prose": 6
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/insurance/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Insurance Plans Accepted By Our Fort Myers Optometrists",
+      "h1": "Our Optometry Practice in Fort Myers Accepts The Following Insurance Plans:",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/insurance/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "callout": 1,
+        "logos": 2,
+        "badges": 1,
+        "prose": 2,
+        "childpages": 1
+      },
+      "images": 21,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/insurance/carecredit/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "CareCredit | No Interest Payment Plans | Fort Myers optical",
+      "h1": "CareCredit",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/insurance/carecredit/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/insurance/faqs-of-vision-insurance-plans/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Vision Insurance Plan & FAQ | Riverside Family Eye Care",
+      "h1": "FAQs of Vision Insurance Plans",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/insurance/faqs-of-vision-insurance-plans/",
+      "aside": "standard",
+      "sections": 2,
+      "blocks": {
+        "prose": 2
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/insurance/whats-in-your-vision-insurance-plan/",
+      "family": "interior",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Vision Insurance & Discount Plans in Fort Myers, FL",
+      "h1": "What’s in Your Vision Insurance Plan",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/insurance/whats-in-your-vision-insurance-plan/",
+      "aside": "standard",
+      "sections": 6,
+      "blocks": {
+        "prose": 6
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/location/riverside-family-eyecare/",
+      "family": "location",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Riverside Family Eyecare | Optometrist in Fort Myers, FL",
+      "h1": "Riverside Family Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/hours-location/",
+      "aside": "location-page",
+      "sections": 1,
+      "blocks": {
+        "visit": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/myopia-management-strategies-for-growing-children/",
+      "family": "blog-post",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Myopia Management in Fort Myers – Protect Your Child's Eyes",
+      "h1": "Myopia Management Strategies for Growing Children",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/our-eye-doctors/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Optometrists in Fort Myers, FL | Riverside Family Eye Care",
+      "h1": "Fort Myers OPTOMETRISTS",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/our-eye-doctors/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "callout": 3,
+        "badges": 1,
+        "team": 1
+      },
+      "images": 2,
+      "placeholders": [
+        "portrait:Dr. Kristin Nelson, O.D., IACMM",
+        "portrait:Dr. Maivys Longa, O.D."
+      ],
+      "embeds": []
+    },
+    {
+      "path": "/privacy-policy/",
+      "family": "legal",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Privacy Policy | Riverside Family Eye Care in Fort Myers",
+      "h1": "Privacy Policy",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/privacy-policy/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Visual Hygiene on Electronic Devices | Riverside Family Eye Care",
+      "h1": "Riverside Family Eye Care’s Guide to Visual Hygiene on Electronic Devices",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "aside": "standard",
+      "sections": 6,
+      "blocks": {
+        "prose": 6
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Benefits of Scleral Contact Lenses | Riverside Family Eye Care",
+      "h1": "Scleral Contact Lenses: A Comfortable and Effective Vision Correction Solution",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/sitemap/",
+      "family": "sitemap",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Eye Clinic in Fort Myers, Florida | Riverside Family Eye Care",
+      "h1": "Sitemap",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/sitemap/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "sitemap": 1,
+        "posts": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/all-about-vision/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "All About Vision",
+      "h1": "All About Vision",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/all-about-vision/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/diabetic-retinopathy/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Diabetic Retinopathy",
+      "h1": "Diabetic Retinopathy",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/dry-eye/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Dry Eye",
+      "h1": "Dry Eye",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/dry-eye/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/dry-eyes/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Dry Eyes",
+      "h1": "Dry Eyes",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/dry-eyes/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/eye-emergencies/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "eye-emergencies",
+      "h1": "eye-emergencies",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/eye-emergencies/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/eye-exam/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Eye Exam",
+      "h1": "Eye Exam",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/eye-exam/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/family-eye-exams/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "family eye exams",
+      "h1": "family eye exams",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/gsp-contact-lens-exams/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Gsp Contact Lens Exams",
+      "h1": "Gsp Contact Lens Exams",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/gsp-eye-emergencies/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Gsp Eye Emergencies",
+      "h1": "Gsp Eye Emergencies",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/licansed-by-adobe-stock/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "Nothing Found",
+      "h1": "Nothing Found",
+      "h1Source": "source",
+      "description": "derived",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/tag/myopia-management-solutions/",
+      "family": "archive",
+      "layout": "classic",
+      "noindex": true,
+      "robots": "noindex, nofollow, max-image-preview:large",
+      "title": "myopia management solutions",
+      "h1": "myopia management solutions",
+      "h1Source": "source",
+      "description": "removed",
+      "canonical": "https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "childpages": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/asma-sahees/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Meet Asma Saheed | Riverside Family Eye Care",
+      "h1": "Asma",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/dr-brittany-degler-od/",
+      "family": "team-member",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Brittany Degler, OD | Riverside Family Eye Care",
+      "h1": "Dr. Brittany Degler, O.D.",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "cta": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/dr-kristin-nelson-od/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Dr. Kristin Nelson, O.D., IACMM",
+      "h1": "Dr. Kristin Nelson, O.D., IACMM",
+      "h1Source": "source",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/team/dr-kristin-nelson-od/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 0,
+      "placeholders": [
+        "portrait:Dr. Kristin Nelson, O.D., IACMM"
+      ],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/erica-eis/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Meet Erica Eis | Riverside Family Eye Care, Fort Myers, FL",
+      "h1": "Erica",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/heather/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Meet Heather Barb | Riverside Family Eye Care",
+      "h1": "Heather",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 0,
+      "placeholders": [
+        "portrait:Heather"
+      ],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/jhonae-anglin/",
+      "family": "team-member",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Jhonae",
+      "h1": "Jhonae",
+      "h1Source": "source",
+      "description": "derived",
+      "canonical": "https://www.riversidefamilyeyecare.com/team/jhonae-anglin/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "video": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "video",
+        "map"
+      ]
+    },
+    {
+      "path": "/team/kristina/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Kristina Riddle | Riverside Family Eye Care",
+      "h1": "Kristina",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/maivys-longa/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Dr. Maivys Longa, O.D.",
+      "h1": "Dr. Maivys Longa, O.D.",
+      "h1Source": "source",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/team/maivys-longa/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 0,
+      "placeholders": [
+        "portrait:Dr. Maivys Longa, O.D."
+      ],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/nancy/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Nancy Bardin | Riverside Family Eye Care",
+      "h1": "Nancy",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/rose-johnson/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Meet Rose Johnson | Riverside Family Eye Care",
+      "h1": "Rose",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/team/xaiene-dos-santos-da-costa/",
+      "family": "team-member",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Xaiene dos Santos da Costa | Riverside Family Eye Care",
+      "h1": "Xaiene",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "team": 1
+      },
+      "images": 0,
+      "placeholders": [
+        "portrait:Xaiene"
+      ],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/template/footer/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Footer",
+      "h1": "Footer",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/footer/",
+      "aside": null,
+      "sections": 1,
+      "blocks": {
+        "prose": 2,
+        "cta": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/template/footer-2/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Footer-NEW",
+      "h1": "Footer-NEW",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/footer-2/",
+      "aside": null,
+      "sections": 1,
+      "blocks": {
+        "prose": 2,
+        "cta": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/template/header/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Header",
+      "h1": "Header",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/header/",
+      "aside": null,
+      "sections": 1,
+      "blocks": {
+        "cta": 1,
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/template/header-2/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Header – MultiLoc",
+      "h1": "Header – MultiLoc",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/header-2/",
+      "aside": null,
+      "sections": 1,
+      "blocks": {
+        "prose": 2,
+        "cta": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/template/header-3/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Header-NEW",
+      "h1": "Header-NEW",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/header-3/",
+      "aside": null,
+      "sections": 3,
+      "blocks": {
+        "prose": 3,
+        "cta": 1
+      },
+      "images": 2,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/template/inner-header/",
+      "family": "template",
+      "layout": "builder",
+      "noindex": true,
+      "robots": "noindex, max-image-preview:large",
+      "title": "Inner Header",
+      "h1": "Inner Header",
+      "h1Source": "title",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/template/inner-header/",
+      "aside": null,
+      "sections": 2,
+      "blocks": {
+        "prose": 2,
+        "callout": 1,
+        "cta": 2
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": []
+    },
+    {
+      "path": "/testimonial/this-was-a-great-experience/",
+      "family": "testimonial",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "This was a great experience!",
+      "h1": "This was a great experience!",
+      "h1Source": "source",
+      "description": "none",
+      "canonical": "https://www.riversidefamilyeyecare.com/testimonial/this-was-a-great-experience/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "testimonials": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/the-staff/",
+      "family": "builder-hub",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Meet our Staff at Riverside Family Eye Care in Fort Myers",
+      "h1": "THE STAFF AT Riverside Family Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/the-staff/",
+      "aside": null,
+      "sections": 2,
+      "blocks": {
+        "callout": 1,
+        "team": 1,
+        "badges": 1
+      },
+      "images": 6,
+      "placeholders": [
+        "portrait:Heather",
+        "portrait:Xaiene",
+        "portrait:Jhonae"
+      ],
+      "embeds": []
+    },
+    {
+      "path": "/top-causes-of-dry-eye-in-fort-myers/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "7 Causes of Dry Eye in Fort Myers | Florida Weather & Your Eyes",
+      "h1": "Top 7 Causes of Dry Eye in Fort Myers and How Local Climate Affects Your Eyes",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/website-accessibility-policy/",
+      "family": "legal",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Website Accessibility Policy | Riverside Family Eye Care",
+      "h1": "Website Accessibility Policy",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/website-accessibility-policy/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+      "family": "blog-post",
+      "layout": "builder",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Family Eye Exams in Fort Myers | Riverside Family Eye Care",
+      "h1": "What Every Mom Needs to Know Before Booking a Family Eye Exam at Riverside Family Eye Care",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "What to Expect at a Dry Eye Assessment in Fort Myers",
+      "h1": "What Happens During a Dry Eye Assessment? A Non-Invasive Exam for Gritty Eyes in Fort Myers",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/what-to-expect-at-your-specialized-dry-eye-assessment/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "What to Expect at Your Specialized Dry Eye Assessment in Fort Myers",
+      "h1": "What to Expect at Your Specialized Dry Eye Assessment",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/whats-new/",
+      "family": "blog-index",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "What’s New | Riverside Family Eye Care in Fort Myers",
+      "h1": "What’s New",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/whats-new/",
+      "aside": "standard",
+      "sections": 1,
+      "blocks": {
+        "prose": 1,
+        "posts": 1
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Why Eye Checkups Are Important | Riverside Family Eye Care",
+      "h1": "Why Regular Optometry Visits Are Crucial for Managing Eye Conditions",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 0,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Dry Eye Treatments in Fort Myers | Riverside Family Eye Care",
+      "h1": "Why Some Dry Eye Treatments Don’t Work & What Actually Does",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/why-some-dry-eye-treatments-dont-work-what-actually-does/",
+      "aside": "standard",
+      "sections": 7,
+      "blocks": {
+        "prose": 7
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/winter-dry-eyes-2023/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "index, follow, max-image-preview:large",
+      "title": "Defeat Dry Eye Syndrome This Winter in Fort Myers, Florida",
+      "h1": "This Winter, Don’t Let Dry Eyes Get the Best of You",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/winter-dry-eyes-2023/",
+      "aside": "standard",
+      "sections": 3,
+      "blocks": {
+        "prose": 3
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    },
+    {
+      "path": "/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+      "family": "blog-post",
+      "layout": "classic",
+      "noindex": false,
+      "robots": "max-image-preview:large",
+      "title": "Workplace Eye Wellness Tips from Riverside Family Eye Care",
+      "h1": "Workplace Eye Wellness Tips for Clearer, Easier Workdays",
+      "h1Source": "source",
+      "description": "source",
+      "canonical": "https://www.riversidefamilyeyecare.com/workplace-eye-wellness-tips-for-clearer-easier-workdays/",
+      "aside": "standard",
+      "sections": 4,
+      "blocks": {
+        "prose": 4
+      },
+      "images": 1,
+      "placeholders": [],
+      "embeds": [
+        "map"
+      ]
+    }
+  ]
+}

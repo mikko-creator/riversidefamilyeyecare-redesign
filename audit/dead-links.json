@@ -1,0 +1,87 @@
+{
+  "schema": "site-reforge/dead-links@1",
+  "note": "Internal targets the SOURCE links to but no page serves (not an alias). The anchor is unwrapped; the link text is kept. Re-pointed alias links are listed under moved.",
+  "targets": [],
+  "moved": [
+    {
+      "from": "/appointment-request-form/",
+      "to": "/contact-us/appointment-request-form/",
+      "references": 1
+    },
+    {
+      "from": "/contact-us/patient-forms/new-patient-information/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    },
+    {
+      "from": "/eye-care-services/eye-conditions/dry-eye-disease-and-treatment/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 3
+    },
+    {
+      "from": "/eye-care-services/management-of-ocular-diseases/cataract-surgery-co-management/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 3
+    },
+    {
+      "from": "/eye-care-services/management-of-ocular-diseases/glaucoma-testing-treatment/",
+      "to": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "references": 3
+    },
+    {
+      "from": "/eye-emergencies-pink-red-eyes/",
+      "to": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "references": 1
+    },
+    {
+      "from": "/eyeglasses-contacts/contact-lenses/",
+      "to": "/contact-lenses/",
+      "references": 2
+    },
+    {
+      "from": "/eyeglasses-contacts/eyeglasses/",
+      "to": "/eyeglasses/",
+      "references": 2
+    },
+    {
+      "from": "/eyeglasses-contacts/eyeglasses/designer-frames/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    },
+    {
+      "from": "/eyeglasses-contacts/eyeglasses/lens-treatments/uv-protection/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    },
+    {
+      "from": "/eyeglasses-contacts/eyeglasses/prescription-eyeglasses/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    },
+    {
+      "from": "/eyeglasses-contacts/eyeglasses/specialty-eyewear/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    },
+    {
+      "from": "/new-patient-information/",
+      "to": "/contact-us/appointment-request-form/",
+      "references": 1
+    },
+    {
+      "from": "/pediatric-eye-exams/",
+      "to": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "references": 1
+    },
+    {
+      "from": "/your-eye-health/protecting-your-eyes/",
+      "to": "/eye-care-services/",
+      "references": 2
+    },
+    {
+      "from": "/your-eye-health/protecting-your-eyes/protecting-your-eyes-from-glare/",
+      "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
+      "references": 1
+    }
+  ]
+}

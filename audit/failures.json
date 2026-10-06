@@ -1,0 +1,347 @@
+{
+  "schema": "site-reforge/failures@1",
+  "items": [
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/1775/2019/11/child-learning-640x350.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:12:43.533Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/1775/2019/11/child-learning-640x350.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 90ff202a-child-learning-640x350.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/09/AdobeStock_819072843_Regular-Optometry.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:25.825Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/09/AdobeStock_819072843_Regular-Optometry.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/); a generated, AI-labelled stand-in fills its slot (images.added: N9 on /why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/11/Child-Serious-Preschool-1280x480-e1541434177535.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:28.453Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/11/Child-Serious-Preschool-1280x480-e1541434177535.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 696a266e-Child-Serious-Preschool-1280x480-e1541434177535-640x240.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/11/teenage-girl-wearing-contact-lenses-640x350-1.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:28.970Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/11/teenage-girl-wearing-contact-lenses-640x350-1.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:29.442Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2024/12/skin-model-1.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/dry-eye-disease-and-treatment/envision-inmode/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/Dry-Eye-Treatment_Thumbnail-1.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:30.641Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/Dry-Eye-Treatment_Thumbnail-1.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/); a generated, AI-labelled stand-in fills its slot (images.added: N10 on /eye-care-services/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:31.373Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/01/happy-old-couple-hugging.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /glaucoma-awareness-starts-with-an-eye-exam/); a generated, AI-labelled stand-in fills its slot (images.added: N7 on /glaucoma-awareness-starts-with-an-eye-exam/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/04/family-wearing-eyeglasses-640.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:32.163Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/04/family-wearing-eyeglasses-640.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/09/heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343-427x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:32.591Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/09/heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343-427x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/09/heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:33.002Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/09/heather_GSP_UID_9ff3e7ab-e26a-4851-a607-0ec5ee9f2343.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-320x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:35.376Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-320x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-640x640.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:35.826Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f-640x640.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:36.189Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/10/xaiene_GSP_UID_a011c47d-8625-4cfd-a000-9c70bb01d14f.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/11/Dry-Eye-Africam-American-Man-640x350.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:36.596Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/11/Dry-Eye-Africam-American-Man-640x350.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 66920b80-Dry-Eye-Africam-American-Man-640x350.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/11/happy-family-wearing-eyeglasses-640x350-1.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:37.439Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/11/happy-family-wearing-eyeglasses-640x350-1.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 8f8cd594-happy-family-wearing-eyeglasses-640x350-1.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/12/young-woman-bajio-sunglasses.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:38.036Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2025/12/young-woman-bajio-sunglasses.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints the brand's name in its place (class ph-brand), declared in audit/clone-removals.json images.refusedPlaceholders.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/01/Dry-Eye-Africam-American-Man-640x350.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:38.473Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/01/Dry-Eye-Africam-American-Man-640x350.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 66920b80-Dry-Eye-Africam-American-Man-640x350.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-427x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:38.831Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-427x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-640x640.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:39.238Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999-640x640.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:39.659Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/kristin_GSP_UID_a1668e7c-baf3-4e92-bfdf-a57139cb8999.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/young-woman-working-on-her-laptop_640x350.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:40.134Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/03/young-woman-working-on-her-laptop_640x350.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 07417529-young-woman-working-on-her-laptop_640x350.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/Dry-Eye-Girl-640x350.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:40.485Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/Dry-Eye-Girl-640x350.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The on-disk sibling 123c59b6-Dry-Eye-Girl-640x350.jpg stands in for it, declared in audit/clone-removals.json images.refusedSiblings (docs/IMAGE-INVENTORY.md section 3).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/senior-man-suffering-from-sore-eyes.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:40.904Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/04/senior-man-suffering-from-sore-eyes.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/); a generated, AI-labelled stand-in fills its slot (images.added: N8 on /what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/05/maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1-427x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:41.306Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/05/maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1-427x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/05/maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:41.725Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/05/maivys_GSP_UID_a1d67446-47bb-4117-a847-9777003a48f1.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:42.515Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/Cheerful-smiling-child-black-wearing-goggles-scaled.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/nearsighted-myopia/); a generated, AI-labelled stand-in fills its slot (images.added: N1 on /eye-care-services/nearsighted-myopia/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-493x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:43.279Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-493x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-640x640.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:43.702Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/07/jhonae_GSP_UID_a247f574-d8a5-4965-aa00-e8f31bd16562-640x640.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. The rebuild prints an honest placeholder in its place (the person's name on a plate, data-needs=\"practice photo\", never a generated face), declared in audit/clone-removals.json images.refusedPlaceholders. For the 5 staff portraits the operator decided on 2026-10-02 \"keep the placeholders for now\" (docs/OPEN-DECISIONS.md Q15); the real photos replace the placeholders when the practice supplies them.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Close-up-of-the-red-eye-of-a-man-affected-by-an-infection-scaled-1-1024x384.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:44.080Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Close-up-of-the-red-eye-of-a-man-affected-by-an-infection-scaled-1-1024x384.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/dry-eye-disease-and-treatment/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:44.507Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-holds-glasses.-Poor-vision-eyesight-concept.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/nearsighted-myopia/); a generated, AI-labelled stand-in fills its slot (images.added: N2 on /eye-care-services/nearsighted-myopia/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:44.891Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Little-girl-practicing-to-insert-ophthalmic-lenses-in-optometry-office.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/nearsighted-myopia/); a generated, AI-labelled stand-in fills its slot (images.added: N3 on /eye-care-services/nearsighted-myopia/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight-640x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:45.308Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight-640x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:45.709Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/Vision-optometrist-and-portrait-of-child-with-glasses-to-test-check-and-examine-eyesight.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/); a generated, AI-labelled stand-in fills its slot (images.added: N1 on /eye-care-services/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:46.112Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/08/atropine.jpg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/nearsighted-myopia/); a generated, AI-labelled stand-in fills its slot (images.added: N4 on /eye-care-services/nearsighted-myopia/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:46.492Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-ddetailed-depiction-emphasizing-the-importance-of-glaucoma-exams.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped; dropped on /eye-care-services/management-of-ocular-diseases/glaucoma/); a generated, AI-labelled stand-in fills its slot (images.added: N5 on /eye-care-services/management-of-ocular-diseases/glaucoma/). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://i.ytimg.com/an_webp/pfAZwGZS-Hk/mqdefault_6s.webp?du=3000&sqp=CPDX8PAF&rs=AOn4CLDCr8v-n-LoAQN95vyFiZK7G29kpQ",
+      "reason": "status 404",
+      "at": "2026-10-01T03:13:46.607Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://i.ytimg.com/an_webp/pfAZwGZS-Hk/mqdefault_6s.webp?du=3000&sqp=CPDX8PAF&rs=AOn4CLDCr8v-n-LoAQN95vyFiZK7G29kpQ answered HTTP 404 during the harvest (2026-10-01): the resource no longer exists at its host, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-detailed-depiction-emphasizing-the-importance-of-glaucoma-exams-and-awareness-640x427.jpeg",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:13:46.896Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://da4e1j5r7gw87.cloudfront.net/wp-content/uploads/sites/3587/2026/09/A-detailed-depiction-emphasizing-the-importance-of-glaucoma-exams-and-awareness-640x427.jpeg answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. No sibling is on disk, so the image is omitted and declared (audit/clone-removals.json images.refusedDropped). The practice can supply the original.",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    },
+    {
+      "stage": "assets:image",
+      "target": "https://www.eyecarepro.net/sites/all/themes/ECP/images/review-quote.png",
+      "reason": "refused: HTTP 403",
+      "at": "2026-10-01T03:14:38.875Z",
+      "accepted": true,
+      "acceptedReason": "SOURCE-SIDE: https://www.eyecarepro.net/sites/all/themes/ECP/images/review-quote.png answered HTTP 403 during the harvest (2026-10-01); per the skill boundary a 401/403 is never retried, so the file was never on disk. It is a platform asset (platform-ui-drop: the former platform's theme UI or vendor mark), dropped by design and declared in audit/clone-removals.json images.vendorAssets; the rebuild draws its own UI and must not ship platform assets (audit/source-cms.json).",
+      "acceptedAt": "2026-10-06T17:37:40.471Z"
+    }
+  ]
+}

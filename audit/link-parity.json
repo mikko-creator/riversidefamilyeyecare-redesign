@@ -1,0 +1,22 @@
+{
+ "schema": "rfec/link-parity@1",
+ "dist": "dist",
+ "totals": {
+  "pages": 148,
+  "sourceLinks": 1002,
+  "kept": 897,
+  "exemptByRule": 103,
+  "exemptDeclared": 2,
+  "exemptDead": 0,
+  "missing": 0
+ },
+ "declaredPrefixes": [
+  "https://builder.eyeglassguide.com"
+ ],
+ "control": {
+  "externalRenormalised": true,
+  "breadcrumbHomeUnlinked": true,
+  "fired": true
+ },
+ "missing": []
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "site-reforge/fabrication-report@1",
+  "generated": "2026-10-06T17:34:36.994Z",
+  "rebuildDir": "C:\\Users\\Dell\\riversidefamilyeyecare-reforge\\dist",
+  "filesScanned": 149,
+  "claimsChecked": 698,
+  "sourceCorpusChars": 656874,
+  "declaredFactsChars": 23303,
+  "counts": {},
+  "verdict": "SOURCED",
+  "findings": []
+}

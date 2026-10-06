@@ -1,0 +1,19 @@
+{
+  "tool": "tools/hf-run.mjs",
+  "provider": "Higgsfield",
+  "endpoint": "kling-video/v3.0-turbo/image-to-video",
+  "input": {
+    "prompt": "Locked-off static camera. The soft luminous ribbon of light drifts and undulates very slowly, like a calm river current, a gentle shimmer travelling from right to left along the teal and navy strands. Smooth continuous ambient motion. No camera movement, no zoom, no new objects, no text, no flashes, no cuts, no brightness changes.",
+    "duration": 10,
+    "resolution": "1080p",
+    "image_url": "https://d3snorpfx4xhv8.cloudfront.net/ddbaf43b-a6aa-42cc-833b-bef90fef7cbf/a6aac3eb-ab5c-4571-9b41-3af4e2aee2c2.jpeg"
+  },
+  "requestId": "97266174-5381-4e20-ba8a-0a69cc660a97",
+  "status": "completed",
+  "outputUrl": "https://d3u0tzju9qaucj.cloudfront.net/ddbaf43b-a6aa-42cc-833b-bef90fef7cbf/7a3ac565-8015-46b0-bf43-1404af7db234.mp4",
+  "bytes": 9161992,
+  "sha256": "c828426ec00928c0fe2cbba97505a84c97cb61895fa10959e22d0149cc05d9fb",
+  "file": "assets/media/raw/hero-river.mp4",
+  "generatedAt": "2026-10-01T09:27:07.462Z",
+  "provenance": "AI-generated (Higgsfield). Illustrative motion only: never footage of this practice, its people, its patients or its results."
+}

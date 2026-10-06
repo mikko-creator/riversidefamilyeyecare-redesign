@@ -1,0 +1,50 @@
+{
+ "schema": "rfec/seo-parity@1",
+ "dist": "dist",
+ "tally": {
+  "title": {
+   "same": 131,
+   "repaired": 17,
+   "mismatch": 0
+  },
+  "description": {
+   "same": 130,
+   "repaired": 18,
+   "mismatch": 0
+  },
+  "canonical": {
+   "same": 131,
+   "repaired": 17,
+   "mismatch": 0
+  },
+  "robots": {
+   "same": 148,
+   "repaired": 0,
+   "mismatch": 0
+  },
+  "h1": {
+   "same": 141,
+   "repaired": 7,
+   "mismatch": 0
+  },
+  "structuredData": {
+   "pages": 148,
+   "problems": 0
+  },
+  "descDerived": 5
+ },
+ "noindexPages": 23,
+ "control": {
+  "planted": "wrong <title> on /; a link-only and a template-page derived description; a dropped BlogPosting, a changed headline and a planted FAQPage on /autoimmune-disease-and-dry-eye-2023/; each kind of REMOVE declaration withdrawn",
+  "title": true,
+  "description": true,
+  "structuredData": true,
+  "removeUndeclared": {
+   "parseable": "/eye-care-services/dry-eye-disease-and-treatment/ FAQPage",
+   "unparseable": "/eye-care-services/eye-emergencies-pink-red-eyes/ VideoObject"
+  },
+  "descriptionRemovalWithdrawn": "/author/riversidefamilyeyecare/",
+  "fired": true
+ },
+ "mismatches": []
+}

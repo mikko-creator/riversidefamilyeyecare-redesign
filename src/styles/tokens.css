@@ -1,0 +1,366 @@
+/* tokens.css — derived by sr-tokens.mjs from computed (browser capture).
+   Every value below traces to audit/design-baseline.json. Change values HERE,
+   never at a call site: one source, or the system is not a system. */
+:root {
+  /* --- colour ------------------------------------------------------ */
+  --c-1: #ffffff;
+  --c-2: #03756d;
+  --c-3: #00000008;
+  --c-4: #1e2c70;
+  --c-5: #000000;
+  --c-6: #464451;
+  --c-7: #ffd700;
+  --c-8: #757575;
+  --c-9: #666666;
+
+  /* --- type -------------------------------------------------------- */
+  --font-body: Verdana;
+  --font-display: Montserrat;
+  --fs-1: 9.756px;
+  --fs-2: 10px;
+  --fs-3: 10.5px;
+  --fs-4: 11px;
+  --fs-5: 11.382px;
+  --fs-6: 12px;
+  --fs-7: 12.6px;
+  --fs-8: 13px;
+  --fs-9: 13.3333px;
+  --fs-10: 14px;
+  --fs-11: 15px;
+  --fs-12: 15.4px;
+  --fs-13: 16px;
+  --fs-14: 17px;
+  --fs-15: 17.5px;
+  --fs-16: 18px;
+  --fs-17: 19.6px;
+  --fs-18: 20px;
+  --fs-19: 21px;
+  --fs-20: 22px;
+  --fs-21: 22.05px;
+  --fs-22: 24px;
+  --fs-23: 24.5px;
+  --fs-24: 26.25px;
+  --fs-25: 28px;
+  --fs-26: 30px;
+  --fs-27: 31.5px;
+  --fs-28: 34px;
+  --fs-29: 35px;
+  --fs-30: 36px;
+  --fs-31: 40px;
+  --fs-32: 65px;
+  --fs-33: 112px;
+
+  /* --- space ------------------------------------------------------- */
+  --sp-1: 4px;
+  --sp-2: 5px;
+  --sp-3: 6px;
+  --sp-4: 6.66667px;
+  --sp-5: 7px;
+  --sp-6: 8px;
+  --sp-7: 9.8px;
+  --sp-8: 10px;
+  --sp-9: 10.5px;
+  --sp-10: 11.9px;
+  --sp-11: 12px;
+  --sp-12: 13.6px;
+  --sp-13: 14px;
+  --sp-14: 15px;
+  --sp-15: 16px;
+  --sp-16: 20px;
+  --sp-17: 25px;
+  --sp-18: 28px;
+  --sp-19: 30px;
+  --sp-20: 33px;
+  --sp-21: 40px;
+  --sp-22: 50px;
+  --sp-23: 60px;
+  --sp-24: 70px;
+  --sp-25: 80px;
+  --sp-26: 90px;
+  --sp-27: 100px;
+  --sp-28: 250px;
+  --sp-29: 350px;
+
+  /* --- shape ------------------------------------------------------- */
+  --radius-1: 50%;
+  --radius-2: 10px;
+  --radius-3: 5px;
+  --radius-4: 32px;
+  --shadow-1: rgb(174, 174, 174) 0px 0px 10px 0px;
+  --shadow-2: rgba(0, 0, 0, 0.07) 0px 36px 67px 0px, rgba(0, 0, 0, 0.05) 0px 13.141px 24.456px 0px, rgba(0, 0, 0, 0.04) 0px 6.38px 11.873px 0px, rgba(0, 0, 0, 0.03) 0px 3.127px 5.82px 0px, rgba(0, 0, 0, 0.02) 0px 1.237px 2.301px 0px;
+  --shadow-3: rgba(0, 0, 0, 0.4) 0px 0px 20px 0px;
+
+  /* --- layout ------------------------------------------------------ */
+  --container: 100%;
+  --bp-1: 1px;
+  --bp-2: 321px;
+  --bp-3: 480px;
+  --bp-4: 600px;
+  --bp-5: 640px;
+  --bp-6: 641px;
+  --bp-7: 700px;
+  --bp-8: 761px;
+  --bp-9: 768px;
+  --bp-10: 769px;
+  --bp-11: 790px;
+  --bp-12: 800px;
+  --bp-13: 900px;
+  --bp-14: 980px;
+  --bp-15: 992px;
+  --bp-16: 993px;
+  --bp-17: 1024px;
+  --bp-18: 1100px;
+  --bp-19: 1200px;
+  --bp-20: 1201px;
+}
+
+/* ===== REDESIGN TOKENS ===== */
+/* Riverlight Aurora (DESIGN-SPEC 2; COMPONENTS 0.6). Above the marker: source evidence, not shipped. Below: shipped.
+   Every colour the theme paints is a token here; the other sheets only reference them (gate C13). */
+:root {
+  /* 2.1 palette (BRAND-SYSTEM 5.3) */
+  --navy-700: #1e2c70;
+  --navy-900: #172257;
+  --navy-950: #11183e;
+  --navy-100: #e9eaf1;
+  --teal-700: #03756d;
+  --teal-800: #025b55;
+  --teal-500: #13a89e;
+  --teal-200: #95d8d3;
+  --lav-300: #bec2d7;
+  --ink-700: #464451;
+  --ink-600: #5c5a66;
+  --ink-900: #313039;
+  --sky-500: #349fc9;
+  --violet-500: #9485d1;
+  --paper: #ffffff;
+  --ground: #f9fafb;
+  --aqua-50: #f3fbfa;
+  --tint-teal: #e7f6f5;
+  --tint-sky: #ebf5fa;
+  --tint-lav: #ecedf3;
+  --tint-violet: #f4f3fa;
+  --field-teal: #b3e3e0;
+  --field-sky: #bee0ee;
+  --field-lav: #bec2d7;
+  --field-violet: #ddd8f0;
+  --glow-teal: #124a60;
+  --glow-sky: #1d476f;
+  --glow-violet: #3f3e71;
+  --line-input: #8c8b93;
+  --alert-700: #941221;
+  --shade: 17 24 62;
+  --on-dark: #ffffff;
+  --mask: #000000;
+  /* derived alpha colours: one name per use */
+  --hairline: rgb(var(--shade) / .07);
+  --hairline-paper: rgb(var(--shade) / .06);
+  --line-glass-nav: rgb(var(--shade) / .08);
+  --line-drawer: rgb(var(--shade) / .08);
+  --line-lav: rgb(64 77 138 / .16);
+  --scrim: rgb(var(--shade) / .45);
+  --dot-idle: rgb(var(--shade) / .55);   /* QA round 1 (A11Y-9): .25 read 1.67-1.75:1 on the review panel; .55 is about 3.8:1 (WCAG 1.4.11) */
+  --navbar-shadow: 0 10px 30px -22px rgb(var(--shade) / .4);
+  --drawer-shadow: -20px 0 60px -20px rgb(var(--shade) / .5);
+  --glass-edge: rgb(255 255 255 / .7);
+  --glass-highlight: rgb(255 255 255 / .9);
+  --frame-edge: rgb(255 255 255 / .55);
+  --frame-highlight: rgb(255 255 255 / .7);
+  --photo-ring: rgb(255 255 255 / .92);
+  --pill-edge: rgb(255 255 255 / .9);
+  --line-on-dark: rgb(255 255 255 / .12);
+  --legal-ground: rgb(17 24 62 / .55);
+  --navy-glass-edge: rgb(190 194 215 / .22);
+  --navy-glass-highlight: rgb(255 255 255 / .16);
+  --link-line: rgb(3 117 109 / .55);
+  --link-line-navy: rgb(30 44 112 / .55);
+  --link-line-image: rgb(2 91 85 / .55);
+  --link-line-light: rgb(149 216 211 / .6);
+  --ring-teal: rgb(19 168 158 / .22);
+  --ring-sky: rgb(52 159 201 / .22);
+  --ring-light: rgb(149 216 211 / .35);
+  --ring-promo: rgb(19 168 158 / .34);
+  --btn-shadow-primary: 0 10px 24px -14px rgb(3 117 109 / .8);
+  --btn-shadow-primary-hover: 0 16px 32px -14px rgb(3 117 109 / .85);
+  --btn-shadow-secondary: 0 10px 24px -14px rgb(var(--shade) / .7);
+  --btn-shadow-secondary-hover: 0 16px 32px -14px rgb(var(--shade) / .75);
+  --btn-shadow-light-hover: 0 16px 32px -14px rgb(0 0 0 / .6);
+  --sheen: linear-gradient(105deg, transparent 30%, rgb(255 255 255 / .38) 48%, rgb(255 255 255 / .1) 56%, transparent 70%);
+  --sheen-soft: linear-gradient(105deg, transparent 30%, rgb(19 168 158 / .18) 50%, transparent 70%);
+  --glare-light: rgb(255 255 255 / .55);
+  /* context colours: riverlight.css re-points these per ground */
+  --focus: var(--teal-700);
+  --link: var(--teal-700);
+  --link-hover: var(--teal-800);
+  --link-underline: var(--link-line);
+  --bullet: var(--img-bullet);
+  /* 2.2 fonts */
+  --font: "RFEC Figures", "Atkinson Hyperlegible Next", "RFEC Verdana Fallback", "RFEC Arial Fallback", "RFEC Roboto Fallback", Verdana, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  /* 2.3 type */
+  --step--1: clamp(.84rem, .81rem + .12vw, .9rem);
+  --step-0: clamp(1rem, .97rem + .15vw, 1.0625rem);
+  --step-prose: clamp(1.0625rem, 1rem + .25vw, 1.1875rem);
+  --step-1: clamp(1.13rem, 1.06rem + .32vw, 1.3rem);
+  --step-2: clamp(1.32rem, 1.16rem + .7vw, 1.72rem);
+  --step-3: clamp(1.62rem, 1.32rem + 1.35vw, 2.45rem);
+  --h1-band: min(clamp(2rem, 1.4rem + 2.6vw, 3.5rem), max(2rem, 8.5vh));
+  --h1-cap-long: 2.75rem;
+  --h1-cap-xlong: 2.3rem;
+  --display: clamp(2.5rem, min(5.9vw, 9.6vh), 5.6rem);
+  --fw-body: 400;
+  --fw-ui: 600;
+  --fw-head: 650;
+  --fw-strong: 700;
+  --fw-statement-light: 340;
+  --fw-statement: 720;
+  --lh-body: 1.65;
+  --lh-prose: 1.7;
+  --lh-head: 1.14;
+  --lh-band: 1.06;
+  --lh-display: .98;
+  --ls-head: -.012em;
+  --ls-band: -.025em;
+  --ls-display: -.03em;
+  --ls-eyebrow: .04em;
+  /* 2.4 space and layout; chrome heights are static (D1) */
+  --gutter: clamp(16px, 4vw, 48px);
+  --maxw: 1200px;
+  --measure: 68ch;
+  --space-section: clamp(64px, 8vw, 120px);
+  --side-w: 340px;
+  --arch-w: clamp(240px, 24vw, 340px);
+  --arch-w-portrait: min(clamp(240px, 24vw, 340px), 300px);
+  --arch-cross: clamp(160px, 17vw, 240px);
+  --al-overlap: clamp(76px, 7vw, 96px);
+  --hero-tuck: clamp(84px, 11vh, 124px);
+  --hero-gap: clamp(64px, 7vh, 86px);
+  --svc-break: clamp(48px, 5vw, 64px);
+  --lens-cross: clamp(72px, 7vw, 110px);
+  --tb-pad-bottom: clamp(80px, 9vw, 120px);
+  --bank-h: clamp(46px, 7vw, 92px);
+  --card-pad: clamp(22px, 2.2vw, 30px);
+  --topbar-h: 44px;
+  --navbar-h: 93px;
+  --chrome-h: 137px;
+  /* 2.5 radii */
+  --r-s: 12px;
+  --r-m: 18px;
+  --r-l: 26px;
+  --r-xl: 38px;
+  --r-pill: 999px;
+  --r-arch: 50% 50% var(--r-xl) var(--r-xl) / 40% 40% var(--r-xl) var(--r-xl);
+  /* 2.6 elevation: the largest blur on the nearest plane */
+  --sh-1: 0 1px 2px rgb(var(--shade) / .06), 4px 8px 22px -10px rgb(var(--shade) / .18);
+  --sh-2: 0 2px 4px rgb(var(--shade) / .06), 10px 18px 40px -16px rgb(var(--shade) / .26);
+  --sh-3: 0 4px 10px rgb(var(--shade) / .08), 18px 30px 60px -20px rgb(var(--shade) / .34);
+  --sh-4: 0 6px 14px rgb(var(--shade) / .10), 24px 40px 84px -24px rgb(var(--shade) / .40);
+  --sh-fore: drop-shadow(24px 44px 88px rgb(var(--shade) / .26)) drop-shadow(4px 8px 8px rgb(var(--shade) / .20));
+  /* 2.7 glass and surfaces */
+  --glass-nav-fill: linear-gradient(160deg, rgb(255 255 255 / .90), rgb(255 255 255 / .80));
+  --glass-sub-fill: linear-gradient(160deg, rgb(255 255 255 / .96), rgb(255 255 255 / .92));
+  --glass-card-fill: linear-gradient(160deg, rgb(255 255 255 / .88), rgb(255 255 255 / .80));
+  --glass-navy-fill: linear-gradient(160deg, rgb(30 44 112 / .95), rgb(30 44 112 / .90));
+  --glass-fallback: rgb(255 255 255 / .96);
+  --glass-blur-nav: blur(18px) saturate(1.5);
+  --glass-blur-card: blur(20px) saturate(1.4);
+  --glass-blur-navy: blur(20px) saturate(1.3);
+  --frost-fill: rgb(255 255 255 / .94);
+  --tint-panel-fill: linear-gradient(150deg, var(--tint-teal), var(--tint-sky));
+  --post-rule: linear-gradient(90deg, var(--teal-500), var(--violet-500));
+  --nav-underline: linear-gradient(90deg, var(--teal-700), var(--navy-700));
+  --plate-fill: radial-gradient(80% 70% at 18% 20%, rgb(255 255 255 / .9), transparent 60%), linear-gradient(150deg, var(--field-teal), var(--field-sky) 48%, var(--field-violet));
+  --portrait-fill: radial-gradient(70% 60% at 30% 25%, rgb(255 255 255 / .95), transparent 62%), linear-gradient(145deg, var(--tint-teal), var(--field-sky) 55%, var(--field-violet));
+  --brand-cell-fill: radial-gradient(70% 60% at 30% 25%, rgb(255 255 255 / .95), transparent 62%), linear-gradient(140deg, var(--tint-sky), var(--field-teal) 55%, var(--field-sky));
+  --iris-ring: conic-gradient(from 210deg, var(--teal-500), var(--sky-500), var(--violet-500), var(--sky-500), var(--teal-500));
+  --iris-segments: repeating-conic-gradient(var(--mask) 0 7deg, transparent 7deg 10deg);
+  --video-poster: radial-gradient(60% 70% at 20% 100%, var(--glow-teal), transparent 70%), radial-gradient(55% 60% at 70% 0%, var(--glow-sky), transparent 70%), var(--navy-950);
+  --map-pattern: radial-gradient(40% 50% at 64% 42%, rgb(19 168 158 / .28), transparent 70%), repeating-linear-gradient(115deg, rgb(30 44 112 / .06) 0 2px, transparent 2px 26px), repeating-linear-gradient(25deg, rgb(30 44 112 / .05) 0 2px, transparent 2px 34px), var(--tint-sky);
+  /* 2.8 aurora */
+  --page-bg: linear-gradient(180deg, var(--paper) 0, var(--ground) 30%, var(--aqua-50) 100%);
+  --aurora-dawn: radial-gradient(48% 40% at 0% 6%, rgb(179 227 224 / .62), transparent 72%), radial-gradient(40% 36% at 100% 26%, rgb(190 224 238 / .48), transparent 72%);
+  --aurora-day: radial-gradient(44% 40% at 100% 10%, rgb(190 224 238 / .55), transparent 72%), radial-gradient(44% 42% at 0% 88%, rgb(179 227 224 / .45), transparent 72%);
+  --aurora-dusk: radial-gradient(44% 40% at 0% 14%, rgb(221 216 240 / .62), transparent 72%), radial-gradient(42% 40% at 100% 84%, rgb(190 194 215 / .34), transparent 72%);
+  --aurora-deep: radial-gradient(60% 70% at 15% 100%, var(--glow-teal), transparent 70%), radial-gradient(55% 60% at 50% 0%, var(--glow-sky), transparent 70%), radial-gradient(45% 55% at 62% 55%, var(--navy-700), transparent 70%), radial-gradient(50% 60% at 85% 90%, var(--glow-violet), transparent 70%), var(--navy-950);
+  --aurora-deep-rise: radial-gradient(70% 80% at 50% 100%, var(--glow-violet), transparent 72%);
+  --band-svc-a: #e3f4f3;
+  --band-svc-b: #e8f3f8;
+  --band-svc-c: #eaf1f7;
+  --band-services: linear-gradient(180deg, var(--band-svc-a), var(--band-svc-b) 55%, var(--band-svc-c));
+  --band-services-dusk: linear-gradient(180deg, color-mix(in oklab, var(--band-svc-a), var(--violet-500) 14%), color-mix(in oklab, var(--band-svc-b), var(--violet-500) 14%) 55%, color-mix(in oklab, var(--band-svc-c), var(--violet-500) 14%));
+  --band-sky: linear-gradient(180deg, var(--tint-sky), #eef6f9 60%, rgb(238 246 249 / 0));
+  --band-sky-dusk: linear-gradient(180deg, var(--tint-violet), color-mix(in oklab, #eef6f9, var(--violet-500) 8%) 60%, rgb(238 246 249 / 0));
+  --band-lav-dusk: var(--field-violet);
+  --band-radius: clamp(28px, 4vw, 60px);
+  --hero-wash: linear-gradient(180deg, rgb(255 255 255 / 0) 0%, rgb(231 246 245 / .55) 62%, rgb(231 246 245 / .95) 100%);
+  --titleband-wash: linear-gradient(180deg, rgb(255 255 255 / 0), rgb(231 246 245 / .8) 70%, rgb(235 245 250 / .95));
+  /* hero light regrade, static (COMPONENTS I.76) */
+  --light-grade: hue-rotate(-32deg) saturate(1.8);
+  --mask-light-y: linear-gradient(180deg, transparent 0, var(--mask) 30%, var(--mask) 66%, transparent 100%);
+  --mask-light-x: linear-gradient(90deg, transparent 0, rgb(0 0 0 / .25) 22%, var(--mask) 52%, var(--mask) 90%, transparent 100%);
+  --mask-light-phone: linear-gradient(180deg, transparent 0, var(--mask) 30%, var(--mask) 70%, transparent 100%);
+  --mask-fade-bottom: linear-gradient(180deg, var(--mask) calc(100% - 140px), transparent 100%);
+  /* images: inline SVG in palette colours */
+  --img-wave-rule: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 12'%3E%3Cpath d='M1 5.5C10 1 19 1 28 4.5S46 9.5 55 6 66 1.5 73 2.5' fill='none' stroke='%2303756d' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M1 10C10 5.5 19 5.5 28 9S46 14 55 10.5' fill='none' stroke='%231e2c70' stroke-width='1.6' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E");
+  --img-wave-rule-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 12'%3E%3Cpath d='M1 5.5C10 1 19 1 28 4.5S46 9.5 55 6 66 1.5 73 2.5' fill='none' stroke='%231e2c70' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M1 10C10 5.5 19 5.5 28 9S46 14 55 10.5' fill='none' stroke='%23025b55' stroke-width='1.6' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E");
+  --img-wave-rule-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 12'%3E%3Cpath d='M1 5.5C10 1 19 1 28 4.5S46 9.5 55 6 66 1.5 73 2.5' fill='none' stroke='%2395d8d3' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M1 10C10 5.5 19 5.5 28 9S46 14 55 10.5' fill='none' stroke='%23e9eaf1' stroke-width='1.6' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E");
+  --img-bullet: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'%3E%3Cpath d='M1 5C3.5 1.5 6 1.5 8 3.5S11.5 6 13 3' fill='none' stroke='%2303756d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  --img-bullet-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'%3E%3Cpath d='M1 5C3.5 1.5 6 1.5 8 3.5S11.5 6 13 3' fill='none' stroke='%231e2c70' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  --img-bullet-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'%3E%3Cpath d='M1 5C3.5 1.5 6 1.5 8 3.5S11.5 6 13 3' fill='none' stroke='%2395d8d3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  --img-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6' fill='none' stroke='%231e2c70' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --img-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+  --img-bank-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath d='M1440 90V52C1260 22 1080 8 880 26C680 44 460 84 260 70C150 62 70 44 0 28V90Z' fill='%23000'/%3E%3C/svg%3E");
+  /* 2.10 motion */
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --dur-fast: 200ms;
+  --dur: 480ms;
+  --dur-fade: 320ms;   /* QA round 1 (MOTION-7): a reveal's opacity settles before its 480 ms slide ends (A-12, 600 ms) */
+  --dur-slow: 800ms;
+  --dur-dropdown: 220ms;
+  --dur-drawer: 380ms;
+  --dur-underline: 400ms;
+  --reveal-y: 26px;
+  --lift-card: -7px;
+  --lift-btn: -2px;
+  --lift-social: -3px;
+  --lift-promo: -6px;
+  --zoom: 1.06;
+  --zoom-promo: 1.04;
+  --tilt-perspective: 900px;
+}
+
+/* static per-layout values (2.4): never measured at runtime for sizing (D1) */
+@media (max-width: 1199px) {
+  :root {
+    --side-w: 300px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --display: clamp(2.5rem, 10.6vw, 3.6rem);
+    --hero-tuck: 70px;
+    --hero-gap: 50px;
+    --lens-cross: 40px;
+    --topbar-h: 60px;
+    --navbar-h: 79px;
+    --chrome-h: 139px;
+  }
+}
+@media (max-width: 420px) {
+  :root {
+    --display: clamp(2.3rem, 11.4vw, 3rem);
+  }
+}
+/* short desktop, the operator view (U1): compact hero and title band; up to 820 px tall since QA round 1 (LAYOUT-4: from
+   721 to about 815 px the full-size hero pushed the home h1 out of the first screen) */
+@media (min-width: 1024px) and (max-height: 820px) {
+  :root {
+    --hero-tuck: 120px;
+    --hero-gap: 0px;
+    --tb-pad-bottom: 48px;
+    /* QA round 1 (LAYOUT-4): the statement keeps its 720 px size up to 820 px tall, so the extended mode moves nothing
+       into the hero cut-out (9.6vh <= 69 px up to 720 px: unchanged there) */
+    --display: clamp(2.5rem, min(5.9vw, 9.6vh, 69px), 5.6rem);
+  }
+}

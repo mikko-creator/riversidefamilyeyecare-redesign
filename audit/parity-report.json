@@ -1,0 +1,5499 @@
+{
+  "schema": "site-reforge/parity-report@1",
+  "generated": "2026-10-06T17:41:56.761Z",
+  "sourcePages": 148,
+  "rebuiltFiles": 149,
+  "mappedPages": 148,
+  "missingPages": [],
+  "extraFiles": [
+    "404.html"
+  ],
+  "recallFloor": 0.95,
+  "contentRunFloor": 12,
+  "meanRecall": 0.9293,
+  "counts": {
+    "blocker": 196,
+    "minor": 161,
+    "major": 40
+  },
+  "verdict": "DRIFT",
+  "rows": [
+    {
+      "url": "https://www.riversidefamilyeyecare.com/",
+      "file": "index.html",
+      "pageType": "home",
+      "status": "DIFFERS",
+      "recall": 0.998,
+      "missingWords": 3,
+      "longestMissingRun": 3,
+      "sourceWords": 1456,
+      "rebuiltWords": 1464,
+      "sourceH1": [
+        "Your Eye Doctor in Fort Myers, Florida"
+      ],
+      "rebuiltH1": [
+        "Your Eye Doctor in Fort Myers, Florida"
+      ],
+      "sourceLinks": 12,
+      "rebuiltLinks": 85,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "3 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "8 image(s) without alt",
+          "detail": "index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/404-page-not-found",
+      "file": "404-page-not-found/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.752,
+      "missingWords": 91,
+      "longestMissingRun": 27,
+      "sourceWords": 351,
+      "rebuiltWords": 266,
+      "sourceH1": [
+        "404"
+      ],
+      "rebuiltH1": [
+        "404"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 75.2% (floor 95%)",
+          "detail": "missing words: return top of menu hours location meet team our staff services comprehensive exams pediatric eye dry myopia management emergency care lasik eyeglasses lenses insurance doctors"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "27 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "404-page-not-found/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare",
+      "file": "author/riversidefamilyeyecare/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7267,
+      "missingWords": 91,
+      "longestMissingRun": 29,
+      "sourceWords": 320,
+      "rebuiltWords": 235,
+      "sourceH1": [
+        "Author: riversidefamilyeyecare"
+      ],
+      "rebuiltH1": [
+        "Author: riversidefamilyeyecare"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Why Eye Checkups Are Important | Riverside Family Eye Care\" -> \"Author: riversidefamilyeyecare\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "author/riversidefamilyeyecare/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 72.7% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive exams pediatric eye dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "29 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "author/riversidefamilyeyecare/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/autoimmune-disease-and-dry-eye-2023",
+      "file": "autoimmune-disease-and-dry-eye-2023/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 491,
+      "rebuiltWords": 566,
+      "sourceH1": [
+        "Autoimmune Disease and Dry Eye: Is There a Connection?"
+      ],
+      "rebuiltH1": [
+        "Autoimmune Disease and Dry Eye: Is There a Connection?"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "autoimmune-disease-and-dry-eye-2023/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/cataract-surgery-co-management-your-path-to-clear-vision",
+      "file": "cataract-surgery-co-management-your-path-to-clear-vision/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 542,
+      "rebuiltWords": 618,
+      "sourceH1": [
+        "Cataract Surgery Co-Management: Your Path to Clear Vision"
+      ],
+      "rebuiltH1": [
+        "Cataract Surgery Co-Management: Your Path to Clear Vision"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "cataract-surgery-co-management-your-path-to-clear-vision/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/category/news",
+      "file": "category/news/index.html",
+      "pageType": "blog-index",
+      "status": "DIFFERS",
+      "recall": 0.7828,
+      "missingWords": 91,
+      "longestMissingRun": 10,
+      "sourceWords": 404,
+      "rebuiltWords": 319,
+      "sourceH1": [
+        "News"
+      ],
+      "rebuiltH1": [
+        "News"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 76,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"What to Expect at Your Specialized Dry Eye Assessment in Fort Myers\" -> \"News\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "category/news/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 78.3% (floor 95%)",
+          "detail": "missing words: return top of menu hours location meet our team doctors the staff services comprehensive exams pediatric treatment emergency lasik eyeglasses lenses insurance care myopia management"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "category/news/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/category/our-doctors",
+      "file": "category/our-doctors/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7182,
+      "missingWords": 93,
+      "longestMissingRun": 40,
+      "sourceWords": 315,
+      "rebuiltWords": 228,
+      "sourceH1": [
+        "Nothing Found"
+      ],
+      "rebuiltH1": [
+        "Nothing Found"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "5 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "category/our-doctors/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/category/our-staff",
+      "file": "category/our-staff/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7182,
+      "missingWords": 93,
+      "longestMissingRun": 40,
+      "sourceWords": 315,
+      "rebuiltWords": 228,
+      "sourceH1": [
+        "Nothing Found"
+      ],
+      "rebuiltH1": [
+        "Nothing Found"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "5 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "category/our-staff/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/category/testimonials",
+      "file": "category/testimonials/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7182,
+      "missingWords": 93,
+      "longestMissingRun": 40,
+      "sourceWords": 315,
+      "rebuiltWords": 228,
+      "sourceH1": [
+        "Nothing Found"
+      ],
+      "rebuiltH1": [
+        "Nothing Found"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "5 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "category/testimonials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/category/uncategorized",
+      "file": "category/uncategorized/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7242,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 317,
+      "rebuiltWords": 232,
+      "sourceH1": [
+        "Uncategorized"
+      ],
+      "rebuiltH1": [
+        "Uncategorized"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"7 Causes of Dry Eye in Fort Myers | Florida Weather & Your Eyes\" -> \"Uncategorized\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "category/uncategorized/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 72.4% (floor 95%)",
+          "detail": "missing words: return to menu hours location meet our team doctors the staff services comprehensive exams pediatric eye treatment myopia management emergency lasik eyeglasses lenses insurance care"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "category/uncategorized/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/cherry-payment-plan",
+      "file": "cherry-payment-plan/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.6161,
+      "missingWords": 86,
+      "longestMissingRun": 32,
+      "sourceWords": 222,
+      "rebuiltWords": 141,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Cherry Payment Plan"
+      ],
+      "sourceLinks": 8,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 61.6% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff eye services comprehensive exams pediatric care dry treatment myopia management emergency lasik"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "32 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "3 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "cherry-payment-plan/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses",
+      "file": "contact-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.9959,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 470,
+      "rebuiltWords": 468,
+      "sourceH1": [
+        "A WIDE SELECTION OF CONTACT LENSES IN Fort Myers, Florida"
+      ],
+      "rebuiltH1": [
+        "A WIDE SELECTION OF CONTACT LENSES IN Fort Myers, Florida"
+      ],
+      "sourceLinks": 16,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "contact-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/bifocal-and-multifocal-contact-lenses",
+      "file": "contact-lenses/bifocal-and-multifocal-contact-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 845,
+      "rebuiltWords": 921,
+      "sourceH1": [
+        "Bifocal and Multifocal Contact Lenses"
+      ],
+      "rebuiltH1": [
+        "Bifocal and Multifocal Contact Lenses"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/bifocal-and-multifocal-contact-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/contact-lenses-for-the-hard-to-fit-patient",
+      "file": "contact-lenses/contact-lenses-for-the-hard-to-fit-patient/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1109,
+      "rebuiltWords": 1185,
+      "sourceH1": [
+        "Contact Lenses for the “Hard-to-Fit” Patient"
+      ],
+      "rebuiltH1": [
+        "Contact Lenses for the “Hard-to-Fit” Patient"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/contact-lenses-for-the-hard-to-fit-patient/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/disposable-contacts",
+      "file": "contact-lenses/disposable-contacts/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 344,
+      "rebuiltWords": 420,
+      "sourceH1": [
+        "Disposable Contact Lenses"
+      ],
+      "rebuiltH1": [
+        "Disposable Contact Lenses"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/disposable-contacts/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/eye-exams-for-contact-lenses",
+      "file": "contact-lenses/eye-exams-for-contact-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1008,
+      "rebuiltWords": 1084,
+      "sourceH1": [
+        "Eye Exams for Contact Lenses"
+      ],
+      "rebuiltH1": [
+        "Eye Exams for Contact Lenses"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/eye-exams-for-contact-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/gas-permeable-gp-contact-lenses",
+      "file": "contact-lenses/gas-permeable-gp-contact-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 615,
+      "rebuiltWords": 691,
+      "sourceH1": [
+        "Gas Permeable (GP) Contact Lenses"
+      ],
+      "rebuiltH1": [
+        "Gas Permeable (GP) Contact Lenses"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/gas-permeable-gp-contact-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands",
+      "file": "contact-lenses/our-featured-brands/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7813,
+      "missingWords": 91,
+      "longestMissingRun": 20,
+      "sourceWords": 405,
+      "rebuiltWords": 320,
+      "sourceH1": [
+        "Our Featured Brands"
+      ],
+      "rebuiltH1": [
+        "Our Featured Brands"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 78.1% (floor 95%)",
+          "detail": "missing words: return top menu hours location meet team doctors staff services comprehensive exams pediatric eye dry treatment myopia management emergency lasik eyeglasses insurance our care cherry"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "20 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/our-featured-brands/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/alcon",
+      "file": "contact-lenses/our-featured-brands/alcon/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.7318,
+      "missingWords": 735,
+      "longestMissingRun": 61,
+      "sourceWords": 2725,
+      "rebuiltWords": 2156,
+      "sourceH1": [
+        "Alcon"
+      ],
+      "rebuiltH1": [
+        "Alcon"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 73.2% (floor 95%)",
+          "detail": "missing words: nbs feels nothing cushion almost very highest compared gliding lasts until life babies help embrace freedom tiny pairs big woven into dna each layer because"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "61 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"as smartsurface te wearing precision1 for astigmatism means you ll always say yasss to the things you love even if you have astigmatism only contact lenses uniquely designed to correct astigmatism can\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "16 image(s) without alt",
+          "detail": "contact-lenses/our-featured-brands/alcon/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/bausch-lomb",
+      "file": "contact-lenses/our-featured-brands/bausch-lomb/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.7763,
+      "missingWords": 529,
+      "longestMissingRun": 13,
+      "sourceWords": 2321,
+      "rebuiltWords": 1973,
+      "sourceH1": [
+        "Bausch & Lomb"
+      ],
+      "rebuiltH1": [
+        "Bausch & Lomb"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 77.6% (floor 95%)",
+          "detail": "missing words: moistureseal demands device users 60 adults spend each 73 individuals 20s symptoms digital strain out relieve their feeling success predictable fit outstanding 80 successfully visit"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "13 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"asphere consisting of multiple aspheric zones with a spherical base curve the most\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "12 image(s) without alt",
+          "detail": "contact-lenses/our-featured-brands/bausch-lomb/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/coopervision",
+      "file": "contact-lenses/our-featured-brands/coopervision/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.7714,
+      "missingWords": 1119,
+      "longestMissingRun": 34,
+      "sourceWords": 4720,
+      "rebuiltWords": 3777,
+      "sourceH1": [
+        "Coopervision"
+      ],
+      "rebuiltH1": [
+        "Coopervision"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 77.1% (floor 95%)",
+          "detail": "missing words: contin energys zone optics there's tired people adapt seamlessly digital cornerstone clinically approved initially old suitable young handle corrects children approach misight single progression years"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "34 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"available coopervision proclear toric has a proven track record of providing outstanding vision health and comfort proclear toric lenses feature a soft low modulus that helps reduce the risk of advers\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "23 image(s) without alt",
+          "detail": "contact-lenses/our-featured-brands/coopervision/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/johnson-johnson",
+      "file": "contact-lenses/our-featured-brands/johnson-johnson/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.791,
+      "missingWords": 643,
+      "longestMissingRun": 53,
+      "sourceWords": 2956,
+      "rebuiltWords": 2511,
+      "sourceH1": [
+        "Johnson & Johnson"
+      ],
+      "rebuiltH1": [
+        "Johnson & Johnson"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 79.1% (floor 95%)",
+          "detail": "missing words: uniquely enabling presbyopic distance intermediate tasks things love approximately multifocal demands work each excellent staring digital devices handling properties avai enhanced helping irritation embedded wetting"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "53 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"availab the superb design of acuvue 2 2 week features a smooth front surface that makes it easy to put on and take off your contact lenses key features a versatile contact lens for clear comfortable v\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "14 image(s) without alt",
+          "detail": "contact-lenses/our-featured-brands/johnson-johnson/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-lenses/toric-contact-lenses-for-astigmatism",
+      "file": "contact-lenses/toric-contact-lenses-for-astigmatism/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 408,
+      "rebuiltWords": 484,
+      "sourceH1": [
+        "Toric Contact Lenses for Astigmatism"
+      ],
+      "rebuiltH1": [
+        "Toric Contact Lenses for Astigmatism"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-lenses/toric-contact-lenses-for-astigmatism/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-us",
+      "file": "contact-us/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 120,
+      "rebuiltWords": 196,
+      "sourceH1": [
+        "Contact Us"
+      ],
+      "rebuiltH1": [
+        "Contact Us"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 73,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-us/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form",
+      "file": "contact-us/appointment-request-form/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.912,
+      "missingWords": 11,
+      "longestMissingRun": 6,
+      "sourceWords": 132,
+      "rebuiltWords": 330,
+      "sourceH1": [
+        "Appointment Request Form"
+      ],
+      "rebuiltH1": [
+        "Appointment Request Form"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 91.2% (floor 95%)",
+          "detail": "missing words: captcha this field is for validation purposes should be left unchanged"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "contact-us/appointment-request-form/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-us/appointment-request-form/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/contact-form",
+      "file": "contact-us/contact-form/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.747,
+      "missingWords": 104,
+      "longestMissingRun": 24,
+      "sourceWords": 402,
+      "rebuiltWords": 304,
+      "sourceH1": [
+        "Email Us"
+      ],
+      "rebuiltH1": [
+        "Email Us"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 74.7% (floor 95%)",
+          "detail": "missing words: return top of menu hours location meet team doctors the staff comprehensive eye exams pediatric dry treatment myopia management care lasik eyeglasses lenses insurance our"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "24 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "contact-us/contact-form/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-us/contact-form/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/patient-forms",
+      "file": "contact-us/patient-forms/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.74,
+      "missingWords": 91,
+      "longestMissingRun": 29,
+      "sourceWords": 339,
+      "rebuiltWords": 254,
+      "sourceH1": [
+        "Patient Forms"
+      ],
+      "rebuiltH1": [
+        "Patient Forms"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 74.0% (floor 95%)",
+          "detail": "missing words: return top menu hours location meet our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik eyeglasses lenses insurance"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "29 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-us/patient-forms/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/contact-us/testimonials",
+      "file": "contact-us/testimonials/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7579,
+      "missingWords": 92,
+      "longestMissingRun": 20,
+      "sourceWords": 369,
+      "rebuiltWords": 283,
+      "sourceH1": [
+        "Testimonials"
+      ],
+      "rebuiltH1": [
+        "Testimonials"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 75.8% (floor 95%)",
+          "detail": "missing words: return to top menu hours location meet our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik eyeglasses lenses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "20 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "contact-us/testimonials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/disclaimer",
+      "file": "disclaimer/index.html",
+      "pageType": "legal",
+      "status": "DIFFERS",
+      "recall": 0.4768,
+      "missingWords": 203,
+      "longestMissingRun": 22,
+      "sourceWords": 382,
+      "rebuiltWords": 375,
+      "sourceH1": [
+        "Disclaimer"
+      ],
+      "rebuiltH1": [
+        "Disclaimer"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 47.7% (floor 95%)",
+          "detail": "missing words: basic graphical template parts have been created a service provided eyecarepro any affiliated companies its endorse products or treatments described mentioned discussed of web pages"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "22 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"eyecarepro does not permanently store nor use transmit other than for its intended use record or otherwise make any use of this\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "disclaimer/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/dry-eyes-driving-you-crazy-heres-how-ipl-could-help",
+      "file": "dry-eyes-driving-you-crazy-heres-how-ipl-could-help/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1011,
+      "rebuiltWords": 1087,
+      "sourceH1": [
+        "Dry Eyes Driving You Crazy? Here’s How IPL Could Help"
+      ],
+      "rebuiltH1": [
+        "Dry Eyes Driving You Crazy? Here’s How IPL Could Help"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "dry-eyes-driving-you-crazy-heres-how-ipl-could-help/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/everything-you-need-to-know-about-uv-rays",
+      "file": "everything-you-need-to-know-about-uv-rays/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 583,
+      "rebuiltWords": 659,
+      "sourceH1": [
+        "Everything You Need to Know About UV Rays"
+      ],
+      "rebuiltH1": [
+        "Everything You Need to Know About UV Rays"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "everything-you-need-to-know-about-uv-rays/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services",
+      "file": "eye-care-services/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.9967,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 596,
+      "rebuiltWords": 594,
+      "sourceH1": [
+        "EYE CARE SERVICES IN Fort Myers"
+      ],
+      "rebuiltH1": [
+        "EYE CARE SERVICES IN Fort Myers"
+      ],
+      "sourceLinks": 11,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eye-care-services/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/cataract-surgery-co-management",
+      "file": "eye-care-services/cataract-surgery-co-management/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.997,
+      "missingWords": 2,
+      "longestMissingRun": 1,
+      "sourceWords": 637,
+      "rebuiltWords": 711,
+      "sourceH1": [
+        "Cataract Co-Management in Fort Myers, FL"
+      ],
+      "rebuiltH1": [
+        "Cataract Co-Management in Fort Myers, FL"
+      ],
+      "sourceLinks": 11,
+      "rebuiltLinks": 72,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eye-care-services/cataract-surgery-co-management/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams",
+      "file": "eye-care-services/contact-lens-exams/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1029,
+      "rebuiltWords": 1105,
+      "sourceH1": [
+        "Contact Lens Exams"
+      ],
+      "rebuiltH1": [
+        "Contact Lens Exams"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/contact-lens-exams/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams/hard-to-fit",
+      "file": "eye-care-services/contact-lens-exams/hard-to-fit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1114,
+      "rebuiltWords": 1190,
+      "sourceH1": [
+        "Hard-to-Fit Contacts"
+      ],
+      "rebuiltH1": [
+        "Hard-to-Fit Contacts"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/contact-lens-exams/hard-to-fit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment",
+      "file": "eye-care-services/dry-eye-disease-and-treatment/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 792,
+      "rebuiltWords": 869,
+      "sourceH1": [
+        "Dry Eye Treatment in Fort Myers, Florida"
+      ],
+      "rebuiltH1": [
+        "Dry Eye Treatment in Fort Myers, Florida"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eye-care-services/dry-eye-disease-and-treatment/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/envision-inmode",
+      "file": "eye-care-services/dry-eye-disease-and-treatment/envision-inmode/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 598,
+      "rebuiltWords": 674,
+      "sourceH1": [
+        "Envision Inmode"
+      ],
+      "rebuiltH1": [
+        "Envision Inmode"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/dry-eye-disease-and-treatment/envision-inmode/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions",
+      "file": "eye-care-services/eye-conditions/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 241,
+      "rebuiltWords": 317,
+      "sourceH1": [
+        "Eye Condition Treatment"
+      ],
+      "rebuiltH1": [
+        "Eye Condition Treatment"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-conditions/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment",
+      "file": "eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 267,
+      "rebuiltWords": 343,
+      "sourceH1": [
+        "Astigmatism"
+      ],
+      "rebuiltH1": [
+        "Astigmatism"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment",
+      "file": "eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 746,
+      "rebuiltWords": 822,
+      "sourceH1": [
+        "Presbyopia Treatment"
+      ],
+      "rebuiltH1": [
+        "Presbyopia Treatment"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes",
+      "file": "eye-care-services/eye-emergencies-pink-red-eyes/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1065,
+      "rebuiltWords": 1141,
+      "sourceH1": [
+        "Eye Emergencies (Pink/Red Eyes) in Fort Myers"
+      ],
+      "rebuiltH1": [
+        "Eye Emergencies (Pink/Red Eyes) in Fort Myers"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 73,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-emergencies-pink-red-eyes/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams",
+      "file": "eye-care-services/eye-exams/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 635,
+      "rebuiltWords": 711,
+      "sourceH1": [
+        "Comprehensive Eye Exams"
+      ],
+      "rebuiltH1": [
+        "Comprehensive Eye Exams"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-exams/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/advanced-technology",
+      "file": "eye-care-services/eye-exams/advanced-technology/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 390,
+      "rebuiltWords": 466,
+      "sourceH1": [
+        "Technology – Advanced Eye Care"
+      ],
+      "rebuiltH1": [
+        "Technology – Advanced Eye Care"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-exams/advanced-technology/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams",
+      "file": "eye-care-services/eye-exams/pediatric-eye-exams/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 653,
+      "rebuiltWords": 729,
+      "sourceH1": [
+        "Kid’s Eye Exams in Fort Myers, FL"
+      ],
+      "rebuiltH1": [
+        "Kid’s Eye Exams in Fort Myers, FL"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eye-care-services/eye-exams/pediatric-eye-exams/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams/infantsee",
+      "file": "eye-care-services/eye-exams/pediatric-eye-exams/infantsee/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 534,
+      "rebuiltWords": 610,
+      "sourceH1": [
+        "InfantSEE®"
+      ],
+      "rebuiltH1": [
+        "InfantSEE®"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-exams/pediatric-eye-exams/infantsee/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/what-to-expect",
+      "file": "eye-care-services/eye-exams/what-to-expect/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 694,
+      "rebuiltWords": 770,
+      "sourceH1": [
+        "What to Expect From Your Eye Exam"
+      ],
+      "rebuiltH1": [
+        "What to Expect From Your Eye Exam"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/eye-exams/what-to-expect/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/faq",
+      "file": "eye-care-services/faq/index.html",
+      "pageType": "faq",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1510,
+      "rebuiltWords": 1586,
+      "sourceH1": [
+        "Frequently Asked Questions (FAQ)"
+      ],
+      "rebuiltH1": [
+        "Frequently Asked Questions (FAQ)"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/faq/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/lasik-refractive-surgery-co-management",
+      "file": "eye-care-services/lasik-refractive-surgery-co-management/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1150,
+      "rebuiltWords": 1226,
+      "sourceH1": [
+        "LASIK & Refractive Surgery Co-Management in Fort Myers, FL"
+      ],
+      "rebuiltH1": [
+        "LASIK & Refractive Surgery Co-Management in Fort Myers, FL"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/lasik-refractive-surgery-co-management/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases",
+      "file": "eye-care-services/management-of-ocular-diseases/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 313,
+      "rebuiltWords": 389,
+      "sourceH1": [
+        "Eye Disease Management"
+      ],
+      "rebuiltH1": [
+        "Eye Disease Management"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/management-of-ocular-diseases/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/glaucoma",
+      "file": "eye-care-services/management-of-ocular-diseases/glaucoma/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 786,
+      "rebuiltWords": 863,
+      "sourceH1": [
+        "Eye Disease Management in Fort Myers"
+      ],
+      "rebuiltH1": [
+        "Eye Disease Management in Fort Myers"
+      ],
+      "sourceLinks": 14,
+      "rebuiltLinks": 75,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/management-of-ocular-diseases/glaucoma/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy",
+      "file": "eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 252,
+      "rebuiltWords": 328,
+      "sourceH1": [
+        "Diabetic Eye Disease"
+      ],
+      "rebuiltH1": [
+        "Diabetic Eye Disease"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration",
+      "file": "eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 354,
+      "rebuiltWords": 430,
+      "sourceH1": [
+        "Macular Degeneration"
+      ],
+      "rebuiltH1": [
+        "Macular Degeneration"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-care-services/nearsighted-myopia",
+      "file": "eye-care-services/nearsighted-myopia/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 867,
+      "rebuiltWords": 944,
+      "sourceH1": [
+        "Myopia Management in Southwest Florida"
+      ],
+      "rebuiltH1": [
+        "Myopia Management in Southwest Florida"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-care-services/nearsighted-myopia/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care",
+      "file": "eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1172,
+      "rebuiltWords": 1248,
+      "sourceH1": [
+        "Eye Exam FAQs: What to Expect at Riverside Family Eye Care",
+        "Introduction"
+      ],
+      "rebuiltH1": [
+        "Eye Exam FAQs: What to Expect at Riverside Family Eye Care"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eye-exam-faqs-what-to-expect-at-riverside-family-eye-care/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses",
+      "file": "eyeglasses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.9955,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 444,
+      "rebuiltWords": 442,
+      "sourceH1": [
+        "CHOICE-EYEGLASSES in Fort Myers"
+      ],
+      "rebuiltH1": [
+        "CHOICE-EYEGLASSES in Fort Myers"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/designer-frames",
+      "file": "eyeglasses/designer-frames/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 173,
+      "rebuiltWords": 173,
+      "sourceH1": [
+        "DESIGNER EYEWEAR"
+      ],
+      "rebuiltH1": [
+        "DESIGNER EYEWEAR"
+      ],
+      "sourceLinks": 8,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "3 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eyeglasses/designer-frames/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics",
+      "file": "eyeglasses/eyeglass-basics/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 786,
+      "rebuiltWords": 862,
+      "sourceH1": [
+        "Eyeglass Basics"
+      ],
+      "rebuiltH1": [
+        "Eyeglass Basics"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/eyeglass-basics/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/eyeglass-frames",
+      "file": "eyeglasses/eyeglass-basics/eyeglass-frames/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 528,
+      "rebuiltWords": 604,
+      "sourceH1": [
+        "Eyeglass Frames"
+      ],
+      "rebuiltH1": [
+        "Eyeglass Frames"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/eyeglass-basics/eyeglass-frames/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses",
+      "file": "eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 708,
+      "rebuiltWords": 784,
+      "sourceH1": [
+        "Lens Options for Eyeglasses"
+      ],
+      "rebuiltH1": [
+        "Lens Options for Eyeglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-guide",
+      "file": "eyeglasses/eyeglass-guide/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 224,
+      "rebuiltWords": 300,
+      "sourceH1": [
+        "EyeGlass Guide"
+      ],
+      "rebuiltH1": [
+        "EyeGlass Guide"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/eyeglass-guide/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/kids-optical",
+      "file": "eyeglasses/kids-optical/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 602,
+      "rebuiltWords": 678,
+      "sourceH1": [
+        "Kid’s Optical"
+      ],
+      "rebuiltH1": [
+        "Kid’s Optical"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/kids-optical/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments",
+      "file": "eyeglasses/lens-treatments/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 155,
+      "rebuiltWords": 231,
+      "sourceH1": [
+        "Lens Treatments"
+      ],
+      "rebuiltH1": [
+        "Lens Treatments"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/lens-treatments/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/anti-reflective",
+      "file": "eyeglasses/lens-treatments/anti-reflective/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 289,
+      "rebuiltWords": 365,
+      "sourceH1": [
+        "Anti-Reflective Coating for Lenses"
+      ],
+      "rebuiltH1": [
+        "Anti-Reflective Coating for Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/lens-treatments/anti-reflective/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/scratch-resistant",
+      "file": "eyeglasses/lens-treatments/scratch-resistant/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 199,
+      "rebuiltWords": 275,
+      "sourceH1": [
+        "Scratch Resistant Lenses"
+      ],
+      "rebuiltH1": [
+        "Scratch Resistant Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/lens-treatments/scratch-resistant/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/lens-treatments/uv-protection",
+      "file": "eyeglasses/lens-treatments/uv-protection/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 266,
+      "rebuiltWords": 342,
+      "sourceH1": [
+        "UV Protection"
+      ],
+      "rebuiltH1": [
+        "UV Protection"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/lens-treatments/uv-protection/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses",
+      "file": "eyeglasses/prescription-eyeglasses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 292,
+      "rebuiltWords": 368,
+      "sourceH1": [
+        "Prescription Eyeglasses"
+      ],
+      "rebuiltH1": [
+        "Prescription Eyeglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 75,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/bifocal-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/bifocal-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 223,
+      "rebuiltWords": 299,
+      "sourceH1": [
+        "Bifocal Lenses"
+      ],
+      "rebuiltH1": [
+        "Bifocal Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/bifocal-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/caring-for-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/caring-for-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 428,
+      "rebuiltWords": 504,
+      "sourceH1": [
+        "Caring for Lenses"
+      ],
+      "rebuiltH1": [
+        "Caring for Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/caring-for-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials",
+      "file": "eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 675,
+      "rebuiltWords": 751,
+      "sourceH1": [
+        "Eyeglass Frame Materials"
+      ],
+      "rebuiltH1": [
+        "Eyeglass Frame Materials"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/frame-maintenance",
+      "file": "eyeglasses/prescription-eyeglasses/frame-maintenance/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 507,
+      "rebuiltWords": 583,
+      "sourceH1": [
+        "Frame Maintenance"
+      ],
+      "rebuiltH1": [
+        "Frame Maintenance"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/frame-maintenance/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 235,
+      "rebuiltWords": 311,
+      "sourceH1": [
+        "High Index and Aspheric Lenses"
+      ],
+      "rebuiltH1": [
+        "High Index and Aspheric Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/photochromic-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/photochromic-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7869,
+      "missingWords": 91,
+      "longestMissingRun": 19,
+      "sourceWords": 416,
+      "rebuiltWords": 331,
+      "sourceH1": [
+        "Photochromic Lenses"
+      ],
+      "rebuiltH1": [
+        "Photochromic Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 78.7% (floor 95%)",
+          "detail": "missing words: top menu hours location meet our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik insurance contact cherry payment"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "19 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/photochromic-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/polycarbonate-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/polycarbonate-lenses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 249,
+      "rebuiltWords": 325,
+      "sourceH1": [
+        "Polycarbonate Lenses"
+      ],
+      "rebuiltH1": [
+        "Polycarbonate Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/polycarbonate-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/progressive-lenses",
+      "file": "eyeglasses/prescription-eyeglasses/progressive-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 141,
+      "rebuiltWords": 217,
+      "sourceH1": [
+        "Progressive Lenses"
+      ],
+      "rebuiltH1": [
+        "Progressive Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/prescription-eyeglasses/progressive-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear",
+      "file": "eyeglasses/specialty-eyewear/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 377,
+      "rebuiltWords": 453,
+      "sourceH1": [
+        "Specialty Eyewear"
+      ],
+      "rebuiltH1": [
+        "Specialty Eyewear"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 73,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance",
+      "file": "eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 928,
+      "rebuiltWords": 1004,
+      "sourceH1": [
+        "Contacts & Glasses that Enhance Performance"
+      ],
+      "rebuiltH1": [
+        "Contacts & Glasses that Enhance Performance"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/safety-and-sports-glasses",
+      "file": "eyeglasses/specialty-eyewear/safety-and-sports-glasses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 747,
+      "rebuiltWords": 823,
+      "sourceH1": [
+        "Safety and Sports Glasses"
+      ],
+      "rebuiltH1": [
+        "Safety and Sports Glasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/safety-and-sports-glasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles",
+      "file": "eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 538,
+      "rebuiltWords": 614,
+      "sourceH1": [
+        "Eyewear for Swimming, Snorkeling and Scuba Diving"
+      ],
+      "rebuiltH1": [
+        "Eyewear for Swimming, Snorkeling and Scuba Diving"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear",
+      "file": "eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 586,
+      "rebuiltWords": 662,
+      "sourceH1": [
+        "Shooting Glasses and Hunting Eyewear"
+      ],
+      "rebuiltH1": [
+        "Shooting Glasses and Hunting Eyewear"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/specialty-eyewear-overview",
+      "file": "eyeglasses/specialty-eyewear/specialty-eyewear-overview/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 526,
+      "rebuiltWords": 602,
+      "sourceH1": [
+        "Specialty Eyewear Overview"
+      ],
+      "rebuiltH1": [
+        "Specialty Eyewear Overview"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/specialty-eyewear/specialty-eyewear-overview/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses",
+      "file": "eyeglasses/sunglasses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 289,
+      "rebuiltWords": 365,
+      "sourceH1": [
+        "Sunglasses"
+      ],
+      "rebuiltH1": [
+        "Sunglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 73,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/nonprescription-sunglasses",
+      "file": "eyeglasses/sunglasses/nonprescription-sunglasses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 653,
+      "rebuiltWords": 729,
+      "sourceH1": [
+        "Nonprescription Sunglasses"
+      ],
+      "rebuiltH1": [
+        "Nonprescription Sunglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/nonprescription-sunglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/performance-and-sport-sunglasses",
+      "file": "eyeglasses/sunglasses/performance-and-sport-sunglasses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 504,
+      "rebuiltWords": 580,
+      "sourceH1": [
+        "Performance and Sport Sunglasses"
+      ],
+      "rebuiltH1": [
+        "Performance and Sport Sunglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/performance-and-sport-sunglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglass-treatments",
+      "file": "eyeglasses/sunglasses/prescription-sunglass-treatments/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 173,
+      "rebuiltWords": 249,
+      "sourceH1": [
+        "Prescription Sunglass Treatments"
+      ],
+      "rebuiltH1": [
+        "Prescription Sunglass Treatments"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/prescription-sunglass-treatments/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglasses",
+      "file": "eyeglasses/sunglasses/prescription-sunglasses/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 455,
+      "rebuiltWords": 531,
+      "sourceH1": [
+        "Prescription Sunglasses"
+      ],
+      "rebuiltH1": [
+        "Prescription Sunglasses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/prescription-sunglasses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/sunglasses-for-kids",
+      "file": "eyeglasses/sunglasses/sunglasses-for-kids/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 535,
+      "rebuiltWords": 611,
+      "sourceH1": [
+        "Sunglasses for Kids"
+      ],
+      "rebuiltH1": [
+        "Sunglasses for Kids"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/sunglasses/sunglasses-for-kids/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses",
+      "file": "eyeglasses/transitions-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 314,
+      "rebuiltWords": 390,
+      "sourceH1": [
+        "Transitions® Lenses"
+      ],
+      "rebuiltH1": [
+        "Transitions® Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 72,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/transitions-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/are-transitions-right-for-you",
+      "file": "eyeglasses/transitions-lenses/are-transitions-right-for-you/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 254,
+      "rebuiltWords": 330,
+      "sourceH1": [
+        "Are Transitions® Lenses Right For You?"
+      ],
+      "rebuiltH1": [
+        "Are Transitions® Lenses Right For You?"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/transitions-lenses/are-transitions-right-for-you/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/original-transitions-lenses",
+      "file": "eyeglasses/transitions-lenses/original-transitions-lenses/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7918,
+      "missingWords": 91,
+      "longestMissingRun": 21,
+      "sourceWords": 426,
+      "rebuiltWords": 341,
+      "sourceH1": [
+        "The Original Transitions Lenses"
+      ],
+      "rebuiltH1": [
+        "The Original Transitions Lenses"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 79.2% (floor 95%)",
+          "detail": "missing words: return top menu hours location our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik insurance meet eyeglasses contact"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "21 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/transitions-lenses/original-transitions-lenses/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/transition-solfx-sunwear-products",
+      "file": "eyeglasses/transitions-lenses/transition-solfx-sunwear-products/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 173,
+      "rebuiltWords": 249,
+      "sourceH1": [
+        "Transitions® SOLFX Sunwear Products"
+      ],
+      "rebuiltH1": [
+        "Transitions® SOLFX Sunwear Products"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/transitions-lenses/transition-solfx-sunwear-products/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/transitions-xtractive",
+      "file": "eyeglasses/transitions-lenses/transitions-xtractive/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7964,
+      "missingWords": 91,
+      "longestMissingRun": 21,
+      "sourceWords": 434,
+      "rebuiltWords": 349,
+      "sourceH1": [
+        "Transitions® Lenses XTRActive"
+      ],
+      "rebuiltH1": [
+        "Transitions® Lenses XTRActive"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 79.6% (floor 95%)",
+          "detail": "missing words: return top menu hours location meet our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik insurance eyeglasses contact"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "21 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "eyeglasses/transitions-lenses/transitions-xtractive/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023",
+      "file": "eyes-a-window-into-your-health-2023/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 399,
+      "rebuiltWords": 475,
+      "sourceH1": [
+        "Your Eyes As A Window Into Your Whole-Body Health"
+      ],
+      "rebuiltH1": [
+        "Your Eyes As A Window Into Your Whole-Body Health"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "eyes-a-window-into-your-health-2023/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/glaucoma-awareness-starts-with-an-eye-exam",
+      "file": "glaucoma-awareness-starts-with-an-eye-exam/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 655,
+      "rebuiltWords": 731,
+      "sourceH1": [
+        "Glaucoma Awareness Starts with an Eye Exam"
+      ],
+      "rebuiltH1": [
+        "Glaucoma Awareness Starts with an Eye Exam"
+      ],
+      "sourceLinks": 11,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "glaucoma-awareness-starts-with-an-eye-exam/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/hours-location",
+      "file": "hours-location/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.9919,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 236,
+      "rebuiltWords": 234,
+      "sourceH1": [
+        "Our Eye Care Practice in Fort Myers"
+      ],
+      "rebuiltH1": [
+        "Our Eye Care Practice in Fort Myers"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "hours-location/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/how-poor-vision-could-stunt-your-childs-academic-performance",
+      "file": "how-poor-vision-could-stunt-your-childs-academic-performance/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 614,
+      "rebuiltWords": 690,
+      "sourceH1": [
+        "How Poor Vision Could Stunt Your Child’s Academic Performance"
+      ],
+      "rebuiltH1": [
+        "How Poor Vision Could Stunt Your Child’s Academic Performance"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "how-poor-vision-could-stunt-your-childs-academic-performance/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023",
+      "file": "how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 608,
+      "rebuiltWords": 684,
+      "sourceH1": [
+        "How Safe Is It To Rinse Your Eyes With Tap Water?"
+      ],
+      "rebuiltH1": [
+        "How Safe Is It To Rinse Your Eyes With Tap Water?"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/inmode-forma-and-lumecca-a-breakthrough-in-eye-care",
+      "file": "inmode-forma-and-lumecca-a-breakthrough-in-eye-care/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 675,
+      "rebuiltWords": 751,
+      "sourceH1": [
+        "InMode Forma and Lumecca: A Breakthrough in Eye Care"
+      ],
+      "rebuiltH1": [
+        "InMode Forma and Lumecca: A Breakthrough in Eye Care"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "inmode-forma-and-lumecca-a-breakthrough-in-eye-care/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/insurance",
+      "file": "insurance/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9933,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 296,
+      "rebuiltWords": 294,
+      "sourceH1": [
+        "Our Optometry Practice in Fort Myers Accepts The Following Insurance Plans:"
+      ],
+      "rebuiltH1": [
+        "Our Optometry Practice in Fort Myers Accepts The Following Insurance Plans:"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 64,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "insurance/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/insurance/carecredit",
+      "file": "insurance/carecredit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 210,
+      "rebuiltWords": 286,
+      "sourceH1": [
+        "CareCredit"
+      ],
+      "rebuiltH1": [
+        "CareCredit"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "insurance/carecredit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/insurance/faqs-of-vision-insurance-plans",
+      "file": "insurance/faqs-of-vision-insurance-plans/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 437,
+      "rebuiltWords": 513,
+      "sourceH1": [
+        "FAQs of Vision Insurance Plans"
+      ],
+      "rebuiltH1": [
+        "FAQs of Vision Insurance Plans"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "insurance/faqs-of-vision-insurance-plans/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/insurance/whats-in-your-vision-insurance-plan",
+      "file": "insurance/whats-in-your-vision-insurance-plan/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 735,
+      "rebuiltWords": 811,
+      "sourceH1": [
+        "What’s in Your Vision Insurance Plan"
+      ],
+      "rebuiltH1": [
+        "What’s in Your Vision Insurance Plan"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "insurance/whats-in-your-vision-insurance-plan/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/location/riverside-family-eyecare",
+      "file": "location/riverside-family-eyecare/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7147,
+      "missingWords": 91,
+      "longestMissingRun": 29,
+      "sourceWords": 306,
+      "rebuiltWords": 217,
+      "sourceH1": [
+        "Riverside Family Eye Care"
+      ],
+      "rebuiltH1": [
+        "Riverside Family Eye Care"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 64,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.5% (floor 95%)",
+          "detail": "missing words: return to top of menu location meet our team doctors the staff services comprehensive exams pediatric eye dry treatment myopia management emergency lasik eyeglasses lenses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "29 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "location/riverside-family-eyecare/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children",
+      "file": "myopia-management-strategies-for-growing-children/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 765,
+      "rebuiltWords": 841,
+      "sourceH1": [
+        "Myopia Management Strategies for Growing Children"
+      ],
+      "rebuiltH1": [
+        "Myopia Management Strategies for Growing Children"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "myopia-management-strategies-for-growing-children/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/our-eye-doctors",
+      "file": "our-eye-doctors/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9944,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 353,
+      "rebuiltWords": 360,
+      "sourceH1": [
+        "Fort Myers OPTOMETRISTS"
+      ],
+      "rebuiltH1": [
+        "Fort Myers OPTOMETRISTS"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "our-eye-doctors/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/privacy-policy",
+      "file": "privacy-policy/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1869,
+      "rebuiltWords": 1945,
+      "sourceH1": [
+        "Privacy Policy"
+      ],
+      "rebuiltH1": [
+        "Privacy Policy"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "privacy-policy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices",
+      "file": "riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 834,
+      "rebuiltWords": 910,
+      "sourceH1": [
+        "Riverside Family Eye Care’s Guide to Visual Hygiene on Electronic Devices"
+      ],
+      "rebuiltH1": [
+        "Riverside Family Eye Care’s Guide to Visual Hygiene on Electronic Devices"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution",
+      "file": "scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 661,
+      "rebuiltWords": 737,
+      "sourceH1": [
+        "Scleral Contact Lenses: A Comfortable and Effective Vision Correction Solution"
+      ],
+      "rebuiltH1": [
+        "Scleral Contact Lenses: A Comfortable and Effective Vision Correction Solution"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/sitemap",
+      "file": "sitemap/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9954,
+      "missingWords": 5,
+      "longestMissingRun": 2,
+      "sourceWords": 1071,
+      "rebuiltWords": 1147,
+      "sourceH1": [
+        "Sitemap"
+      ],
+      "rebuiltH1": [
+        "Sitemap"
+      ],
+      "sourceLinks": 20,
+      "rebuiltLinks": 179,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "5 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "sitemap/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/all-about-vision",
+      "file": "tag/all-about-vision/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7415,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 340,
+      "rebuiltWords": 255,
+      "sourceH1": [
+        "All About Vision"
+      ],
+      "rebuiltH1": [
+        "All About Vision"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 76,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Eyeglass Basics | Fort Myers Optical | Riverside Family Eye Care\" -> \"All About Vision\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/all-about-vision/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 74.1% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/all-about-vision/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy",
+      "file": "tag/diabetic-retinopathy/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7183,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 309,
+      "rebuiltWords": 224,
+      "sourceH1": [
+        "Diabetic Retinopathy"
+      ],
+      "rebuiltH1": [
+        "Diabetic Retinopathy"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"What Your Eyes Reveal About Health | Riverside Family Eye Care\" -> \"Diabetic Retinopathy\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/diabetic-retinopathy/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/diabetic-retinopathy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/dry-eye",
+      "file": "tag/dry-eye/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7292,
+      "missingWords": 91,
+      "longestMissingRun": 20,
+      "sourceWords": 322,
+      "rebuiltWords": 237,
+      "sourceH1": [
+        "Dry Eye"
+      ],
+      "rebuiltH1": [
+        "Dry Eye"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Is Rinsing Eyes with Tap Water Safe? | Eye Care in Fort Myers\" -> \"Dry Eye\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/dry-eye/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 72.9% (floor 95%)",
+          "detail": "missing words: return top menu hours location meet our team doctors staff services comprehensive exams pediatric eye treatment myopia management emergency care lasik eyeglasses lenses insurance the"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "20 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return to top of menu\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/dry-eye/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/dry-eyes",
+      "file": "tag/dry-eyes/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.72,
+      "missingWords": 91,
+      "longestMissingRun": 20,
+      "sourceWords": 311,
+      "rebuiltWords": 226,
+      "sourceH1": [
+        "Dry Eyes"
+      ],
+      "rebuiltH1": [
+        "Dry Eyes"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Defeat Dry Eye Syndrome This Winter in Fort Myers, Florida\" -> \"Dry Eyes\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/dry-eyes/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 72.0% (floor 95%)",
+          "detail": "missing words: return to top menu hours location meet our team doctors staff services comprehensive eye exams pediatric treatment myopia management emergency care lasik eyeglasses lenses insurance"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "20 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return to top of menu\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/dry-eyes/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/eye-emergencies",
+      "file": "tag/eye-emergencies/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7165,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 306,
+      "rebuiltWords": 221,
+      "sourceH1": [
+        "eye-emergencies"
+      ],
+      "rebuiltH1": [
+        "eye-emergencies"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Emergency Eye Care in Fort Myers | Riverside Family Eye Care\" -> \"eye-emergencies\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/eye-emergencies/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.7% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive exams pediatric dry eye treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/eye-emergencies/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/eye-exam",
+      "file": "tag/eye-exam/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7183,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 309,
+      "rebuiltWords": 224,
+      "sourceH1": [
+        "Eye Exam"
+      ],
+      "rebuiltH1": [
+        "Eye Exam"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"What Your Eyes Reveal About Health | Riverside Family Eye Care\" -> \"Eye Exam\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/eye-exam/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive exams pediatric eye dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/eye-exam/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams",
+      "file": "tag/family-eye-exams/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7251,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 318,
+      "rebuiltWords": 233,
+      "sourceH1": [
+        "family eye exams"
+      ],
+      "rebuiltH1": [
+        "family eye exams"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Family Eye Exams in Fort Myers | Riverside Family Eye Care\" -> \"family eye exams\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/family-eye-exams/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 72.5% (floor 95%)",
+          "detail": "missing words: return top of menu hours location meet our team doctors the staff services comprehensive pediatric dry treatment myopia management emergency eye lasik eyeglasses lenses insurance"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/family-eye-exams/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams",
+      "file": "tag/gsp-contact-lens-exams/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7138,
+      "missingWords": 91,
+      "longestMissingRun": 15,
+      "sourceWords": 305,
+      "rebuiltWords": 220,
+      "sourceH1": [
+        "Gsp Contact Lens Exams"
+      ],
+      "rebuiltH1": [
+        "Gsp Contact Lens Exams"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Contact Lens Exam in Fort Myers | Riverside Family Eye Care\" -> \"Gsp Contact Lens Exams\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/gsp-contact-lens-exams/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.4% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye pediatric dry treatment myopia management emergency care lasik eyeglasses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "15 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/gsp-contact-lens-exams/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies",
+      "file": "tag/gsp-eye-emergencies/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7174,
+      "missingWords": 91,
+      "longestMissingRun": 40,
+      "sourceWords": 308,
+      "rebuiltWords": 223,
+      "sourceH1": [
+        "Gsp Eye Emergencies"
+      ],
+      "rebuiltH1": [
+        "Gsp Eye Emergencies"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Emergency Eye Care in Fort Myers | Riverside Family Eye Care\" -> \"Gsp Eye Emergencies\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/gsp-eye-emergencies/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.7% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive exams pediatric dry eye treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/gsp-eye-emergencies/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock",
+      "file": "tag/licansed-by-adobe-stock/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7182,
+      "missingWords": 93,
+      "longestMissingRun": 40,
+      "sourceWords": 315,
+      "rebuiltWords": 228,
+      "sourceH1": [
+        "Nothing Found"
+      ],
+      "rebuiltH1": [
+        "Nothing Found"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.8% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-block-missing",
+          "title": "40 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lens\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "5 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/licansed-by-adobe-stock/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions",
+      "file": "tag/myopia-management-solutions/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7156,
+      "missingWords": 91,
+      "longestMissingRun": 22,
+      "sourceWords": 307,
+      "rebuiltWords": 222,
+      "sourceH1": [
+        "myopia management solutions"
+      ],
+      "rebuiltH1": [
+        "myopia management solutions"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Myopia Management in Fort Myers – Protect Your Child's Eyes\" -> \"myopia management solutions\""
+        },
+        {
+          "severity": "major",
+          "code": "description-lost",
+          "title": "Meta description lost",
+          "detail": "tag/myopia-management-solutions/index.html"
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 71.6% (floor 95%)",
+          "detail": "missing words: return to top of menu hours location meet our team doctors the staff services comprehensive eye exams pediatric dry treatment emergency care lasik eyeglasses lenses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "22 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"hours location meet our team our eye doctors the staff eye care services comprehensive eye exams pediatric eye care dry eye treatment\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "tag/myopia-management-solutions/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/asma-sahees",
+      "file": "team/asma-sahees/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 291,
+      "rebuiltWords": 367,
+      "sourceH1": [
+        "Asma"
+      ],
+      "rebuiltH1": [
+        "Asma"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/asma-sahees/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-brittany-degler-od",
+      "file": "team/dr-brittany-degler-od/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 375,
+      "rebuiltWords": 452,
+      "sourceH1": [
+        "Dr. Brittany Degler, O.D."
+      ],
+      "rebuiltH1": [
+        "Dr. Brittany Degler, O.D."
+      ],
+      "sourceLinks": 11,
+      "rebuiltLinks": 72,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/dr-brittany-degler-od/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/dr-kristin-nelson-od",
+      "file": "team/dr-kristin-nelson-od/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 240,
+      "rebuiltWords": 321,
+      "sourceH1": [
+        "Dr. Kristin Nelson, O.D., IACMM"
+      ],
+      "rebuiltH1": [
+        "Dr. Kristin Nelson, O.D., IACMM"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/dr-kristin-nelson-od/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/erica-eis",
+      "file": "team/erica-eis/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 350,
+      "rebuiltWords": 426,
+      "sourceH1": [
+        "Erica"
+      ],
+      "rebuiltH1": [
+        "Erica"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/erica-eis/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/heather",
+      "file": "team/heather/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 183,
+      "rebuiltWords": 260,
+      "sourceH1": [
+        "Heather"
+      ],
+      "rebuiltH1": [
+        "Heather"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/heather/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/jhonae-anglin",
+      "file": "team/jhonae-anglin/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 0.8004,
+      "missingWords": 91,
+      "longestMissingRun": 24,
+      "sourceWords": 443,
+      "rebuiltWords": 359,
+      "sourceH1": [
+        "Jhonae"
+      ],
+      "rebuiltH1": [
+        "Jhonae"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 80.0% (floor 95%)",
+          "detail": "missing words: return top menu hours location meet our doctors services comprehensive exams pediatric eye dry treatment myopia management emergency lasik eyeglasses lenses insurance care contact cherry"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "24 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/jhonae-anglin/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/kristina",
+      "file": "team/kristina/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 361,
+      "rebuiltWords": 437,
+      "sourceH1": [
+        "Kristina"
+      ],
+      "rebuiltH1": [
+        "Kristina"
+      ],
+      "sourceLinks": 11,
+      "rebuiltLinks": 73,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/kristina/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/maivys-longa",
+      "file": "team/maivys-longa/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 411,
+      "rebuiltWords": 491,
+      "sourceH1": [
+        "Dr. Maivys Longa, O.D."
+      ],
+      "rebuiltH1": [
+        "Dr. Maivys Longa, O.D."
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 68,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/maivys-longa/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/nancy",
+      "file": "team/nancy/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 305,
+      "rebuiltWords": 381,
+      "sourceH1": [
+        "Nancy"
+      ],
+      "rebuiltH1": [
+        "Nancy"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/nancy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/rose-johnson",
+      "file": "team/rose-johnson/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 236,
+      "rebuiltWords": 312,
+      "sourceH1": [
+        "Rose"
+      ],
+      "rebuiltH1": [
+        "Rose"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/rose-johnson/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/team/xaiene-dos-santos-da-costa",
+      "file": "team/xaiene-dos-santos-da-costa/index.html",
+      "pageType": "about",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 335,
+      "rebuiltWords": 412,
+      "sourceH1": [
+        "Xaiene"
+      ],
+      "rebuiltH1": [
+        "Xaiene"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "2 image(s) without alt",
+          "detail": "team/xaiene-dos-santos-da-costa/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/footer",
+      "file": "template/footer/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.8409,
+      "missingWords": 7,
+      "longestMissingRun": 4,
+      "sourceWords": 37,
+      "rebuiltWords": 155,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Footer"
+      ],
+      "sourceLinks": 3,
+      "rebuiltLinks": 62,
+      "findings": [
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 84.1% (floor 95%)",
+          "detail": "missing words: home us what s new speak field"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "3 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/footer/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/footer-2",
+      "file": "template/footer-2/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.8696,
+      "missingWords": 6,
+      "longestMissingRun": 3,
+      "sourceWords": 41,
+      "rebuiltWords": 159,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Footer-NEW"
+      ],
+      "sourceLinks": 3,
+      "rebuiltLinks": 62,
+      "findings": [
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 87.0% (floor 95%)",
+          "detail": "missing words: home us what s speak field"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "3 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/footer-2/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/header",
+      "file": "template/header/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.9615,
+      "missingWords": 4,
+      "longestMissingRun": 3,
+      "sourceWords": 104,
+      "rebuiltWords": 159,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Header"
+      ],
+      "sourceLinks": 4,
+      "rebuiltLinks": 60,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "2 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/header/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/header-2",
+      "file": "template/header-2/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.8992,
+      "missingWords": 12,
+      "longestMissingRun": 5,
+      "sourceWords": 117,
+      "rebuiltWords": 163,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Header – MultiLoc"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 89.9% (floor 95%)",
+          "detail": "missing words: call return to top menu of"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "2 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/header-2/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/header-3",
+      "file": "template/header-3/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.592,
+      "missingWords": 71,
+      "longestMissingRun": 31,
+      "sourceWords": 176,
+      "rebuiltWords": 154,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Header-NEW"
+      ],
+      "sourceLinks": 5,
+      "rebuiltLinks": 60,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 59.2% (floor 95%)",
+          "detail": "missing words: return to top menu hours location meet our team doctors staff eye services comprehensive exams pediatric care dry treatment myopia management emergency lasik eyeglasses lenses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "31 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return to top of\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "2 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/header-3/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/template/inner-header",
+      "file": "template/inner-header/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.5943,
+      "missingWords": 71,
+      "longestMissingRun": 32,
+      "sourceWords": 177,
+      "rebuiltWords": 156,
+      "sourceH1": [],
+      "rebuiltH1": [
+        "Inner Header"
+      ],
+      "sourceLinks": 8,
+      "rebuiltLinks": 62,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 59.4% (floor 95%)",
+          "detail": "missing words: return to top hours location meet our team doctors staff eye services comprehensive exams pediatric care dry treatment myopia management emergency lasik eyeglasses lenses insurance"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "32 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return to top of\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "2 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "template/inner-header/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/testimonial/this-was-a-great-experience",
+      "file": "testimonial/this-was-a-great-experience/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 0.7592,
+      "missingWords": 92,
+      "longestMissingRun": 31,
+      "sourceWords": 371,
+      "rebuiltWords": 285,
+      "sourceH1": [
+        "This was a great experience!"
+      ],
+      "rebuiltH1": [
+        "This was a great experience!"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 67,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 75.9% (floor 95%)",
+          "detail": "missing words: return to top menu hours location meet our team doctors staff services comprehensive eye exams pediatric dry treatment myopia management emergency care lasik eyeglasses lenses"
+        },
+        {
+          "severity": "major",
+          "code": "content-block-missing",
+          "title": "31 consecutive source words absent from the rebuild (limit 12)",
+          "detail": "\"staff eye care services comprehensive eye exams pediatric eye care dry eye treatment myopia management emergency eye care lasik eyeglasses contact lenses insurance cherry payment plan return to top of\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "testimonial/this-was-a-great-experience/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/the-staff",
+      "file": "the-staff/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9962,
+      "missingWords": 2,
+      "longestMissingRun": 2,
+      "sourceWords": 532,
+      "rebuiltWords": 533,
+      "sourceH1": [
+        "THE STAFF AT Riverside Family Eye Care"
+      ],
+      "rebuiltH1": [
+        "THE STAFF AT Riverside Family Eye Care"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 75,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "the-staff/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers",
+      "file": "top-causes-of-dry-eye-in-fort-myers/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 602,
+      "rebuiltWords": 678,
+      "sourceH1": [
+        "Top 7 Causes of Dry Eye in Fort Myers and How Local Climate Affects Your Eyes"
+      ],
+      "rebuiltH1": [
+        "Top 7 Causes of Dry Eye in Fort Myers and How Local Climate Affects Your Eyes"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "top-causes-of-dry-eye-in-fort-myers/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/website-accessibility-policy",
+      "file": "website-accessibility-policy/index.html",
+      "pageType": "form",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 1143,
+      "rebuiltWords": 1219,
+      "sourceH1": [
+        "Website Accessibility Policy"
+      ],
+      "rebuiltH1": [
+        "Website Accessibility Policy"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 69,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "website-accessibility-policy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar",
+      "file": "what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 672,
+      "rebuiltWords": 748,
+      "sourceH1": [
+        "What Every Mom Needs to Know Before Booking a Family Eye Exam at Riverside Family Eye Care"
+      ],
+      "rebuiltH1": [
+        "What Every Mom Needs to Know Before Booking a Family Eye Exam at Riverside Family Eye Care"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers",
+      "file": "what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 593,
+      "rebuiltWords": 669,
+      "sourceH1": [
+        "What Happens During a Dry Eye Assessment? A Non-Invasive Exam for Gritty Eyes in Fort Myers"
+      ],
+      "rebuiltH1": [
+        "What Happens During a Dry Eye Assessment? A Non-Invasive Exam for Gritty Eyes in Fort Myers"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "what-happens-during-a-dry-eye-assessment-a-non-invasive-exam-for-gritty-eyes-in-fort-myers/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment",
+      "file": "what-to-expect-at-your-specialized-dry-eye-assessment/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 623,
+      "rebuiltWords": 699,
+      "sourceH1": [
+        "What to Expect at Your Specialized Dry Eye Assessment"
+      ],
+      "rebuiltH1": [
+        "What to Expect at Your Specialized Dry Eye Assessment"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "what-to-expect-at-your-specialized-dry-eye-assessment/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/whats-new",
+      "file": "whats-new/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9956,
+      "missingWords": 5,
+      "longestMissingRun": 1,
+      "sourceWords": 1098,
+      "rebuiltWords": 1311,
+      "sourceH1": [
+        "What’s New"
+      ],
+      "rebuiltH1": [
+        "What’s New"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 108,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "whats-new/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions",
+      "file": "why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 479,
+      "rebuiltWords": 555,
+      "sourceH1": [
+        "Why Regular Optometry Visits Are Crucial for Managing Eye Conditions"
+      ],
+      "rebuiltH1": [
+        "Why Regular Optometry Visits Are Crucial for Managing Eye Conditions"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "why-regular-optometry-visits-are-crucial-for-managing-eye-conditions/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/why-some-dry-eye-treatments-dont-work-what-actually-does",
+      "file": "why-some-dry-eye-treatments-dont-work-what-actually-does/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 971,
+      "rebuiltWords": 1047,
+      "sourceH1": [
+        "Why Some Dry Eye Treatments Don’t Work & What Actually Does"
+      ],
+      "rebuiltH1": [
+        "Why Some Dry Eye Treatments Don’t Work & What Actually Does"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 71,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "why-some-dry-eye-treatments-dont-work-what-actually-does/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/winter-dry-eyes-2023",
+      "file": "winter-dry-eyes-2023/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 341,
+      "rebuiltWords": 417,
+      "sourceH1": [
+        "This Winter, Don’t Let Dry Eyes Get the Best of You"
+      ],
+      "rebuiltH1": [
+        "This Winter, Don’t Let Dry Eyes Get the Best of You"
+      ],
+      "sourceLinks": 9,
+      "rebuiltLinks": 74,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "4 image(s) without alt",
+          "detail": "winter-dry-eyes-2023/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.riversidefamilyeyecare.com/workplace-eye-wellness-tips-for-clearer-easier-workdays",
+      "file": "workplace-eye-wellness-tips-for-clearer-easier-workdays/index.html",
+      "pageType": "portfolio",
+      "status": "DIFFERS",
+      "recall": 1,
+      "missingWords": 0,
+      "longestMissingRun": 0,
+      "sourceWords": 872,
+      "rebuiltWords": 948,
+      "sourceH1": [
+        "Workplace Eye Wellness Tips for Clearer, Easier Workdays"
+      ],
+      "rebuiltH1": [
+        "Workplace Eye Wellness Tips for Clearer, Easier Workdays"
+      ],
+      "sourceLinks": 10,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "form-lost",
+          "title": "Form removed",
+          "detail": "4 form(s) on source, 0 on rebuild"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "workplace-eye-wellness-tips-for-clearer-easier-workdays/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1083 @@
+{
+  "schema": "site-reforge/seo-report@1",
+  "generated": "2026-10-06T17:41:57.695Z",
+  "origin": "https://www.riversidefamilyeyecare.com",
+  "buildDir": "dist",
+  "siteUrl": "https://www.riversidefamilyeyecare.com",
+  "mode": "migrating (replaces the original at its own domain)",
+  "limits": {
+    "titleMax": 60,
+    "titleMin": 15,
+    "descMax": 160,
+    "descMin": 50
+  },
+  "pages": 148,
+  "emitted": null,
+  "externalLinks": null,
+  "repaired": null,
+  "counts": {
+    "source": {
+      "major": 58,
+      "minor": 79,
+      "blocker": 11
+    },
+    "migration": {},
+    "byCode": {
+      "canonical-missing": 17,
+      "title-too-long": 57,
+      "description-too-long": 3,
+      "title-missing": 4,
+      "description-missing": 14,
+      "og-title-missing": 4,
+      "h1-missing": 7,
+      "alt-missing": 4,
+      "h1-multiple": 1,
+      "title-too-short": 6,
+      "title-duplicate": 11,
+      "description-duplicate": 12,
+      "canonical-points-elsewhere": 8
+    }
+  },
+  "findings": {
+    "source": [
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/autoimmune-disease-and-dry-eye-2023",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/cataract-surgery-co-management-your-path-to-clear-vision",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/category/news",
+        "field": "title",
+        "detail": "67 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "description-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/category/news",
+        "field": "description",
+        "detail": "197 chars (limit 160)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/news",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "blocker",
+        "code": "title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-doctors",
+        "field": "title",
+        "detail": "no <title>"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-doctors",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-doctors",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "og-title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-doctors",
+        "field": "og:title",
+        "detail": "no og:title"
+      },
+      {
+        "severity": "blocker",
+        "code": "title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-staff",
+        "field": "title",
+        "detail": "no <title>"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-staff",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-staff",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "og-title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/our-staff",
+        "field": "og:title",
+        "detail": "no og:title"
+      },
+      {
+        "severity": "blocker",
+        "code": "title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/testimonials",
+        "field": "title",
+        "detail": "no <title>"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/testimonials",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/testimonials",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "og-title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/testimonials",
+        "field": "og:title",
+        "detail": "no og:title"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/category/uncategorized",
+        "field": "title",
+        "detail": "63 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/category/uncategorized",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/cherry-payment-plan",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/bifocal-and-multifocal-contact-lenses",
+        "field": "title",
+        "detail": "63 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/disposable-contacts",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/gas-permeable-gp-contact-lenses",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "alt-missing",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/alcon",
+        "field": "alt",
+        "detail": "13 of 16 images have no alt"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/bausch-lomb",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "alt-missing",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/bausch-lomb",
+        "field": "alt",
+        "detail": "9 of 12 images have no alt"
+      },
+      {
+        "severity": "major",
+        "code": "alt-missing",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/coopervision",
+        "field": "alt",
+        "detail": "20 of 23 images have no alt"
+      },
+      {
+        "severity": "major",
+        "code": "alt-missing",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/our-featured-brands/johnson-johnson",
+        "field": "alt",
+        "detail": "11 of 14 images have no alt"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-lenses/toric-contact-lenses-for-astigmatism",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/contact-us/appointment-request-form",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/everything-you-need-to-know-about-uv-rays",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/cataract-surgery-co-management",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams/hard-to-fit",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "description-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment",
+        "field": "description",
+        "detail": "178 chars (limit 160)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/envision-inmode",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-exams/pediatric-eye-exams/infantsee",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/faq",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/lasik-refractive-surgery-co-management",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/glaucoma",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy",
+        "field": "title",
+        "detail": "63 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "h1-multiple",
+        "page": "https://www.riversidefamilyeyecare.com/eye-exam-faqs-what-to-expect-at-riverside-family-eye-care",
+        "field": "h1",
+        "detail": "2 H1 elements"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-guide",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/photochromic-lenses",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/prescription-eyeglasses/polycarbonate-lenses",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/safety-and-sports-glasses",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/specialty-eyewear/specialty-eyewear-overview",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/nonprescription-sunglasses",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglass-treatments",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/prescription-sunglasses",
+        "field": "title",
+        "detail": "65 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/sunglasses/sunglasses-for-kids",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/are-transitions-right-for-you",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/transitions-lenses/transition-solfx-sunwear-products",
+        "field": "title",
+        "detail": "63 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/hours-location",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/how-poor-vision-could-stunt-your-childs-academic-performance",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/inmode-forma-and-lumecca-a-breakthrough-in-eye-care",
+        "field": "title",
+        "detail": "66 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/scleral-contact-lenses-a-comfortable-and-effective-vision-correction-solution",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/sitemap",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/tag/all-about-vision",
+        "field": "title",
+        "detail": "64 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/all-about-vision",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/tag/dry-eye",
+        "field": "title",
+        "detail": "61 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/dry-eye",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/dry-eyes",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/eye-emergencies",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/tag/eye-exam",
+        "field": "title",
+        "detail": "62 chars (limit 60)"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/eye-exam",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "blocker",
+        "code": "title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock",
+        "field": "title",
+        "detail": "no <title>"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "minor",
+        "code": "og-title-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/licansed-by-adobe-stock",
+        "field": "og:title",
+        "detail": "no og:title"
+      },
+      {
+        "severity": "major",
+        "code": "canonical-missing",
+        "page": "https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions",
+        "field": "canonical",
+        "detail": "no rel=canonical"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/team/dr-kristin-nelson-od",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/team/jhonae-anglin",
+        "field": "title",
+        "detail": "6 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/team/jhonae-anglin",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/team/maivys-longa",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer",
+        "field": "title",
+        "detail": "6 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer-2",
+        "field": "title",
+        "detail": "10 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer-2",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/footer-2",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/template/header",
+        "field": "title",
+        "detail": "6 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header-2",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header-2",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/template/header-3",
+        "field": "title",
+        "detail": "10 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header-3",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/header-3",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-short",
+        "page": "https://www.riversidefamilyeyecare.com/template/inner-header",
+        "field": "title",
+        "detail": "12 chars"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/inner-header",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "blocker",
+        "code": "h1-missing",
+        "page": "https://www.riversidefamilyeyecare.com/template/inner-header",
+        "field": "h1",
+        "detail": "no H1 on the page"
+      },
+      {
+        "severity": "major",
+        "code": "description-missing",
+        "page": "https://www.riversidefamilyeyecare.com/testimonial/this-was-a-great-experience",
+        "field": "description",
+        "detail": "no meta description"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers",
+        "field": "title",
+        "detail": "63 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "title-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment",
+        "field": "title",
+        "detail": "67 chars (limit 60)"
+      },
+      {
+        "severity": "minor",
+        "code": "description-too-long",
+        "page": "https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment",
+        "field": "description",
+        "detail": "197 chars (limit 160)"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare",
+        "field": "title",
+        "detail": "2 pages share \"Why Eye Checkups Are Important | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare , https://www.riversidefamilyeyecare.com/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/category/news",
+        "field": "title",
+        "detail": "2 pages share \"What to Expect at Your Specialized Dry Eye Assessment in Fort Myers\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/category/news , https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/category/uncategorized",
+        "field": "title",
+        "detail": "2 pages share \"7 Causes of Dry Eye in Fort Myers | Florida Weather & Your Eyes\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/category/uncategorized , https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams",
+        "field": "title",
+        "detail": "2 pages share \"Contact Lens Exam in Fort Myers | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams , https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes",
+        "field": "title",
+        "detail": "3 pages share \"Emergency Eye Care in Fort Myers | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes , https://www.riversidefamilyeyecare.com/tag/eye-emergencies , https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics",
+        "field": "title",
+        "detail": "2 pages share \"Eyeglass Basics | Fort Myers Optical | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics , https://www.riversidefamilyeyecare.com/tag/all-about-vision"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023",
+        "field": "title",
+        "detail": "3 pages share \"What Your Eyes Reveal About Health | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023 , https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy , https://www.riversidefamilyeyecare.com/tag/eye-exam"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023",
+        "field": "title",
+        "detail": "2 pages share \"Is Rinsing Eyes with Tap Water Safe? | Eye Care in Fort Myers\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023 , https://www.riversidefamilyeyecare.com/tag/dry-eye"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children",
+        "field": "title",
+        "detail": "2 pages share \"Myopia Management in Fort Myers – Protect Your Child's Eyes\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children , https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/tag/dry-eyes",
+        "field": "title",
+        "detail": "2 pages share \"Defeat Dry Eye Syndrome This Winter in Fort Myers, Florida\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/tag/dry-eyes , https://www.riversidefamilyeyecare.com/winter-dry-eyes-2023"
+      },
+      {
+        "severity": "major",
+        "code": "title-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams",
+        "field": "title",
+        "detail": "2 pages share \"Family Eye Exams in Fort Myers | Riverside Family Eye Care\" and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/tag/family-eye-exams , https://www.riversidefamilyeyecare.com/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/author/riversidefamilyeyecare , https://www.riversidefamilyeyecare.com/why-regular-optometry-visits-are-crucial-for-managing-eye-conditions"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/category/news",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/category/news , https://www.riversidefamilyeyecare.com/what-to-expect-at-your-specialized-dry-eye-assessment"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/category/uncategorized",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/category/uncategorized , https://www.riversidefamilyeyecare.com/top-causes-of-dry-eye-in-fort-myers"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/cherry-payment-plan",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/cherry-payment-plan , https://www.riversidefamilyeyecare.com/eye-care-services"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eye-care-services/contact-lens-exams , https://www.riversidefamilyeyecare.com/tag/gsp-contact-lens-exams"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes",
+        "field": "description",
+        "detail": "3 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eye-care-services/eye-emergencies-pink-red-eyes , https://www.riversidefamilyeyecare.com/tag/eye-emergencies , https://www.riversidefamilyeyecare.com/tag/gsp-eye-emergencies"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eyeglasses/eyeglass-basics , https://www.riversidefamilyeyecare.com/tag/all-about-vision"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023",
+        "field": "description",
+        "detail": "3 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/eyes-a-window-into-your-health-2023 , https://www.riversidefamilyeyecare.com/tag/diabetic-retinopathy , https://www.riversidefamilyeyecare.com/tag/eye-exam"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/how-safe-is-it-to-rinse-your-eyes-with-tap-water-2023 , https://www.riversidefamilyeyecare.com/tag/dry-eye"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/myopia-management-strategies-for-growing-children , https://www.riversidefamilyeyecare.com/tag/myopia-management-solutions"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/tag/dry-eyes",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/tag/dry-eyes , https://www.riversidefamilyeyecare.com/winter-dry-eyes-2023"
+      },
+      {
+        "severity": "major",
+        "code": "description-duplicate",
+        "page": "https://www.riversidefamilyeyecare.com/tag/family-eye-exams",
+        "field": "description",
+        "detail": "2 pages share a description and do NOT share one canonical — e.g. https://www.riversidefamilyeyecare.com/tag/family-eye-exams , https://www.riversidefamilyeyecare.com/what-every-mom-needs-to-know-before-booking-a-family-eye-exam-at-riverside-family-eyecar"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/location/riverside-family-eyecare",
+        "field": "canonical",
+        "detail": "canonicalises to /hours-location — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/asma-sahees",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/erica-eis",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/heather",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/kristina",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/nancy",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/rose-johnson",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      },
+      {
+        "severity": "minor",
+        "code": "canonical-points-elsewhere",
+        "page": "https://www.riversidefamilyeyecare.com/team/xaiene-dos-santos-da-costa",
+        "field": "canonical",
+        "detail": "canonicalises to /the-staff — that page is indexed, this one is not"
+      }
+    ],
+    "migration": []
+  },
+  "note": "READ-ONLY. This run wrote no page and repaired nothing. SOURCE findings are the live site's own defects and repairing them is an improvement, not a preservation. MIGRATION findings are damage the rebuild created and did not exist on the source."
+}

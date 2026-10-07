@@ -224,3 +224,24 @@ two heading links, so what remains is a copy change with non-breaking characters
 M-LOOK-12 at 1024 px and up (the videos keep the grey default poster on desktop; the phone rule applied site-wide would
 change the signed-off desktop); R3 on the 5 placeholder-plate pages and the river crossing the arch faces at 769-1023 px
 (15.1); MT-R3's fastest flings (15.2); the side-by-side doctor blocks at 769-1023 px (15.3).
+
+## F. Site restructure to the Eye Trends structure (operator, 2026-10-07)
+
+The operator's instruction, verbatim: "Revise the site architecture of Riverside, I want to copy the site structure of
+https://eyetrendsclearlake.com/ but retain the text copies and content of riverside. For internal pages that is not present
+in current riverside live site, use the content from eye trends clear lake but replace the company name with Riverside
+Family Eye Care. Skip the long verification process and keep it as simple as possible to make this process faster".
+
+What the build does now (`docs/BUILD-NOTES.md` section 16): the menus and URLs follow Eye Trends (Home, About Us, Services
+in 5 groups, Eyewear, Insurance, Reviews, Visit Us, and its footer columns); the 148 source pages keep their own text at
+their new paths; 11 pages the source site does not have carry Eye Trends' text adapted to Riverside
+(`src/content/adopted/*.json`, each with an `edits` list of every change). Each row below waits on the practice.
+
+| item | what the visitor gets today | decision |
+|---|---|---|
+| F1 the 11 adopted pages | `/services/` adult-eye-exams, senior-eye-exams, childrens-eye-care, childrens-contact-lenses, back-to-school-eye-exams, pink-eye-conjunctivitis, foreign-body-removal, red-eye-treatment, flashes-floaters, same-day-contacts, and `/terms/`. Eye Trends' name, town, phone, doctor (Dr. Hyder), founding year, years in practice, one-doctor continuity, exam length, Saturday hours, Medicare and named insurers, reviews and stat strips were removed; what stays describes each service as Eye Trends does | Confirm Riverside offers each service as described, in particular: children's contact lens fittings with follow-ups; a myopia program with atropine or multifocal lenses (`childrens-eye-care`); foreign-body removal with numbing drops and rust-ring removal; pink-eye and red-eye treatment with prescription drops; same-day contact fittings from trial lenses in stock; that eye injuries and pink eye are billed to medical insurance |
+| F2 permission for the adopted text | The 11 pages are Eye Trends' wording | Confirm the text may be used on Riverside's site (the author of the Eye Trends copy, or the agency that wrote it, agrees) |
+| F3 Terms of Use | Eye Trends' terms, which say themselves: "Placeholder — not yet reviewed. ... It has not been written or reviewed by an attorney". Governing law changed from Texas to Florida, venue from Harris County to Lee County; effective date "August 2026" is Eye Trends' | Replace with counsel-approved terms before launch |
+| F4 moved URLs | 77 source pages moved (`src/lib/restructure.mjs` MOVES, a page below a moved page moves with it). `dist/_redirects` and `dist/.htaccess` carry 93 rules: one 301 per moved page plus the 16 live aliases re-pointed to the new paths. The GitHub Pages preview, which reads no redirect file, serves a noindex redirect page at each old path | Keep at launch; submit the new `sitemap.xml` (128 URLs) in Search Console |
+| F5 the About Us path | `/our-doctors/` (Eye Trends has `/our-doctor`, for its one doctor; Riverside has three) | Confirm, or use `/our-doctor/` |
+| F6 pages the Eye Trends menus have no place for | Our Staff and Contact Us are in the footer's Practice and Contact columns; the Cherry page is the footer's financing link; the blog index is `/eye-health/`; the lens, frame and contact-lens articles sit under `/products/`; the eye-conditions, FAQ, technology and InfantSEE pages under `/services/`; blog posts, team bios, forms, archives and legal pages keep their paths | Confirm, or name pages to add to the menus |

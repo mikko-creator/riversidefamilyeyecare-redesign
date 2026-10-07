@@ -851,7 +851,7 @@
     },
     "added": {
       "why": "Images the redesign adds through model.art (DESIGN-SPEC 4.3 P4; src/content/image-plan.json; IMAGE-PLAN 2-4): the generated title-arch defaults, the generated stand-ins in the slots of refused stock photos (`replaces`: the declared-dropped source image they stand in for) and added illustrations (ai: true, AI-labelled files, P7), the home cut-outs and lens, and two real arches (TB-contact: the practice-interior photo; TB-team: Dr. Degler's own portrait on her team page). `file` is the model `url` file; its srcset variants share its base name.",
-      "count": 146,
+      "count": 157,
       "onPages": [
         {
           "page": "/404-page-not-found/",
@@ -1750,6 +1750,86 @@
           "ai": true
         },
         {
+          "page": "/services/adult-eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/back-to-school-eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/childrens-contact-lenses/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/childrens-eye-care/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/flashes-floaters/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/foreign-body-removal/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/pink-eye-conjunctivitis/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/red-eye-treatment/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/same-day-contacts/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/services/senior-eye-exams/",
+          "slot": "title-arch",
+          "id": "TB-ecs",
+          "file": "gen-tb-ecs.de623d80af.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
           "page": "/sitemap/",
           "slot": "title-arch",
           "id": "TB-utility",
@@ -1895,6 +1975,14 @@
         },
         {
           "page": "/template/inner-header/",
+          "slot": "title-arch",
+          "id": "TB-utility",
+          "file": "gen-tb-utility.a08f1d29ce.webp",
+          "alt": "",
+          "ai": true
+        },
+        {
+          "page": "/terms/",
           "slot": "title-arch",
           "id": "TB-utility",
           "file": "gen-tb-utility.a08f1d29ce.webp",

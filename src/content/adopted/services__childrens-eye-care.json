@@ -1,0 +1,30 @@
+{
+  "path": "/services/childrens-eye-care/",
+  "source": "https://eyetrendsclearlake.com/services/childrens-eye-care",
+  "title": "Children's Eye Care in Fort Myers | Riverside Family Eye Care",
+  "metaDescription": "Children's eye care in Fort Myers: pediatric exams, first contact lens fittings, back-to-school checks and myopia management. Vision and medical plans accepted.",
+  "h1": "Children's eye care in Fort Myers",
+  "html": "<p>One place in Fort Myers for every stage of your child's vision - gentle eye exams from age 4 to 5, their first contact lenses when they're ready, back-to-school checks, and a myopia program that helps slow nearsightedness as they grow. We check their eyes year after year, so nothing slips through the cracks between visits.</p><p><a href=\"/contact-us/appointment-request-form/\">Request Appointment</a> or call <a href=\"tel:239-500-2020\">239-500-2020</a>.</p><h2>The four kinds of kids' care, all in one place</h2><p>Pick the exact care your child needs and book it in one step, instead of hunting across the site.</p><ul><li><a href=\"/services/pediatric-eye-exams/\">Pediatric Eye Exams</a>: thorough, patient exams for kids from age 4 to 5, plus school-vision screening that catches what a quick classroom check can miss.</li><li><a href=\"/services/childrens-contact-lenses/\">Kids' Contact Lenses</a>: careful first-contact fittings with hands-on handling lessons, usually around ages 10 to 12, so a nervous first-timer leaves knowing how to put lenses in and take them back out.</li><li><a href=\"/services/back-to-school-eye-exams/\">Back-to-School Eye Exams</a>: checks so your child starts the school year seeing the board clearly.</li><li><a href=\"/services/myopia-management/\">Myopia Management</a>: a program using atropine or multifocal lenses to help slow a child's nearsightedness while their eyes are still growing.</li></ul><h2>Following your child's vision through the school years</h2><p>Here, <a href=\"/our-doctors/\">our optometrists</a> follow your child's vision from the very first exam through the school years.</p><h2>Bring your card, we accept vision and medical plans</h2><p>Book your child's eye exam online, or call and talk to a real person. We accept vision and medical insurance plans, so bring your card and call for pricing, and we will help you figure out what applies to your family.</p><p>Coverage varies by plan, so call and we will walk you through what yours covers. See our <a href=\"/insurance/\">Insurance</a> page for the plans we accept.</p><ul><li><a href=\"/products/kids-eyewear/\">Kids' Eyewear</a></li><li><a href=\"/services/\">All Eye Care Services</a></li><li><a href=\"/insurance/\">Insurance &amp; Plans</a></li></ul><p><strong>Riverside Family Eye Care</strong></p><p>11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905</p><p><a href=\"tel:239-500-2020\">239-500-2020</a></p><p><a href=\"/eye-doctor-fort-myers/\">Hours and location</a></p><p><a href=\"/contact-us/appointment-request-form/\">Request Appointment</a> or call <a href=\"tel:239-500-2020\">239-500-2020</a>.</p>",
+  "edits": [
+    "replaced: Clear Lake -> Fort Myers (title, meta, h1, intro)",
+    "replaced: Eye Trends -> Riverside Family Eye Care",
+    "deleted: h1 tail 'from a doctor your kids grow up with' (one-doctor continuity)",
+    "replaced: 'Most plans accepted' -> 'Vision and medical plans accepted' (meta)",
+    "replaced: Book an Eye Exam / Call (281) 488-0066 -> Request Appointment / 239-500-2020",
+    "deleted: eyebrow labels ('Children's eye care, Clear Lake', 'Find the right care', 'Why families stay', 'Insurance and access', 'While you're here')",
+    "replaced: card links -> list with trailing-slash /services/<x>/ links; dropped 'Learn more'",
+    "deleted: 'Saturday-friendly checks, we are open Saturdays 9 AM to 1 PM'",
+    "deleted: paragraph contrasting rotating multi-doctor groups and a six-doctor group a mile away",
+    "replaced: 'Dr. Jerry Hyder sees your child himself, every visit, and follows' -> 'our optometrists follow'",
+    "deleted: Dr. Hyder anecdote (squinting, sliding frames) and generations-of-families claim",
+    "deleted: whole 'Trusted since 1984 / Caring for Clear Lake eyes for 42 years' section and stat strip",
+    "replaced: 'we accept most vision and medical plans' -> 'we accept vision and medical (insurance) plans'",
+    "deleted: named carriers list (VSP, EyeMed, Superior, Aetna, BCBS, Medicare, Cigna, Tricare)",
+    "replaced: plan list -> link to /insurance/",
+    "replaced: /products/kids-eyewear, /services, /insurance -> trailing-slash versions",
+    "deleted: 'Care led by Dr. Hyder, OD'",
+    "replaced: 515 Bay Area Blvd #300, Houston, TX 77058 -> 11841 Palm Beach Blvd, Unit 117, Fort Myers, FL 33905",
+    "deleted: Eye Trends hours (Mon-Fri 9:30-6:30, Wed closed, Sat 9-1)",
+    "replaced: /eye-doctor-clear-lake -> /eye-doctor-fort-myers/"
+  ]
+}

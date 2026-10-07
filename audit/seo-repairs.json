@@ -757,7 +757,7 @@
       "page": "/eye-care-services/dry-eye-disease-and-treatment/",
       "type": "FAQPage",
       "decision": "REMOVE",
-      "why": "its 4 questions and answers are not printed on this page (8 of 8 texts absent). Structured data describes what the page shows, so it is removed (docs/OPEN-DECISIONS.md B)"
+      "why": "its 4 questions and answers are not printed on this page (8 of 8 texts absent); its url names another page (https://www.riversidefamilyeyecare.com/eye-care-services/dry-eye-disease-and-treatment/). Structured data describes what the page shows, so it is removed (docs/OPEN-DECISIONS.md B)"
     },
     {
       "page": "/eye-care-services/eye-emergencies-pink-red-eyes/",

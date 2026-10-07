@@ -241,7 +241,18 @@ html.js .mainnav { display: none; }
   html.js .sub--end { left: auto; right: 0; }
   html.js .mainnav__item.has-sub:hover:not(.is-dismissed) > .sub,
   html.js .mainnav__item.is-open > .sub { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
+  /* restructure (2026-10-07): the Services mega menu, anchored to the navbar (not to its item) so its five groups fit */
+  html.js .navbar__inner { position: relative; }
+  html.js .mainnav__item.has-mega { position: static; }
+  html.js .sub--mega {
+    left: auto; right: 0; top: calc(100% - 10px); width: min(100%, 1100px);
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px 10px; padding: 14px;
+  }
+  html.js .sub--mega::before { top: -14px; height: 14px; }
 }
+.sub__group, .sub__list { margin: 0; padding: 0; list-style: none; }
+.sub .sub__head { color: var(--navy-900); font-weight: 700; }
+.sub__list a { min-height: 40px; padding-block: 6px; font-size: 0.90625rem; }
 .mobilebar { display: none; align-items: center; gap: 8px; flex: none; }
 @media (max-width: 74.9375em) { .mobilebar { display: flex; } }
 @media (min-width: 769px) and (max-width: 74.9375em) { .mobilebar > :not(.menu-toggle) { display: none; } }
@@ -328,6 +339,8 @@ dialog.drawer.is-open .drawer__panel { translate: 0 0; }
 .dnav__toggle[aria-expanded="true"] .ico { rotate: 180deg; }
 .dnav__sub { margin: 0 0 10px; padding: 0 0 0 14px; list-style: none; border-left: 2px solid var(--teal-200); }
 .dnav__sub a { min-height: 44px; font-size: 1rem; font-weight: 500; }
+.dnav__sub .dnav__head { font-weight: 700; }
+.dnav__sub2 { margin: 0 0 6px; padding: 0 0 0 14px; list-style: none; border-left: 2px solid var(--line-drawer); }
 .drawer__actions { display: grid; gap: 12px; margin-top: auto; }
 
 /* shared controls (B.0) */
@@ -941,6 +954,11 @@ dialog.drawer.is-open .drawer__panel { translate: 0 0; }
   transition: background-size var(--dur-underline) var(--ease-out), color var(--dur-fast);
 }
 .footer__menu a:is(:hover, :focus-visible) { background-size: 100% 2px; color: var(--teal-200); }
+/* restructure (2026-10-07): the four titled footer columns span the grid's first row */
+.footer__grid--cols { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.footer__menu--cols { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px clamp(20px, 3vw, 40px); }
+.footer__title { margin: 0 0 4px; color: var(--teal-200); font-size: var(--step--1); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.footer__col a { min-height: 40px; font-weight: 500; }
 .footer__social { display: grid; justify-items: start; gap: 22px; }
 .social { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .social__link {

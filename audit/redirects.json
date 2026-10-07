@@ -1,6 +1,6 @@
 {
   "schema": "rfec/redirects@1",
-  "note": "Emitted as dist/_redirects and dist/.htaccess: the 16 live aliases of the source, nothing else.",
+  "note": "Emitted as dist/_redirects and dist/.htaccess: the 16 live aliases of the source (re-pointed to the restructured paths) and one 301 per page the restructure moved (src/lib/restructure.mjs).",
   "redirects": [
     {
       "from": "/appointment-request-form/",
@@ -9,16 +9,208 @@
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/contact-lenses/",
+      "to": "/products/contact-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/bifocal-and-multifocal-contact-lenses/",
+      "to": "/services/multifocal-contacts/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+      "to": "/products/contact-lenses/contact-lenses-for-the-hard-to-fit-patient/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/disposable-contacts/",
+      "to": "/products/contact-lenses/disposable-contacts/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/eye-exams-for-contact-lenses/",
+      "to": "/products/contact-lenses/eye-exams-for-contact-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/gas-permeable-gp-contact-lenses/",
+      "to": "/services/gas-permeable-contacts/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/our-featured-brands/",
+      "to": "/products/contact-lenses/our-featured-brands/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/our-featured-brands/alcon/",
+      "to": "/products/contact-lenses/our-featured-brands/alcon/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/our-featured-brands/bausch-lomb/",
+      "to": "/products/contact-lenses/our-featured-brands/bausch-lomb/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/our-featured-brands/coopervision/",
+      "to": "/products/contact-lenses/our-featured-brands/coopervision/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/our-featured-brands/johnson-johnson/",
+      "to": "/products/contact-lenses/our-featured-brands/johnson-johnson/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-lenses/toric-contact-lenses-for-astigmatism/",
+      "to": "/services/toric-contacts/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/contact-us/patient-forms/",
+      "to": "/patient-forms/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/contact-us/patient-forms/new-patient-information/",
       "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/contact-us/testimonials/",
+      "to": "/reviews/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/",
+      "to": "/services/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/cataract-surgery-co-management/",
+      "to": "/services/cataract-co-management/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/contact-lens-exams/",
+      "to": "/services/contact-lens-exams/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/contact-lens-exams/hard-to-fit/",
+      "to": "/services/specialty-contacts/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/dry-eye-disease-and-treatment/",
+      "to": "/services/dry-eye-treatment/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/dry-eye-disease-and-treatment/envision-inmode/",
+      "to": "/services/dry-eye-treatment/envision-inmode/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-conditions/",
+      "to": "/services/eye-conditions/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-conditions/astigmatism-diagnosis-treatment/",
+      "to": "/services/eye-conditions/astigmatism-diagnosis-treatment/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/eye-care-services/eye-conditions/dry-eye-disease-and-treatment/",
       "to": "/riverside-family-eyecares-guide-to-visual-hygiene-on-electronic-devices/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
+    },
+    {
+      "from": "/eye-care-services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+      "to": "/services/eye-conditions/presbyopia-diagnosis-and-treatment/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "to": "/services/emergency-eye-care/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-exams/",
+      "to": "/services/comprehensive-eye-exams/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-exams/advanced-technology/",
+      "to": "/services/comprehensive-eye-exams/advanced-technology/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "to": "/services/pediatric-eye-exams/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-exams/pediatric-eye-exams/infantsee/",
+      "to": "/services/pediatric-eye-exams/infantsee/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/eye-exams/what-to-expect/",
+      "to": "/services/comprehensive-eye-exams/what-to-expect/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/faq/",
+      "to": "/services/faq/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/lasik-refractive-surgery-co-management/",
+      "to": "/services/lasik-co-management/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/management-of-ocular-diseases/",
+      "to": "/services/medical-eye-care/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
     },
     {
       "from": "/eye-care-services/management-of-ocular-diseases/cataract-surgery-co-management/",
@@ -28,25 +220,49 @@
     },
     {
       "from": "/eye-care-services/management-of-ocular-diseases/glaucoma-testing-treatment/",
-      "to": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "to": "/services/glaucoma-management/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/eye-care-services/management-of-ocular-diseases/glaucoma/",
+      "to": "/services/glaucoma-management/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/management-of-ocular-diseases/treating-diabetic-retinopathy/",
+      "to": "/services/diabetic-eye-exams/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/management-of-ocular-diseases/treating-macular-degeneration/",
+      "to": "/services/macular-degeneration/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eye-care-services/nearsighted-myopia/",
+      "to": "/services/myopia-management/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/eye-emergencies-pink-red-eyes/",
-      "to": "/eye-care-services/eye-emergencies-pink-red-eyes/",
+      "to": "/services/emergency-eye-care/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
       "from": "/eyeglasses-contacts/contact-lenses/",
-      "to": "/contact-lenses/",
+      "to": "/products/contact-lenses/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
       "from": "/eyeglasses-contacts/eyeglasses/",
-      "to": "/eyeglasses/",
+      "to": "/products/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
@@ -75,20 +291,266 @@
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/eyeglasses/",
+      "to": "/products/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/designer-frames/",
+      "to": "/products/designer-frames/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/eyeglass-basics/",
+      "to": "/products/eyeglass-basics/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/eyeglass-basics/eyeglass-frames/",
+      "to": "/products/eyeglass-basics/eyeglass-frames/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/eyeglass-basics/lens-options-for-eyeglasses/",
+      "to": "/products/eyeglass-basics/lens-options-for-eyeglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/eyeglass-guide/",
+      "to": "/products/eyeglass-guide/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/kids-optical/",
+      "to": "/products/kids-eyewear/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/lens-treatments/",
+      "to": "/products/lens-treatments/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/lens-treatments/anti-reflective/",
+      "to": "/products/lens-treatments/anti-reflective/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/lens-treatments/scratch-resistant/",
+      "to": "/products/lens-treatments/scratch-resistant/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/lens-treatments/uv-protection/",
+      "to": "/products/lens-treatments/uv-protection/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/",
+      "to": "/products/prescription-eyeglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/bifocal-lenses/",
+      "to": "/products/prescription-eyeglasses/bifocal-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/caring-for-lenses/",
+      "to": "/products/prescription-eyeglasses/caring-for-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/eyeglass-frame-materials/",
+      "to": "/products/prescription-eyeglasses/eyeglass-frame-materials/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/frame-maintenance/",
+      "to": "/products/prescription-eyeglasses/frame-maintenance/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+      "to": "/products/prescription-eyeglasses/high-index-and-aspheric-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/photochromic-lenses/",
+      "to": "/products/prescription-eyeglasses/photochromic-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/polycarbonate-lenses/",
+      "to": "/products/prescription-eyeglasses/polycarbonate-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/prescription-eyeglasses/progressive-lenses/",
+      "to": "/products/prescription-eyeglasses/progressive-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/",
+      "to": "/products/specialty-eyewear/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+      "to": "/products/specialty-eyewear/contacts-glasses-that-enhance-performance/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/safety-and-sports-glasses/",
+      "to": "/products/specialty-eyewear/safety-and-sports-glasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/scuba-masks-and-swim-goggles/",
+      "to": "/products/specialty-eyewear/scuba-masks-and-swim-goggles/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+      "to": "/products/specialty-eyewear/shooting-glasses-and-hunting-eyewear/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/specialty-eyewear/specialty-eyewear-overview/",
+      "to": "/products/specialty-eyewear/specialty-eyewear-overview/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/",
+      "to": "/products/sunglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/nonprescription-sunglasses/",
+      "to": "/products/sunglasses/nonprescription-sunglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/performance-and-sport-sunglasses/",
+      "to": "/products/sunglasses/performance-and-sport-sunglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/prescription-sunglass-treatments/",
+      "to": "/products/sunglasses/prescription-sunglass-treatments/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/prescription-sunglasses/",
+      "to": "/products/sunglasses/prescription-sunglasses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/sunglasses/sunglasses-for-kids/",
+      "to": "/products/sunglasses/sunglasses-for-kids/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/transitions-lenses/",
+      "to": "/products/transitions-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/transitions-lenses/are-transitions-right-for-you/",
+      "to": "/products/transitions-lenses/are-transitions-right-for-you/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/transitions-lenses/original-transitions-lenses/",
+      "to": "/products/transitions-lenses/original-transitions-lenses/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/transitions-lenses/transition-solfx-sunwear-products/",
+      "to": "/products/transitions-lenses/transition-solfx-sunwear-products/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/eyeglasses/transitions-lenses/transitions-xtractive/",
+      "to": "/products/transitions-lenses/transitions-xtractive/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/hours-location/",
+      "to": "/eye-doctor-fort-myers/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/new-patient-information/",
       "to": "/contact-us/appointment-request-form/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/our-eye-doctors/",
+      "to": "/our-doctors/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/pediatric-eye-exams/",
-      "to": "/eye-care-services/eye-exams/pediatric-eye-exams/",
+      "to": "/services/pediatric-eye-exams/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },
     {
+      "from": "/website-accessibility-policy/",
+      "to": "/accessibility/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
+      "from": "/whats-new/",
+      "to": "/eye-health/",
+      "status": 301,
+      "why": "restructure 301 (src/lib/restructure.mjs)"
+    },
+    {
       "from": "/your-eye-health/protecting-your-eyes/",
-      "to": "/eye-care-services/",
+      "to": "/services/",
       "status": 301,
       "why": "source 301 (live alias, audit/site-inventory.json)"
     },

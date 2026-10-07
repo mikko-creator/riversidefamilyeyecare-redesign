@@ -2307,3 +2307,34 @@ spacing, the landscape navbar against the A11Y-8 header matrix, the menu retap a
 independent verification of fixers A-C and of D1-D2 (verify-1 and verify-2 had partial results only, in
 `tmp/mobile/verify-1/` and `verify-2/`); a re-measure of option 4b at 667x375 now that 8b is applied (D1's what-if: the h1
 ends at 358.4 of 375 px).
+
+## 16. Site restructure to the Eye Trends structure (operator, 2026-10-07)
+
+Instruction and open decisions: `docs/OPEN-DECISIONS.md` section F. The operator asked for no long verification, so this
+stage ran the build, a repro build, the link check, a main-text comparison, a residue grep and one headless look. The 12
+gates, `sr-gate`, the sweep, screens and pixel diff were not run, and the handoff zip (v20261006) predates this stage.
+
+- **Structure:** `src/lib/restructure.mjs` holds `MOVES` (26 source paths to their Eye Trends paths) and `remap()`, a
+  longest-prefix rule that moves every page below a moved page with it. `content.mjs` `localHref` / `ownPathOf`,
+  `page-model.mjs` (slug, depth, canonical, JSON-LD trail, current-menu path) and the sitemap apply it; every per-page
+  lookup (image plan, families, art, forms) keeps the source path. The build fails if two pages share a path, a moved path
+  is still a page, or a live alias is now a page.
+- **Menus:** `src/content/chrome.json` `nav`, `footer.columns` and `footer.util` are the Eye Trends menus (change R01); the
+  source menus stay in `navSource` / `footerSource`, which the build reads for the Cherry page label and the `/template/*`
+  menu detection. `templates.mjs` renders a menu item whose children have children as a mega menu (`.sub--mega`, five
+  groups) and the drawer as nested groups (`.dnav__grp`), and titled footer columns (`.footer__menu--cols`).
+- **Adopted pages:** `src/content/adopted/*.json` (workflow `wf_9d850499-741`, 11 editors, 2 min; the source pages in
+  `tmp/restructure/et-raw`, extracted to `et-extract`). The build turns each into an EyeCarePro-shaped raw page (trail Home
+  » Services » h1) and an `interior` model with its section's title arch (TB-ecs, TB-utility for `/terms/`). One editor
+  aside left in the copy ("We won't invent a turnaround promise") was rewritten by the orchestrator (recorded in the
+  file's `edits`).
+- **Redirects:** 93 rules (77 moves + 16 aliases); the preview gets 77 redirect pages from `tmp/restructure/stubs/` (never in
+  `dist/`, where a file at the old path would shadow a Netlify rule).
+- **Evidence:** build exit 0, 159/159 pages + 404, dead refs 0, failures 0; `dist` = `af7b0069…` (801 files), a second
+  build to `tmp/restructure/repro` IDENTICAL; `tools/link-check.mjs` 22,719 local refs, 0 broken, control fired; the
+  `<main>` text of all 148 pages of the released build (`tmp/mobile/final`, 90c8838f) equals the text at each page's new
+  path (`tmp/restructure/content-kept.mjs`; controls: two different pages differ, one dropped word is caught); no Eye
+  Trends, Clear Lake, Hyder, (281) or Texas text in `dist/` except Riverside's own "University of Houston" (Dr. Degler's
+  degree); headless Chrome (`tmp/restructure/look.mjs`): the header is one row at 1200 and 1280, the open mega menu sits
+  inside the viewport (control: shifted 400 px it fails), no sideways overflow on an adopted page at 390, the drawer shows
+  5 groups / 21 links. Preview gh-pages `889a4cd`: 9 sampled URLs live 200 and byte-identical, noindex.

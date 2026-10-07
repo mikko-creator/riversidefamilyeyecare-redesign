@@ -23,6 +23,7 @@
 import { esc, plain, decodeEntities, findElements, attrOf, up, ownPath } from './util.mjs';
 import { TOKEN, TOKEN_RE } from './content.mjs';
 import { renderForm } from './forms.mjs';
+import { remap } from './restructure.mjs';
 
 export const MODEL_SCHEMA = 'rfec/page-model@1';
 export const BLOCK_TYPES = ['prose', 'callout', 'cta', 'badges', 'childpages', 'posts', 'team', 'testimonials', 'reviews', 'visit', 'hours', 'accordion', 'video', 'products', 'equipment', 'gallery', 'logos', 'sitemap', 'docs', 'form', 'cherry'];
@@ -46,6 +47,7 @@ const TOKEN_SPLIT = new RegExp('(?:<p>\\s*)?' + TOKEN + 'C(\\d+)' + TOKEN + '(?:
 export function createPageModel(deps) {
   const { C, chrome, origin, seoBy, familyOf, imgUrl, ship, fail, stats, MAP_SRC, rowBackgrounds, mediaFor, seo, parseConditionalLogic, parseGravityForm, logoRec, mobileLogoRec, mobileMedia, ogImageFor, garbageAlt, shortcodes, cherryMode, ui } = deps;
   const pathOf = (url) => { const s = ownPath(url, origin); return s ? '/' + s + '/' : '/'; };
+  const newExist = new Set([...deps.willExist].map(remap));
 
   /* ---------------------------------------------------------------- chrome, per page (page-relative) */
   function chromeFor(depth, curPath, opts) {
@@ -79,6 +81,7 @@ export function createPageModel(deps) {
       social: f.social.map((s) => ({ network: s.network, label: s.label, href: s.href, rel: s.rel })),
       footer: {
         menu: f.columns.flatMap((c) => c.links.map((l) => ({ label: l.label, href: H(l.href), path: l.href }))),
+        columns: f.columns.map((c) => ({ title: c.title || null, links: c.links.map((l) => ({ label: l.label, href: H(l.href), path: l.href })) })),
         button: { label: f.button.label, href: H(f.button.href) },
         nap: { name: f.nap.name, located: f.nap.located, street: f.nap.street, sep: f.nap.sep, locality: f.nap.locality, region: f.nap.region, postalCode: f.nap.postalCode, postalEnd: f.nap.postalEnd, phoneLabel: f.nap.phoneLabel, phone: chrome.phone, phoneHref: 'tel:' + chrome.phone, phoneEnd: f.nap.phoneEnd, site: { label: f.nap.site.label, href: H('/') }, text: f.nap.text },
         copyright: f.copyright,
@@ -171,8 +174,11 @@ export function createPageModel(deps) {
   function build(page, opts = {}) {
     const s = seoBy.get(page.url) || {};
     const as404 = !!opts.as404;
-    const depth = as404 ? 0 : (opts.depth !== undefined ? opts.depth : ownPath(page.url, origin).split('/').filter(Boolean).length);
-    const slug = ownPath(page.url, origin);
+    /* restructure: the page is written at its path in the restructured site (slug); every per-page lookup keeps the
+       source path (p) */
+    const srcSlug = ownPath(page.url, origin);
+    const slug = remap(srcSlug);
+    const depth = as404 ? 0 : (opts.depth !== undefined ? opts.depth : slug.split('/').filter(Boolean).length);
     const p = pathOf(page.url);
     const family = familyOf.get(p) || 'page';
     const raw = deps.rawOf(page);
@@ -426,7 +432,7 @@ export function createPageModel(deps) {
 
     /* ---- head ---- */
     const willExist = deps.willExist;
-    const canonicalSlug = seo.canonicalSlugFor(s, page, slug, willExist, origin, deps.seoLog);
+    const canonicalSlug = remap(seo.canonicalSlugFor(s, page, srcSlug, willExist, origin, deps.seoLog));
     const canonical = origin + '/' + (canonicalSlug ? canonicalSlug + '/' : '');
     const title = as404 ? (s.title || page.title || '').trim() : seo.pageTitle(s, page, h1.text, slug, deps.seoLog, '');
     let description = (s.metaDescription || '').trim();
@@ -475,7 +481,7 @@ export function createPageModel(deps) {
     const twitter = { card: ((s.twitter && s.twitter['twitter:card']) || '').trim() || 'summary', title: srcTwitterTitle && !(title !== srcTitle && srcTwitterTitle === srcTitle) ? srcTwitterTitle : null, image: og.image };
     const trailAbs = trail.length >= 2 ? trail.map((seg, i) => {
       let abs = null;
-      if (seg.href) { const own = ownPath(seg.href, origin); if (own !== null && (own === '' || willExist.has(own))) abs = origin + '/' + (own ? own + '/' : ''); }
+      if (seg.href) { const own = ownPath(seg.href, origin); if (own !== null && (own === '' || willExist.has(own) || newExist.has(own))) { const np = remap(own); abs = origin + '/' + (np ? np + '/' : ''); } }
       /* QA round 1 (CONTENT-12): the trail's last item is the page itself, its own URL (it was the canonical, which on 8
          pages is another page: 7 staff pages -> /the-staff/, the location page -> /hours-location/) */
       return { text: seg.text, abs: i === trail.length - 1 ? origin + '/' + (slug ? slug + '/' : '') : abs };
@@ -553,7 +559,7 @@ export function createPageModel(deps) {
       embeds,
       declared,
       links,
-      chrome: chromeFor(depth, as404 ? '' : p, { financing: ui.financing }),
+      chrome: chromeFor(depth, as404 ? '' : (slug ? '/' + slug + '/' : '/'), { financing: ui.financing }),
       head: { favicon: deps.favicon(depth), stylesheets: deps.stylesheets(depth), scripts: deps.scripts ? deps.scripts(depth) : [], jsonLdHtml: ld.html, lang: s.lang || page.lang || 'en-US', lcp: null },
     };
   }

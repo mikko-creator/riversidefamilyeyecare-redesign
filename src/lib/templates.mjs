@@ -597,16 +597,23 @@ export function createTemplates() {
       + '</div></div></div>';
   }
   const cur = (it) => (it.current ? ' aria-current="page"' : '');
+  /* restructure (2026-10-07): a menu item whose children have children of their own (the Services menu of the Eye Trends
+     structure) is a mega menu: one group per child, its link as the group head over its own pages */
+  const isMega = (it) => (it.children || []).some((k) => (k.children || []).length);
+  const subLink = (k) => '<li' + (k.inSection ? ' class="is-section"' : '') + '><a href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a></li>';
+  const subGroup = (k) => (!(k.children || []).length ? subLink(k)
+    : '<li class="sub__group' + (k.inSection ? ' is-section' : '') + '"><a class="sub__head" href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a>'
+      + '<ul class="sub__list">' + k.children.map(subLink).join('') + '</ul></li>');
   function navbar(c) {
     const lastWithKids = c.nav.map((x) => (x.children || []).length > 0).lastIndexOf(true);
     const items = c.nav.map((it, i) => {
-      const n = i + 1, kids = it.children || [];
+      const n = i + 1, kids = it.children || [], mega = isMega(it);
       if (!kids.length) return '<li class="mainnav__item' + (it.inSection ? ' is-section' : '') + '"><a class="mainnav__link" href="' + esc(it.href) + '"' + cur(it) + '>' + esc(it.label) + '</a></li>';
-      return '<li class="mainnav__item has-sub' + (it.inSection ? ' is-section' : '') + '">'
+      return '<li class="mainnav__item has-sub' + (mega ? ' has-mega' : '') + (it.inSection ? ' is-section' : '') + '">'
         + '<a class="mainnav__link" href="' + esc(it.href) + '"' + cur(it) + '>' + esc(it.label) + '</a>'
         + '<button class="mainnav__toggle" type="button" aria-expanded="false" aria-controls="sub-' + n + '" aria-label="' + esc(it.label) + ' submenu">' + ico('chev') + '</button>'
-        + '<ul class="sub' + (i === lastWithKids ? ' sub--end' : '') + '" id="sub-' + n + '">'
-        + kids.map((k) => '<li' + (k.inSection ? ' class="is-section"' : '') + '><a href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a></li>').join('')
+        + '<ul class="sub' + (mega ? ' sub--mega' : i === lastWithKids ? ' sub--end' : '') + '" id="sub-' + n + '">'
+        + kids.map(mega ? subGroup : subLink).join('')
         + '</ul></li>';
     }).join('');
     const mob = c.mobile, logo = c.logo, ml = mob.logo;
@@ -632,7 +639,9 @@ export function createTemplates() {
       return '<li class="dnav__group' + (it.inSection ? ' is-section' : '') + '">'
         + '<div class="dnav__row"><a href="' + esc(it.href) + '"' + cur(it) + '>' + esc(it.label) + '</a>'
         + '<button class="dnav__toggle" type="button" aria-expanded="false" aria-controls="dsub-' + n + '" aria-label="' + esc(it.label) + ' submenu">' + ico('chev') + '</button></div>'
-        + '<ul class="dnav__sub" id="dsub-' + n + '" hidden>' + kids.map((k) => '<li' + (k.inSection ? ' class="is-section"' : '') + '><a href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a></li>').join('') + '</ul>'
+        + '<ul class="dnav__sub" id="dsub-' + n + '" hidden>' + kids.map((k) => (!(k.children || []).length ? '<li' + (k.inSection ? ' class="is-section"' : '') + '><a href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a></li>'
+          : '<li class="dnav__grp' + (k.inSection ? ' is-section' : '') + '"><a class="dnav__head" href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a><ul class="dnav__sub2">'
+            + k.children.map((g) => '<li' + (g.inSection ? ' class="is-section"' : '') + '><a href="' + esc(g.href) + '"' + cur(g) + '>' + esc(g.label) + '</a></li>').join('') + '</ul></li>')).join('') + '</ul>'
         + '</li>';
     }).join('');
     const ml = c.mobile.logo, t = c.topbar;
@@ -660,8 +669,11 @@ export function createTemplates() {
     return '<footer class="site-footer aurora-deep" data-band>'
       + bank('bank--up bank--footer')
       + (isHub(m) ? HUB_FOOTER_ROUTE : FOOTER_ROUTE).map(([k, a]) => ra(k, a)).join('')
-      + '<div class="container pl-surface footer__grid">'
-      + '<nav class="footer__menu" aria-label="Footer"><ul role="list">' + f.menu.map((l) => '<li><a href="' + esc(l.href) + '">' + esc(l.label) + '</a></li>').join('') + '</ul></nav>'
+      + '<div class="container pl-surface footer__grid' + (f.columns && f.columns.some((col) => col.title) ? ' footer__grid--cols' : '') + '">'
+      /* restructure (2026-10-07): titled footer columns (the Eye Trends footer: Services, Eyewear, Practice, Contact) */
+      + (f.columns && f.columns.some((col) => col.title)
+        ? '<nav class="footer__menu footer__menu--cols" aria-label="Footer">' + f.columns.map((col) => '<div class="footer__col">' + (col.title ? '<p class="footer__title">' + esc(col.title) + '</p>' : '') + '<ul role="list">' + col.links.map((l) => '<li><a href="' + esc(l.href) + '">' + esc(l.label) + '</a></li>').join('') + '</ul></div>').join('') + '</nav>'
+        : '<nav class="footer__menu" aria-label="Footer"><ul role="list">' + f.menu.map((l) => '<li><a href="' + esc(l.href) + '">' + esc(l.label) + '</a></li>').join('') + '</ul></nav>')
       + '<div class="footer__social">' + social(c.social)
       + '<a class="btn btn--light" href="' + esc(f.button.href) + '">' + ico('calendar') + '<span>' + esc(f.button.label) + '</span></a>'
       + (c.financing ? '<p class="footer__financing"><a href="' + esc(c.financing.href) + '">' + esc(c.financing.label) + '</a></p>' : '')

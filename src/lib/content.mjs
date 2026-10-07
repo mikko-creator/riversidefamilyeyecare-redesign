@@ -28,6 +28,7 @@
           A lift that cannot account for every word of its module is NOT made (the module stays generic prose).
    Copy is never rewritten: text comes out of the source HTML and goes into the rebuild unchanged. */
 import { esc, decodeEntities, plain, findElements, attrOf, innerOf } from './util.mjs';
+import { remap } from './restructure.mjs';
 
 export const PARA_BREAK = String.fromCharCode(1);
 export const TOKEN = String.fromCharCode(2);
@@ -70,6 +71,8 @@ const imgOf = (html) => {
 
 export function createContent(ctx) {
   const { origin, imageMap, willExist, moved, fail, stats, imgUrl } = ctx;
+  /* restructure (src/lib/restructure.mjs): every own link resolves to the page's path in the restructured site */
+  const newExist = new Set([...willExist].map(remap));
   const OLD_VENDOR = /eyecarepro/i;
   const bump = (k, n = 1) => { stats[k] = (stats[k] || 0) + n; };
   /* 2.1: the own host is chrome.origin's host, with or without www (the source prints most internal links as
@@ -110,12 +113,14 @@ export function createContent(ctx) {
     if (/\.(xml|txt|pdf)$/i.test(p)) return rel + p;
     if (!p) return rel + 'index.html' + (u.hash || '');
     if (!willExist.has(p)) {
+      /* restructure: a path of the restructured site (chrome.json menus, adopted pages) is already final */
+      if (newExist.has(p)) return rel + p + '/index.html' + (u.hash || '');
       const m = moved.get(p);
-      if (m !== undefined && (m === '' || willExist.has(m))) { stats.moved.set(p, (stats.moved.get(p) || 0) + 1); return rel + (m ? m + '/index.html' : 'index.html') + (u.hash || ''); }
+      if (m !== undefined && (m === '' || willExist.has(m))) { stats.moved.set(p, (stats.moved.get(p) || 0) + 1); return rel + (m ? remap(m) + '/index.html' : 'index.html') + (u.hash || ''); }
       stats.dead.set(p, (stats.dead.get(p) || 0) + 1);
       return null;
     }
-    return rel + p + '/index.html' + (u.hash || '');
+    return rel + remap(p) + '/index.html' + (u.hash || '');
   }
 
   /* own path ('/a/b/') of an internal href, or null (external / not a page) */
@@ -128,7 +133,8 @@ export function createContent(ctx) {
     try { u = new URL(h, origin + '/'); } catch { return null; }
     if (!(u.origin === origin || ownHostRe.test(u.hostname))) return null;
     let p = decodeURIComponent(u.pathname).replace(/^\/+|\/+$/g, '');
-    if (!willExist.has(p) && moved.has(p)) p = moved.get(p);
+    if (!willExist.has(p) && !newExist.has(p) && moved.has(p)) p = moved.get(p);
+    p = remap(p);
     return p ? '/' + p + '/' : '/';
   }
 

@@ -36,6 +36,7 @@ import { parseGravityForm, parseConditionalLogic } from './lib/forms.mjs';
 import * as seo from './lib/seo.mjs';
 import { createImages } from './lib/images.mjs';
 import { createPageModel } from './lib/page-model.mjs';
+import { remap, adoptedPages, redirectPage } from './lib/restructure.mjs';
 
 const PROJ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const P = (...a) => path.join(PROJ, ...a);
@@ -58,6 +59,9 @@ const siteInv = readJSON(P('audit/site-inventory.json'));
 const mediaInv = readJSON(P('audit/media-inventory.json'));
 const archMap = readJSON(P('audit/architecture-map.json'));
 const seoBy = new Map(seoInv.pages.map((p) => [p.url, p]));
+/* restructure (src/lib/restructure.mjs): the 11 adopted pages join the inventory as interior pages */
+const ADOPTED = adoptedPages(PROJ, ORIGIN);
+for (const a of ADOPTED) { content.pages.push(a.page); seoBy.set(a.page.url, a.seo); }
 
 const failures = [];
 const fail = (stage, target, reason) => failures.push({ stage, target, reason });
@@ -290,6 +294,13 @@ for (const e of plan.images || []) {
     }
   }
 }
+/* restructure: an adopted page takes its section's title arch (Services: TB-ecs, as /eye-care-services/eye-exams/;
+   /terms/: TB-utility, as /privacy-policy/) */
+for (const a of ADOPTED) {
+  const like = a.path.startsWith('/services/') ? '/eye-care-services/eye-exams/' : '/privacy-policy/';
+  if (!artTitle.has(like)) planProblems.push('restructure: no title arch on ' + like + ' to share with ' + a.path);
+  else if (!artTitle.has(a.path)) artTitle.set(a.path, artTitle.get(like));
+}
 /* TB-contact (IMAGE-PLAN 4): the real practice-interior photo; the file is the one image-plan.json names */
 const TB_CONTACT_FILE = ((/TB-contact \((assets\/source\/[^,)]+)/.exec((plan.notPlannedHere && plan.notPlannedHere.realImages) || '') || [])[1]) || null;
 const tbContactHit = TB_CONTACT_FILE ? invBySrc.find((x) => x.rec.localFile === TB_CONTACT_FILE) : null;
@@ -504,16 +515,19 @@ const SHORTCODES = [
    one, else a labelled data-needs placeholder. RFEC_CHERRY=embed reproduces the source embed (after a test on the
    practice's own domain). */
 const CHERRY_MODE = process.env.RFEC_CHERRY === 'embed' ? 'embed' : 'link';
-const cherryNav = chrome.nav.flatMap((n) => [n, ...(n.children || [])]).find((n) => n.href === '/cherry-payment-plan/');
+const cherryNav = (chrome.navSource || chrome.nav).flatMap((n) => [n, ...(n.children || [])]).find((n) => n.href === '/cherry-payment-plan/');
 const MAP_SRC = 'https://www.google.com/maps?q=' + encodeURIComponent(chrome.mapQuery) + '&output=embed';
 const familyOf = new Map();
 for (const [fam, paths] of Object.entries(siteMap.templates)) for (const p of paths) familyOf.set(p, fam);
+for (const a of ADOPTED) familyOf.set(a.path, 'interior');
 const homeRowKind = new Map(((archMap.home && archMap.home.rows) || []).map((r) => [r.node, r.kind]));
-const rawOf = (page) => fs.readFileSync(P('audit/raw', page.savedAs), 'utf8');
+const rawOf = (page) => page.adoptedRaw || fs.readFileSync(P('audit/raw', page.savedAs), 'utf8');
 
 /* the site menus' labels (primary menu + children, footer menu, utility links): a /template/* menu made only of these
    is a copy of the chrome; any other menu is page content (content.mjs prepare) */
-const SITE_MENU_LABELS = [...chrome.nav.flatMap((n) => [n, ...(n.children || [])]), ...chrome.footer.columns.flatMap((c) => c.links), ...chrome.footer.util].map((x) => x.label);
+/* (restructure: the SOURCE menus, kept in chrome.json navSource / footerSource, are what the /template/* pages copy) */
+const SRC_NAV = chrome.navSource || chrome.nav, SRC_FOOT = chrome.footerSource || chrome.footer;
+const SITE_MENU_LABELS = [...SRC_NAV.flatMap((n) => [n, ...(n.children || [])]), ...SRC_FOOT.columns.flatMap((c) => c.links), ...SRC_FOOT.util].map((x) => x.label);
 const C = createContent({ origin: ORIGIN, imageMap, willExist, moved: MOVED, fail, stats, imgUrl, mapQuery: chrome.mapQuery, pdfFor, garbageAlt, byFileName, siteMenuLabels: SITE_MENU_LABELS });
 const T = createTemplates();
 const M = createPageModel({
@@ -687,7 +701,7 @@ if (THEME === 'scaffold') {
 
 /* ---------- 5. sitemap + robots (indexable canonical pages only) ---------- */
 const sitemapUrls = pageRecords.filter((r) => !r.noindex)
-  .map((r) => r.path.replace(/^\/|\/$/g, ''))
+  .map((r) => remap(r.path.replace(/^\/|\/$/g, '')))
   .filter((slug) => (canonicalBySlug.get(slug) ?? slug) === slug)
   .sort()
   .map((slug) => ORIGIN + '/' + (slug ? slug + '/' : ''));
@@ -695,11 +709,30 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), '<?xml version="1.0" encoding="
 fs.writeFileSync(path.join(DIST, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + ORIGIN + '/sitemap.xml\n');
 
 /* ---------- 5b. redirect map: exactly the source's own live aliases (no redirect the source never had) ---------- */
-const rLines = [...MOVED].filter(([, to]) => to === '' || willExist.has(to)).sort((a, b) => (a[0] < b[0] ? -1 : 1)).map(([f, t]) => ['/' + f + '/', t ? '/' + t + '/' : '/', 'source 301 (live alias, audit/site-inventory.json)']);
+const rLines = [...MOVED].filter(([, to]) => to === '' || willExist.has(to)).sort((a, b) => (a[0] < b[0] ? -1 : 1)).map(([f, t]) => ['/' + f + '/', t ? '/' + remap(t) + '/' : '/', 'source 301 (live alias, audit/site-inventory.json)']);
+/* restructure: every source page that moved is redirected to its new path; the GitHub Pages preview (no redirect file)
+   gets a redirect page per old path from tmp/restructure/stubs/ (never in dist/, where a file at the old path would
+   shadow the host's redirect rule on Netlify) */
+{
+  const finalPaths = new Map();
+  for (const m of models) if (!m.as404) { if (finalPaths.has(m.slug)) fail('build:plan', 'src/lib/restructure.mjs', 'two pages share the path /' + m.slug + '/: ' + finalPaths.get(m.slug) + ' and ' + m.path); finalPaths.set(m.slug, m.path); }
+  for (const [from] of MOVED) if (finalPaths.has(from)) fail('build:plan', 'src/lib/restructure.mjs', 'the live alias /' + from + '/ is now a page of the restructured site; its redirect would hide it');
+  const moves = [...willExist].filter((p) => p && remap(p) !== p).sort();
+  const STUBS = P('tmp/restructure/stubs');
+  fs.rmSync(STUBS, { recursive: true, force: true });
+  for (const p of moves) {
+    if (finalPaths.has(p)) fail('build:plan', 'src/lib/restructure.mjs', 'the moved path /' + p + '/ is also a page of the restructured site');
+    rLines.push(['/' + p + '/', '/' + remap(p) + '/', 'restructure 301 (src/lib/restructure.mjs)']);
+    fs.mkdirSync(path.join(STUBS, p), { recursive: true });
+    fs.writeFileSync(path.join(STUBS, p, 'index.html'), redirectPage(p, remap(p), ORIGIN));
+  }
+  stats.restructureMoves = moves.length;
+  rLines.sort((a, b) => (a[0] < b[0] ? -1 : 1));
+}
 /* the host-level files name paths from the deploy base (D7): "/" leaves them exactly as the root deploy needs them */
 const atBase = (p) => BASE.replace(/\/$/, '') + p;
-fs.writeFileSync(path.join(DIST, '_redirects'), '# Carried-forward redirects: the live site\'s own aliases (see audit/redirects.json)\n' + rLines.flatMap(([f, t]) => [atBase(f) + '  ' + atBase(t) + '  301', atBase(f).replace(/\/$/, '') + '  ' + atBase(t) + '  301']).join('\n') + '\n');
-fs.writeFileSync(path.join(DIST, '.htaccess'), '# 404 page (dist/404.html; its URLs are root-relative)\nErrorDocument 404 ' + atBase('/404.html') + '\n\n# Carried-forward redirects: the live site\'s own aliases (see audit/redirects.json)\n' + rLines.map(([f, t]) => 'RedirectMatch 301 ^' + atBase(f).replace(/\/$/, '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/?$ ' + atBase(t)).join('\n') + '\n');
+fs.writeFileSync(path.join(DIST, '_redirects'), '# Redirects: the live site\'s own aliases, plus every page the restructure moved (see audit/redirects.json)\n' + rLines.flatMap(([f, t]) => [atBase(f) + '  ' + atBase(t) + '  301', atBase(f).replace(/\/$/, '') + '  ' + atBase(t) + '  301']).join('\n') + '\n');
+fs.writeFileSync(path.join(DIST, '.htaccess'), '# 404 page (dist/404.html; its URLs are root-relative)\nErrorDocument 404 ' + atBase('/404.html') + '\n\n# Redirects: the live site\'s own aliases, plus every page the restructure moved (see audit/redirects.json)\n' + rLines.map(([f, t]) => 'RedirectMatch 301 ^' + atBase(f).replace(/\/$/, '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/?$ ' + atBase(t)).join('\n') + '\n');
 stats.redirects = rLines.length;
 
 /* ---------- 6. reports (canonical build only; RFEC_DIST builds write nothing to audit/) ---------- */
@@ -730,7 +763,7 @@ if (REPORTS) {
   aud('build-pages.json', { schema: 'rfec/build-pages@1', pages: pageRecords });
   aud('clone-removals.json', removals);
   aud('seo-repairs.json', { schema: 'site-reforge/seo-repairs@1', note: 'Head-level fields: source values carried forward; repairs only from the page own content or a declared decision.', titles: seoLog.titles, openGraph: seoLog.openGraph, canonicals: seoLog.canonicals, descriptionsDerived: seoLog.descriptions, descriptions: seoLog.derivedDescriptions, descriptionsNotDerived: seoLog.descriptionsNotDerived, descriptionsRemoved: seoLog.descriptionsRemoved, h1: seoLog.h1Labels, noindex: seoLog.noindex, structuredDataNote: 'Every application/ld+json block of every raw page that is not one of the platform\'s site-wide types (replaced: audit/clone-removals.json elements): CARRY (verbatim), REPAIR (carried with the listed field repairs, each with from / to / why) or REMOVE (with why). src/lib/seo.mjs sourceStructuredData; tools/seo-parity.mjs checks it.', structuredData: seoLog.structuredData });
-  aud('redirects.json', { schema: 'rfec/redirects@1', note: 'Emitted as dist/_redirects and dist/.htaccess: the 16 live aliases of the source, nothing else.', redirects: rLines.map(([from, to, why]) => ({ from, to, status: 301, why })) });
+  aud('redirects.json', { schema: 'rfec/redirects@1', note: 'Emitted as dist/_redirects and dist/.htaccess: the 16 live aliases of the source (re-pointed to the restructured paths) and one 301 per page the restructure moved (src/lib/restructure.mjs).', redirects: rLines.map(([from, to, why]) => ({ from, to, status: 301, why })) });
   aud('dead-links.json', { schema: 'site-reforge/dead-links@1', note: 'Internal targets the SOURCE links to but no page serves (not an alias). The anchor is unwrapped; the link text is kept. Re-pointed alias links are listed under moved.', targets: report.links.dead, moved: report.links.moved });
   /* audit/failures.json is site-reforge stage evidence (the crawl/assets record): R merged its build:* items into
      that file; this build neither reads nor writes it. Build failures live in build-report.json `failures` and set

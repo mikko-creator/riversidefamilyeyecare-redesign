@@ -2,8 +2,8 @@
   "schema": "rfec/build-report@1",
   "dist": "dist",
   "pages": {
-    "built": 148,
-    "of": 148,
+    "built": 159,
+    "of": 159,
     "plus404": true
   },
   "images": {
@@ -59,9 +59,9 @@
     "mode": "riverlight",
     "root": "src",
     "stylesheet": {
-      "path": "theme/riverlight.da04c250.css",
-      "bytes": 104433,
-      "sha256": "da04c2503842b69d83dfc7b64e8958de2b7b58f1e654275b1a81b7f58f1c71bb"
+      "path": "theme/riverlight.2e1c56a9.css",
+      "bytes": 105455,
+      "sha256": "2e1c56a93cc6427acd8ad528d50acdd04ac638648bbfaaea5064db59314e1790"
     },
     "script": {
       "path": "theme/site.5fd59f85.js",
@@ -81,8 +81,8 @@
       },
       {
         "file": "riverlight.css",
-        "bytes": 127902,
-        "sha256": "61018c7b7c870180f9e76f1e4c81c2cbef4da3bfc9ec02e39ae5ef9506b5225e"
+        "bytes": 129291,
+        "sha256": "92425f04e6bfed83529ad1faea2b92d0735a02fcefb603ecb00e1816d35a510e"
       },
       {
         "file": "motion.css",
@@ -105,16 +105,16 @@
   },
   "art": {
     "titleBy": {
-      "TB-utility": 30,
+      "TB-utility": 31,
       "TB-blog": 22,
       "TB-insurance": 4,
       "TB-contacts": 11,
       "TB-contact": 7,
-      "TB-ecs": 21,
+      "TB-ecs": 31,
       "TB-eyeglasses": 36,
       "TB-team": 2
     },
-    "titles": 133,
+    "titles": 144,
     "inline": 11,
     "home": [
       "hero-cutout:H1",
@@ -122,7 +122,7 @@
       "graft-cutout:H3"
     ],
     "altBlanksDeclared": 1,
-    "models": 149
+    "models": 160
   },
   "media": [
     "For-those-tired-of-scratchy-irritated-eyes-why-is-now-the-best-time-to-book-one-of-your-limited-specialty-consultations_v001-1.mp4",
@@ -143,12 +143,12 @@
     "ctaButtons": 21,
     "divHeadingsPromoted": 7,
     "emptyRowsSkipped": 6,
-    "looseRunsWrapped": 1571,
+    "looseRunsWrapped": 1778,
     "linkedImagesKept": 6,
     "figuresWrapped": 74,
     "linkedFigures": 6,
     "voidEndTagsRepaired": 1,
-    "sourceCrumbsTaken": 141,
+    "sourceCrumbsTaken": 152,
     "imagesDroppedByDecision": 13,
     "crumbSegmentsEmptyDropped": 17,
     "archiveLists": 13,
@@ -198,7 +198,8 @@
     "artCached": 119,
     "unreferencedImagesPruned": 2,
     "imagesFromCacheAfterRender": 347,
-    "redirects": 16
+    "restructureMoves": 77,
+    "redirects": 93
   },
   "lists": {
     "dupSections": [],
@@ -310,8 +311,8 @@
       "VideoObject REMOVE": 3
     },
     "noindex": 23,
-    "sitemapUrls": 117,
-    "redirects": 16
+    "sitemapUrls": 128,
+    "redirects": 93
   },
   "base": "/",
   "families": {
@@ -320,7 +321,7 @@
     "archive": 17,
     "blog-post": 21,
     "builder-hub": 9,
-    "interior": 73,
+    "interior": 84,
     "form": 2,
     "legal": 3,
     "location": 1,

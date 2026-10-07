@@ -55,7 +55,10 @@ export function createPageModel(deps) {
     const navItem = (it) => {
       const cur = curPath === it.href;
       const section = !cur && it.href !== '/' && curPath.startsWith(it.href);
-      return { label: it.label, href: H(it.href), path: it.href, current: cur, inSection: section || it.children.some((c) => curPath === c.href), children: (it.children || []).map(navItem) };
+      return { label: it.label, href: H(it.href), path: it.href, current: cur, inSection: section || it.children.some((c) => curPath === c.href), children: (it.children || []).map(navItem),
+        /* navglass: a mega-menu group's generated image (chrome.json nav[].children[].art = a master id) and the hub
+           link label of a mega menu's foot */
+        art: it.art && deps.menuArt ? deps.menuArt(it.art, depth) : null, artFit: it.artFit || null, allLabel: it.allLabel || null };
     };
     const t = chrome.topbar;
     const f = chrome.footer;

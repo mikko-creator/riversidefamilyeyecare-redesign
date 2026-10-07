@@ -1,11 +1,11 @@
 {
  "schema": "rfec/link-check@1",
- "generated": "2026-10-07T00:15:39.762Z",
+ "generated": "2026-10-07T08:57:47.765Z",
  "dist": "C:\\Users\\Dell\\riversidefamilyeyecare-reforge\\dist",
  "base404": "/",
  "filesChecked": 161,
- "localRefs": 22719,
- "externalRefsSkipped": 2613,
+ "localRefs": 23839,
+ "externalRefsSkipped": 2773,
  "broken": 0,
  "byKind": {},
  "control": {
@@ -34,7 +34,7 @@
     "resolved": "ctl/img/nothing.webp"
    }
   ],
-  "planted404": "<a href=\"/\">home</a><a href=\"/theme/riverlight.2e1c56a9.css\">css</a><link href=\"/styles/nope.css\"><a href=\"index.html\">rel</a>",
+  "planted404": "<a href=\"/\">home</a><a href=\"/theme/riverlight.571b28f3.css\">css</a><link href=\"/styles/nope.css\"><a href=\"index.html\">rel</a>",
   "reported404": [
    {
     "kind": "missing",

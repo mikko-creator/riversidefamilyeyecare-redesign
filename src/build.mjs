@@ -273,6 +273,14 @@ function generated(masterId) {   /* -> { rel, w, h, variants, record } (P1 + P7)
   genCache.set(masterId, out);
   return out;
 }
+/* navglass (operator, 2026-10-07): a mega-menu group's image is a generated master shipped through the same P1/P7 path as
+   model.art (width variants, AI label); the srcset stops at 1080 w (a menu card is about 210 px wide) */
+const menuArt = (id, depth) => {
+  const g = generated(id);
+  const set = g.variants.filter((v) => v.w <= 1080).sort((a, b) => a.w - b.w);
+  if (!set.length) throw new Error('navglass: no width variant up to 1080 w for ' + id);
+  return { url: relUrl(set[0].rel, depth), w: set[0].w, h: set[0].h, srcset: set.map((v) => relUrl(v.rel, depth) + ' ' + v.w + 'w').join(', ') };
+};
 const artTitle = new Map();    /* page -> { id, masterId, alt, objectPosition } (generated section defaults) */
 const artInline = new Map();   /* page -> [{ id, masterId, alt, role, anchor, position, replaces }] */
 const artHome = new Map();     /* role -> { id, masterId, alt } */
@@ -534,7 +542,7 @@ const M = createPageModel({
   C, chrome, origin: ORIGIN, seoBy, familyOf, imgUrl, ship, fail, stats, MAP_SRC, rowBackgrounds, backgroundRec, mediaFor, pdfFor, seo,
   parseConditionalLogic, parseGravityForm, logoRec, mobileLogoRec, mobileMedia: MOBILE_MEDIA, ogImageFor, garbageAlt, shortcodes: SHORTCODES, cherryMode: CHERRY_MODE, cherryUrl: /^https:\/\//.test(process.env.RFEC_CHERRY_URL || '') ? process.env.RFEC_CHERRY_URL : null,
   rawOf, willExist, seoLog, favicon, stylesheets, scripts, homeRowKind, altBlanks,
-  srcsetOf, relUrl, cropOf, supersededOf,
+  srcsetOf, relUrl, cropOf, supersededOf, menuArt,
   ui: { financing: cherryNav ? { label: cherryNav.label, href: cherryNav.href } : null },
 });
 
@@ -556,8 +564,9 @@ function rootRelative(html) {
     const cut = v.indexOf('#'), pathPart = cut < 0 ? v : v.slice(0, cut), hash = cut < 0 ? '' : v.slice(cut);
     return (BASE + pathPart.replace(/^\.\//, '')).replace(/(^|\/)index\.html$/, '$1') + hash;
   };
-  return html.replace(/(\s(?:href|src|poster))="([^"]*)"/g, (m, a, v) => a + '="' + rootRel(v) + '"')
-    .replace(/(\s(?:srcset|imagesrcset))="([^"]*)"/g, (m, a, v) => a + '="' + v.split(',').map((part) => { const t = part.trim().split(/\s+/); t[0] = rootRel(t[0]); return t.join(' '); }).join(', ') + '"');
+  /* (navglass: the mega menu's deferred images, data-src / data-srcset, are URLs too) */
+  return html.replace(/(\s(?:href|src|poster|data-src))="([^"]*)"/g, (m, a, v) => a + '="' + rootRel(v) + '"')
+    .replace(/(\s(?:srcset|imagesrcset|data-srcset))="([^"]*)"/g, (m, a, v) => a + '="' + v.split(',').map((part) => { const t = part.trim().split(/\s+/); t[0] = rootRel(t[0]); return t.join(' '); }).join(', ') + '"');
 }
 
 /* Pages are built in three passes (wf5b): every model first, then model.art (a team page with no portrait of its own

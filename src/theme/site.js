@@ -196,6 +196,25 @@
     items.forEach((it) => { if (it.hover && !it.li.classList.contains('is-dismissed')) { it.li.classList.add('is-dismissed'); it.hover = false; setItem(it, it.li.classList.contains('is-open')); } });
   });
 
+  /* navglass (2026-10-07): the mega menu's images load on the first intent - the pointer over the menu bar, focus inside
+     it - never with the page; each fades in once decoded (CSS .mega__img.is-loaded) */
+  const mainnav = $('.mainnav');
+  if (mainnav) {
+    const hydrate = () => {
+      $$('img[data-src]', mainnav).forEach((img) => {
+        const done = () => img.classList.add('is-loaded');
+        img.addEventListener('load', done, { once: true });
+        if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        img.removeAttribute('data-srcset');
+        if (img.complete && img.naturalWidth) done();
+      });
+    };
+    mainnav.addEventListener('pointerenter', hydrate, { once: true });
+    mainnav.addEventListener('focusin', hydrate, { once: true });
+  }
+
   const drawer = $('#drawer'), menuBtn = $('.menu-toggle');
   /* Mobile optimisation (MT-R1, MT-R2, M-TOUCH-1): the drawer's phone-only behaviour applies below 1024 px; 1024-1199 px
      (the drawer's desktop range) is unchanged */

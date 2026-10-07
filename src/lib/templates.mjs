@@ -601,9 +601,20 @@ export function createTemplates() {
      structure) is a mega menu: one group per child, its link as the group head over its own pages */
   const isMega = (it) => (it.children || []).some((k) => (k.children || []).length);
   const subLink = (k) => '<li' + (k.inSection ? ' class="is-section"' : '') + '><a href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a></li>';
-  const subGroup = (k) => (!(k.children || []).length ? subLink(k)
-    : '<li class="sub__group' + (k.inSection ? ' is-section' : '') + '"><a class="sub__head" href="' + esc(k.href) + '"' + cur(k) + '>' + esc(k.label) + '</a>'
-      + '<ul class="sub__list">' + k.children.map(subLink).join('') + '</ul></li>');
+  /* navglass (operator, 2026-10-07): the mega menu is one card per group (its generated image, loaded by site.js on the
+     first intent: data-src, never with the page; alt "" because the card's title names it) over the group's own pages,
+     and a foot with the hub link and the top bar's own appointment and call actions */
+  const megaCol = (k) => '<li class="mega__col' + (k.inSection ? ' is-section' : '') + '">'
+    + '<a class="mega__card" href="' + esc(k.href) + '"' + cur(k) + '>'
+    + (k.art ? '<span class="mega__media' + (k.artFit === 'contain' ? ' mega__media--cutout' : '') + '"><img class="mega__img" data-src="' + esc(k.art.url) + '" data-srcset="' + esc(k.art.srcset) + '" sizes="(min-width: 1500px) 240px, 210px" width="' + k.art.w + '" height="' + k.art.h + '" alt="" decoding="async"></span>' : '')
+    + '<span class="mega__title"><span>' + esc(k.label) + '</span>' + ico('arrow') + '</span></a>'
+    + ((k.children || []).length ? '<ul class="mega__list" role="list">' + k.children.map((g) => '<li' + (g.inSection ? ' class="is-section"' : '') + '><a class="mega__link" href="' + esc(g.href) + '"' + cur(g) + '>' + esc(g.label) + '</a></li>').join('') + '</ul>' : '')
+    + '</li>';
+  const megaFoot = (it, t) => '<div class="mega__foot">'
+    + '<a class="mega__all" href="' + esc(it.href) + '"><span>' + esc(it.allLabel || it.label) + '</span>' + ico('arrow') + '</a>'
+    + '<div class="mega__cta"><a class="mega__call" href="' + esc(t.call.href) + '">' + ico('phone') + '<span>' + esc(t.call.label) + '</span></a>'
+    + '<a class="btn btn--primary mega__btn" href="' + esc(t.appointment.href) + '">' + ico('calendar') + '<span>' + esc(t.appointment.label) + '</span></a></div>'
+    + '</div>';
   function navbar(c) {
     const lastWithKids = c.nav.map((x) => (x.children || []).length > 0).lastIndexOf(true);
     const items = c.nav.map((it, i) => {
@@ -612,9 +623,9 @@ export function createTemplates() {
       return '<li class="mainnav__item has-sub' + (mega ? ' has-mega' : '') + (it.inSection ? ' is-section' : '') + '">'
         + '<a class="mainnav__link" href="' + esc(it.href) + '"' + cur(it) + '>' + esc(it.label) + '</a>'
         + '<button class="mainnav__toggle" type="button" aria-expanded="false" aria-controls="sub-' + n + '" aria-label="' + esc(it.label) + ' submenu">' + ico('chev') + '</button>'
-        + '<ul class="sub' + (mega ? ' sub--mega' : i === lastWithKids ? ' sub--end' : '') + '" id="sub-' + n + '">'
-        + kids.map(mega ? subGroup : subLink).join('')
-        + '</ul></li>';
+        + (mega
+          ? '<div class="sub sub--mega mega" id="sub-' + n + '"><ul class="mega__grid" role="list">' + kids.map(megaCol).join('') + '</ul>' + megaFoot(it, c.topbar) + '</div></li>'
+          : '<ul class="sub' + (i === lastWithKids ? ' sub--end' : '') + '" id="sub-' + n + '">' + kids.map(subLink).join('') + '</ul></li>');
     }).join('');
     const mob = c.mobile, logo = c.logo, ml = mob.logo;
     return '<div class="navbar"><div class="container navbar__inner">'

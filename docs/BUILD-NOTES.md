@@ -2338,3 +2338,48 @@ gates, `sr-gate`, the sweep, screens and pixel diff were not run, and the handof
   degree); headless Chrome (`tmp/restructure/look.mjs`): the header is one row at 1200 and 1280, the open mega menu sits
   inside the viewport (control: shifted 400 px it fails), no sideways overflow on an adopted page at 390, the drawer shows
   5 groups / 21 links. Preview gh-pages `889a4cd`: 9 sampled URLs live 200 and byte-identical, noindex.
+
+## 17. Glass menu bar, evenly spaced options, image mega menu (operator, 2026-10-07)
+
+The operator, verbatim: "make the navigation bar glass morphism style to elevate optics", "options in the navigation bar
+are too close to each other, create even spacing between all options", "I want the megamenu to be redesigned, I want
+amazing imagery and amazing style, add some great hover effects on the options". The short-verification rule of section
+16 applies: build, repro, link check and one headless look; no gate run.
+
+- **Glass bar** (`src/styles/riverlight.css`, block "navglass", placed before the forced-colours, reduced-transparency
+  and print blocks so they still win): the frost moved from `.navbar` to `.navbar::before` (blur 24 px, saturate 1.8,
+  74-60 % white, inner highlights) because a `backdrop-filter` on `.navbar` made it the backdrop root of the dropdowns,
+  whose own blur then showed the page unblurred (the hero heading read through the old Services panel). An aurora wash on
+  `<body>` sits behind the bar at the top of the page; an aurora hairline runs along its edge. The blur rules sit in
+  `@supports`, so the no-blur fallback of the 2026-10-02 QA round still applies. Bar heights are unchanged: 92.6 px
+  (at 769 px and up) and 78.5 px (phones), header 136.6 / 138.5 px, so `--navbar-h` and `--chrome-h` hold.
+- **Even spacing** (at 1200 px and up): the options sit in a glass dock (`.mainnav__list`, fit-content, right-aligned),
+  one pill per option (16 px inner padding; a sub-menu's chevron, now 30 px wide, sits inside its pill), every gap 6 px.
+  Hover, open and focus-within light the whole pill; the current section is a teal pill.
+- **Mega menu** (`templates.mjs` megaCol / megaFoot; `chrome.json` change R02): a glass panel, 28 px radius, as wide
+  as the content column, 10 px under the bar. It has five cards, each holding a generated master shipped through the
+  P1/P7 path (`build.mjs` menuArt, srcset 360-1080 w): H2 lens, H3 children's glasses cut-out, N4 dropper, TB-ecs
+  droplet, N3 contact lens. Each card sits over its group's pages. The foot carries "View all eye care services" (Eye
+  Trends' own label), the phone number and Request Appointment (the top bar's own actions). Images load only on the
+  first hover over or focus inside the menu bar (`site.js`, `data-src`), then fade in.
+- **Hover effects:**
+  - Cards lift onto white glass; the image zooms 8 % and a light sweep crosses it; the children's glasses float up and
+    tilt 4 degrees; the arrow slides.
+  - Links (mega and Eyewear) grow a teal-to-navy accent bar, tint, and slide 6 px.
+  - Columns rise in staggered by 45 ms.
+  - At 1200 px and up with a height of 720 px or less, the images are 21:9 and the rows shorter, so the open panel fits
+    at 1280x585.
+  - Reduced motion removes every transform and the sweep; forced colours and reduced transparency drop the
+    decorations.
+- **Fix found by the link check:** `rootRelative()` (dist/404.html) now also rewrites `data-src` / `data-srcset`.
+  `.sub a` rules are scoped to `.sub > li > a`, so they no longer reach the mega menu's cards.
+- **Evidence:**
+  - build exit 0, 159/159 + 404, 0 failures; `dist` = `461b8184…` (801 files), repro IDENTICAL;
+  - link check: 23,839 local refs, 0 broken, control fired;
+  - headless Chrome (`tmp/navglass/look.mjs`, `look2.mjs`, real mouse moves):
+    - the bar is 92.6 px at 1200/1280/1440/1920 and 78.5 px at 768/390/320, with no sideways overflow at 320;
+    - every option gap is 6 px, in one row;
+    - the open panel sits inside the viewport at 1280x800 (bottom 635) and 1280x585 (bottom 574), with all five
+      images loaded on hover and `aria-expanded` true;
+  - preview gh-pages `16352a1`: 9 sampled pages, the stylesheet, the script and the five images are live 200 and
+    byte-identical.

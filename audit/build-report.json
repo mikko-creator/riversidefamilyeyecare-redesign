@@ -59,14 +59,14 @@
     "mode": "riverlight",
     "root": "src",
     "stylesheet": {
-      "path": "theme/riverlight.2e1c56a9.css",
-      "bytes": 105455,
-      "sha256": "2e1c56a93cc6427acd8ad528d50acdd04ac638648bbfaaea5064db59314e1790"
+      "path": "theme/riverlight.571b28f3.css",
+      "bytes": 114681,
+      "sha256": "571b28f353212b61f32c80a22a05f43022b3e2c1b0c764057c0944883d9879cc"
     },
     "script": {
-      "path": "theme/site.5fd59f85.js",
-      "bytes": 28196,
-      "sha256": "5fd59f858a84b39371ba0b9fddab5b9c2b89639093e9a58c23625deadc4759ea"
+      "path": "theme/site.4f3f026b.js",
+      "bytes": 28754,
+      "sha256": "4f3f026bfa68caacb5a5b6e47424422eedc563d488ea56d459357cc882fa0874"
     },
     "layers": [
       {
@@ -81,8 +81,8 @@
       },
       {
         "file": "riverlight.css",
-        "bytes": 129291,
-        "sha256": "92425f04e6bfed83529ad1faea2b92d0735a02fcefb603ecb00e1816d35a510e"
+        "bytes": 141643,
+        "sha256": "ea043ec0272d76d67e0711ecce283bbe2cc1d793878f3db4cee62f865d69a231"
       },
       {
         "file": "motion.css",
@@ -148,6 +148,7 @@
     "figuresWrapped": 74,
     "linkedFigures": 6,
     "voidEndTagsRepaired": 1,
+    "artCached": 119,
     "sourceCrumbsTaken": 152,
     "imagesDroppedByDecision": 13,
     "crumbSegmentsEmptyDropped": 17,
@@ -195,7 +196,6 @@
     "deadButtonsAsText": 1,
     "emptyTelUnwrapped": 2,
     "paragraphsClosedByP": 2,
-    "artCached": 119,
     "unreferencedImagesPruned": 2,
     "imagesFromCacheAfterRender": 347,
     "restructureMoves": 77,

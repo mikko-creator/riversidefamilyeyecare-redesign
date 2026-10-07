@@ -88,7 +88,8 @@
               "href": "/services/senior-eye-exams/",
               "children": []
             }
-          ]
+          ],
+          "art": "H2"
         },
         {
           "label": "Children's Eye Care",
@@ -114,7 +115,9 @@
               "href": "/services/myopia-management/",
               "children": []
             }
-          ]
+          ],
+          "art": "H3",
+          "artFit": "contain"
         },
         {
           "label": "Medical Eye Care",
@@ -150,7 +153,8 @@
               "href": "/services/lasik-co-management/",
               "children": []
             }
-          ]
+          ],
+          "art": "N4"
         },
         {
           "label": "Emergency Eye Care",
@@ -176,7 +180,8 @@
               "href": "/services/flashes-floaters/",
               "children": []
             }
-          ]
+          ],
+          "art": "TB-ecs"
         },
         {
           "label": "Contact Lens Exams",
@@ -207,9 +212,11 @@
               "href": "/services/multifocal-contacts/",
               "children": []
             }
-          ]
+          ],
+          "art": "N3"
         }
-      ]
+      ],
+      "allLabel": "View all eye care services"
     },
     {
       "label": "Eyewear",
@@ -509,6 +516,10 @@
     {
       "id": "R01",
       "what": "restructure 2026-10-07 (operator: copy the site structure of https://eyetrendsclearlake.com/): the primary menu, footer columns and legal links follow the Eye Trends menus and labels, every href a path of the restructured site (src/lib/restructure.mjs). The source menus are kept unchanged in navSource and footerSource."
+    },
+    {
+      "id": "R02",
+      "what": "navglass 2026-10-07 (operator: glassmorphism menu bar, even spacing, mega menu with imagery and hover effects): each Services group names a generated master as its mega-menu image (art: H2 lens, H3 children’s glasses cut-out, N4 dropper, TB-ecs droplet, N3 contact lens; audit/generated-images.json) and the Services item carries the mega foot’s hub-link label allLabel (Eye Trends’ own \"View all eye care services\")."
     }
   ],
   "extensions": [
@@ -523,7 +534,8 @@
     "footer.nap.postalEnd / phoneEnd / site / text: the source NAP line ends the ZIP and the phone with \".\" and adds the site URL; text is the whole line as printed, the oracle write-facts compares against.",
     "footer.button: the footer prints a Request Appointment button.",
     "footer.social: four networks (facebook, yelp, google, youtube); R's footer() draws every icon with the facebook glyph.",
-    "notice = null: the form notice is a build decision Riverside has not made (R: BUILD-DECISIONS #4)."
+    "notice = null: the form notice is a build decision Riverside has not made (R: BUILD-DECISIONS #4).",
+    "nav[].children[].art / artFit and nav[].allLabel: the mega menu (navglass, change R02)."
   ],
   "navSource": [
     {

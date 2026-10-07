@@ -211,13 +211,14 @@ table { border-collapse: collapse; }
 .mainnav__toggle .ico { width: 16px; height: 16px; transition: rotate 300ms var(--ease-out); }
 .mainnav__item.is-open > .mainnav__toggle .ico, .mainnav__toggle[aria-expanded="true"] .ico { rotate: 180deg; }
 .sub { margin: 0; padding: 0; list-style: none; }
-.sub a {
+/* (navglass: scoped to a plain dropdown's own links, so nothing here reaches the mega menu's cards and links) */
+.sub > li > a {
   display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border-radius: 10px;
   color: var(--navy-700); font-size: 0.9375rem; font-weight: 500; line-height: 1.3; text-decoration: none;
   transition: background-color var(--dur-fast), color var(--dur-fast);
 }
-.sub a:is(:hover, :focus-visible) { background: var(--tint-teal); color: var(--teal-800); }
-.sub a[aria-current="page"], .sub .is-section > a { background: var(--tint-lav); color: var(--navy-900); }
+.sub > li > a:is(:hover, :focus-visible) { background: var(--tint-teal); color: var(--teal-800); }
+.sub > li > a[aria-current="page"], .sub > .is-section > a { background: var(--tint-lav); color: var(--navy-900); }
 
 html.js .mainnav { display: none; }
 /* QA round 1 (LAYOUT-11): the nav breakpoint is in em (75em = 1200 px at the default 16 px font), so a larger browser
@@ -241,18 +242,10 @@ html.js .mainnav { display: none; }
   html.js .sub--end { left: auto; right: 0; }
   html.js .mainnav__item.has-sub:hover:not(.is-dismissed) > .sub,
   html.js .mainnav__item.is-open > .sub { opacity: 1; visibility: visible; translate: 0 0; transition-delay: 0s; }
-  /* restructure (2026-10-07): the Services mega menu, anchored to the navbar (not to its item) so its five groups fit */
-  html.js .navbar__inner { position: relative; }
+  /* restructure (2026-10-07): the Services mega menu is anchored to the navbar (not to its item) so its five groups fit;
+     its look is the navglass block at the end of this file */
   html.js .mainnav__item.has-mega { position: static; }
-  html.js .sub--mega {
-    left: auto; right: 0; top: calc(100% - 10px); width: min(100%, 1100px);
-    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px 10px; padding: 14px;
-  }
-  html.js .sub--mega::before { top: -14px; height: 14px; }
 }
-.sub__group, .sub__list { margin: 0; padding: 0; list-style: none; }
-.sub .sub__head { color: var(--navy-900); font-weight: 700; }
-.sub__list a { min-height: 40px; padding-block: 6px; font-size: 0.90625rem; }
 .mobilebar { display: none; align-items: center; gap: 8px; flex: none; }
 @media (max-width: 74.9375em) { .mobilebar { display: flex; } }
 @media (min-width: 769px) and (max-width: 74.9375em) { .mobilebar > :not(.menu-toggle) { display: none; } }
@@ -1762,6 +1755,187 @@ html:not(.js) .sub { margin: 0 0 6px 10px; padding-left: 10px; border-left: 2px 
   html.no-modal .mainnav__toggle { display: none; }
   html.no-modal .sub { margin: 0 0 6px 10px; padding-left: 10px; border-left: 2px solid var(--teal-200); }
 }
+
+/* ==========================================================================================================
+   navglass (operator, 2026-10-07): "make the navigation bar glass morphism style to elevate optics", "options in the
+   navigation bar are too close to each other, create even spacing between all options", "I want the megamenu to be
+   redesigned, I want amazing imagery and amazing style, add some great hover effects on the options".
+   - The bar's frost lives on .navbar::before. A backdrop-filter on .navbar itself would make it the backdrop root of
+     the dropdown panels inside it, and their own blur would then show the page unblurred.
+   - A soft aurora wash on <body>, behind the bar at the top of the page, gives the glass colour to refract; it
+     scrolls away with the page, after which the content passing under the bar is what the glass frosts.
+   - Desktop options sit in a glass dock, one pill per option (label + chevron), all pills the same 6 px apart.
+   - Heights are unchanged (the bar stays 92.6 / 78.5 px), so --navbar-h, --chrome-h and the scroll offsets hold.
+   The forced-colours, reduced-transparency / more-contrast and print blocks below still override all of this.
+   ========================================================================================================== */
+body {
+  background-image:
+    radial-gradient(440px 120px at 8% 94px, rgb(179 227 224 / .6), transparent 72%),
+    radial-gradient(560px 110px at 50% 72px, rgb(221 216 240 / .55), transparent 72%),
+    radial-gradient(480px 120px at 93% 100px, rgb(190 224 238 / .6), transparent 72%);
+  background-repeat: no-repeat;
+}
+.navbar { position: relative; }
+.navbar::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; z-index: -1; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgb(19 168 158 / .55) 20%, rgb(150 140 210 / .5) 50%, rgb(110 180 225 / .55) 80%, transparent);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .navbar { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
+  .navbar::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background-image: linear-gradient(180deg, rgb(255 255 255 / .74), rgb(255 255 255 / .6));
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+    backdrop-filter: blur(24px) saturate(1.8);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / .8), inset 0 -1px 0 rgb(255 255 255 / .45), 0 16px 36px -26px rgb(var(--shade) / .55);
+  }
+  @media (min-width: 75em) {
+    html.js .sub {
+      background-image: linear-gradient(165deg, rgb(255 255 255 / .9), rgb(255 255 255 / .78));
+      -webkit-backdrop-filter: blur(28px) saturate(1.8);
+      backdrop-filter: blur(28px) saturate(1.8);
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  /* the dock and its evenly spaced pills */
+  html.js .mainnav__list {
+    width: fit-content; margin-inline-start: auto;
+    gap: 6px; padding: 5px; border-radius: 999px;
+    background-image: linear-gradient(160deg, rgb(255 255 255 / .82), rgb(255 255 255 / .46));
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / .95), inset 0 0 0 1px rgb(255 255 255 / .6), 0 12px 28px -18px rgb(var(--shade) / .45), 0 1px 2px rgb(var(--shade) / .06);
+  }
+  html.js .mainnav__item { border-radius: 999px; transition: background-color 250ms var(--ease-out), box-shadow 250ms var(--ease-out); }
+  html.js .mainnav__item.has-sub { padding-right: 9px; }
+  html.js .mainnav__list .mainnav__link { padding: 0 16px; border-radius: 999px; background: transparent; }
+  html.js .mainnav__list .has-sub > .mainnav__link { padding-right: 2px; }
+  html.js .mainnav__list .mainnav__toggle { width: 30px; border-radius: 999px; background: transparent; }
+  html.js .mainnav__list .mainnav__link::after { left: 16px; right: 16px; bottom: 9px; }
+  html.js .mainnav__list .has-sub > .mainnav__link::after { right: 2px; }
+  html.js .mainnav__item:is(:hover, :focus-within, .is-open) {
+    background-color: rgb(255 255 255 / .94);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / .95), 0 8px 18px -10px rgb(var(--shade) / .45);
+  }
+  html.js .mainnav__item:is(.is-section, :has(> .mainnav__link[aria-current="page"])) {
+    background-color: var(--tint-teal);
+    box-shadow: inset 0 0 0 1px rgb(19 168 158 / .28);
+  }
+
+  /* panels: floating glass sheets under the bar */
+  html.js .sub {
+    border: 1px solid rgb(255 255 255 / .8); border-radius: 20px; padding: 10px;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / .95), 0 28px 60px -28px rgb(var(--shade) / .5), 0 6px 16px -8px rgb(var(--shade) / .16);
+  }
+  html.js .sub:not(.sub--mega) { top: calc(100% + 14px); min-width: 260px; }
+  html.js .sub:not(.sub--mega)::before { top: -16px; height: 16px; }
+  html.js .sub--mega { left: var(--gutter); right: var(--gutter); width: auto; top: calc(100% + 10px); padding: 16px 16px 12px; border-radius: 28px; }
+  html.js .sub--mega::before { top: -34px; height: 34px; }
+  /* columns rise in one after another as the panel opens */
+  html.js .mega__col { opacity: 0; translate: 0 10px; transition: opacity 380ms var(--ease-out), translate 520ms var(--ease-out); }
+  html.js .mainnav__item.has-mega:is(:hover:not(.is-dismissed), .is-open) .mega__col { opacity: 1; translate: 0 0; }
+  html.js .mega__col:nth-child(2) { transition-delay: 45ms; }
+  html.js .mega__col:nth-child(3) { transition-delay: 90ms; }
+  html.js .mega__col:nth-child(4) { transition-delay: 135ms; }
+  html.js .mega__col:nth-child(5) { transition-delay: 180ms; }
+}
+
+/* plain dropdown links (Eyewear): a teal bar grows in on the left and the label slides after it */
+.sub > li > a { position: relative; transition: background-color 250ms, color 250ms, padding-left 320ms var(--ease-out); }
+.sub > li > a::before {
+  content: ""; position: absolute; left: 7px; top: 50%; width: 3px; height: 0; border-radius: 3px;
+  background: linear-gradient(180deg, var(--teal-500), var(--navy-700)); translate: 0 -50%; transition: height 320ms var(--ease-out);
+}
+.sub > li > a:is(:hover, :focus-visible), .sub > li > a[aria-current="page"] { padding-left: 21px; background: linear-gradient(90deg, var(--tint-teal), rgb(231 246 245 / 0) 85%); }
+.sub > li > a:is(:hover, :focus-visible)::before, .sub > li > a[aria-current="page"]::before { height: 18px; }
+
+/* the mega menu */
+.mega__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.mega__col { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.mega__card {
+  display: flex; flex-direction: column; gap: 10px; padding: 8px; border-radius: 20px; color: var(--navy-900); text-decoration: none;
+  transition: background-color 320ms var(--ease-out), box-shadow 320ms var(--ease-out), translate 420ms var(--ease-out);
+}
+.mega__media {
+  position: relative; display: block; overflow: hidden; isolation: isolate; aspect-ratio: 16 / 9; border-radius: 14px;
+  background-image: radial-gradient(80% 95% at 0% 100%, rgb(179 227 224 / .95), transparent 70%), radial-gradient(75% 85% at 100% 0%, rgb(221 216 240 / .95), transparent 70%), linear-gradient(160deg, #f5fbfb, #eef0f8);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .65), 0 10px 22px -16px rgb(var(--shade) / .45);
+}
+.mega__img {
+  display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0;
+  transition: opacity 500ms var(--ease-out), scale 900ms var(--ease-out), translate 650ms var(--ease-out), rotate 650ms var(--ease-out);
+}
+.mega__img.is-loaded { opacity: 1; }
+.mega__media--cutout .mega__img { filter: drop-shadow(0 12px 10px rgb(var(--shade) / .22)); }
+.mega__media::before {
+  content: ""; position: absolute; inset: auto 0 0; height: 55%; z-index: 1; pointer-events: none;
+  background: linear-gradient(0deg, rgb(3 117 109 / .2), transparent);
+}
+.mega__media::after {
+  content: ""; position: absolute; inset: -20% -60%; z-index: 2; pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgb(255 255 255 / .6) 50%, transparent 62%);
+  translate: -70% 0; transition: translate 1000ms var(--ease-out);
+}
+.mega__title { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 6px 2px; font-size: 1rem; font-weight: 700; line-height: 1.25; }
+.mega__title .ico { width: 16px; height: 16px; color: var(--teal-700); opacity: .5; translate: -4px 0; transition: translate 320ms var(--ease-out), opacity 320ms; }
+.mega__card:is(:hover, :focus-visible) {
+  background-color: rgb(255 255 255 / .9); translate: 0 -3px;
+  box-shadow: 0 18px 36px -22px rgb(var(--shade) / .55), inset 0 0 0 1px rgb(255 255 255 / .95);
+}
+.mega__card:is(:hover, :focus-visible) .mega__img { scale: 1.08; }
+.mega__card:is(:hover, :focus-visible) .mega__media--cutout .mega__img { scale: 1.07; translate: 0 -6px; rotate: -4deg; }
+.mega__card:is(:hover, :focus-visible) .mega__media::after { translate: 70% 0; }
+.mega__card:is(:hover, :focus-visible) .mega__title .ico { translate: 2px 0; opacity: 1; }
+.mega__card[aria-current="page"], .mega__col.is-section > .mega__card { background-color: var(--tint-teal); }
+.mega__list { display: grid; gap: 2px; margin: 0; padding: 0 0 4px; list-style: none; }
+.mega__link {
+  position: relative; display: flex; align-items: center; min-height: 34px; padding: 5px 10px 5px 14px; border-radius: 10px;
+  color: var(--navy-700); font-size: 0.90625rem; font-weight: 500; line-height: 1.3; text-decoration: none;
+  transition: color 250ms, background-color 250ms, padding-left 320ms var(--ease-out);
+}
+.mega__link::before {
+  content: ""; position: absolute; left: 6px; top: 50%; width: 3px; height: 0; border-radius: 3px;
+  background: linear-gradient(180deg, var(--teal-500), var(--navy-700)); translate: 0 -50%; transition: height 320ms var(--ease-out);
+}
+.mega__link:is(:hover, :focus-visible), .mega__link[aria-current="page"] { color: var(--teal-800); padding-left: 20px; background: linear-gradient(90deg, var(--tint-teal), rgb(231 246 245 / 0) 85%); }
+.mega__link:is(:hover, :focus-visible)::before, .mega__link[aria-current="page"]::before { height: 16px; }
+.mega__link[aria-current="page"] { font-weight: 650; }
+.mega__foot {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  margin-top: 12px; padding: 12px 6px 0 14px; border-top: 1px solid rgb(var(--shade) / .08);
+}
+.mega__all { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--navy-900); font-weight: 650; text-decoration: none; }
+.mega__all .ico { width: 16px; height: 16px; color: var(--teal-700); transition: translate 320ms var(--ease-out); }
+.mega__all:is(:hover, :focus-visible) { color: var(--teal-800); }
+.mega__all:is(:hover, :focus-visible) .ico { translate: 5px 0; }
+.mega__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mega__call {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  color: var(--navy-900); font-weight: 650; text-decoration: none; background-color: rgb(255 255 255 / .75);
+  box-shadow: inset 0 0 0 1px rgb(var(--shade) / .12); transition: background-color 250ms, box-shadow 250ms;
+}
+.mega__call .ico, .mega__btn .ico { width: 18px; height: 18px; }
+.mega__call:is(:hover, :focus-visible) { background-color: #fff; box-shadow: inset 0 0 0 1px rgb(19 168 158 / .55), 0 10px 20px -14px rgb(var(--shade) / .55); }
+/* short laptop screens (the operator's 1280 x 585): shorter images and rows so the open panel fits below the bar */
+@media (min-width: 75em) and (max-height: 720px) {
+  .mega__media { aspect-ratio: 21 / 9; }
+  .mega__card { gap: 8px; }
+  .mega__link { min-height: 30px; padding-block: 3px; }
+  .mega__foot { margin-top: 8px; padding-top: 8px; }
+}
+/* without the script the menus print as plain nested lists (no images, no foot) */
+html:not(.js) .mega__media, html:not(.js) .mega__foot { display: none; }
+html:not(.js) .mega__grid, html:not(.js) .mega__list { display: block; padding-left: 10px; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .mega__col { opacity: 1; translate: none; }
+  .mega__card:is(:hover, :focus-visible), .mega__card:is(:hover, :focus-visible) .mega__img,
+  .mega__card:is(:hover, :focus-visible) .mega__media--cutout .mega__img, .mega__title .ico, .mega__all .ico { translate: none; scale: none; rotate: none; }
+  .mega__media::after { display: none; }
+}
+@media (forced-colors: active), (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .navbar::before, .navbar::after, .mega__media::before, .mega__media::after { display: none; }
+}
+@media print { body { background-image: none; } }
 
 /* forced colours (DESIGN-SPEC 8) */
 @media (forced-colors: active) {
